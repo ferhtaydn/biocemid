@@ -15,6 +15,9 @@ object Main extends App {
   val wordsFile = s"MI${method}_annotations_words.txt"
   val groupedWordsFile = s"MI${method}_annotations_groupedWords.txt"
 
+  Util.remove(passagesFile)
+  Util.remove(sentencesFile)
+  Util.remove(wordsFile)
   Util.remove(groupedWordsFile)
 
   Util.list(directory).foreach(extractAnnotations(_, method))
@@ -43,11 +46,15 @@ object Main extends App {
 
     val annotations = passages \\ "annotation"
 
-    val result = annotations.filter(annot =>
+    val filtered = annotations.filter(annot =>
       (annot \ "infon").filter(i =>
         (i \\ "@key").text.equals("PSIMI")
       ).text.equals(method)
-    ).map(m => (m \\ "text").text).mkString("\n")
+    )
+
+    println(s"There exists ${filtered.size} ${method} in ${file}")
+
+    val result = filtered.map(m => (m \\ "text").text).mkString("\n")
 
     Util.append(passagesFile, result)
 
