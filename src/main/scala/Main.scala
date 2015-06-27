@@ -4,11 +4,10 @@ import java.io.File
 
 object Main extends App {
 
-  // "/Users/aydinf/Desktop/annotated_xml
-  val directory = args(1)
+  val directory = "annotated_xml"
 
   // "0006"
-  val method = args(2)
+  val method = args(1)
 
   val passagesFile = s"MI${method}_annotations_passages.txt"
   val sentencesFile = s"MI${method}_annotations_sentences.txt"
