@@ -1,7 +1,4 @@
 
-import scala.xml._
-import java.io.File
-
 object Main extends App {
 
   val directory = "annotated_xml"
@@ -13,54 +10,47 @@ object Main extends App {
   val sentencesFile = s"MI${method}_annotations_sentences.txt"
   val wordsFile = s"MI${method}_annotations_words.txt"
   val groupedWordsFile = s"MI${method}_annotations_groupedWords.txt"
+  val tfRfFile = s"MI${method}_annotations_tf-rf.txt"
 
-  Util.remove(passagesFile)
-  Util.remove(sentencesFile)
-  Util.remove(wordsFile)
-  Util.remove(groupedWordsFile)
+  if (args.length == 2) {
+    IO.remove(passagesFile)
+    IO.remove(sentencesFile)
+    IO.remove(wordsFile)
+    IO.remove(groupedWordsFile)
 
-  Util.list(directory).foreach(extractAnnotations(_, method))
+    IO.list(directory, ".xml").foreach(f => prepareOutputFiles(BioC.extractAnnotatedSentences(f, method)))
 
-  Util.write(groupedWordsFile, wordCount(wordsFile))
-
-  def wordCount(wordsFile: String) = {
-
-    val groupedWords = Util.read(wordsFile).foldLeft(Map.empty[String, Int]) {
-      (m, word) => m + (word -> (m.getOrElse(word, 0) + 1))
-    }
-
-    val sorted = groupedWords.toSeq.sortBy(_._2).reverse
-
-    val sb = new StringBuilder()
-    sorted.foreach(a => sb.append(s"${a._1} ${a._2}\n"))
-    sb.toString()
-
+    IO.write(groupedWordsFile, IO.stringifyTuple2Sequence(BioC.getFrequencies(wordsFile)))
   }
 
-  def extractAnnotations(file: File, method: String): Unit = {
+  if (args.length > 2 && args(2).equals("tfrf")) {
+    IO.write(tfRfFile, IO.stringifyTuple2Sequence(tfRf.sortBy(_._2).reverse))
+  }
 
-    val bioCFile = XML.loadFile(file)
+  def prepareOutputFiles(annotatedSentences: String): Unit = {
+    IO.append(passagesFile, annotatedSentences)
+    IO.append(sentencesFile, IO.mkSentence(annotatedSentences))
+    IO.append(wordsFile, IO.mkSentence(annotatedSentences).toLowerCase.split("\\W+").mkString("\n"))
+  }
 
-    val passages = bioCFile \\ "passage"
+  def tfRf: Seq[(String, Double)] = {
 
-    val annotations = passages \\ "annotation"
+    val methodFreqs = BioC.getFrequencies(wordsFile)
+    val otherFiles = IO.listOthers(method).map(f => f.getPath)
 
-    val filtered = annotations.filter(annot =>
-      (annot \ "infon").filter(i =>
-        (i \\ "@key").text.equals("PSIMI")
-      ).text.equals(method)
-    )
+    methodFreqs.map { case (word, freq) =>
 
-    println(s"There exists ${filtered.size} ${method} in ${file}")
+      def log2(x: Double) = scala.math.log(x) / scala.math.log(2)
 
-    val result = filtered.map(m => (m \\ "text").text).mkString("\n")
+      val otherTotal = otherFiles.map(BioC.getFrequencies(_).find(wf => word.equals(wf._1)).fold(0.0)(_._2)).sum
 
-    Util.append(passagesFile, result)
+      val rf = log2(2.0 + (freq / scala.math.max(1.0, otherTotal)))
+      val tfRf = freq * rf
 
-    Util.append(sentencesFile, Util.mkSentence(result))
+      //println(s"$word $freq $otherTotal $rf $tfRf")
 
-    Util.append(wordsFile, Util.mkSentence(result).toLowerCase.split("\\W+").mkString("\n"))
-
+      (word, tfRf)
+    }
   }
 
 }
