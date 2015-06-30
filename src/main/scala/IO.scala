@@ -24,6 +24,8 @@ object IO {
     }.toList
   }
 
+  def extractFileName(fileName: String, suffix: String) = fileName.split("\\.").head
+
   def read(path: String) = scala.io.Source.fromFile(path).getLines()
 
   def mkSentence(text: String): String = text.split("\\.\\s").mkString(".\n")
