@@ -20,17 +20,17 @@ object Main extends App {
 
     IO.list(directory, ".xml").foreach(f => prepareOutputFiles(BioC.extractAnnotatedSentences(f, method)))
 
-    IO.write(groupedWordsFile, IO.stringifyTuple2Sequence(BioC.getFrequencies(wordsFile)))
+    IO.write(groupedWordsFile, Util.stringifyTuple2Sequence(BioC.getFrequencies(wordsFile)))
   }
 
   if (args.length > 2 && args(2).equals("tfrf")) {
-    IO.write(tfRfFile, IO.stringifyTuple2Sequence(tfRf.sortBy(_._2).reverse))
+    IO.write(tfRfFile, Util.stringifyTuple2Sequence(tfRf.sortBy(_._2).reverse))
   }
 
   def prepareOutputFiles(annotatedSentences: String): Unit = {
     IO.append(passagesFile, annotatedSentences)
-    IO.append(sentencesFile, IO.mkSentence(annotatedSentences))
-    IO.append(wordsFile, IO.mkSentence(annotatedSentences).toLowerCase.split("\\W+").mkString("\n"))
+    IO.append(sentencesFile, Util.mkSentence(annotatedSentences))
+    IO.append(wordsFile, Util.mkSentence(annotatedSentences).toLowerCase.split("\\W+").mkString("\n"))
   }
 
   def tfRf: Seq[(String, Double)] = {

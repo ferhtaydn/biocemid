@@ -24,17 +24,9 @@ object IO {
     }.toList
   }
 
-  def extractFileName(fileName: String, suffix: String) = fileName.split("\\.").head
-
   def read(path: String) = scala.io.Source.fromFile(path).getLines()
 
-  def mkSentence(text: String): String = text.split("\\.\\s").mkString(".\n")
 
   def remove(file: String) = Files.deleteIfExists(Paths.get(file))
 
-  def stringifyTuple2Sequence(seq: Seq[(String, Double)]): String = {
-    val sb = new StringBuilder()
-    seq.foreach(a => sb.append(s"${a._1} ${a._2}\n"))
-    sb.toString()
-  }
 }

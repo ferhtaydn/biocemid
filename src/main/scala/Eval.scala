@@ -13,7 +13,8 @@ object Eval extends App {
 
     IO.list(dir, ".xml").foreach { file =>
 
-      val out = dir.concat("/").concat(IO.extractFileName(file.getName, ".xml").concat("_out.xml"))
+      val fileName = Util.extractFileName(file.getName, ".xml")
+      val out = s"$dir/${fileName}_out.xml"
 
       val factory: BioCFactory = BioCFactory.newFactory(BioCFactory.WOODSTOX)
       val reader: BioCDocumentReader = factory.createBioCDocumentReader(new FileReader(file))

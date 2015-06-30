@@ -33,9 +33,9 @@ class SentenceConverter extends CopyConverter {
     ("0416", MI_0416)
   )
 
-  var annotationId: Int = -1
+  private var annotationId: Int = -1
 
-  def psiMiDecider(words: List[String]): Option[String] = {
+  private def psiMiDecider(words: List[String]): Option[String] = {
 
     val result = keywords.map { case (method, ks) =>
       val result = words.flatMap { w =>
@@ -49,20 +49,31 @@ class SentenceConverter extends CopyConverter {
     }
   }
 
-  def annotateSentence(sentence: String): Option[BioCAnnotation] = {
+  private def annotateSentence(sentence: BioCSentence): Option[BioCAnnotation] = {
 
-    psiMiDecider(sentence.toLowerCase.split("\\s").toList) match {
+    psiMiDecider(Util.mkWordList(sentence.getText)) match {
       case None => None
       case Some(psimiInfon) =>
 
         val annotationInfons = Map("type" -> "ExperimentalMethod", "PSIMI" -> psimiInfon)
         val out: BioCAnnotation = new BioCAnnotation
         out.setInfons(annotationInfons)
-        out.setText(sentence)
+        out.setText(sentence.getText)
         annotationId += 1
         out.setID(annotationId.toString)
+        out.setLocation(sentence.getOffset, sentence.getText.length)
         Option(out)
     }
+  }
+
+  private def sentenceWithOffset(sentences: List[String]) = {
+
+    def loop(sentences: List[String], count: Int, acc: Seq[(String, Int, Int)]): Seq[(String, Int, Int)] = sentences match {
+      case Nil => acc
+      case x::xs => loop(xs, x.length + count + 1, acc :+ (x, count, x.length))
+    }
+
+    loop(sentences, 0, Seq.empty[(String, Int, Int)])
   }
 
   override def getPassage(in: BioCPassage): BioCPassage = {
@@ -72,44 +83,23 @@ class SentenceConverter extends CopyConverter {
     out.setInfons(in.getInfons)
     out.setText(in.getText)
 
-    val text: String = in.getText
-    var current: Int = 0
-    var period: Int = text.indexOf(". ", current)
+    if (!in.getInfons.get("type").contains("title")) {
 
-    while (period > -1) {
+      val sentences: List[String] = Util.mkSentenceList(in.getText)
 
-      val sentence: BioCSentence = new BioCSentence
-      sentence.setOffset(out.getOffset + current)
-      sentence.setText(text.substring(current, period + 1))
-      //out.addSentence(sentence)
+      sentenceWithOffset(sentences).foreach { case (s, o, l) =>
 
-      annotateSentence(sentence.getText) match {
-        case None =>
-        case Some(annotation) =>
-          out.addAnnotation(annotation)
-      }
+        val sentence: BioCSentence = new BioCSentence
+        sentence.setOffset(in.getOffset + o)
+        sentence.setText(s)
 
-      current = period + 2
-      while (current < text.length && text.charAt(current) == ' ') {
-        current += 1  // skip extra spaces
-      }
-
-      if (current >= text.length) {
-        current = -1
-        period = -1
-      } else {
-        period = text.indexOf(". ", current)
+        annotateSentence(sentence) match {
+          case None =>
+          case Some(annotation) =>
+            out.addAnnotation(annotation)
+        }
       }
     }
-
-    /*
-    if (current > -1) {
-      val sentence: BioCSentence = new BioCSentence
-      sentence.setOffset(out.getOffset + current)
-      sentence.setText(text.substring(current))
-      out.addSentence(sentence)
-    }
-    */
 
     out
   }
