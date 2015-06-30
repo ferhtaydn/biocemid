@@ -1,56 +1,75 @@
 
 object Main extends App {
 
-  val directory = "annotated_xml"
+  val annotatedDirectory = "annotated_xml"
+  val annotationDirectory = "xml/train_oa"
 
-  // "0006"
-  val method = args(1)
+  Console.println(
 
-  val passagesFile = s"MI${method}_annotations_passages.txt"
-  val sentencesFile = s"MI${method}_annotations_sentences.txt"
-  val wordsFile = s"MI${method}_annotations_words.txt"
-  val groupedWordsFile = s"MI${method}_annotations_groupedWords.txt"
-  val tfRfFile = s"MI${method}_annotations_tf-rf.txt"
+    s"""
+      |------------ Welcome to the BioCreative V - Task 6 ------------
+      |
+      |Please press the key for:
+      |
+      |1 - To generate the helper information files from training data in $annotatedDirectory
+      |
+      |2 - To generate the tr-rf results for each method
+      |
+      |3 - Annotate the raw BioC files in $annotationDirectory
+      |
+    """.stripMargin
 
-  if (args.length == 2) {
+  )
+
+  val selection = scala.io.StdIn.readInt()
+
+  if (selection == 1) {
+
+    Console.println("Please enter the PSIMI code for method. e.g. 0006")
+
+    val method = scala.io.StdIn.readLine()
+
+    val passagesFile = s"MI${method}_annotations_passages.txt"
+    val sentencesFile = s"MI${method}_annotations_sentences.txt"
+    val wordsFile = s"MI${method}_annotations_words.txt"
+    val groupedWordsFile = s"MI${method}_annotations_groupedWords.txt"
+    val tfRfFile = s"MI${method}_annotations_tf-rf.txt"
+
+    def prepareOutputFiles(annotatedSentences: String): Unit = {
+      IO.append(passagesFile, annotatedSentences)
+      IO.append(sentencesFile, Util.mkSentence(annotatedSentences))
+      IO.append(wordsFile, Util.mkSentence(annotatedSentences).toLowerCase.split("\\W+").mkString("\n"))
+    }
+
     IO.remove(passagesFile)
     IO.remove(sentencesFile)
     IO.remove(wordsFile)
     IO.remove(groupedWordsFile)
 
-    IO.list(directory, ".xml").foreach(f => prepareOutputFiles(BioC.extractAnnotatedSentences(f, method)))
+    IO.list(annotatedDirectory, ".xml").foreach(f => prepareOutputFiles(BioC.extractAnnotatedSentences(f, method)))
 
     IO.write(groupedWordsFile, Util.stringifyTuple2Sequence(BioC.getFrequencies(wordsFile)))
-  }
 
-  if (args.length > 2 && args(2).equals("tfrf")) {
-    IO.write(tfRfFile, Util.stringifyTuple2Sequence(tfRf.sortBy(_._2).reverse))
-  }
+  } else if (selection == 2) {
 
-  def prepareOutputFiles(annotatedSentences: String): Unit = {
-    IO.append(passagesFile, annotatedSentences)
-    IO.append(sentencesFile, Util.mkSentence(annotatedSentences))
-    IO.append(wordsFile, Util.mkSentence(annotatedSentences).toLowerCase.split("\\W+").mkString("\n"))
-  }
+    Console.println("Please enter the PSIMI code for method. e.g. 0006")
 
-  def tfRf: Seq[(String, Double)] = {
+    val method = scala.io.StdIn.readLine()
 
-    val methodFreqs = BioC.getFrequencies(wordsFile)
-    val otherFiles = IO.listOthers(method).map(f => f.getPath)
+    val wordsFile = s"MI${method}_annotations_words.txt"
+    val tfRfFile = s"MI${method}_annotations_tf-rf.txt"
 
-    methodFreqs.map { case (word, freq) =>
+    IO.write(tfRfFile, Util.stringifyTuple2Sequence(BioC.tfRf(method, wordsFile).sortBy(_._2).reverse))
 
-      def log2(x: Double) = scala.math.log(x) / scala.math.log(2)
+  } else if (selection == 3) {
 
-      val otherTotal = otherFiles.map(BioC.getFrequencies(_).find(wf => word.equals(wf._1)).fold(0.0)(_._2)).sum
+    BioC.annotate(annotationDirectory)
 
-      val rf = log2(2.0 + (freq / scala.math.max(1.0, otherTotal)))
-      val tfRf = freq * rf
+  } else {
 
-      //println(s"$word $freq $otherTotal $rf $tfRf")
+    Console.println("Please select the options from 1 until 3.")
+    System.exit(0)
 
-      (word, tfRf)
-    }
   }
 
 }
