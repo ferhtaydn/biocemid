@@ -1,34 +1,20 @@
 import bioc.{BioCAnnotation, BioCSentence, BioCPassage}
 import bioc.util.CopyConverter
+import com.typesafe.config.ConfigFactory
 import scala.collection.JavaConversions._
 
 class SentenceConverter extends CopyConverter {
 
-  val MI_0416: List[String] = List(
-    "microscopy", "fluorescence", "immunofluorescence",
-    "gfp", "rfp", "infected", "image", "imaging", "get1", "subcellular", "conjugated"
-  )
-  val MI_0096: List[String] = List(
-    "pull", "down", "pull-down", "pull down", "pulldown", "affinity", "affinity capture",
-    "gst", "appl1", "rab5", "gel", "glutathione"
-  )
-  val MI_0018: List[String] = List(
-    "yeast", "hybrid", "two-hybrid", "two hybrid", "y2h","y-2h",
-    "2 hybrid", "2-hybrid", "2h", "classical two hybrid",
-    "Gal4 transcription regeneration", "yeast two hybrid",
-    "bait", "cdna", "gal4", "gal", "galactosidase"
-  )
+  val config = ConfigFactory.load()
 
-  val MI_0006_0007_as_0019: List[String] = List(
-    "co-immunoprecipitation", "coimmunoprecipitation", "co-ip", "coip",
-    "immunoprecipitation", "immunoprecipitated", "immunoprecipitates",
-    "anti bait coip", "anti tag coip", "precipitated", "precipitate", "precipitates",
-    "antibody", "antibodies", "tag", "tagged", "bait"
-  )
+  val MI_0018: List[String] = config.getStringList("BioC.PSIMI.0018.Synonyms").toList
+  val MI_0019: List[String] = config.getStringList("BioC.PSIMI.0019.Synonyms").toList
+  val MI_0096: List[String] = config.getStringList("BioC.PSIMI.0096.Synonyms").toList
+  val MI_0416: List[String] = config.getStringList("BioC.PSIMI.0416.Synonyms").toList
 
   val keywords: Map[String, List[String]] = Map(
-    ("0019", MI_0006_0007_as_0019),
     ("0018", MI_0018),
+    ("0019", MI_0019),
     ("0096", MI_0096),
     ("0416", MI_0416)
   )

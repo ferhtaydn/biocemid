@@ -5,5 +5,6 @@ version := "1.0"
 scalaVersion := "2.11.7"
 
 libraryDependencies ++= Seq(
-  "org.scala-lang.modules" %% "scala-xml" % "1.0.4"
+  "org.scala-lang.modules" %% "scala-xml" % "1.0.4",
+  "com.typesafe" % "config" % "1.3.0"
 )
