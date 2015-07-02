@@ -1,9 +1,11 @@
-import bioc.{BioCAnnotation, BioCSentence, BioCPassage}
+import bioc.{BioCLocation, BioCAnnotation, BioCSentence, BioCPassage}
 import bioc.util.CopyConverter
 import com.typesafe.config.ConfigFactory
 import scala.collection.JavaConversions._
 
 class SentenceConverter extends CopyConverter {
+
+  private var annotationId: Int = -1
 
   val config = ConfigFactory.load()
 
@@ -19,50 +21,49 @@ class SentenceConverter extends CopyConverter {
     ("0416", MI_0416)
   )
 
-  private var annotationId: Int = -1
-
-  private def psiMiDecider(words: List[String]): Option[String] = {
-
-    val result = keywords.map { case (method, ks) =>
-      val result = words.flatMap { w =>
-        ks.filter(k => k.equalsIgnoreCase(w))
-      }.size
-      (method, result)
-    }.toSeq.sortBy(_._2)
-
-    result.last match { case (m, c) =>
-      if (c > 0) Some(m) else None
-    }
-  }
-
-  private def annotateSentence(sentence: BioCSentence): Option[BioCAnnotation] = {
-
-    psiMiDecider(Util.mkWordList(sentence.getText)) match {
-      case None => None
-      case Some(psimiInfon) =>
-
-        val annotationInfons = Map("type" -> "ExperimentalMethod", "PSIMI" -> psimiInfon)
-        val out: BioCAnnotation = new BioCAnnotation
-        out.setInfons(annotationInfons)
-        out.setText(sentence.getText)
-        annotationId += 1
-        out.setID(annotationId.toString)
-        out.setLocation(sentence.getOffset, sentence.getText.length)
-        Option(out)
-    }
-  }
-
-  private def sentenceWithOffset(sentences: List[String]) = {
-
-    def loop(sentences: List[String], count: Int, acc: Seq[(String, Int, Int)]): Seq[(String, Int, Int)] = sentences match {
-      case Nil => acc
-      case x::xs => loop(xs, x.length + count + 1, acc :+ (x, count, x.length))
-    }
-
-    loop(sentences, 0, Seq.empty[(String, Int, Int)])
-  }
-
   override def getPassage(in: BioCPassage): BioCPassage = {
+
+    def annotateSentence(sentence: BioCSentence): Option[BioCAnnotation] = {
+
+      def psiMiDecider(words: List[String]): Option[String] = {
+
+        val result = keywords.map { case (method, ks) =>
+          val result = words.flatMap { w =>
+            ks.filter(k => k.equalsIgnoreCase(w))
+          }.size
+          (method, result)
+        }.toSeq.sortBy(_._2)
+
+        result.last match {
+          case (m, c) =>
+            if (c > 0) Some(m) else None
+        }
+      }
+
+      psiMiDecider(Util.mkWordList(sentence.getText)) match {
+        case None => None
+        case Some(psimiInfon) =>
+
+          val annotationInfons = Map("type" -> "ExperimentalMethod", "PSIMI" -> psimiInfon)
+          val out: BioCAnnotation = new BioCAnnotation
+          out.setInfons(annotationInfons)
+          out.setText(sentence.getText)
+          annotationId += 1
+          out.setID(annotationId.toString)
+          out.setLocation(sentence.getOffset, sentence.getText.length)
+          Option(out)
+      }
+    }
+
+    def sentenceWithOffset(sentences: List[String]) = {
+
+      def loop(sentences: List[String], count: Int, acc: Seq[(String, Int, Int)]): Seq[(String, Int, Int)] = sentences match {
+        case Nil => acc
+        case x :: xs => loop(xs, x.length + count + 1, acc :+(x, count, x.length))
+      }
+
+      loop(sentences, 0, Seq.empty[(String, Int, Int)])
+    }
 
     val out: BioCPassage = new BioCPassage
     out.setOffset(in.getOffset)
@@ -87,7 +88,65 @@ class SentenceConverter extends CopyConverter {
       }
     }
 
+    //remove only this line, if you do not want to concat sentences.
+    if (out.getAnnotations.size() > 1)
+      out.setAnnotations(concatSuccessiveSameAnnotations(out.getAnnotations.toList))
+    //remove only this line, if you do not want to concat sentences.
+
     out
+  }
+
+  private def concatSuccessiveSameAnnotations(annotations: List[BioCAnnotation]): List[BioCAnnotation] = {
+
+    def arrangeAnnotationIds(annotations: List[BioCAnnotation]): List[BioCAnnotation] = {
+
+      def loop(annots: List[BioCAnnotation], acc: List[BioCAnnotation], id: Int): List[BioCAnnotation] = annots match {
+        case Nil => acc
+        case x :: xs =>
+          x.setID(id.toString)
+          loop(xs, acc :+ x, id + 1)
+      }
+
+      val initialId = annotations.head.getID.toInt
+      loop(annotations, List[BioCAnnotation](), initialId)
+    }
+
+    // a then b
+    def successive(a: BioCAnnotation, b: BioCAnnotation): Boolean = {
+
+      val endOfA = locationOf(a).getOffset + locationOf(a).getLength + 1
+      val result = a.getInfon("PSIMI").equals(b.getInfon("PSIMI")) && endOfA == locationOf(b).getOffset
+
+      result
+    }
+
+    def locationOf(a: BioCAnnotation): BioCLocation = a.getLocations.get(0)
+
+    // a concat b
+    def concatAnnotations(a: BioCAnnotation, b: BioCAnnotation): BioCAnnotation = {
+      annotationId -= 1
+      val out = new BioCAnnotation
+      out.setID(a.getID)
+      out.setInfons(a.getInfons)
+      out.setText(a.getText + " " + b.getText)
+      out.setLocation(locationOf(a).getOffset, locationOf(a).getLength + 1 + locationOf(b).getLength)
+      out
+    }
+
+    def loop(annots: List[BioCAnnotation], acc: List[BioCAnnotation]): List[BioCAnnotation] = annots match {
+      case Nil => acc
+      case x :: xs if xs.isEmpty => loop(xs, acc :+ x)
+      case x :: xs =>
+        val y = xs.head
+        if (successive(x, y)) {
+          val newAnnot = concatAnnotations(x, y)
+          loop(newAnnot :: xs.tail, acc)
+        } else loop(xs, acc :+ x)
+    }
+
+    val result = loop(annotations, List[BioCAnnotation]())
+    if (result.size > 1) arrangeAnnotationIds(result) else result
+
   }
 
 }
