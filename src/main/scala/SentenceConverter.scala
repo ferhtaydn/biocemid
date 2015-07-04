@@ -57,26 +57,11 @@ class SentenceConverter extends CopyConverter {
 
         result.last match {
           case (m, c) =>
-            if (c > 0) Some(m) else None
+            if (c >= 0.5) Some(m) else None
         }
       }
 
-      def psiMiDeciderOnSynonyms(words: List[String]): Option[String] = {
-
-        val result = vocabularies.map { case (method, (ss, _, _)) =>
-          val result = words.flatMap { w =>
-            ss.filter(s => s.equalsIgnoreCase(w))
-          }.size
-          (method, result)
-        }.toSeq.sortBy(_._2)
-
-        result.last match {
-          case (m, c) =>
-            if (c > 0) Some(m) else None
-        }
-      }
-
-      psiMiDeciderOnVocabularies(Util.mkWordList(sentence.getText)) match {
+      psiMiDeciderOnVocabularies(Util.tokenize(sentence.getText)) match {
         case None => None
         case Some(psimiInfon) =>
 
