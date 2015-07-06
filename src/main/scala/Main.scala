@@ -2,7 +2,7 @@
 object Main extends App {
 
   val annotatedDirectory = "annotated_xml"
-  val annotationDirectory = "xml/train_oa"
+  val annotationDirectory = "xml/dataset"
 
   Console.println(
 

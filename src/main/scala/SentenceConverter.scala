@@ -1,35 +1,10 @@
 import bioc.{BioCLocation, BioCAnnotation, BioCSentence, BioCPassage}
 import bioc.util.CopyConverter
-import com.typesafe.config.ConfigFactory
 import scala.collection.JavaConversions._
 
 class SentenceConverter extends CopyConverter {
 
   private var annotationId: Int = -1
-
-  val config = ConfigFactory.load()
-
-  val MI_0018_Synonyms: List[String] = config.getStringList("BioC.PSIMI.0018.Synonyms").toList
-  val MI_0019_Synonyms: List[String] = config.getStringList("BioC.PSIMI.0019.Synonyms").toList
-  val MI_0096_Synonyms: List[String] = config.getStringList("BioC.PSIMI.0096.Synonyms").toList
-  val MI_0416_Synonyms: List[String] = config.getStringList("BioC.PSIMI.0416.Synonyms").toList
-
-  val MI_0018_Keywords: List[String] = config.getStringList("BioC.PSIMI.0018.Keywords").toList
-  val MI_0019_Keywords: List[String] = config.getStringList("BioC.PSIMI.0019.Keywords").toList
-  val MI_0096_Keywords: List[String] = config.getStringList("BioC.PSIMI.0096.Keywords").toList
-  val MI_0416_Keywords: List[String] = config.getStringList("BioC.PSIMI.0416.Keywords").toList
-
-  val MI_0018_Others: List[String] = config.getStringList("BioC.PSIMI.0018.Others").toList
-  val MI_0019_Others: List[String] = config.getStringList("BioC.PSIMI.0019.Others").toList
-  val MI_0096_Others: List[String] = config.getStringList("BioC.PSIMI.0096.Others").toList
-  val MI_0416_Others: List[String] = config.getStringList("BioC.PSIMI.0416.Others").toList
-
-  val vocabularies: Map[String, (List[String], List[String], List[String])] = Map(
-    ("0018", (MI_0018_Synonyms, MI_0018_Keywords, MI_0018_Others)),
-    ("0019", (MI_0019_Synonyms, MI_0019_Keywords, MI_0019_Others)),
-    ("0096", (MI_0096_Synonyms, MI_0096_Keywords, MI_0096_Others)),
-    ("0416", (MI_0416_Synonyms, MI_0416_Keywords, MI_0416_Others))
-  )
 
   override def getPassage(in: BioCPassage): BioCPassage = {
 
@@ -37,7 +12,7 @@ class SentenceConverter extends CopyConverter {
 
       def psiMiDeciderOnVocabularies(words: List[String]): Option[String] = {
 
-        val result = vocabularies.map { case (method, (ss, ks, os)) =>
+        val result = BioC.vocabularies.map { case (method, (ss, ks, os)) =>
 
           val synonym = words.flatMap { w =>
             ss.filter(s => s.equalsIgnoreCase(w))

@@ -20,7 +20,9 @@ object Util {
 
   def mkSentenceList(text: String): List[String] = text.split("\\.\\s").toList.map { s =>
     val sentence = s.trim
-    if (!sentence.last.equals('.')) sentence.concat(".") else sentence
+    sentence.lastOption.fold(sentence) { l =>
+      if (!l.equals('.')) sentence.concat(".") else sentence
+    }
   }
 
   lazy val initTokenization: StanfordCoreNLP = {

@@ -2,11 +2,52 @@
 import java.io.{FileOutputStream, OutputStreamWriter, FileReader, File}
 import bioc.{BioCDocument, BioCCollection}
 import bioc.io.{BioCDocumentWriter, BioCDocumentReader, BioCFactory}
+import com.typesafe.config.ConfigFactory
 
 import scala.collection.JavaConversions._
 import scala.xml.XML
 
 object BioC {
+
+  val config = ConfigFactory.load()
+
+  val MI_0018_Synonym: List[String] = config.getStringList("BioC.PSIMI.0018.Synonym").toList
+  val MI_0019_Synonym: List[String] = config.getStringList("BioC.PSIMI.0019.Synonym").toList
+  val MI_0096_Synonym: List[String] = config.getStringList("BioC.PSIMI.0096.Synonym").toList
+  val MI_0416_Synonym: List[String] = config.getStringList("BioC.PSIMI.0416.Synonym").toList
+  val MI_0040_Synonym: List[String] = config.getStringList("BioC.PSIMI.0040.Synonym").toList
+  val MI_0055_Synonym: List[String] = config.getStringList("BioC.PSIMI.0055.Synonym").toList
+  val MI_0402_Synonym: List[String] = config.getStringList("BioC.PSIMI.0402.Synonym").toList
+  val MI_0114_Synonym: List[String] = config.getStringList("BioC.PSIMI.0114.Synonym").toList
+
+  val MI_0018_Related: List[String] = config.getStringList("BioC.PSIMI.0018.Related").toList
+  val MI_0019_Related: List[String] = config.getStringList("BioC.PSIMI.0019.Related").toList
+  val MI_0096_Related: List[String] = config.getStringList("BioC.PSIMI.0096.Related").toList
+  val MI_0416_Related: List[String] = config.getStringList("BioC.PSIMI.0416.Related").toList
+  val MI_0040_Related: List[String] = config.getStringList("BioC.PSIMI.0040.Related").toList
+  val MI_0055_Related: List[String] = config.getStringList("BioC.PSIMI.0055.Related").toList
+  val MI_0402_Related: List[String] = config.getStringList("BioC.PSIMI.0402.Related").toList
+  val MI_0114_Related: List[String] = config.getStringList("BioC.PSIMI.0114.Related").toList
+
+  val MI_0018_Extra: List[String] = config.getStringList("BioC.PSIMI.0018.Extra").toList
+  val MI_0019_Extra: List[String] = config.getStringList("BioC.PSIMI.0019.Extra").toList
+  val MI_0096_Extra: List[String] = config.getStringList("BioC.PSIMI.0096.Extra").toList
+  val MI_0416_Extra: List[String] = config.getStringList("BioC.PSIMI.0416.Extra").toList
+  val MI_0040_Extra: List[String] = config.getStringList("BioC.PSIMI.0040.Extra").toList
+  val MI_0055_Extra: List[String] = config.getStringList("BioC.PSIMI.0055.Extra").toList
+  val MI_0402_Extra: List[String] = config.getStringList("BioC.PSIMI.0402.Extra").toList
+  val MI_0114_Extra: List[String] = config.getStringList("BioC.PSIMI.0114.Extra").toList
+
+  val vocabularies: Map[String, (List[String], List[String], List[String])] = Map(
+    ("0018", (MI_0018_Synonym, MI_0018_Related, MI_0018_Extra)),
+    ("0019", (MI_0019_Synonym, MI_0019_Related, MI_0019_Extra)),
+    ("0096", (MI_0096_Synonym, MI_0096_Related, MI_0096_Extra)),
+    ("0416", (MI_0416_Synonym, MI_0416_Related, MI_0416_Extra)),
+    ("0040", (MI_0040_Synonym, MI_0040_Related, MI_0040_Extra)),
+    ("0055", (MI_0055_Synonym, MI_0055_Related, MI_0055_Extra)),
+    ("0402", (MI_0402_Synonym, MI_0402_Related, MI_0402_Extra)),
+    ("0114", (MI_0114_Synonym, MI_0114_Related, MI_0114_Extra))
+  )
 
   def getFrequencies(wordsFile: String): Seq[(String, Double)] = {
     val groupedWords = IO.read(wordsFile).foldLeft(Map.empty[String, Double]) {
