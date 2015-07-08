@@ -1,12 +1,10 @@
-
 import java.util.Properties
 
 import edu.stanford.nlp.ling.CoreAnnotations.TokensAnnotation
 import edu.stanford.nlp.pipeline.{Annotation, StanfordCoreNLP}
-
 import scala.collection.JavaConversions._
 
-object Util {
+package object utils {
 
   def extractFileName(fileName: String, suffix: String) = fileName.split(suffix).head
 
@@ -25,6 +23,8 @@ object Util {
     }
   }
 
+  def mkNgram(elems: List[String], size: Int): List[String] = elems.sliding(size).map(e => e.mkString(" ")).toList
+
   lazy val initTokenization: StanfordCoreNLP = {
     val properties = new Properties()
     properties.setProperty("annotators", "tokenize")
@@ -33,9 +33,27 @@ object Util {
   }
 
   def tokenize(sentence: String): List[String] = {
+
     val annotation = new Annotation(sentence.toLowerCase)
     initTokenization.annotate(annotation)
-    annotation.get(classOf[TokensAnnotation]).map(_.value).toList
+    annotation.get(classOf[TokensAnnotation]).map(_.value).toList.filterNot { a =>
+      a.equalsIgnoreCase(",") ||
+        a.equalsIgnoreCase(".") ||
+        a.equalsIgnoreCase("-LRB-") ||
+        a.equalsIgnoreCase("-RRB-") ||
+        a.equalsIgnoreCase("-LSB-") ||
+        a.equalsIgnoreCase("-RSB-") ||
+        a.equalsIgnoreCase("/") ||
+        a.equalsIgnoreCase("ml") ||
+        a.equalsIgnoreCase("μg") ||
+        a.equalsIgnoreCase("%") ||
+        a.equalsIgnoreCase("mm") ||
+        a.isFloat || a.isDigit
+    }
   }
 
+  implicit class StringUtils(val s: String) extends AnyVal {
+    def isFloat: Boolean = s.matches("[+-]?\\d+.?\\d+")
+    def isDigit: Boolean = s.matches("[+-]?\\d+")
+  }
 }

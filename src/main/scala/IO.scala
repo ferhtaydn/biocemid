@@ -2,7 +2,7 @@ import java.io.{File, FileWriter}
 import java.nio.charset.StandardCharsets
 import java.nio.file.{Files, Paths, StandardOpenOption}
 
-object IO {
+package object io {
 
   def write(path: String, txt: String): Unit = {
     Files.write(Paths.get(path), txt.getBytes(StandardCharsets.UTF_8), StandardOpenOption.CREATE)
@@ -25,7 +25,6 @@ object IO {
   }
 
   def read(path: String) = scala.io.Source.fromFile(path).getLines()
-
 
   def remove(file: String) = Files.deleteIfExists(Paths.get(file))
 

@@ -2,7 +2,7 @@
 object Main extends App {
 
   val annotatedDirectory = "annotated_xml"
-  val annotationDirectory = "xml/bc5_dataset"
+  val annotationDirectory = "xml/testset"
 
   Console.println(
 
@@ -36,19 +36,19 @@ object Main extends App {
     val tfRfFile = s"MI${method}_annotations_tf-rf.txt"
 
     def prepareOutputFiles(annotatedSentences: String): Unit = {
-      IO.append(passagesFile, annotatedSentences)
-      IO.append(sentencesFile, Util.mkSentence(annotatedSentences))
-      IO.append(wordsFile, Util.mkSentence(annotatedSentences).toLowerCase.split("\\W+").mkString("\n"))
+      io.append(passagesFile, annotatedSentences)
+      io.append(sentencesFile, utils.mkSentence(annotatedSentences))
+      io.append(wordsFile, utils.mkSentence(annotatedSentences).toLowerCase.split("\\W+").mkString("\n"))
     }
 
-    IO.remove(passagesFile)
-    IO.remove(sentencesFile)
-    IO.remove(wordsFile)
-    IO.remove(groupedWordsFile)
+    io.remove(passagesFile)
+    io.remove(sentencesFile)
+    io.remove(wordsFile)
+    io.remove(groupedWordsFile)
 
-    IO.list(annotatedDirectory, ".xml").foreach(f => prepareOutputFiles(BioC.extractAnnotatedSentences(f, method)))
+    io.list(annotatedDirectory, ".xml").foreach(f => prepareOutputFiles(BioC.extractAnnotatedSentences(f, method)))
 
-    IO.write(groupedWordsFile, Util.stringifyTuple2Sequence(BioC.getFrequencies(wordsFile)))
+    io.write(groupedWordsFile, utils.stringifyTuple2Sequence(BioC.getFrequencies(wordsFile)))
 
   } else if (selection == 2) {
 
@@ -59,7 +59,7 @@ object Main extends App {
     val wordsFile = s"MI${method}_annotations_words.txt"
     val tfRfFile = s"MI${method}_annotations_tf-rf.txt"
 
-    IO.write(tfRfFile, Util.stringifyTuple2Sequence(BioC.tfRf(method, wordsFile).sortBy(_._2).reverse))
+    io.write(tfRfFile, utils.stringifyTuple2Sequence(BioC.tfRf(method, wordsFile).sortBy(_._2).reverse))
 
   } else if (selection == 3) {
 

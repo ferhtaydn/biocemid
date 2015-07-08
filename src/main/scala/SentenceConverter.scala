@@ -12,23 +12,32 @@ class SentenceConverter extends CopyConverter {
 
       def psiMiDeciderOnVocabularies(words: List[String]): Option[String] = {
 
-        val result = BioC.vocabularies.map { case (method, (ss, ks, os)) =>
+        val result = BioC.vocabularies.map { case (method, (ss, rs, es)) =>
 
-          val synonym = words.flatMap { w =>
-            ss.filter(s => s.equalsIgnoreCase(w))
-          }.size
+          val synonymNgram = ss.flatMap { s =>
+            val size = s.split("\\s").size
+            if (size > 1) {
+              utils.mkNgram(words, size).filter(a => a.equalsIgnoreCase(s))
+            } else {
+              words.filter(w => w.equalsIgnoreCase(s))
+            }
+          }
 
-          val keyword = words.flatMap { w =>
-            ks.filter(k => k.equalsIgnoreCase(w))
-          }.size
+          val foundedWords = synonymNgram.flatMap(s => s.split("\\s"))
 
-          val other = words.flatMap { w =>
-            os.filter(o => o.equalsIgnoreCase(w))
-          }.size
+          val related = words.distinct.diff(foundedWords).flatMap { w =>
+            rs.filter(r => r.equalsIgnoreCase(w))
+          }
 
-          (method, (0.5 * synonym) + (0.3 * keyword) + (0.2 * other))
+          val extra = words.distinct.diff(foundedWords).flatMap { w =>
+            es.filter(e => e.equalsIgnoreCase(w))
+          }
+
+          (method, (0.5 * synonymNgram.size) + (0.25 * related.size) + (0.125 * extra.size))
 
         }.toSeq.sortBy(_._2)
+
+        println(s"result: $result")
 
         result.last match {
           case (m, c) =>
@@ -36,7 +45,7 @@ class SentenceConverter extends CopyConverter {
         }
       }
 
-      psiMiDeciderOnVocabularies(Util.tokenize(sentence.getText)) match {
+      psiMiDeciderOnVocabularies(utils.tokenize(sentence.getText)) match {
         case None => None
         case Some(psimiInfon) =>
 
@@ -70,7 +79,7 @@ class SentenceConverter extends CopyConverter {
 
     if (!in.getInfons.get("type").contains("title")) {
 
-      val sentences: List[String] = Util.mkSentenceList(in.getText)
+      val sentences: List[String] = utils.mkSentenceList(in.getText)
 
       sentenceWithOffset(sentences).foreach { case (s, o, l) =>
 
