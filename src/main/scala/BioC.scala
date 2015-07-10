@@ -20,6 +20,8 @@ object BioC {
   val MI_0402_Synonym: List[String] = config.getStringList("BioC.PSIMI.0402.Synonym").toList
   val MI_0114_Synonym: List[String] = config.getStringList("BioC.PSIMI.0114.Synonym").toList
   val MI_0424_Synonym: List[String] = config.getStringList("BioC.PSIMI.0424.Synonym").toList
+  val MI_0004_Synonym: List[String] = config.getStringList("BioC.PSIMI.0004.Synonym").toList
+  val MI_0047_Synonym: List[String] = config.getStringList("BioC.PSIMI.0047.Synonym").toList
 
   val MI_0018_Related: List[String] = config.getStringList("BioC.PSIMI.0018.Related").toList
   val MI_0019_Related: List[String] = config.getStringList("BioC.PSIMI.0019.Related").toList
@@ -30,6 +32,8 @@ object BioC {
   val MI_0402_Related: List[String] = config.getStringList("BioC.PSIMI.0402.Related").toList
   val MI_0114_Related: List[String] = config.getStringList("BioC.PSIMI.0114.Related").toList
   val MI_0424_Related: List[String] = config.getStringList("BioC.PSIMI.0424.Related").toList
+  val MI_0004_Related: List[String] = config.getStringList("BioC.PSIMI.0004.Related").toList
+  val MI_0047_Related: List[String] = config.getStringList("BioC.PSIMI.0047.Related").toList
 
   val MI_0018_Extra: List[String] = config.getStringList("BioC.PSIMI.0018.Extra").toList
   val MI_0019_Extra: List[String] = config.getStringList("BioC.PSIMI.0019.Extra").toList
@@ -40,6 +44,8 @@ object BioC {
   val MI_0402_Extra: List[String] = config.getStringList("BioC.PSIMI.0402.Extra").toList
   val MI_0114_Extra: List[String] = config.getStringList("BioC.PSIMI.0114.Extra").toList
   val MI_0424_Extra: List[String] = config.getStringList("BioC.PSIMI.0424.Extra").toList
+  val MI_0004_Extra: List[String] = config.getStringList("BioC.PSIMI.0004.Extra").toList
+  val MI_0047_Extra: List[String] = config.getStringList("BioC.PSIMI.0047.Extra").toList
 
   val vocabularies: Map[String, (List[String], List[String], List[String])] = Map(
     ("0018", (MI_0018_Synonym, MI_0018_Related, MI_0018_Extra)),
@@ -50,7 +56,9 @@ object BioC {
     ("0055", (MI_0055_Synonym, MI_0055_Related, MI_0055_Extra)),
     ("0402", (MI_0402_Synonym, MI_0402_Related, MI_0402_Extra)),
     ("0114", (MI_0114_Synonym, MI_0114_Related, MI_0114_Extra)),
-    ("0424", (MI_0424_Synonym, MI_0424_Related, MI_0424_Extra))
+    ("0424", (MI_0424_Synonym, MI_0424_Related, MI_0424_Extra)),
+    ("0004", (MI_0004_Synonym, MI_0004_Related, MI_0004_Extra)),
+    ("0047", (MI_0047_Synonym, MI_0047_Related, MI_0047_Extra))
   )
 
   def getFrequencies(wordsFile: String): Seq[(String, Double)] = {
@@ -99,7 +107,7 @@ object BioC {
     io.list(dir, ".xml").foreach { file =>
 
       val fileName = utils.extractFileName(file.getName, ".xml")
-      val out = s"$dir/${fileName}_out.xml"
+      val out = s"$dir/${fileName}_passages_with_exp_methods.xml"
 
       val factory: BioCFactory = BioCFactory.newFactory(BioCFactory.WOODSTOX)
       val reader: BioCDocumentReader = factory.createBioCDocumentReader(new FileReader(file))

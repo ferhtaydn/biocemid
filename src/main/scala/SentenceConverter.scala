@@ -37,8 +37,6 @@ class SentenceConverter extends CopyConverter {
 
         }.toSeq.sortBy(_._2)
 
-        println(s"result: $result")
-
         result.last match {
           case (m, c) =>
             if (c >= 0.5) Some(m) else None
