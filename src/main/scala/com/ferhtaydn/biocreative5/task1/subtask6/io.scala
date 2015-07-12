@@ -1,8 +1,10 @@
+package com.ferhtaydn.biocreative5.task1.subtask6
+
 import java.io.{File, FileWriter}
 import java.nio.charset.StandardCharsets
 import java.nio.file.{Files, Paths, StandardOpenOption}
 
-package object io {
+object io {
 
   def write(path: String, txt: String): Unit = {
     Files.write(Paths.get(path), txt.getBytes(StandardCharsets.UTF_8), StandardOpenOption.CREATE)

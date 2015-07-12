@@ -1,3 +1,4 @@
+package com.ferhtaydn.biocreative5.task1.subtask6
 
 object Main extends App {
 

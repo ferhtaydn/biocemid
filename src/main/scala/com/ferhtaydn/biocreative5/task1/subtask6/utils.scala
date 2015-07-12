@@ -1,10 +1,13 @@
+package com.ferhtaydn.biocreative5.task1.subtask6
+
 import java.util.Properties
 
 import edu.stanford.nlp.ling.CoreAnnotations.TokensAnnotation
 import edu.stanford.nlp.pipeline.{Annotation, StanfordCoreNLP}
+
 import scala.collection.JavaConversions._
 
-package object utils {
+object utils {
 
   def extractFileName(fileName: String, suffix: String) = fileName.split(suffix).head
 

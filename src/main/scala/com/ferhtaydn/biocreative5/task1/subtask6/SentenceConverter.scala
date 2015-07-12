@@ -1,5 +1,8 @@
-import bioc.{BioCLocation, BioCAnnotation, BioCSentence, BioCPassage}
+package com.ferhtaydn.biocreative5.task1.subtask6
+
 import bioc.util.CopyConverter
+import bioc.{BioCAnnotation, BioCLocation, BioCPassage, BioCSentence}
+
 import scala.collection.JavaConversions._
 
 class SentenceConverter extends CopyConverter {
@@ -12,7 +15,7 @@ class SentenceConverter extends CopyConverter {
 
       def psiMiDeciderOnVocabularies(words: List[String]): Option[String] = {
 
-        val result = BioC.vocabularies.map { case (method, (ss, rs, es)) =>
+        val result = BioC.methodsInfo.map { case MethodInfo(method, ss, rs, es) =>
 
           val synonymNgram = ss.flatMap { s =>
             val size = s.split("\\s").size
