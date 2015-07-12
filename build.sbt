@@ -1,3 +1,5 @@
+import scalariform.formatter.preferences._
+
 name := "BioCreative5Task6"
 
 version := "1.0"
@@ -9,3 +11,11 @@ libraryDependencies ++= Seq(
   "com.typesafe" % "config" % "1.3.0",
   "edu.stanford.nlp" % "stanford-corenlp" % "3.5.2"
 )
+
+
+scalariformSettings
+
+ScalariformKeys.preferences := ScalariformKeys.preferences.value
+  .setPreference(AlignSingleLineCaseStatements, true)
+  .setPreference(DoubleIndentClassDeclaration, true)
+  .setPreference(RewriteArrowSymbols, true)

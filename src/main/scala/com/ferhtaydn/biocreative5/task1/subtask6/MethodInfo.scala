@@ -8,7 +8,7 @@ case class MethodInfo(name: String, synonym: List[String], related: List[String]
 
 object MethodInfo {
 
-  def apply(config: Config) = {
+  def apply(config: Config): MethodInfo = {
     val name = config.getString("name")
     val synonym = config.getStringList("synonym").toList
     val related = config.getStringList("related").toList

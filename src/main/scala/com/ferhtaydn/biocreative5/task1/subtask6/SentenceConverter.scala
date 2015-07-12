@@ -1,7 +1,7 @@
 package com.ferhtaydn.biocreative5.task1.subtask6
 
 import bioc.util.CopyConverter
-import bioc.{BioCAnnotation, BioCLocation, BioCPassage, BioCSentence}
+import bioc.{ BioCAnnotation, BioCLocation, BioCPassage, BioCSentence }
 
 import scala.collection.JavaConversions._
 
@@ -15,41 +15,37 @@ class SentenceConverter extends CopyConverter {
 
       def psiMiDeciderOnVocabularies(words: List[String]): Option[String] = {
 
-        val result = BioC.methodsInfo.map { case MethodInfo(method, ss, rs, es) =>
+        val result = BioC.methodsInfo.map {
 
-          val synonymNgram = ss.flatMap { s =>
-            val size = s.split("\\s").size
-            if (size > 1) {
-              utils.mkNgram(words, size).filter(a => a.equalsIgnoreCase(s))
-            } else {
-              words.filter(w => w.equalsIgnoreCase(s))
+          case MethodInfo(method, ss, rs, es) ⇒
+
+            val synonymNgram = ss.flatMap { s ⇒
+              val size = s.split("\\s").size
+              if (size > 1) {
+                Utils.mkNgram(words, size).filter(_.equalsIgnoreCase(s))
+              } else {
+                words.filter(_.equalsIgnoreCase(s))
+              }
             }
-          }
 
-          val foundedWords = synonymNgram.flatMap(s => s.split("\\s"))
+            val foundedWords = synonymNgram.flatMap(_.split("\\s"))
 
-          val related = words.distinct.diff(foundedWords).flatMap { w =>
-            rs.filter(r => r.equalsIgnoreCase(w))
-          }
+            val related = words.distinct.diff(foundedWords).flatMap(w ⇒ rs.filter(_.equalsIgnoreCase(w)))
 
-          val extra = words.distinct.diff(foundedWords).flatMap { w =>
-            es.filter(e => e.equalsIgnoreCase(w))
-          }
+            val extra = words.distinct.diff(foundedWords).flatMap(w ⇒ es.filter(_.equalsIgnoreCase(w)))
 
-          (method, (0.5 * synonymNgram.size) + (0.25 * related.size) + (0.125 * extra.size))
+            (method, (0.5 * synonymNgram.size) + (0.25 * related.size) + (0.125 * extra.size))
 
         }.toSeq.sortBy(_._2)
 
         result.last match {
-          case (m, c) =>
-            if (c >= 0.5) Some(m) else None
+          case (m, c) ⇒ if (c >= 0.5) Some(m) else None
         }
       }
 
-      psiMiDeciderOnVocabularies(utils.tokenize(sentence.getText)) match {
-        case None => None
-        case Some(psimiInfon) =>
-
+      psiMiDeciderOnVocabularies(Utils.tokenize(sentence.getText)) match {
+        case None ⇒ None
+        case Some(psimiInfon) ⇒
           val annotationInfons = Map("type" -> "ExperimentalMethod", "PSIMI" -> psimiInfon)
           val out: BioCAnnotation = new BioCAnnotation
           out.setInfons(annotationInfons)
@@ -65,8 +61,8 @@ class SentenceConverter extends CopyConverter {
 
       def loop(sentences: List[String], count: Int, acc: Seq[(String, Int, Int)]): Seq[(String, Int, Int)] = {
         sentences match {
-          case Nil => acc
-          case x :: xs => loop(xs, x.length + count + 1, acc :+(x, count, x.length))
+          case Nil     ⇒ acc
+          case x :: xs ⇒ loop(xs, x.length + count + 1, acc :+ (x, count, x.length))
         }
       }
 
@@ -80,25 +76,27 @@ class SentenceConverter extends CopyConverter {
 
     if (!in.getInfons.get("type").contains("title")) {
 
-      val sentences: List[String] = utils.mkSentenceList(in.getText)
+      val sentences: List[String] = Utils.mkSentenceList(in.getText)
 
-      sentenceWithOffset(sentences).foreach { case (s, o, l) =>
+      sentenceWithOffset(sentences).foreach {
 
-        val sentence: BioCSentence = new BioCSentence
-        sentence.setOffset(in.getOffset + o)
-        sentence.setText(s)
+        case (s, o, l) ⇒
 
-        annotateSentence(sentence) match {
-          case None =>
-          case Some(annotation) =>
-            out.addAnnotation(annotation)
-        }
+          val sentence: BioCSentence = new BioCSentence
+          sentence.setOffset(in.getOffset + o)
+          sentence.setText(s)
+
+          annotateSentence(sentence) match {
+            case None             ⇒
+            case Some(annotation) ⇒ out.addAnnotation(annotation)
+          }
       }
     }
 
     //remove only this line, if you do not want to concat sentences.
-    if (out.getAnnotations.size() > 1)
+    if (out.getAnnotations.size() > 1) {
       out.setAnnotations(concatSuccessiveSameAnnotations(out.getAnnotations.toList))
+    }
     //remove only this line, if you do not want to concat sentences.
 
     out
@@ -109,8 +107,8 @@ class SentenceConverter extends CopyConverter {
     def arrangeAnnotationIds(annotations: List[BioCAnnotation]): List[BioCAnnotation] = {
 
       def loop(annots: List[BioCAnnotation], acc: List[BioCAnnotation], id: Int): List[BioCAnnotation] = annots match {
-        case Nil => acc
-        case x :: xs =>
+        case Nil ⇒ acc
+        case x :: xs ⇒
           x.setID(id.toString)
           loop(xs, acc :+ x, id + 1)
       }
@@ -142,18 +140,20 @@ class SentenceConverter extends CopyConverter {
     }
 
     def loop(annots: List[BioCAnnotation], acc: List[BioCAnnotation]): List[BioCAnnotation] = annots match {
-      case Nil => acc
-      case x :: xs if xs.isEmpty => loop(xs, acc :+ x)
-      case x :: xs =>
+      case Nil                   ⇒ acc
+      case x :: xs if xs.isEmpty ⇒ loop(xs, acc :+ x)
+      case x :: xs ⇒
         val y = xs.head
         if (successive(x, y)) {
           val newAnnot = concatAnnotations(x, y)
           loop(newAnnot :: xs.tail, acc)
-        } else loop(xs, acc :+ x)
+        } else {
+          loop(xs, acc :+ x)
+        }
     }
 
     val result = loop(annotations, List[BioCAnnotation]())
-    if (result.size > 1) arrangeAnnotationIds(result) else result
+    if (result.size > 1) { arrangeAnnotationIds(result) } else { result }
 
   }
 
