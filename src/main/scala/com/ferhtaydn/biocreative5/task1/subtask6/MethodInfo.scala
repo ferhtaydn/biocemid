@@ -17,3 +17,12 @@ object MethodInfo {
   }
 
 }
+
+case class MethodWeight(name: String, weight: Double)
+
+object MethodWeight {
+  private def toInfon(mw: MethodWeight): (String, String) = mw.name -> mw.weight.toString
+  implicit def toInfons(mws: List[MethodWeight]): Map[String, String] = mws.map(toInfon).toMap
+  private def fromInfon(infon: (String, String)): MethodWeight = MethodWeight(infon._1, infon._2.toDouble)
+  implicit def fromInfons(infons: Map[String, String]): List[MethodWeight] = infons.map(fromInfon).toList
+}
