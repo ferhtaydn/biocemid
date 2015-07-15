@@ -20,13 +20,17 @@ class SentenceConverter2 extends CopyConverter {
     out.setInfons(in.getInfons)
     out.setText(in.getText)
 
-    if (!in.getInfons.get("type").contains("title")) {
+    if (in.getInfon("type").contains("title") ||
+      in.getInfon("type").equalsIgnoreCase("table_caption") ||
+      in.getInfon("type").equalsIgnoreCase("table") ||
+      in.getInfon("type").equalsIgnoreCase("ref")) {
 
-      val sentences: List[String] = Utils.mkSentenceList(in.getText)
+      // do nothing for these cases.
+      out
 
-      val annotatedSentences = mutable.MutableList(
-        sentenceWithOffset(in.getOffset, sentences).map(annotateSentence)
-      ).flatten
+    } else {
+
+      val annotatedSentences = mutable.MutableList(BioC.splitPassageToSentences(in).map(annotateSentence)).flatten
 
       out.setAnnotations(
         concatSuccessiveSameAnnotations(
@@ -34,9 +38,6 @@ class SentenceConverter2 extends CopyConverter {
         )
       )
 
-      out
-
-    } else {
       out
     }
 
@@ -91,24 +92,6 @@ class SentenceConverter2 extends CopyConverter {
 
     setWeights(sentence, calculateMethodWeights(Utils.tokenize(sentence.getText)))
 
-  }
-
-  private def sentenceWithOffset(passageOffset: Int, sentences: List[String]): Seq[BioCSentence] = {
-
-    def loop(sentences: List[String], count: Int, acc: Seq[(String, Int, Int)]): Seq[(String, Int, Int)] = {
-      sentences match {
-        case Nil     ⇒ acc
-        case x :: xs ⇒ loop(xs, x.length + count + 1, acc :+ (x, count, x.length))
-      }
-    }
-
-    loop(sentences, 0, Seq.empty[(String, Int, Int)]).map {
-      case (s, o, l) ⇒
-        val sentence: BioCSentence = new BioCSentence
-        sentence.setOffset(passageOffset + o)
-        sentence.setText(s)
-        sentence
-    }
   }
 
   private def annotatePreviousAndNextSentences(annotatedSentences: mutable.MutableList[BioCSentence]) = {

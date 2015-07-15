@@ -19,10 +19,9 @@ object Utils {
 
   def mkSentence(text: String): String = text.split("\\.\\s").mkString(".\n")
 
-  def mkSentenceList(text: String): List[String] = text.split("\\.\\s").toList.map { s ⇒
-    val sentence = s.trim
-    sentence.lastOption.fold(sentence) { l ⇒
-      if (!l.equals('.')) sentence.concat(".") else sentence
+  def mkSentences(text: String): List[String] = text.split("\\.\\s").toList.map { s ⇒
+    s.lastOption.fold(s) { l ⇒
+      if (!l.equals('.')) s.concat(".") else s
     }
   }
 

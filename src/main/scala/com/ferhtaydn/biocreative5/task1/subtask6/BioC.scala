@@ -3,7 +3,7 @@ package com.ferhtaydn.biocreative5.task1.subtask6
 import java.io.{ File, FileOutputStream, FileReader, OutputStreamWriter }
 
 import bioc.io.{ BioCDocumentReader, BioCDocumentWriter, BioCFactory }
-import bioc.{ BioCCollection, BioCDocument }
+import bioc.{ BioCPassage, BioCSentence, BioCCollection, BioCDocument }
 import com.typesafe.config.ConfigFactory
 
 import scala.collection.JavaConversions._
@@ -86,6 +86,26 @@ object BioC {
       reader.close()
       writer.close()
 
+    }
+  }
+
+  def splitPassageToSentences(bioCPassage: BioCPassage): Seq[BioCSentence] = {
+
+    lazy val sentences: List[String] = Utils.mkSentences(bioCPassage.getText)
+
+    def loop(sentences: List[String], count: Int, acc: Seq[(String, Int, Int)]): Seq[(String, Int, Int)] = {
+      sentences match {
+        case Nil     ⇒ acc
+        case x :: xs ⇒ loop(xs, x.length + count + 1, acc :+ (x.trim, count + (x.length - x.trim.length), x.trim.length))
+      }
+    }
+
+    loop(sentences, 0, Seq.empty[(String, Int, Int)]).map {
+      case (s, o, l) ⇒
+        val sentence: BioCSentence = new BioCSentence
+        sentence.setOffset(bioCPassage.getOffset + o)
+        sentence.setText(s)
+        sentence
     }
   }
 }

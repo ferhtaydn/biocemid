@@ -3,7 +3,7 @@ package com.ferhtaydn.biocreative5.task1.subtask6
 object Main extends App {
 
   val annotatedDirectory = "annotated_xml"
-  val annotationDirectory = "xml/testset"
+  val annotationDirectory = "xml/bc5_dataset"
 
   Console.println(
 

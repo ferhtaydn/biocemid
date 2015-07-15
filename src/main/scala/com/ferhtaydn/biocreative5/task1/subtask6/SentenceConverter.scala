@@ -57,49 +57,35 @@ class SentenceConverter extends CopyConverter {
       }
     }
 
-    def sentenceWithOffset(sentences: List[String]): Seq[(String, Int, Int)] = {
-
-      def loop(sentences: List[String], count: Int, acc: Seq[(String, Int, Int)]): Seq[(String, Int, Int)] = {
-        sentences match {
-          case Nil     ⇒ acc
-          case x :: xs ⇒ loop(xs, x.length + count + 1, acc :+ (x, count, x.length))
-        }
-      }
-
-      loop(sentences, 0, Seq.empty[(String, Int, Int)])
-    }
-
     val out: BioCPassage = new BioCPassage
     out.setOffset(in.getOffset)
     out.setInfons(in.getInfons)
     out.setText(in.getText)
 
-    if (!in.getInfons.get("type").contains("title")) {
+    if (in.getInfon("type").contains("title") ||
+      in.getInfon("type").equalsIgnoreCase("table_caption") ||
+      in.getInfon("type").equalsIgnoreCase("table") ||
+      in.getInfon("type").equalsIgnoreCase("ref")) {
 
-      val sentences: List[String] = Utils.mkSentenceList(in.getText)
+      // do nothing for these cases.
+      out
 
-      sentenceWithOffset(sentences).foreach {
+    } else {
 
-        case (s, o, l) ⇒
+      BioC.splitPassageToSentences(in).foreach { s ⇒
 
-          val sentence: BioCSentence = new BioCSentence
-          sentence.setOffset(in.getOffset + o)
-          sentence.setText(s)
-
-          annotateSentence(sentence) match {
-            case None             ⇒
-            case Some(annotation) ⇒ out.addAnnotation(annotation)
-          }
+        annotateSentence(s) match {
+          case None             ⇒
+          case Some(annotation) ⇒ out.addAnnotation(annotation)
+        }
       }
-    }
 
-    //remove only this line, if you do not want to concat sentences.
-    if (out.getAnnotations.size() > 1) {
-      out.setAnnotations(concatSuccessiveSameAnnotations(out.getAnnotations.toList))
-    }
-    //remove only this line, if you do not want to concat sentences.
+      if (out.getAnnotations.size() > 1) {
+        out.setAnnotations(concatSuccessiveSameAnnotations(out.getAnnotations.toList))
+      }
 
-    out
+      out
+    }
   }
 
   private def concatSuccessiveSameAnnotations(annotations: List[BioCAnnotation]): List[BioCAnnotation] = {
