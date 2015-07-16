@@ -20,10 +20,7 @@ class SentenceConverter2 extends CopyConverter {
     out.setInfons(in.getInfons)
     out.setText(in.getText)
 
-    if (in.getInfon("type").contains("title") ||
-      in.getInfon("type").equalsIgnoreCase("table_caption") ||
-      in.getInfon("type").equalsIgnoreCase("table") ||
-      in.getInfon("type").equalsIgnoreCase("ref")) {
+    if (BioC.checkPassageType(in)) {
 
       // do nothing for these cases.
       out

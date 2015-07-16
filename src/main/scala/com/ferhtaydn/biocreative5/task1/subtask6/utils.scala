@@ -19,10 +19,15 @@ object Utils {
 
   def mkSentence(text: String): String = text.split("\\.\\s").mkString(".\n")
 
-  def mkSentences(text: String): List[String] = text.split("\\.\\s").toList.map { s ⇒
-    s.lastOption.fold(s) { l ⇒
-      if (!l.equals('.')) s.concat(".") else s
-    }
+  def mkSentences(text: String): List[String] = text.split("\\.\\s").toList match {
+    case Nil                         ⇒ Nil
+    case lst @ x :: xs if xs.isEmpty ⇒ lst
+    case lst @ x :: xs ⇒
+      lst.map { s ⇒
+        s.lastOption.fold(s) { l ⇒
+          if (!l.equals('.')) s.concat(".") else s
+        }
+      }
   }
 
   def mkNgram(elems: List[String], size: Int): List[String] = elems.sliding(size).map(_.mkString(" ")).toList

@@ -62,7 +62,7 @@ object BioC {
     IO.list(dir, ".xml").foreach { file ⇒
 
       val fileName = Utils.extractFileName(file.getName, ".xml")
-      val out = s"$dir/${fileName}_passages_with_exp_methods.xml"
+      val out = s"$dir/${fileName}_passages_with_exp_methods_with_before_after.xml"
 
       val factory: BioCFactory = BioCFactory.newFactory(BioCFactory.WOODSTOX)
       val reader: BioCDocumentReader = factory.createBioCDocumentReader(new FileReader(file))
@@ -72,7 +72,7 @@ object BioC {
 
       val collection: BioCCollection = reader.readCollectionInfo
 
-      val converter: SentenceConverter = new SentenceConverter
+      val converter: SentenceConverter2 = new SentenceConverter2
 
       val outCollection: BioCCollection = converter.getCollection(collection)
       outCollection.setKey("sentence.key")
@@ -107,5 +107,14 @@ object BioC {
         sentence.setText(s)
         sentence
     }
+  }
+
+  def checkPassageType(bioCPassage: BioCPassage): Boolean = {
+    bioCPassage.getInfon("type").contains("title") ||
+      bioCPassage.getInfon("type").equalsIgnoreCase("table_caption") ||
+      bioCPassage.getInfon("type").equalsIgnoreCase("table") ||
+      bioCPassage.getInfon("type").equalsIgnoreCase("ref") ||
+      bioCPassage.getInfon("type").equalsIgnoreCase("footnote") ||
+      bioCPassage.getInfon("type").equalsIgnoreCase("front")
   }
 }
