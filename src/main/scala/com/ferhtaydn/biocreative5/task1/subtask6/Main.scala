@@ -2,8 +2,9 @@ package com.ferhtaydn.biocreative5.task1.subtask6
 
 object Main extends App {
 
-  val annotatedDirectory = "annotated_xml"
+  val annotatedDirectory = "manual_annotated_data_set"
   val annotationDirectory = "xml/bc5_dataset"
+  val algoResultsDirectory = "annotated_before_after_results"
 
   Console.println(
 
@@ -17,6 +18,10 @@ object Main extends App {
       |2 - To generate the tr-rf results for each method
       |
       |3 - Annotate the raw BioC files in $annotationDirectory
+      |
+      |4 - Generate Eval results in $algoResultsDirectory
+      |
+      |5 - Count of each method annotated in $algoResultsDirectory
       |
     """.stripMargin
 
@@ -74,9 +79,17 @@ object Main extends App {
 
     BioC.annotate(annotationDirectory)
 
+  } else if (selection == 4) {
+
+    BioC.evaluate(annotatedDirectory, algoResultsDirectory)
+
+  } else if (selection == 5) {
+
+    BioC.countOfMethods(annotatedDirectory)
+
   } else {
 
-    Console.println("Please select the options from 1 until 3.")
+    Console.println("Please select the options from 1 until 5.")
     System.exit(0)
 
   }

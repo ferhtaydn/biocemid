@@ -57,11 +57,11 @@ class SentenceConverter2 extends CopyConverter {
             }
           }
 
-          val foundedWords = synonymNgram.flatMap(_.split("\\s"))
+          val foundWords = synonymNgram.flatMap(_.split("\\s"))
 
-          val related = words.distinct.diff(foundedWords).flatMap(w ⇒ rs.filter(_.equalsIgnoreCase(w)))
+          val related = words.distinct.diff(foundWords).flatMap(w ⇒ rs.filter(_.equalsIgnoreCase(w)))
 
-          val extra = words.distinct.diff(foundedWords).flatMap(w ⇒ es.filter(_.equalsIgnoreCase(w)))
+          val extra = words.distinct.diff(foundWords).flatMap(w ⇒ es.filter(_.equalsIgnoreCase(w)))
 
           MethodWeight(method, (0.5 * synonymNgram.size) + (0.25 * related.size) + (0.125 * extra.size))
 
