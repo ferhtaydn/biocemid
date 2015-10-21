@@ -22,9 +22,9 @@ object IO {
     new File(dirName).listFiles.filter(_.isFile).filter(_.getName.endsWith(suffix)).toList
   }
 
-  def listOthers(method: String): List[File] = {
+  def listOthers(method: String, suffix: String): List[File] = {
     new File(".").listFiles.filter(_.isFile).filter { f ⇒
-      f.getName.contains("annotations_words.txt") && !f.getName.contains(method)
+      f.getName.contains(suffix) && !f.getName.contains(method)
     }.toList
   }
 

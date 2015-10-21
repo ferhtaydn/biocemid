@@ -39,23 +39,14 @@ object Utils {
     coreNLP
   }
 
+  lazy val stopwords = IO.read("stopwords.txt").toList
+
   def tokenize(sentence: String): List[String] = {
 
     val annotation = new Annotation(sentence.toLowerCase)
     initTokenization.annotate(annotation)
     annotation.get(classOf[TokensAnnotation]).map(_.value).toList.filterNot { a ⇒
-      a.equalsIgnoreCase(",") ||
-        a.equalsIgnoreCase(".") ||
-        a.equalsIgnoreCase("-LRB-") ||
-        a.equalsIgnoreCase("-RRB-") ||
-        a.equalsIgnoreCase("-LSB-") ||
-        a.equalsIgnoreCase("-RSB-") ||
-        a.equalsIgnoreCase("/") ||
-        a.equalsIgnoreCase("ml") ||
-        a.equalsIgnoreCase("μg") ||
-        a.equalsIgnoreCase("%") ||
-        a.equalsIgnoreCase("mm") ||
-        a.isFloat || a.isDigit
+      a.length < 2 || stopwords.contains(a) || a.isFloat || a.isDigit
     }
   }
 

@@ -38,19 +38,35 @@ object BioC {
 
   }
 
-  def tfRf(method: String, wordsFile: String): Seq[(String, Double)] = {
+  def tfRf(method: String): Seq[(String, Double)] = {
 
-    val methodFreqs = BioC.getFrequencies(wordsFile)
-    val otherFiles = IO.listOthers(method).map(_.getPath)
+    val tokenizedFile = s"MI${method}_tokenized_words.txt"
+    val passagesFile = s"MI${method}_annotations_passages.txt"
+
+    val methodFreqs = BioC.getFrequencies(tokenizedFile)
+
+    val positiveCategory = IO.read(passagesFile).map(Utils.tokenize(_).toSet).toList
+
+    val negativeCategory = IO.listOthers(method, "annotations_passages.txt").flatMap { file ⇒
+
+      val passages = IO.read(file.getPath)
+
+      val passageTokens = passages.map(Utils.tokenize(_).toSet)
+
+      passageTokens
+
+    }
 
     methodFreqs.map {
       case (word, freq) ⇒
 
         def log2(x: Double) = scala.math.log(x) / scala.math.log(2)
 
-        val otherTotal = otherFiles.map(BioC.getFrequencies(_).find(wf ⇒ word.equals(wf._1)).fold(0.0)(_._2)).sum
+        val a = positiveCategory.count(_.contains(word))
 
-        val rf = log2(2.0 + (freq / scala.math.max(1.0, otherTotal)))
+        val c = negativeCategory.count(_.contains(word))
+
+        val rf = log2(2.0 + (a / scala.math.max(1.0, c)))
         val tfRf = freq * rf
 
         (word, tfRf)
