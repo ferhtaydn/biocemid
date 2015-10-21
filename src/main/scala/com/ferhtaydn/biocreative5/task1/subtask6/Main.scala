@@ -29,11 +29,8 @@ object Main extends App {
 
   if (selection == 1) {
 
-    Console.println("Please enter the PSIMI code for method. e.g. 0006")
-
-    val method = scala.io.StdIn.readLine()
-
-    createHelperFiles(method)
+    BioC.methodNames.foreach(createHelperFiles)
+    BioC.methodNames.foreach(calculateTfrf)
 
   } else if (selection == 2) {
 
@@ -54,13 +51,30 @@ object Main extends App {
 
   }
 
+  def calculateTfrf(method: String) = {
+
+    println(s"method id: $method")
+
+    val passagesFile = s"MI${method}_annotations_passages.txt"
+    val tokenizedFile = s"MI${method}_tokenized_words.txt"
+    val tfRfTokenizedFile = s"MI${method}_tokenized_tf-rf.txt"
+
+    val tokenFreqs = BioC.getFrequencies(tokenizedFile)
+
+    val positivePassages = IO.read(passagesFile)
+    val negativePassagesFiles = IO.listOthers(method, "annotations_passages.txt")
+
+    val tfrf = BioC.tfRf(method, tokenFreqs, positivePassages, negativePassagesFiles).sortBy(_._2).reverse
+
+    IO.write(tfRfTokenizedFile, Utils.stringifyTuple2Sequence(tfrf))
+  }
+
   def createHelperFiles(method: String): Unit = {
 
     val passagesFile = s"MI${method}_annotations_passages.txt"
     val sentencesFile = s"MI${method}_annotations_sentences.txt"
     val tokenizedFile = s"MI${method}_tokenized_words.txt"
     val tokenizedFreqsFile = s"MI${method}_tokenized_freqs.txt"
-    val tfRfTokenizedFile = s"MI${method}_tokenized_tf-rf.txt"
 
     def out(annotatedSentences: String): Unit = {
       IO.append(passagesFile, annotatedSentences)
@@ -74,16 +88,7 @@ object Main extends App {
 
     IO.list(annotatedDirectory, ".xml").foreach(f ⇒ out(BioC.extractAnnotatedSentences(f, method)))
 
-    val tokenFreqs = BioC.getFrequencies(tokenizedFile)
-
-    IO.write(tokenizedFreqsFile, Utils.stringifyTuple2Sequence(tokenFreqs))
-
-    val positivePassages = IO.read(passagesFile)
-    val negativePassagesFiles = IO.listOthers(method, "annotations_passages.txt")
-
-    val tfrf = BioC.tfRf(method, tokenFreqs, positivePassages, negativePassagesFiles).sortBy(_._2).reverse
-
-    IO.write(tfRfTokenizedFile, Utils.stringifyTuple2Sequence(tfrf))
+    IO.write(tokenizedFreqsFile, Utils.stringifyTuple2Sequence(BioC.getFrequencies(tokenizedFile)))
 
   }
 
