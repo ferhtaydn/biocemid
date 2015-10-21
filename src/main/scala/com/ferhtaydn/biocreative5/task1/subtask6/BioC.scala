@@ -38,16 +38,13 @@ object BioC {
 
   }
 
-  def tfRf(method: String): Seq[(String, Double)] = {
+  def tfRf(method: String, tokenFreqs: Seq[(String, Double)],
+    positivePassages: scala.collection.Iterator[String],
+    negativePassagesFiles: List[File]): Seq[(String, Double)] = {
 
-    val tokenizedFile = s"MI${method}_tokenized_words.txt"
-    val passagesFile = s"MI${method}_annotations_passages.txt"
+    val positiveCategory = positivePassages.map(Utils.tokenize(_).toSet).toList
 
-    val methodFreqs = BioC.getFrequencies(tokenizedFile)
-
-    val positiveCategory = IO.read(passagesFile).map(Utils.tokenize(_).toSet).toList
-
-    val negativeCategory = IO.listOthers(method, "annotations_passages.txt").flatMap { file ⇒
+    val negativeCategory = negativePassagesFiles.flatMap { file ⇒
 
       val passages = IO.read(file.getPath)
 
@@ -57,7 +54,8 @@ object BioC {
 
     }
 
-    methodFreqs.map {
+    tokenFreqs map {
+
       case (word, freq) ⇒
 
         def log2(x: Double) = scala.math.log(x) / scala.math.log(2)
@@ -73,12 +71,12 @@ object BioC {
     }
   }
 
-  def annotate(dir: String): Unit = {
+  def annotate(dir: String, InputFileSuffix: String, outputFileSuffix: String): Unit = {
 
-    IO.list(dir, ".xml").foreach { file ⇒
+    IO.list(dir, InputFileSuffix).foreach { file ⇒
 
-      val fileName = Utils.extractFileName(file.getName, ".xml")
-      val out = s"$dir/${fileName}_passages_with_exp_methods_with_before_after.xml"
+      val fileName = Utils.extractFileName(file.getName, InputFileSuffix)
+      val out = s"$dir/${fileName}_$outputFileSuffix"
 
       val factory: BioCFactory = BioCFactory.newFactory(BioCFactory.WOODSTOX)
       val reader: BioCDocumentReader = factory.createBioCDocumentReader(new FileReader(file))
@@ -105,11 +103,11 @@ object BioC {
     }
   }
 
-  def countOfMethods(dir: String): Unit = {
+  def countOfMethods(dir: String, suffix: String): Unit = {
 
     val methodCounts: scala.collection.mutable.Map[String, Int] = scala.collection.mutable.Map.empty[String, Int].withDefaultValue(0)
 
-    IO.list(dir, ".xml").foreach { file ⇒
+    IO.list(dir, suffix).foreach { file ⇒
 
       val factory: BioCFactory = BioCFactory.newFactory(BioCFactory.WOODSTOX)
 
@@ -134,10 +132,10 @@ object BioC {
     println(methodCounts)
   }
 
-  def evaluate(manuResultDir: String, algoResultDir: String) = {
+  def evaluate(manuResultDir: String, algoResultDir: String, fileSuffix: String) = {
 
-    val manuAnnotationFiles = IO.list(manuResultDir, ".xml")
-    val algorithmAnnotationFiles = IO.list(algoResultDir, ".xml")
+    val manuAnnotationFiles = IO.list(manuResultDir, fileSuffix)
+    val algorithmAnnotationFiles = IO.list(algoResultDir, fileSuffix)
 
     manuAnnotationFiles.zip(algorithmAnnotationFiles).foreach {
       case (manu, algo) ⇒
