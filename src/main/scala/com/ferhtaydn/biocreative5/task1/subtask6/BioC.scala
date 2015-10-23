@@ -15,7 +15,7 @@ object BioC {
     ConfigFactory.load("methods.conf").getConfigList("bioc.psimi.methods").map(MethodInfo(_)).toList
   }
 
-  lazy val methodNames = methodsInfo.map(_.name)
+  lazy val methodNames = methodsInfo.map(_.id)
 
   def getFrequencies(wordsFile: String): Seq[(String, Double)] = {
     val groupedWords = IO.read(wordsFile).foldLeft(Map.empty[String, Double]) {

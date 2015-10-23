@@ -4,16 +4,25 @@ import com.typesafe.config.Config
 
 import scala.collection.JavaConversions._
 
-case class MethodInfo(name: String, synonym: List[String], related: List[String], extra: List[String])
+case class MethodInfo(id: String, name: String, synonym: List[String], related: List[String], extra: List[String],
+  definition: String, isA: List[Hierarchy])
+
+case class Hierarchy(id: String, name: String)
 
 object MethodInfo {
 
   def apply(config: Config): MethodInfo = {
+    val id = config.getString("id")
     val name = config.getString("name")
     val synonym = config.getStringList("synonym").toList
     val related = config.getStringList("related").toList
     val extra = config.getStringList("extra").toList
-    new MethodInfo(name, synonym, related, extra)
+    val definition = config.getString("definition")
+    val isA = config.getStringList("isA").toList.map { y ⇒
+      val x = y.split("!")
+      Hierarchy(x.head, x.last)
+    }
+    new MethodInfo(id, name, synonym, related, extra, definition, isA)
   }
 
 }

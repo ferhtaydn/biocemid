@@ -46,7 +46,7 @@ class SentenceConverter2 extends CopyConverter {
 
       BioC.methodsInfo.map {
 
-        case MethodInfo(method, ss, rs, es) ⇒
+        case MethodInfo(id, name, ss, rs, es, definition, hierarchies) ⇒
 
           val synonymNgram = ss.flatMap { s ⇒
             val size = s.split("\\s").size
@@ -63,7 +63,7 @@ class SentenceConverter2 extends CopyConverter {
 
           val extra = words.distinct.diff(foundWords).flatMap(w ⇒ es.filter(_.equalsIgnoreCase(w)))
 
-          MethodWeight(method, (0.5 * synonymNgram.size) + (0.25 * related.size) + (0.125 * extra.size))
+          MethodWeight(id, (0.5 * synonymNgram.size) + (0.25 * related.size) + (0.125 * extra.size))
 
       }.filter(_.weight > 0.0).sortWith(_.weight > _.weight)
 
