@@ -17,11 +17,18 @@ object BioC {
 
   lazy val methodNames = methodsInfo.map(_.id)
 
-  def getFrequencies(wordsFile: String): Seq[(String, Double)] = {
-    val groupedWords = IO.read(wordsFile).foldLeft(Map.empty[String, Double]) {
+  def calcFrequenciesFromTokensFile(tokensFile: String): Seq[(String, Double)] = {
+    val tokenFreqs = IO.read(tokensFile).foldLeft(Map.empty[String, Double]) {
       (m, word) ⇒ m + (word -> (m.getOrElse(word, 0.0) + 1.0))
     }
-    groupedWords.toSeq.sortBy(_._2).reverse
+    tokenFreqs.toSeq.sortBy(_._2).reverse
+  }
+
+  def calcTokenFrequencies(tokens: List[String]): Seq[(String, Double)] = {
+    val tokenFreqs = tokens.foldLeft(Map.empty[String, Double]) {
+      (m, word) ⇒ m + (word -> (m.getOrElse(word, 0.0) + 1.0))
+    }
+    tokenFreqs.toSeq.sortBy(_._2).reverse
   }
 
   def extractAnnotatedSentences(file: File, method: String): String = {
@@ -40,8 +47,8 @@ object BioC {
 
   }
 
-  def tfRf(method: String, tokenFreqs: Seq[(String, Double)],
-    positivePassages: scala.collection.Iterator[String],
+  def tfRf(tokenFreqs: Seq[(String, Double)],
+    positivePassages: Seq[String],
     negativePassagesFiles: List[File]): Seq[(String, Double)] = {
 
     val positiveCategory = positivePassages.map(Utils.tokenize(_).toSet).toList
@@ -65,6 +72,31 @@ object BioC {
         val a = positiveCategory.count(_.contains(word))
 
         val c = negativeCategory.count(_.contains(word))
+
+        val rf = log2(2.0 + (a / scala.math.max(1.0, c)))
+        val tfRf = freq * rf
+
+        (word, tfRf)
+    }
+  }
+
+  def tfRfOntology(tokenFreqs: Seq[(String, Double)],
+    positivePassages: Seq[String],
+    negativePassages: Seq[Set[String]]): Seq[(String, Double)] = {
+
+    val positiveCategory = positivePassages.map(Utils.tokenize(_).toSet).toList
+
+    val negativeCategory = negativePassages
+
+    tokenFreqs map {
+
+      case (word, freq) ⇒
+
+        def log2(x: Double) = scala.math.log(x) / scala.math.log(2)
+
+        val a = positiveCategory.count(_.contains(word)) / positiveCategory.length
+
+        val c = negativeCategory.count(_.contains(word)) / negativeCategory.length
 
         val rf = log2(2.0 + (a / scala.math.max(1.0, c)))
         val tfRf = freq * rf

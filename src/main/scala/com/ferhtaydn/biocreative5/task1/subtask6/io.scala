@@ -28,7 +28,7 @@ object IO {
     }.toList
   }
 
-  def read(path: String): Iterator[String] = scala.io.Source.fromFile(path).getLines()
+  def read(path: String): Seq[String] = scala.io.Source.fromFile(path).getLines().toSeq
 
   def remove(file: String): Boolean = Files.deleteIfExists(Paths.get(file))
 
