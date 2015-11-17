@@ -23,6 +23,8 @@ object Main extends App {
       |
       |5 - Count of each method annotated in $algoResultsDirectory
       |
+      |6 - To generate word2vec results for each method name and synonym
+      |
     """.stripMargin
 
   )
@@ -102,6 +104,23 @@ object Main extends App {
   } else if (selection == 5) {
 
     BioC.countOfMethods(annotatedDirectory, ".xml")
+
+  } else if (selection == 6) {
+
+    val methods = BioC.methodsInfo.map { m ⇒
+      val synonyms = m.synonym.map(x ⇒ x.split(" ").mkString("_"))
+      val name = m.name.split(" ").mkString("_")
+      if (!synonyms.contains(name)) name :: synonyms else name :: (synonyms diff List(name))
+    }
+
+    methods.foreach(println)
+
+    import sys.process._
+    methods.map { m ⇒
+      val seq = Seq("/Users/aydinf/Desktop/word2vec_extension/distance_files",
+        "/Users/aydinf/Desktop/bc3_word2vec_results/phrase1_eval/bc3_phrase1_vectors.bin") ++ m
+      seq.!!
+    }
 
   } else {
 
