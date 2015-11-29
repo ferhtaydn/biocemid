@@ -12,6 +12,7 @@ libraryDependencies ++= Seq(
   "edu.stanford.nlp" % "stanford-corenlp" % "3.5.2"
 )
 
+mainClass in (Compile, run) := Some("com.ferhtaydn.biocreative5.task1.subtask6.Main")
 
 scalariformSettings
 

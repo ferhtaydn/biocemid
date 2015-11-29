@@ -5,6 +5,7 @@ object Main extends App {
   val annotatedDirectory = "manual_annotated_data_set"
   val annotationDirectory = "xml/bc5_dataset"
   val algoResultsDirectory = "annotated_before_after_results"
+  val word2vecs = "word2vecs"
 
   Console.println(
 
@@ -24,6 +25,8 @@ object Main extends App {
       |5 - Count of each method annotated in $algoResultsDirectory
       |
       |6 - To generate word2vec results for each method name and synonym
+      |
+      |7 - Gather the word2vec results for each method
       |
     """.stripMargin
 
@@ -110,16 +113,62 @@ object Main extends App {
     val methods = BioC.methodsInfo.map { m ⇒
       val synonyms = m.synonym.map(x ⇒ x.split(" ").mkString("_"))
       val name = m.name.split(" ").mkString("_")
-      if (!synonyms.contains(name)) name :: synonyms else name :: (synonyms diff List(name))
+      m.id :: (if (!synonyms.contains(name)) name :: synonyms else name :: (synonyms diff List(name)))
     }
 
     methods.foreach(println)
 
     import sys.process._
+
+    //clean the word2vecs file
+    s"find . -name $word2vecs" #| "xargs rm -r" !!
+
+    s"mkdir $word2vecs".!!
+
     methods.map { m ⇒
       val seq = Seq("/Users/aydinf/Desktop/word2vec_extension/distance_files",
         "/Users/aydinf/Desktop/bc3_word2vec_results/phrase1_eval/bc3_phrase1_vectors.bin") ++ m
-      seq.!!
+      Process(seq, new java.io.File(word2vecs)).!!
+    }
+
+  } else if (selection == 7) {
+
+    lazy val methodsNames = BioC.methodsInfo.map { m ⇒
+      val synonyms = m.synonym.map(x ⇒ x.split(" ").mkString("_"))
+      val name = m.name.split(" ").mkString("_")
+      (m.id, if (!synonyms.contains(name)) name :: synonyms else name :: (synonyms diff List(name)))
+    }.toMap
+
+    methodsNames.foreach(println)
+
+    BioC.methodsInfo.foreach { method ⇒
+
+      val map = scala.collection.mutable.Map.empty[String, Double].withDefaultValue(0d)
+
+      IO.list(s"$word2vecs/${method.id}", ".txt").foreach { file ⇒
+
+        IO.read(file).foreach { line ⇒
+
+          val splitted = line.split(",")
+          val cosineString = splitted.last
+          val word = line.dropRight(cosineString.length + 1)
+          val cosine = cosineString.toDouble
+
+          val otherMethodsNames = methodsNames - method.id
+
+          if (!otherMethodsNames.values.exists(_.contains(word))) {
+
+            map.get(word) match {
+              case Some(cos) if cos < cosine ⇒ map(word) = cosine
+              case None                      ⇒ map(word) = cosine
+              case _                         ⇒ // do not modify
+            }
+
+          }
+        }
+      }
+
+      IO.write(s"$word2vecs/${method.id}/${method.id}-result.txt", Utils.stringifyTuple2Sequence(map.toSeq.sortBy(_._2).reverse))
     }
 
   } else {

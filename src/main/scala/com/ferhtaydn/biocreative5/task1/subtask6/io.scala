@@ -4,8 +4,6 @@ import java.io.{ File, FileWriter }
 import java.nio.charset.StandardCharsets
 import java.nio.file.{ Files, Paths, StandardOpenOption }
 
-import scala.collection.Iterator
-
 object IO {
 
   def write(path: String, txt: String): Unit = {
@@ -29,6 +27,8 @@ object IO {
   }
 
   def read(path: String): Seq[String] = scala.io.Source.fromFile(path).getLines().toSeq
+
+  def read(file: File): Seq[String] = scala.io.Source.fromFile(file).getLines().toSeq
 
   def remove(file: String): Boolean = Files.deleteIfExists(Paths.get(file))
 
