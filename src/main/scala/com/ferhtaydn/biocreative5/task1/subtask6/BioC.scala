@@ -55,7 +55,7 @@ object BioC {
 
     val negativeCategory = negativePassagesFiles.flatMap { file ⇒
 
-      val passages = IO.read(file.getPath)
+      val passages = IO.read(file)
 
       val passageTokens = passages.map(Utils.tokenize(_).toSet)
 

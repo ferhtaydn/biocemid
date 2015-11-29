@@ -13,7 +13,7 @@ object Utils {
 
   def stringifyTuple2Sequence(seq: Seq[(String, Double)]): String = {
     val sb = new StringBuilder()
-    seq.foreach(a ⇒ sb.append(s"${a._1} ${a._2}\n"))
+    seq.foreach(a ⇒ sb.append(s"${a._1},${a._2}\n"))
     sb.toString()
   }
 
