@@ -3,6 +3,7 @@ package com.ferhtaydn.biocreative5.task1.subtask6
 import java.io.{ File, FileOutputStream, FileReader, OutputStreamWriter }
 
 import bioc.io.{ BioCDocumentReader, BioCDocumentWriter, BioCFactory }
+import bioc.util.CopyConverter
 import bioc.{ BioCPassage, BioCSentence, BioCCollection, BioCDocument }
 import com.typesafe.config.ConfigFactory
 
@@ -15,7 +16,7 @@ object BioC {
     ConfigFactory.load("methods.conf").getConfigList("bioc.psimi.methods").map(MethodInfo(_)).toList
   }
 
-  lazy val methodNames = methodsInfo.map(_.id)
+  lazy val methodIds = methodsInfo.map(_.id)
 
   def calcFrequenciesFromTokensFile(tokensFile: String): Seq[(String, Double)] = {
     val tokenFreqs = IO.read(tokensFile).foldLeft(Map.empty[String, Double]) {
@@ -105,7 +106,7 @@ object BioC {
     }
   }
 
-  def annotate(dir: String, InputFileSuffix: String, outputFileSuffix: String): Unit = {
+  def annotate(converter: CopyConverter, dir: String, InputFileSuffix: String, outputFileSuffix: String): Unit = {
 
     IO.list(dir, InputFileSuffix).foreach { file ⇒
 
@@ -119,8 +120,6 @@ object BioC {
       )
 
       val collection: BioCCollection = reader.readCollectionInfo
-
-      val converter: SentenceConverter2 = new SentenceConverter2
 
       val outCollection: BioCCollection = converter.getCollection(collection)
       outCollection.setKey("sentence.key")

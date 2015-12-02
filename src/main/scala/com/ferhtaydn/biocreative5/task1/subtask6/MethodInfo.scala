@@ -5,7 +5,14 @@ import com.typesafe.config.Config
 import scala.collection.JavaConversions._
 
 case class MethodInfo(id: String, name: String, synonym: List[String], related: List[String], extra: List[String],
-  definition: String, isA: List[Hierarchy])
+    definition: String, isA: List[Hierarchy]) {
+
+  def nameAndSynonyms: List[String] = {
+    if (!synonym.contains(name)) name :: synonym
+    else name :: (synonym diff List(name))
+  }
+
+}
 
 case class Hierarchy(id: String, name: String)
 
@@ -27,10 +34,10 @@ object MethodInfo {
 
 }
 
-case class MethodWeight(name: String, weight: Double)
+case class MethodWeight(id: String, weight: Double)
 
 object MethodWeight {
-  private def toInfon(mw: MethodWeight): (String, String) = mw.name -> mw.weight.toString
+  private def toInfon(mw: MethodWeight): (String, String) = mw.id -> mw.weight.toString
   implicit def toInfons(mws: List[MethodWeight]): Map[String, String] = mws.map(toInfon).toMap
   private def fromInfon(infon: (String, String)): MethodWeight = MethodWeight(infon._1, infon._2.toDouble)
   implicit def fromInfons(infons: Map[String, String]): List[MethodWeight] = infons.map(fromInfon).toList
