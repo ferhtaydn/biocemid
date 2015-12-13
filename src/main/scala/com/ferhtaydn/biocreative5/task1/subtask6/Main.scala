@@ -95,7 +95,7 @@ object Main extends App {
 
   } else if (selection == 3) {
 
-    BioC.annotate(new SentenceConverter2, IO.annotationDirectory, IO.xmlSuffix, "passages_with_exp_methods_with_before_after.xml")
+    BioC.annotate(IO.annotationDirectory, IO.xmlSuffix, "passages_with_exp_methods_with_before_after.xml")
 
   } else if (selection == 4) {
 
@@ -139,7 +139,7 @@ object Main extends App {
     cleanPreviousResultFiles
     generateWord2vecResultFiles()
     cleanPreviousAnnotatedFiles
-    BioC.annotate(new SentenceConverter3(IO.bc3Word2vecsDirectory), IO.bc3Word2vecAnnotationDirectory, IO.xmlSuffix, IO.word2vecAnnotationSuffix)
+    BioC.annotate(IO.bc3Word2vecAnnotationDirectory, IO.xmlSuffix, IO.word2vecAnnotationSuffix, Some(IO.oaWord2vecsDirectory))
 
     def cleanPreviousResultFiles: String = {
       import scala.sys.process._
@@ -198,7 +198,7 @@ object Main extends App {
             methodsNames(method.id).foreach(map.remove)
             val maxMinNormalized = maxMinNormalization(map.toSeq, numberOfVectors)
 
-            IO.write(s"${IO.bc3Word2vecsDirectory}/${method.id}/${method.id}${IO.word2vecResultFileSuffix}", Utils.stringifyTuples(maxMinNormalized))
+            IO.write(s"${IO.bc3Word2vecsDirectory}/${method.id}/${method.id}-${IO.word2vecResultFileSuffix}", Utils.stringifyTuples(maxMinNormalized))
         }
       }
     }
@@ -208,7 +208,7 @@ object Main extends App {
     cleanPreviousResultFiles
     generateWord2vecResultFiles()
     cleanPreviousAnnotatedFiles
-    BioC.annotate(new SentenceConverter3(IO.oaWord2vecsDirectory), IO.oaWord2vecAnnotationDirectory, IO.xmlSuffix, IO.word2vecAnnotationSuffix)
+    BioC.annotate(IO.oaWord2vecAnnotationDirectory, IO.xmlSuffix, IO.word2vecAnnotationSuffix, Some(IO.oaWord2vecsDirectory))
 
     def cleanPreviousResultFiles: String = {
       import scala.sys.process._
@@ -228,14 +228,14 @@ object Main extends App {
         (m.id, if (!synonyms.contains(name)) name :: synonyms else name :: (synonyms diff List(name)))
       }.toMap
 
-      BioC.methodsInfo.foreach { method ⇒
+      BioC.methodIds.foreach { method ⇒
 
-        IO.list(s"${IO.oaWord2vecsDirectory}/${method.id}", IO.txtSuffix) match {
+        IO.list(s"${IO.oaWord2vecsDirectory}/$method", IO.txtSuffix) match {
           case Nil ⇒ //do nothing
           case files ⇒
             val map = scala.collection.mutable.Map.empty[String, Double].withDefaultValue(0d)
 
-            val otherMethodsNames = methodsNames - method.id
+            val otherMethodsNames = methodsNames - method
 
             files.foreach { file ⇒
 
@@ -255,9 +255,9 @@ object Main extends App {
               }
             }
 
-            //todo decide here.
-            methodsNames(method.id).foreach(map.remove)
-            IO.write(s"${IO.oaWord2vecsDirectory}/${method.id}/${method.id}${IO.word2vecResultFileSuffix}",
+            // remove the name/synonyms from word2vecs list.
+            methodsNames(method).foreach(map.remove)
+            IO.write(s"${IO.oaWord2vecsDirectory}/$method/$method-${IO.word2vecResultFileSuffix}",
               Utils.stringifyTuples(map.toSeq.sortBy(_._2).reverse))
         }
       }
