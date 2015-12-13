@@ -3,7 +3,6 @@ package com.ferhtaydn.biocreative5.task1.subtask6
 import java.io.{ File, FileOutputStream, FileReader, OutputStreamWriter }
 
 import bioc.io.{ BioCDocumentReader, BioCDocumentWriter, BioCFactory }
-import bioc.util.CopyConverter
 import bioc.{ BioCPassage, BioCSentence, BioCCollection, BioCDocument }
 import com.typesafe.config.ConfigFactory
 
@@ -106,7 +105,7 @@ object BioC {
     }
   }
 
-  def annotate(converter: CopyConverter, dir: String, InputFileSuffix: String, outputFileSuffix: String): Unit = {
+  def annotate(dir: String, InputFileSuffix: String, outputFileSuffix: String, word2vecsDir: Option[String] = None): Unit = {
 
     IO.list(dir, InputFileSuffix).foreach { file ⇒
 
@@ -120,6 +119,11 @@ object BioC {
       )
 
       val collection: BioCCollection = reader.readCollectionInfo
+
+      val converter = word2vecsDir match {
+        case None      ⇒ new SentenceConverter2
+        case Some(w2v) ⇒ new SentenceConverter3(w2v)
+      }
 
       val outCollection: BioCCollection = converter.getCollection(collection)
       outCollection.setKey("sentence.key")

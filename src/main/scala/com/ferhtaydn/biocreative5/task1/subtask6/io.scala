@@ -16,7 +16,7 @@ object IO {
   val word2vecAnnotationSuffix = "word2vecs_annotated.xml"
   val xmlSuffix = ".xml"
   val txtSuffix = ".txt"
-  val word2vecResultFileSuffix = "-result.txt"
+  val word2vecResultFileSuffix = "result.txt"
 
   def write(path: String, txt: String): Unit = {
     Files.write(Paths.get(path), txt.getBytes(StandardCharsets.UTF_8), StandardOpenOption.CREATE)
@@ -29,7 +29,12 @@ object IO {
   }
 
   def list(dirName: String, suffix: String): List[File] = {
-    new File(dirName).listFiles.filter(_.isFile).filter(_.getName.endsWith(suffix)).toList
+    val dir = new File(dirName)
+    if (dir.exists()) {
+      dir.listFiles.filter(_.isFile).filter(_.getName.endsWith(suffix)).toList
+    } else {
+      Nil
+    }
   }
 
   def listOthers(method: String, suffix: String): List[File] = {

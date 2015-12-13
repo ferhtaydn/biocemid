@@ -82,33 +82,7 @@ class SentenceConverter3(word2vecsDir: String) extends CopyConverter {
           }
           val word2vecResults = word2vecs.filter { case (p, s) ⇒ matchingVectors.contains(p) }
 
-          def dedupe(elements: Seq[(String, Double)], acc: Seq[(String, Double)]): Seq[(String, Double)] = elements match {
-            case Nil ⇒ acc
-            case (elem @ (p, s)) +: tail ⇒
-
-              tail.find { case (a, b) ⇒ (a.contains(p) || p.contains(a)) && s < b } match {
-                case None    ⇒ dedupe(tail.filterNot { case (a, b) ⇒ a.contains(p) || p.contains(a) }, acc :+ elem)
-                case Some(x) ⇒ dedupe(tail, acc)
-              }
-          }
-
-          def filterMaxLengthMatch(elements: Seq[(String, Double)], acc: Seq[(String, Double)]): Seq[(String, Double)] = elements match {
-            case Nil ⇒ acc
-            case (elem @ (p, s)) +: tail ⇒
-
-              tail.find { case (a, b) ⇒ a.contains(p) } match {
-                case None ⇒ acc.find { case (x, y) ⇒ x.contains(p) } match {
-                  case None    ⇒ filterMaxLengthMatch(tail, acc :+ elem)
-                  case Some(t) ⇒ filterMaxLengthMatch(tail, acc)
-                }
-                case Some(x) ⇒ filterMaxLengthMatch(tail, acc)
-              }
-          }
-
-          //todo decide here
-          //val n = if (synonymNgram.nonEmpty) synonymNgram.map(s ⇒ s -> 1d).map(_._2).sum else 0d
           val n = if (synonymNgram.nonEmpty) 1d else 0d
-          //val w = if (word2vecResults.nonEmpty) filterMaxLengthMatch(word2vecResults, Seq()).map(_._2).sum else 0d
           val w = if (word2vecResults.nonEmpty) word2vecResults.map(_._2).sum else 0d
 
           MethodWeight(id, n + w)
@@ -119,21 +93,26 @@ class SentenceConverter3(word2vecsDir: String) extends CopyConverter {
 
     def setWeights(sentence: BioCSentence, methodWeights: List[MethodWeight]): BioCSentence = {
 
-      methodWeights match {
-        case Nil ⇒ sentence
-        case mw :: mws ⇒
-          if (mw.weight >= 1.0) {
-            //todo change threshold or look for duplicates, not only the first one.
-            val annotationInfons = Map("type" -> "ExperimentalMethod", "PSIMI" -> mw.id)
-            val out: BioCAnnotation = new BioCAnnotation
-            out.setInfons(annotationInfons)
-            out.setText(sentence.getText)
-            out.setLocation(sentence.getOffset, sentence.getText.length)
-            sentence.addAnnotation(out)
+      methodWeights.partition(_.weight >= 1d) match {
+        case (up, down) ⇒
+
+          if (up.nonEmpty) {
+
+            up.groupBy(_.weight).toSeq.sortBy(_._1).reverse.head._2.foreach {
+              case mw ⇒
+                val annotationInfons = Map("type" -> "ExperimentalMethod", "PSIMI" -> mw.id)
+                val out: BioCAnnotation = new BioCAnnotation
+                out.setInfons(annotationInfons)
+                out.setText(sentence.getText)
+                out.setLocation(sentence.getOffset, sentence.getText.length)
+                sentence.addAnnotation(out)
+            }
+
             sentence
+
           } else {
             import MethodWeight.toInfons
-            sentence.setInfons(mapAsJavaMap(methodWeights))
+            sentence.setInfons(mapAsJavaMap(down))
             sentence
           }
       }
@@ -152,7 +131,6 @@ class SentenceConverter3(word2vecsDir: String) extends CopyConverter {
       import MethodWeight.fromInfons
       val targetSentenceInfon: List[MethodWeight] = targetSentence.getInfons.toMap
 
-      //todo decide here
       targetSentenceInfon.find(mw ⇒ mw.id.equals(sentenceAnnotation) && mw.weight >= 0.5).map { mw ⇒
         val annotationInfons = Map("type" -> "ExperimentalMethod", "PSIMI" -> mw.id)
         val out: BioCAnnotation = new BioCAnnotation
@@ -169,7 +147,6 @@ class SentenceConverter3(word2vecsDir: String) extends CopyConverter {
 
         if (sentence.getAnnotations.nonEmpty && sentence.getInfons.isEmpty) {
 
-          //todo decide here
           ((index - 2) to (index + 2)).foreach { i ⇒
             annotatedSentences.get(i).fold() { sent ⇒
               if (sent.getAnnotations.isEmpty && sent.getInfons.nonEmpty) {
