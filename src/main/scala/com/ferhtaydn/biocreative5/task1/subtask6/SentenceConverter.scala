@@ -17,9 +17,9 @@ class SentenceConverter extends CopyConverter {
 
         val result = BioC.methodsInfo.map {
 
-          case MethodInfo(id, name, ss, rs, es, definition, hierarchies) ⇒
+          case info @ MethodInfo(id, name, ss, rs, es, definition, hierarchies) ⇒
 
-            val synonymNgram = ss.flatMap { s ⇒
+            val synonymNgram = info.nameAndSynonyms.flatMap { s ⇒
               val size = s.split("\\s").size
               if (size > 1) {
                 Utils.mkNgram(words, size).filter(_.equalsIgnoreCase(s))

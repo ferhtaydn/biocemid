@@ -11,7 +11,7 @@ object Utils {
 
   def extractFileName(fileName: String, suffix: String): String = fileName.split(suffix).head
 
-  def stringifyTuple2Sequence(seq: Seq[(String, Double)]): String = {
+  def stringifyTuples[A, B](seq: Seq[(A, B)]): String = {
     val sb = new StringBuilder()
     seq.foreach(a ⇒ sb.append(s"${a._1},${a._2}\n"))
     sb.toString()
@@ -39,7 +39,7 @@ object Utils {
     coreNLP
   }
 
-  lazy val stopwords = IO.read("stopwords.txt").toList
+  lazy val stopwords = IO.read("files/stopwords.txt").toList
 
   def tokenize(sentence: String): List[String] = {
 

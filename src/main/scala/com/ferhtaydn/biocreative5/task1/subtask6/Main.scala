@@ -2,11 +2,6 @@ package com.ferhtaydn.biocreative5.task1.subtask6
 
 object Main extends App {
 
-  val annotatedDirectory = "manual_annotated_data_set"
-  val annotationDirectory = "xml/bc5_dataset"
-  val algoResultsDirectory = "annotated_before_after_results"
-  val word2vecs = "word2vecs"
-
   Console.println(
 
     s"""
@@ -14,19 +9,21 @@ object Main extends App {
       |
       |Please press the key for:
       |
-      |1 - To generate the helper information files and tf-rf results from training data in $annotatedDirectory
+      |1 - To generate the helper information files and tf-rf results from training data in ${IO.annotatedDirectory}
       |
       |2 - To get tf-rf results from PSI-MI ontology definitions
       |
-      |3 - Annotate the raw BioC files in $annotationDirectory
+      |3 - Annotate the raw BioC files in ${IO.annotationDirectory}
       |
-      |4 - Generate Eval results in $algoResultsDirectory
+      |4 - Generate Eval results in ${IO.algoResultsDirectory}
       |
-      |5 - Count of each method annotated in $algoResultsDirectory
+      |5 - Count of each method annotated in ${IO.algoResultsDirectory}
       |
-      |6 - To generate word2vec results for each method name and synonym
+      |6 - To generate bc3 word2vec results for each method name and synonym
       |
-      |7 - Gather the word2vec results for each method
+      |7 - Gather the bc3 word2vec results for each method
+      |
+      |8 - Gather the open access word2vec results for each method
       |
     """.stripMargin
 
@@ -36,8 +33,8 @@ object Main extends App {
 
   if (selection == 1) {
 
-    BioC.methodNames.foreach(createHelperFiles)
-    BioC.methodNames.foreach(calculateTfrf)
+    BioC.methodIds.foreach(createHelperFiles)
+    BioC.methodIds.foreach(calculateTfrf)
 
     def calculateTfrf(method: String): Unit = {
 
@@ -54,7 +51,7 @@ object Main extends App {
 
       val tfrf = BioC.tfRf(tokenFreqs, positivePassages, negativePassagesFiles).sortBy(_._2).reverse
 
-      IO.write(tfRfTokenizedFile, Utils.stringifyTuple2Sequence(tfrf))
+      IO.write(tfRfTokenizedFile, Utils.stringifyTuples(tfrf))
     }
 
     def createHelperFiles(method: String): Unit = {
@@ -74,9 +71,9 @@ object Main extends App {
       IO.remove(sentencesFile)
       IO.remove(tokenizedFile)
 
-      IO.list(annotatedDirectory, ".xml").foreach(f ⇒ out(BioC.extractAnnotatedSentences(f, method)))
+      IO.list(IO.annotatedDirectory, IO.xmlSuffix).foreach(f ⇒ out(BioC.extractAnnotatedSentences(f, method)))
 
-      IO.write(tokenizedFreqsFile, Utils.stringifyTuple2Sequence(BioC.calcFrequenciesFromTokensFile(tokenizedFile)))
+      IO.write(tokenizedFreqsFile, Utils.stringifyTuples(BioC.calcFrequenciesFromTokensFile(tokenizedFile)))
 
     }
 
@@ -92,88 +89,183 @@ object Main extends App {
 
       val tfrf = BioC.tfRfOntology(tokenFreqs, Seq(m.definition), negativePassages).sortBy(_._2).reverse
 
-      IO.write(tfRfTokenizedFile, Utils.stringifyTuple2Sequence(tfrf))
+      IO.write(tfRfTokenizedFile, Utils.stringifyTuples(tfrf))
 
     }
 
   } else if (selection == 3) {
 
-    BioC.annotate(annotationDirectory, ".xml", "passages_with_exp_methods_with_before_after.xml")
+    BioC.annotate(new SentenceConverter2, IO.annotationDirectory, IO.xmlSuffix, "passages_with_exp_methods_with_before_after.xml")
 
   } else if (selection == 4) {
 
-    BioC.evaluate(annotatedDirectory, algoResultsDirectory, ".xml")
+    BioC.evaluate(IO.annotatedDirectory, IO.algoResultsDirectory, IO.xmlSuffix)
 
   } else if (selection == 5) {
 
-    BioC.countOfMethods(annotatedDirectory, ".xml")
+    BioC.countOfMethods(IO.annotatedDirectory, IO.xmlSuffix)
 
   } else if (selection == 6) {
 
-    val methods = BioC.methodsInfo.map { m ⇒
-      val synonyms = m.synonym.map(x ⇒ x.split(" ").mkString("_"))
-      val name = m.name.split(" ").mkString("_")
-      m.id :: (if (!synonyms.contains(name)) name :: synonyms else name :: (synonyms diff List(name)))
+    deleteWord2vecsDirectory()
+    generateWord2vecs()
+
+    def deleteWord2vecsDirectory(): Unit = {
+      import sys.process._
+      //clean the word2vecs file
+      s"find . -name ${IO.bc3Word2vecsDirectory}" #| "xargs rm -r" !!
+
+      s"mkdir ${IO.bc3Word2vecsDirectory}".!!
     }
 
-    methods.foreach(println)
+    def generateWord2vecs(): Unit = {
 
-    import sys.process._
+      val methods = BioC.methodsInfo.map { m ⇒
+        val synonyms = m.synonym.map(x ⇒ x.split(" ").mkString("_"))
+        val name = m.name.split(" ").mkString("_")
+        m.id :: (if (!synonyms.contains(name)) name :: synonyms else name :: (synonyms diff List(name)))
+      }
 
-    //clean the word2vecs file
-    s"find . -name $word2vecs" #| "xargs rm -r" !!
-
-    s"mkdir $word2vecs".!!
-
-    methods.map { m ⇒
-      val seq = Seq("/Users/aydinf/Desktop/word2vec_extension/distance_files",
-        "/Users/aydinf/Desktop/bc3_word2vec_results/phrase1_eval/bc3_phrase1_vectors.bin") ++ m
-      Process(seq, new java.io.File(word2vecs)).!!
+      import sys.process._
+      methods.foreach { m ⇒
+        val seq = Seq("/Users/aydinf/Desktop/word2vec_extension/distance_files",
+          "/Users/aydinf/Desktop/bc3_word2vec_results/phrase1_eval/bc3_phrase1_vectors.bin") ++ m
+        Process(seq, new java.io.File(IO.bc3Word2vecsDirectory)).!!
+      }
     }
 
   } else if (selection == 7) {
 
-    lazy val methodsNames = BioC.methodsInfo.map { m ⇒
-      val synonyms = m.synonym.map(x ⇒ x.split(" ").mkString("_"))
-      val name = m.name.split(" ").mkString("_")
-      (m.id, if (!synonyms.contains(name)) name :: synonyms else name :: (synonyms diff List(name)))
-    }.toMap
+    cleanPreviousResultFiles
+    generateWord2vecResultFiles()
+    cleanPreviousAnnotatedFiles
+    BioC.annotate(new SentenceConverter3(IO.bc3Word2vecsDirectory), IO.bc3Word2vecAnnotationDirectory, IO.xmlSuffix, IO.word2vecAnnotationSuffix)
 
-    methodsNames.foreach(println)
+    def cleanPreviousResultFiles: String = {
+      import scala.sys.process._
+      s"find ${IO.bc3Word2vecsDirectory} -type f -name *${IO.word2vecResultFileSuffix}" #| "xargs rm" !!
+    }
 
-    BioC.methodsInfo.foreach { method ⇒
+    def cleanPreviousAnnotatedFiles: String = {
+      import scala.sys.process._
+      s"find ${IO.bc3Word2vecAnnotationDirectory} -type f -name *${IO.word2vecAnnotationSuffix}" #| "xargs rm" !!
+    }
 
-      val map = scala.collection.mutable.Map.empty[String, Double].withDefaultValue(0d)
+    def generateWord2vecResultFiles(): Unit = {
 
-      IO.list(s"$word2vecs/${method.id}", ".txt").foreach { file ⇒
-
-        IO.read(file).foreach { line ⇒
-
-          val splitted = line.split(",")
-          val cosineString = splitted.last
-          val word = line.dropRight(cosineString.length + 1)
-          val cosine = cosineString.toDouble
-
-          val otherMethodsNames = methodsNames - method.id
-
-          if (!otherMethodsNames.values.exists(_.contains(word))) {
-
-            map.get(word) match {
-              case Some(cos) if cos < cosine ⇒ map(word) = cosine
-              case None                      ⇒ map(word) = cosine
-              case _                         ⇒ // do not modify
-            }
-
-          }
-        }
+      def maxMinNormalization(data: Seq[(String, Double)], itemCount: Int) = {
+        val partial = data.sortBy(_._2).reverse.take(itemCount)
+        val min = partial.last._2
+        val max = partial.head._2
+        partial.map { case (w, c) ⇒ (w, (c - min) / (max - min)) }
       }
 
-      IO.write(s"$word2vecs/${method.id}/${method.id}-result.txt", Utils.stringifyTuple2Sequence(map.toSeq.sortBy(_._2).reverse))
+      lazy val methodsNames = BioC.methodsInfo.map { m ⇒
+        val synonyms = m.synonym.map(x ⇒ x.split(" ").mkString("_"))
+        val name = m.name.split(" ").mkString("_")
+        (m.id, if (!synonyms.contains(name)) name :: synonyms else name :: (synonyms diff List(name)))
+      }.toMap
+
+      BioC.methodsInfo.foreach { method ⇒
+
+        IO.list(s"${IO.bc3Word2vecsDirectory}/${method.id}", IO.txtSuffix) match {
+          case Nil ⇒ //do nothing
+          case files ⇒
+            val map = scala.collection.mutable.Map.empty[String, Double].withDefaultValue(0d)
+            val list = scala.collection.mutable.MutableList.empty[(String, Double)]
+
+            val otherMethodsNames = methodsNames - method.id
+
+            files.foreach { file ⇒
+              IO.read(file).foreach { line ⇒
+                val cosineString = line.split(",").last
+                val word = line.dropRight(cosineString.length + 1)
+                val cosine = cosineString.toDouble
+                if (!otherMethodsNames.values.exists(_.contains(word))) list += word -> cosine
+              }
+            }
+
+            list.foreach {
+              case (word, cosine) ⇒
+                map.get(word) match {
+                  case Some(cos) ⇒ map.update(word, map(word) + cosine)
+                  case None      ⇒ map(word) = cosine
+                }
+            }
+
+            val numberOfVectors = 101
+            //remove the method name and synonyms, those will be checked in converter.
+            methodsNames(method.id).foreach(map.remove)
+            val maxMinNormalized = maxMinNormalization(map.toSeq, numberOfVectors)
+
+            IO.write(s"${IO.bc3Word2vecsDirectory}/${method.id}/${method.id}${IO.word2vecResultFileSuffix}", Utils.stringifyTuples(maxMinNormalized))
+        }
+      }
+    }
+
+  } else if (selection == 8) {
+
+    cleanPreviousResultFiles
+    generateWord2vecResultFiles()
+    cleanPreviousAnnotatedFiles
+    BioC.annotate(new SentenceConverter3(IO.oaWord2vecsDirectory), IO.oaWord2vecAnnotationDirectory, IO.xmlSuffix, IO.word2vecAnnotationSuffix)
+
+    def cleanPreviousResultFiles: String = {
+      import scala.sys.process._
+      s"find ${IO.oaWord2vecsDirectory} -type f -name *${IO.word2vecResultFileSuffix}" #| "xargs rm" !!
+    }
+
+    def cleanPreviousAnnotatedFiles: String = {
+      import scala.sys.process._
+      s"find ${IO.oaWord2vecAnnotationDirectory} -type f -name *${IO.word2vecAnnotationSuffix}" #| "xargs rm" !!
+    }
+
+    def generateWord2vecResultFiles(): Unit = {
+
+      lazy val methodsNames = BioC.methodsInfo.map { m ⇒
+        val synonyms = m.synonym.map(x ⇒ x.split(" ").mkString("_"))
+        val name = m.name.split(" ").mkString("_")
+        (m.id, if (!synonyms.contains(name)) name :: synonyms else name :: (synonyms diff List(name)))
+      }.toMap
+
+      BioC.methodsInfo.foreach { method ⇒
+
+        IO.list(s"${IO.oaWord2vecsDirectory}/${method.id}", IO.txtSuffix) match {
+          case Nil ⇒ //do nothing
+          case files ⇒
+            val map = scala.collection.mutable.Map.empty[String, Double].withDefaultValue(0d)
+
+            val otherMethodsNames = methodsNames - method.id
+
+            files.foreach { file ⇒
+
+              IO.read(file).foreach { line ⇒
+
+                val cosineString = line.split(",").last
+                val word = line.dropRight(cosineString.length + 1)
+                val cosine = cosineString.toDouble
+
+                if (!otherMethodsNames.values.exists(_.contains(word))) {
+                  map.get(word) match {
+                    case Some(cos) if cos < cosine ⇒ map(word) = cosine
+                    case None                      ⇒ map(word) = cosine
+                    case _                         ⇒ // do not modify
+                  }
+                }
+              }
+            }
+
+            //todo decide here.
+            methodsNames(method.id).foreach(map.remove)
+            IO.write(s"${IO.oaWord2vecsDirectory}/${method.id}/${method.id}${IO.word2vecResultFileSuffix}",
+              Utils.stringifyTuples(map.toSeq.sortBy(_._2).reverse))
+        }
+      }
     }
 
   } else {
 
-    Console.println("Please select the options from 1 until 4.")
+    Console.println("Please select the options from 1 until 8.")
     System.exit(0)
 
   }

@@ -46,9 +46,9 @@ class SentenceConverter2 extends CopyConverter {
 
       BioC.methodsInfo.map {
 
-        case MethodInfo(id, name, ss, rs, es, definition, hierarchies) ⇒
+        case info @ MethodInfo(id, name, ss, rs, es, definition, hierarchies) ⇒
 
-          val synonymNgram = ss.flatMap { s ⇒
+          val synonymNgram = info.nameAndSynonyms.flatMap { s ⇒
             val size = s.split("\\s").size
             if (size > 1) {
               Utils.mkNgram(words, size).filter(_.equalsIgnoreCase(s))
@@ -73,7 +73,7 @@ class SentenceConverter2 extends CopyConverter {
       case Nil ⇒ sentence
       case mw :: mws ⇒
         if (mw.weight >= 0.5) {
-          val annotationInfons = Map("type" -> "ExperimentalMethod", "PSIMI" -> mw.name)
+          val annotationInfons = Map("type" -> "ExperimentalMethod", "PSIMI" -> mw.id)
           val out: BioCAnnotation = new BioCAnnotation
           out.setInfons(annotationInfons)
           out.setText(sentence.getText)
@@ -112,8 +112,8 @@ class SentenceConverter2 extends CopyConverter {
               val targetSentence = annotatedSentences(i)
               val targetSentenceInfon: List[MethodWeight] = targetSentence.getInfons.toMap
 
-              targetSentenceInfon.find(mw ⇒ mw.name.equals(sentenceAnnotation) && mw.weight >= 0.25).fold() { mw ⇒
-                val annotationInfons = Map("type" -> "ExperimentalMethod", "PSIMI" -> mw.name)
+              targetSentenceInfon.find(mw ⇒ mw.id.equals(sentenceAnnotation) && mw.weight >= 0.25).fold() { mw ⇒
+                val annotationInfons = Map("type" -> "ExperimentalMethod", "PSIMI" -> mw.id)
                 val out: BioCAnnotation = new BioCAnnotation
                 out.setInfons(annotationInfons)
                 out.setText(targetSentence.getText)
