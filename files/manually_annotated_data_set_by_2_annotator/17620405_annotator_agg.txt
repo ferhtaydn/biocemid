@@ -1,0 +1,43 @@
+Uncomplete Annotation => UA
+Wrong Annotation => WA
+Missing Annotation => MA
+Extra Annotation => EA
+
+
+17620405:
+	passage_offset_7334:
+		Melce: 1 MA (0018), 1 MA (0416), 1 MA (0019)
+	passage_offset_8477:
+		Melce: 1 UA (0006)
+	passage_offset_9204:
+		Melce: 1 UA (0006)
+	passage_offset_19763:
+		Melce: 1 WA (0007)
+	passage_offset_12056:
+		Melce: 1 WA (0007)
+	passage_offset_13493:
+		Melce: 1 MA (0413)
+	passage_offset_14396:
+		Melce: 1 MA (0413)
+	passage_offset_21463:
+		Melce: 1 MA (0413), 1 MA (0402)
+	passage_offset_23457:
+		Melce: 1 MA (0413)
+	passage_offset_23882:
+		Melce: 1 UA (0402)
+	passage_offset_25171:
+		Melce: 1 MA (0416)
+	passage_offset_29501:
+		Melce: 1 MA (0413)
+	passage_offset_30247:
+		Melce: 1 MA (0402)
+	passage_offset_31191:
+		Melce: 1 MA (0402), 1 MA (0412)
+	passage_offset_32123:
+		Melce: 1 MA (0412)
+	passage_offset_33641:
+		Melce: 1 MA (0426)
+	passage_offset_38020:
+		Melce: 1 MA (0413)
+	passage_offset_38926:
+		Melce: 1 MA (0889)

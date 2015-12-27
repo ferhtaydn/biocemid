@@ -1,0 +1,29 @@
+Uncomplete Annotation => UA
+Wrong Annotation => WA
+Missing Annotation => MA
+Extra Annotation => EA
+
+
+18292755:
+	passage_offset_4631:
+		Melce: 1 EA (0077) // actually a 0077 seperated on a passage, all passage annotated.
+	passage_offset_5615:
+		Melce: 1 WA (0051) // 0017
+	passage_offset_6038:
+		Melce: 1 WA (0051) // 0017
+	passage_offset_6694:
+		Melce: 1 WA (0051), 1 WA (0051) // 0017
+	passage_offset_8911:
+		Melce: 1 UA (0077)
+	passage_offset_9734:
+		Melce: 1 EA (0077)
+	passage_offset_12128:
+		Melce: 1 MA (0402)
+	passage_offset_19166:
+		Melce: 1 EA (0047), 1 EA (0047), 1 EA (0047), 1 EA (0047)
+	passage_offset_21688:
+		Melce: 1 WA (0065) // 0096, 1 EA (0065)
+	passage_offset_23490:
+		Melce: 1 MA (0402)
+	passage_offset_24295:
+		Melce: 1 EA (0051), 1 EA (0065)

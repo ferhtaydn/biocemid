@@ -1,0 +1,18 @@
+Uncomplete Annotation => UA
+Wrong Annotation => WA
+Missing Annotation => MA
+Extra Annotation => EA
+
+
+17511879:
+	passage_offset_1212:
+		Melce: 1 EA (0006)
+	passage_offset_4216:
+		Melce: 1 UA (0018)
+	passage_offset_12059:
+		Melce: 1 MA (0018)
+	passage_offset_19224:
+		Melce: 1 UA (0018)
+	passage_offset_20196:
+		Melce: 1 UA (0007)
+	

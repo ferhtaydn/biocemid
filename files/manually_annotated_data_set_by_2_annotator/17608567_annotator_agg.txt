@@ -1,0 +1,21 @@
+Uncomplete Annotation => UA
+Wrong Annotation => WA
+Missing Annotation => MA
+Extra Annotation => EA
+
+
+17608567:
+	passage_offset_18463:
+		Melce: 1 MA (0114)
+	passage_offset_21033:
+		Melce: 1 EA (0114)
+	passage_offset_21817:
+		Melce: 1 EA (0006)
+	passage_offset_22090:
+		Melce: 1 EA (0006)
+	passage_offset_31529:
+		Melce: 1 MA (0071), 1 WA (0096)
+	passage_offset_34283:
+		Melce: 1 EA (0114)
+	passage_offset_36761:
+		Melce: 1 EA/WA (0006) //immunoblotting
