@@ -142,7 +142,9 @@ object BioC {
 
   def countOfMethods(dir: String, suffix: String): Unit = {
 
-    val methodCounts: scala.collection.mutable.Map[String, Int] = scala.collection.mutable.Map.empty[String, Int].withDefaultValue(0)
+    import scala.collection.mutable
+    val methodCountWithinPassages: mutable.Map[String, Int] = mutable.Map.empty[String, Int].withDefaultValue(0)
+    val methodCountWithinArticles: mutable.Map[String, Set[String]] = mutable.Map.empty[String, Set[String]].withDefaultValue(Set.empty[String])
 
     IO.list(dir, suffix).foreach { file ⇒
 
@@ -159,14 +161,23 @@ object BioC {
 
         pas.getAnnotations.toList.groupBy(a ⇒ a.getInfon("PSIMI")).map(x ⇒ x._1 -> x._2.size).foreach {
           case (n, c) ⇒
-
-            methodCounts.update(n, methodCounts(n) + c)
+            methodCountWithinPassages.update(n, methodCountWithinPassages(n) + c)
+            methodCountWithinArticles.update(n, methodCountWithinArticles(n) + file.getName)
         }
 
       }
     }
 
-    println(methodCounts)
+    methodIds.foreach { m ⇒
+      val str =
+        s"""
+           |MI:$m
+           |In ${methodCountWithinArticles(m).size} articles: ${methodCountWithinArticles(m)}
+           |In ${methodCountWithinPassages(m)} passages
+         """.stripMargin
+
+      println(str)
+    }
   }
 
   def evaluate(manuResultDir: String, algoResultDir: String, fileSuffix: String) = {
