@@ -17,7 +17,7 @@ object Main extends App {
       |
       |4 - Generate Eval results in ${IO.algoResultsDirectory}
       |
-      |5 - Count of each method annotated in ${IO.algoResultsDirectory}
+      |5 - Count of each method annotated in ${IO.manualAnnotationStatistics}
       |
       |6 - To generate bc3 word2vec results for each method name and synonym
       |
@@ -103,7 +103,7 @@ object Main extends App {
 
   } else if (selection == 5) {
 
-    BioC.countOfMethods(IO.annotatedDirectory, IO.xmlSuffix)
+    BioC.countOfMethods(IO.manualAnnotationStatistics, IO.xmlSuffix)
 
   } else if (selection == 6) {
 
