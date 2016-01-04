@@ -9,11 +9,11 @@ object Main extends App {
       |
       |Please press the key for:
       |
-      |1 - To generate the helper information files and tf-rf results from training data in ${IO.annotatedDirectory}
+      |1 - To generate the helper information files and tf-rf results from training data in ${IO.manualAnnotationRawDirectory}
       |
       |2 - To get tf-rf results from PSI-MI ontology definitions
       |
-      |3 - Annotate the raw BioC files in ${IO.annotationDirectory}
+      |3 - Annotate the raw BioC files in ${IO.manualAnnotationRawDirectory}
       |
       |4 - Generate Eval results in ${IO.algoResultsDirectory}
       |
@@ -71,7 +71,7 @@ object Main extends App {
       IO.remove(sentencesFile)
       IO.remove(tokenizedFile)
 
-      IO.list(IO.annotatedDirectory, IO.xmlSuffix).foreach(f ⇒ out(BioC.extractAnnotatedSentences(f, method)))
+      IO.list(IO.manualAnnotationRawDirectory, IO.xmlSuffix).foreach(f ⇒ out(BioC.extractAnnotatedSentences(f, method)))
 
       IO.write(tokenizedFreqsFile, Utils.stringifyTuples(BioC.calcFrequenciesFromTokensFile(tokenizedFile)))
 
@@ -95,11 +95,11 @@ object Main extends App {
 
   } else if (selection == 3) {
 
-    BioC.annotate(IO.annotationDirectory, IO.xmlSuffix, "passages_with_exp_methods_with_before_after.xml")
+    BioC.annotate(IO.manualAnnotationRawDirectory, IO.xmlSuffix, "baseline.xml")
 
   } else if (selection == 4) {
 
-    BioC.evaluate(IO.annotatedDirectory, IO.algoResultsDirectory, IO.xmlSuffix)
+    BioC.evaluate(IO.manualAnnotationRawDirectory, IO.algoResultsDirectory, IO.xmlSuffix)
 
   } else if (selection == 5) {
 
