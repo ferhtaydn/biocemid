@@ -1,0 +1,9 @@
+Uncomplete Annotation => UA
+Wrong Annotation => WA
+Missing Annotation => MA
+Extra Annotation => EA
+
+
+18700817:
+	passage_offset_6113:
+		Melce: 1 WA (0018) // 0014

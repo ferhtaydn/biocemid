@@ -1,0 +1,43 @@
+Uncomplete Annotation => UA
+Wrong Annotation => WA
+Missing Annotation => MA
+Extra Annotation => EA
+
+0424: in vitro kinase assay problems.
+0419: Gtpase 
+
+17341134:
+	passage_offset_76:
+		Melce: 1 MA (0419)
+	passage_offset_8709:
+		Melce: 1 EA (0424)
+	passage_offset_12837:
+		Melce: 1 EA (0424)
+	passage_offset_17602:
+		Melce: 1 MA (0419)
+	passage_offset_25235
+		Melce: 1 MA (0419)
+	passage_offset_39238:
+		Melce: 1 EA (0424)
+	passage_offset_40763:
+		Melce: 1 MA (0419)
+	passage_offset_41379:
+		Melce: 1 MA (0416)
+	passage_offset_47491:
+		Melce: 1 MA (0096)
+	passage_offset_48289:
+		Melce: 1 EA (0424)
+	passage_offset_48584:
+		Melce: 1 EA (0424)
+	passage_offset_48584:
+		Melce: 1 MA (0096)
+	passage_offset_48963:
+		Melce: 1 EA (0006)
+	passage_offset_50730:
+		Melce: 1 EA (0424)
+	passage_offset_51227:
+		Melce: 1 EA (0424)
+	passage_offset_52308:
+		Melce: 1 EA (0424)
+	passage_offset_52442:
+		Melce: 1 EA (0424)

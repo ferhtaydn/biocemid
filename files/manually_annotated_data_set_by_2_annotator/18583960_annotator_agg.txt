@@ -1,0 +1,22 @@
+Uncomplete Annotation => UA
+Wrong Annotation => WA
+Missing Annotation => MA
+Extra Annotation => EA
+
+
+18583960:
+	passage_offset_114:
+		Melce: 1 UA (0402)
+	passage_offset_6006:
+		Melce: 1 WA (0007) //0019
+	passage_offset_22231:
+		Melce: 1 MA (0402)
+	passage_offset_31857:
+		Melce: 1 MA (0411)
+	passage_offset_35315:
+		Melce: 1 EA (0424) // only experiment details.
+	passage_offset_36083:
+		Melce: 1 EA (0081) // only experiment details. causes false positives.
+	passage_offset_44637:
+		Melce: 1 MA (0411)
+	

@@ -1,0 +1,21 @@
+Uncomplete Annotation => UA
+Wrong Annotation => WA
+Missing Annotation => MA
+Extra Annotation => EA
+
+0054 is used for detection of genetic interactions and mentioned in a few passages through the paper.
+We did not annotate.
+
+17177603:
+	passage_offset_10563:
+		Melce: 1 WA (0006) // 0019
+	passage_offset_41323:
+		Melce: 1 EA/WA (0226)
+	passage_offset_53713:
+		Melce: 1 WA (0006) // 0019
+	passage_offset_54149:
+		Melce: 1 WA (0006) // 0019
+	passage_offset_55247:
+		Melce: 1 WA (0006) // 0019
+	passage_offset_55738:
+		Melce: 1 EA (0004)
