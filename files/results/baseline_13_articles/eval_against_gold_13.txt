@@ -1,0 +1,83 @@
+TN -> 469.0, FN -> 47.0, TP -> 115.0, FP -> 120.0
+accuracy: 0.7776298268974701
+precision: 0.48936170212765956
+recall: 0.7098765432098766
+fscore: 0.5793450881612091
+
+document id: 1851384
+falseNegatives: 4
+falsePositives: 4
+trueNegatives: 37
+truePositives: 14
+
+document id: 1808488
+falseNegatives: 12
+falsePositives: 7
+trueNegatives: 77
+truePositives: 8
+
+document id: 1906825
+falseNegatives: 3
+falsePositives: 6
+trueNegatives: 27
+truePositives: 7
+
+document id: 1933402
+falseNegatives: 6
+falsePositives: 20
+trueNegatives: 27
+truePositives: 11
+
+document id: 1945078
+falseNegatives: 10
+falsePositives: 2
+trueNegatives: 55
+truePositives: 1
+
+document id: 2064443
+falseNegatives: 3
+falsePositives: 14
+trueNegatives: 35
+truePositives: 17
+
+document id: 2291449
+falseNegatives: 1
+falsePositives: 5
+trueNegatives: 38
+truePositives: 7
+
+document id: 2453059
+falseNegatives: 0
+falsePositives: 18
+trueNegatives: 37
+truePositives: 9
+
+document id: 2442910
+falseNegatives: 3
+falsePositives: 0
+trueNegatives: 17
+truePositives: 4
+
+document id: 2572727
+falseNegatives: 0
+falsePositives: 11
+trueNegatives: 55
+truePositives: 5
+
+document id: 2577129
+falseNegatives: 2
+falsePositives: 13
+trueNegatives: 24
+truePositives: 9
+
+document id: 2532794
+falseNegatives: 1
+falsePositives: 4
+trueNegatives: 21
+truePositives: 6
+
+document id: 2576630
+falseNegatives: 2
+falsePositives: 16
+trueNegatives: 19
+truePositives: 17
