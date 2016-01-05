@@ -180,10 +180,13 @@ object BioC {
     }
   }
 
-  def evaluate(manuResultDir: String, algoResultDir: String, fileSuffix: String) = {
+  //noinspection ScalaStyle
+  def evaluate(manuResultDir: String, algoResultDir: String, fileSuffix: String): Unit = {
 
     val manuAnnotationFiles = IO.list(manuResultDir, fileSuffix)
     val algorithmAnnotationFiles = IO.list(algoResultDir, fileSuffix)
+
+    val results = scala.collection.mutable.Map.empty[String, Double].withDefaultValue(0)
 
     manuAnnotationFiles.zip(algorithmAnnotationFiles).foreach {
       case (manu, algo) ⇒
@@ -201,10 +204,10 @@ object BioC {
 
         println(s"document id: ${manuDocument.getID}")
 
-        var falseNegatives: Int = 0
-        var falsePositives: Int = 0
-        var trueNegatives: Int = 0
-        var truePositives: Int = 0
+        var falseNegatives: Double = 0d
+        var falsePositives: Double = 0d
+        var trueNegatives: Double = 0d
+        var truePositives: Double = 0d
 
         val algoPassages = algoDocument.getPassages.filterNot(checkPassageType)
         val manuPassages = manuDocument.getPassages.filterNot(checkPassageType)
@@ -314,6 +317,11 @@ object BioC {
             }
         }
 
+        results.update("FN", results("FN") + falseNegatives)
+        results.update("FP", results("FP") + falsePositives)
+        results.update("TN", results("TN") + trueNegatives)
+        results.update("TP", results("TP") + truePositives)
+
         println("falseNegatives: " + falseNegatives)
         println("falsePositives: " + falsePositives)
         println("trueNegatives: " + trueNegatives)
@@ -321,6 +329,18 @@ object BioC {
         println()
 
     }
+
+    println(results)
+    val accuracy = (results("TP") + results("TN")) / results.values.toList.sum
+    val precision = results("TP") / (results("TP") + results("FP"))
+    val recall = results("TP") / (results("TP") + results("FN"))
+    val fscore = (2 * precision * recall) / (precision + recall)
+
+    println(s"accuracy: $accuracy")
+    println(s"precision: $precision")
+    println(s"recall: $recall")
+    println(s"fscore: $fscore")
+
   }
 
   def splitPassageToSentences(bioCPassage: BioCPassage): Seq[BioCSentence] = {

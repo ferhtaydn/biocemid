@@ -6,7 +6,9 @@ import java.nio.file.{ Files, Paths, StandardOpenOption }
 
 object IO {
 
-  val manualAnnotationRawDirectory = "files/manual_annotation_raw_17"
+  val goldResultDirectory = "files/gold_set_17"
+  val baselineResultDirectory = "files/results/baseline_17_articles"
+  val manualAnnotationRawDirectory = "files/manual_annotation_raw_13"
   val bc5WorkshopTestSetDirectory = "files/bc5_dataset"
   val algoResultsDirectory = "files/annotated_before_after_results"
   val manualAnnotationStatistics = "files/manually_annotated_data_set_by_2_annotator"

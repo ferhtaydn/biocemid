@@ -99,7 +99,7 @@ object Main extends App {
 
   } else if (selection == 4) {
 
-    BioC.evaluate(IO.manualAnnotationRawDirectory, IO.algoResultsDirectory, IO.xmlSuffix)
+    BioC.evaluate(IO.goldResultDirectory, IO.baselineResultDirectory, IO.xmlSuffix)
 
   } else if (selection == 5) {
 
