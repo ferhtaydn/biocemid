@@ -1,0 +1,4 @@
+(C) 293T cells were induced by 10 ng/ml TNF-α for 30 min, and nuclear extracts were prepared and incubated with the indicated antibodies to perform EMSA supershift assays.
+Alternatively, we performed supershift assay to further substantiate this observation.
+Stimulation of 293T cells with TNF-α led to a strong NF-κB DNA-binding band composed of κB probe, NF-κB, and its cofactors in EMSA.
+Interestingly, this EMSA band was markedly diminished when antibody against UXT was introduced into the reaction mixture (Fig.

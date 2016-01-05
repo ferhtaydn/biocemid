@@ -47,6 +47,8 @@ object BioC {
 
   }
 
+  private def log2(x: Double) = scala.math.log(x) / scala.math.log(2)
+
   def tfRf(tokenFreqs: Seq[(String, Double)],
     positivePassages: Seq[String],
     negativePassagesFiles: List[File]): Seq[(String, Double)] = {
@@ -66,8 +68,6 @@ object BioC {
     tokenFreqs map {
 
       case (word, freq) ⇒
-
-        def log2(x: Double) = scala.math.log(x) / scala.math.log(2)
 
         val a = positiveCategory.count(_.contains(word))
 
@@ -91,8 +91,6 @@ object BioC {
     tokenFreqs map {
 
       case (word, freq) ⇒
-
-        def log2(x: Double) = scala.math.log(x) / scala.math.log(2)
 
         val a = positiveCategory.count(_.contains(word)) / positiveCategory.length
 

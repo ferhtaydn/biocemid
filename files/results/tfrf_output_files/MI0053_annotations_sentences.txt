@@ -1,0 +1,2 @@
+To establish whether the N-terminal region of α−parvin, which is excluded from our structural analysis, contributes to LD recognition, we compared binding of a fluorophore-labeled LD1 peptide to either α-parvin-CHC or full-length α-parvin by fluorescence anisotropy.
+For fluorescence anisotropy studies, LD1 with 5-carboxyfluorescein (5-FAM) attached to the ɛ-amino group of the C-terminal lysine was used.

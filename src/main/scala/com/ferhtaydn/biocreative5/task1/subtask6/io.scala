@@ -6,12 +6,14 @@ import java.nio.file.{ Files, Paths, StandardOpenOption }
 
 object IO {
 
-  val goldResultDirectory = "files/gold_set_17"
-  val baselineResultDirectory = "files/results/baseline_17_articles"
-  val manualAnnotationRawDirectory = "files/manual_annotation_raw_13"
-  val bc5WorkshopTestSetDirectory = "files/bc5_dataset"
-  val algoResultsDirectory = "files/annotated_before_after_results"
+  // gold_set_13 and gold_set_17 files contains the articles from $manualAnnotationStatistics
+  val goldResultDirectory = "files/gold_set_30"
   val manualAnnotationStatistics = "files/manually_annotated_data_set_by_2_annotator"
+
+  val tfrfResultDirectory = "files/results/tfrf_30_articles"
+  val baselineResultDirectory = "files/results/baseline_17_articles"
+  val manualAnnotationRawDirectory = "files/manual_annotation_raw_17"
+
   val bc3Word2vecsDirectory = "files/bc3_word2vecs"
   val oaWord2vecsDirectory = "files/oa_word2vecs"
   val bc3Word2vecAnnotationDirectory = "files/bc3_word2vecAnnotation"
@@ -20,6 +22,8 @@ object IO {
   val xmlSuffix = ".xml"
   val txtSuffix = ".txt"
   val word2vecResultFileSuffix = "result.txt"
+  val baselineResultSuffix = "baseline.xml"
+  val tfrfResultSuffix = "tfrf.xml"
 
   def write(path: String, txt: String): Unit = {
     Files.write(Paths.get(path), txt.getBytes(StandardCharsets.UTF_8), StandardOpenOption.CREATE)
