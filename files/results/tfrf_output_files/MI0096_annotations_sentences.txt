@@ -1,0 +1,105 @@
+To test whether ephrin-B1 and Cx43 physically interact, we performed a pull-down assay in NIH 3T3 cells expressing ephrin-B1.
+We used a recombinant protein consisting of the extracellular domain of Eph-B2 receptor fused to the Fc fragment of human IgG (EphB2-Fc) to pull down ephrin-B1.
+Cx43 was detected in the pull down, indicating that it interacts with ephrin-B1 (Figure 6Ca).
+To identify the domain of ephrin-B1 required for the interaction with Cx43, we performed a pull down using a recombinant protein consisting of the extracellular domain of ephrin-B1 fused to the Fc fragment of human IgG (ephrinB1-Fc).
+Cx43 was not detected in the pull down indicating that the intracellular domain of ephrin-B1 is required for the interaction with Cx43 (Figure 6Cb).
+Cx43 could be detected in the pull downs from cells expressing either ephrin-B1 wild type or ephrin-B1ΔPDZ, however, the relative abundance of phosphorylated versus unphosphorylated band was changed.
+More phosphorylated Cx43 (slower mobility) was observed in the ephrin-B1 wild-type pull down, whereas more unphosphorylated Cx43 was detected in the ephrin-B1ΔPDZ pull down (Figure 7A).
+These results indicate that the PDZ binding domain of ephrin-B1 is not required for its interaction with Cx43; however, ephrin-B1ΔPDZ and wild-type ephrin-B1 interact preferentially with different forms of Cx43.
+In our pull-down assay, wild-type ephrin-B1 interacted preferentially with phosphorylated Cx43 whereas ephrin-B1ΔPDZ interacted preferentially with unphosphorylated Cx43, suggesting that the interaction between ephrin-B1 and Cx43 might not be direct, and that these proteins might interact differently when at the cell surface or in the cytoplasm.To assess whether MELK has a role in mammary carcinogenesis, we knocked down the expression of endogenous MELK in breast cancer cell lines using mammalian vector-based RNA interference.
+Furthermore, we identified a long isoform of Bcl-G (Bcl-GL), a pro-apoptotic member of the Bcl-2 family, as a possible substrate for MELK by pull-down assay with recombinant wild-type and kinase-dead MELK.
+To investigate the biological functions of MELK in breast cancer cells, we searched for substrates of MELK in cancer cells by in vitro protein pull-down assays using wild-type MELK (WT-MELK) and kinase-dead MELK (D150A-MELK) recombinant proteins.
+Comparison of silver staining of SDS-PAGE gels containing the pulled-down proteins identified an approximately 30 kDa protein in the lane corresponding to proteins pulled-down with WT-MELK but not in that corresponding to proteins pulled-down with D150A-MELK (Figure 3a).
+Furthermore, we demonstrated that His-tagged WT-MELK could pull-down with Bcl-GL but His-tagged D150A-MELK could not, indicating that, in vitro, Bcl-GL interacts directly with WT-MELK but not with D150A-MELK (Figure 3d).
+Thus, to investigate the biological significance of MELK in breast cancer cells, we searched for a possible substrate(s) of MELK by means of in vitro pull-down assays with recombinant wild-type MELK (WT-MELK) and kinase-dead MELK (D150A-MELK).Flag-tagged protein was overexpressed in COS7 cells and the cell lysate was obtained as described above.
+The cell lysate obtained was incubated with anti-Flag M2 affinity gel (Sigma-Aldrich) at 4 °C overnight with rotation.
+The Flag-tagged protein was pulled down by the affinity gel, and the affinity gel was washed twice with lysis buffer (0.5% NP-40, 20 mM Tris-HCl, 150 mM NaCl, 1 mM EDTA, 1 mM EGTA, and 1 mM NaF [pH 7.5]) with various protease inhibitors (1 mM PMSF, 1 mM NaOV, 2 μg/ml antipain, 10 μg/ml leupeptin, 30 nM okadaic acid, 5 mM benzamidine, and 10 μg/ml aprotinin).
+One to two milligrams of proteins prepared from brain tissues was incubated with the affinity gel, and the Flag-tagged protein pulled down by the affinity gel for 1 h.
+The affinity gel was washed twice with lysis buffer supplemented with protease inhibitors.
+The proteins pulled down by the Flag-tagged protein were subjected to Western blot analysis.
+(E) The membrane fraction of adult brain lysates was incubated with or without Flag-tagged Cdk5.
+Flag-tagged Cdk5 pulled down TrkB from the membrane fraction of adult brain lysates.
+Quality of the purified GST and GST-fusion proteins used in the GST pull-down assay was verified by Coomassie blue staining.GST-pull down and co-immunoprecipitation assays were performed to further characterize this interaction.
+GST-pull down assay to identify the region of BRCA1 interacting with PP1.
+(A) Fragments used in GST pull down assays (BR 2 to 5) are diagrammed.
+(B) Gel depicting co-precipitation of GST-bound BR-4 with PP1.
+Following incubation of GST-BRCA1 proteins with equal amounts of cell lysate, a western blot was performed and probed with an antibody to the catalytic region of PP1.
+(C) Analysis of the effect of mutations of the KVTF PP1 interacting domain on the BRCA1- PP1 interaction.
+GST-bound-BR4 V-A and GST-bound-BR4 F-A binds PP1 with decreased intensity, compared to WT GST-bound-BR4.To study APPL1−Rab5 interaction in solution, we performed glutathione S-transferase (GST)-mediated pull-down assays.
+The APPL1 BAR-PH domain (residues 5−385) and a longer fragment with a 40-residue extension downstream of the PH domain, APPL1 (5−419), were each effectively pulled down by GTP-bound GST−Rab5 fusion protein (Figure 4).
+The APPL1 protein was pulled down by either WT Rab5 preloaded with non-hydrolysable GTP analog (GppNHp) or Rab5-Q79L defective in GTP hydrolysis (with or without preloaded GTP analog), but could not be effectively pulled down by either the WT Rab5 preloaded with GDP or Rab5-S34N defective in GTP binding (Figure 4 and data not shown).
+Therefore, we tested APPL1 binding specificity towards other members in the Rab5 subfamily, using GST−Rab21 (full length) and GST−Rab22 (2−192) to pull down APPL1 (5−419).
+On the other hand, we were unable to detect any binding between APPL1 and Rab22 in the pull-down assay (Figure 4).
+To further define the Rab5−APPL1 binding mode, we performed extensive pull-down analyses between variants of Rab5 and APPL1, looking for reversal mutants that could rescue the lost binding ability of others.
+We identified one such pair; APPL1-N308D abolished the binding to Rab5, while Rab5-L38R had no effect on APPL1 binding.
+However, Rab5-L38R was found to bind with APPL1-N308D, but not with the other tested APPL1 variants of similar hydrophobic-to-charged mutations, including V25D, A318D, and L321D (Supplementary Figure 6).
+This result suggests that Rab5-L38R restores binding for APPL1-N308D through complementary, electrostatic, yet specific interactions.
+It further implies that the position 308 in the β3 strand of APPL1 PH domain is in the vicinity of position 38 in the α1 helix of Rab5 in their complex.
+Combined results from our mutagenesis pull-down experiments (Figures 4, 5 and 6), crystal structures of the BAR-PH domain of APPL1 (Figure 1), and structures of GTPase domain of human Rab5 in different nucleotide binding modes (Zhu et al, 2003, 2004) clearly explain the requirement of GTP-bound Rab5 for APPL1 binding.
+Based on available information, we have modeled the interaction between the two proteins.
+With the assumption that both proteins remain rigid bodies, our complex model satisfies constraints imposed by the mutagenesis pull-down results (Figure 7).
+In the Rab5−APPL1 pull-down experiment, 30 μg GST−Rab fusion protein (52 kDa) was incubated with 60 μl of 30% slurry of GSH–Sepharose 4B (GE Healthcare) at 22°C for 30 min.
+Nucleotide loading reaction was performed on the GSH beads in an exchange buffer of (1 × PBS, 2 mM DTT, 1 mM MgCl2, 4 mM EDTA, and 400 μM GppNHp or GDP) at 22°C for 30 min.
+Increasing the magnesium ion concentration to 20 mM terminated the loading reaction.
+Pull-down analysis of APPL1-Rab interaction.
+GST fusion proteins of Rab5, Rab21, and Rab22 were used to pull down His-tagged APPL1 (5−385) and (5−419) fragments in the presence of GDP or GTP analog (GppNHp).
+(A) Pull-down assay on Rab5 variants.
+Point mutations in switch regions were introduced in the full-length Rab5-Q79L background of the GST fusion construct.
+Each mutant was expressed in E.
+coli, purified, and equal amounts of each Rab5 sample was used to pull down recombinant proteins of His-tagged WT APPL1 (5−419) (top panel) and His-tagged rabaptin5 (551−862) (bottom panel).
+The results were visualized by Coomassie blue stain.Consistent with prior reports [23,24], we failed to observe stable direct interaction between purified ST and PP2A C subunit using a glutathione S-transferase (GST) pull-down assay (unpublished data).To assess which of the PDE4 subtypes contribute to the activity recovered in the β1AR IP, cardiomyocytes deficient in PDE4A, PDE4B, and PDE4D were subjected to pull-down experiments.
+In pull-down experiments using purified proteins (Figure 3D and E), β1AR efficiently interacts with PDE4D, whereas β2AR has negligible affinity for PDE4D, underscoring the direct mode of PDE4D–β1AR interaction versus the indirect, β-arrestin-dependent mode of PDE4D–β2AR interaction.In agreement with the GST fusion pull-down experiments, fluorescence spectroscopy showed no binding of H3K4me0 to AIRE–PHD1 containing the APECED-causing C311Y mutation (Bjorses et al, 2000).
+Nevertheless, a second pathological mutant, V301M (Soderbergh et al, 2000), was still able to bind to H3K4me0, indicating that this mutation is not located in the H3 interaction site (Table 1).
+Similarly, pull-down experiments with whole histones and the H3K4me0 peptide, together with fluorescence spectroscopy and ITC measurements performed on AIRE–PHD1-D297A showed reduced binding (Table 1; Fig 4).
+(A) Pull-down assay of AIRE–PHD1 (PHD1) and AIRE–PHD1-D297A (D297A) mutant proteins with histones.To identify the region of Plx1 that binds to the Mcm complex, we used truncated proteins fused to GST in pull-down experiments.
+One of the truncated proteins contained the protein interaction domain known as the Polo box, which has been shown to interact with phosphorylated proteins (Elia et al, 2003).
+The GST–Polo box-containing fragment derived from Plk1, which is highly similar to the Polo box of Plx1, was incubated with egg extracts.
+Proteins bound to the Polo box domain were then eluted using a phosphorylated peptide with a strong affinity for the Polo box, and subsequently subjected to matrix-assisted laser desorption/ionization time-of-flight (MALDI-TOF) to identify the sequence of the interacting proteins.
+As shown in Figure 5D, the GST–Polo box was able to pull down four major proteins, Mcm2, Mcm4, Mcm6 and Mcm7, as revealed by MALDI-TOF analysis.
+As the Polo box interacts with phosphorylated residues and the Mcm proteins could be eluted using a phosphorylated peptide, it is likely that the interaction is mediated by phosphorylated serine/threonine residues present on endogenous Mcm proteins.
+The binding of the Polo box to endogenous Mcm proteins was consistent with the ability of full-length Plx1 to interact with chromatin and Mcm7.
+We then tested whether the Polo box binding to Mcm proteins was enhanced by the activation of checkpoint.
+In line with the results obtained with full-length Plx1, Polo box binding to the Mcm complex was enhanced by checkpoint activation and was inhibited by caffeine (Figure 5E).
+(D) Pull-down with GST–Polo box and MALDI-TOF analysis.
+Interphase extracts were incubated with GST–agarose beads or agarose beads with GST fused to the Polo box derived from human Plk1.
+After pull-down, proteins were consecutively eluted using 3 mg/ml of phosphopeptide solution (first elution=E1, second elution=E2, see Supplementary data for the sequence of the peptide and the Polo box) and subjected to MALDI-TOF analysis.
+Band 1 corresponds to Mcm2, band 2 to Mcm6, band 3 to Mcm4 and band 4 to Mcm7.
+The GST fusion protein containing the Polo box from Plk1 is shown at the bottom.
+(E) GST–Polo box pull-down of nuclear proteins probed with anti-Mcm7 antibodies (GST–Polo box).
+The extract used for the pull-down was supplemented with nuclei and buffer (Buff), 2.5 μM aphidicolin (APH) or 2.5 μM aphidicolin and 5 mM caffeine (Caff), as indicated.
+The total amount of unbound Mcm7 extracted from nuclei was loaded as a control (Input).To confirm this and to identify the AC-D-binding region in p62, we performed a GST pull-down assay using hTFIIEα AC-D and GST-fused p62 deletion mutants (Figure 2A).
+(B) GST pull-down assay of hTFIIEα AC-D with wild type and p62 mutants.
+Lane 1, GST; lane 2, GST–p62 (1–548aa); lane 3, GST–p62 (1–108aa); lane 4, GST–p62 (1–238aa); lane 5, GST–p62 (1–333aa); lane 6, GST–p62 (109–548aa); lane 7, GST–p62 (238–548aa); lane 8, GST–p62 (333–548aa); lane 9, 20% input.Finally, the interaction of Vav3 and ERα was assessed by GST pull-down analysis.
+For pull down reaction, 5~10 ug of GST or GST-Vav3-DH+PH was incubated with 1 mg of cell extracts from MCF7 cells in a binding buffer [20 mM of Tris.CL, PH.
+We performed GST pull down experiment to confirm the interaction between Vav3 and ERα.
+A GST fusion protein including the DH and PH domain of Vav3 (GST-Vav3-DH+PH) was generated (Figure 7A).
+Cell extract derived from MCF7 cells was incubated with immobilized GST-Vav3-DH+PH fusion protein or GST protein.
+Then, the pull down samples were fractionated by SDS-PAGE (Figure 7B) and subjected to western blot analysis for ERα.
+We found that GST-Vav3-DH+PH fusion protein, but GST protein, interacted with ERα (Figure 7C).
+In summary, we found that Vav3 contains NLS in the PH domain and three LXXLL motifs in the DH domain.
+Vav3 complexes with ERα by GST pull down analysis.
+(A) GST-Vav3-DH+PH fusion protein.
+(B) GST-Vav3-DH+PH fusion protein (lane 3 and 4) and control GST protein (lane 1 and 2) were subjected to pull down reaction in the absence (lane 1 and 3) and presence (land 2 and 4) of cell extract derived from MCF7 cells.Next, we used the recombinant, purified MRN complex in peptide pull-down experiments.
+These showed that MRN bound to the phosphorylated but not the unphosphorylated form of the SDTD peptide—confirming the direct nature of the interaction—yet did not bind to either version of the H2AX C-terminal peptide (Fig 3A).
+This indicates the specificity of MRN for the phosphorylated MDC1 SDTD motif and also shows that if, as previously reported, NBS1 binds to γH2AX directly (Kobayashi et al, 2002), this interaction must be less stable than MRN binding to the phosphorylated SDTD motif.
+(B) Silver-stained SDS–polyacrylamide gel of an SDTD peptide pull-down.
+PP, S329 T331 doubly phosphorylated peptide and −, its non-phosphorylated equivalent; B, bead-interacting proteins removed from extracts in a pre-clearing step; M, molecular weight markers.
+(B) A 200 ng portion of CK2-phosphorylated or mock-phosphorylated GST-SDTD6 was incubated in pull-down reactions with 25 μl of in vitro-translated (IVT) HA fusions corresponding to amino-acid residues 1–348 of NBS1 (HA-fNBS1), or analogous proteins bearing point mutations predicted to abolish either FHA (R28A/H45A) or BRCT2 (K160M) phosphorylation-dependent interactions.For the glutathione S-transferase (GST) pull-down experiments, plasmids pGEX-RNP-K (kindly provided by Dr.
+Levens) and pGEX-4T (GE Healthcare) were used to express GST-hnRNP-K fusion protein or GST alone in Escherichia coli.
+GST-hnRNP-K and GST proteins were produced in E.
+coli BL21 cells, previously transformed with vector pGEX-RNP-K or pGEX-4T.
+Cells were induced with 0.1 mM IPTG for 2 h at 37 °C.
+Bacteria were harvested and suspended in lysis buffer (PBS, 1% Triton X-100, 1 mM PMSF, 5 mM DTT, and anti-proteases), and sonicated on ice.
+GST-hnRNP-K and GST alone were purified from cleared lysates by mixing with glutathione-sepharose 4B beads (GE HealthCare), 5 ml of cleared lysate/400 μl of beads, for 1 h at 4 °C.
+After extensive washing, GST-hnRNP-K or GST beads were incubated in binding buffer (50 mM HEPES, ph 7.5, 50 mM NaCl, 0.1% Nonidet P-40 with protease inhibitor mixture (Roche Molecular Biochemical)) at 4 °C for 1 h with insect cell extracts containing either p30 or p54 ASFV proteins overexpressed in a baculovirus system [8].
+Equal amounts of GST, GST-hnRNP-K and ASFV proteins p30 and p54 were used as judged by Coomasie Blue staining.
+The interaction was further confirmed by in vitro binding assays using a GST-hnRNP-K fusion protein bound to glutathione-sepharose 4B beads.
+GST pull-down experiments were carried out followed by Western blot with specific antibodies.
+First, p30 and another unrelated ASFV protein (in this case, p54 as negative control) were used to bind GST fusion protein or GST alone.
+Protein p30, and not p54, was retained in the presence of GST-hnRNP K, showing a band of appropriate size (30 kDa) for p30 in Western blotting.
+This band did not appear in the presence of GST alone, indicating specific interaction of p30 with hnRNP K and not with GST (Fig.
+1A).
+Identical results were obtained in subsequent experiments using BA71V infected or mock-infected cells extracts instead of baculovirus infected cell extracts in the pull-down assay (Fig.
+1B).
+This interaction was further confirmed by an in vitro GST-fusion pull-down assay, using either p30 obtained from baculovirus system or ASFV infected cell extracts.In contrast, previous data based on less-sensitive pull-down experiments suggested that α-parvin binding is limited to LD1 and LD4 (Nikolopoulos and Turner, 2000).A single round of transcription on the HIS4 template was allowed, and RNApII was immunoprecipitated from the supernatant through the Rpb3 subunit (Figure 5E).
+Although we can efficiently pull down Rpb3 itself, we failed to coimmunoprecipitate any of the basal transcription factors that cross-linked throughout genes in ctk1Δ cells (Figure 5F).

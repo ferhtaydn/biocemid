@@ -1,0 +1,1 @@
+To use the long isoform Bcl-GL recombinant protein as a substrate for kinase assay, a set of Flag-tagged Bcl-GL (FL, N-1, N-2 N-3 and N-4) expression vectors was transfected into HeLa cells, and the proteins were immunoprecipitated with Flag-conjugated agarose M2 gel (Sigma-Aldrich) at 4°C for 1 hour.

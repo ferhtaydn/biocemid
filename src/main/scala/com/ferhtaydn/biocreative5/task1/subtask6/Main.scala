@@ -9,13 +9,13 @@ object Main extends App {
       |
       |Please press the key for:
       |
-      |1 - To generate the helper information files and tf-rf results from training data in ${IO.manualAnnotationRawDirectory}
+      |1 - To generate the helper information files and tf-rf results from training data in ${IO.manualAnnotationStatistics}
       |
       |2 - To get tf-rf results from PSI-MI ontology definitions
       |
       |3 - Annotate the raw BioC files in ${IO.manualAnnotationRawDirectory}
       |
-      |4 - Generate Eval results in ${IO.algoResultsDirectory}
+      |4 - Generate Eval results in ${IO.goldResultDirectory}
       |
       |5 - Count of each method annotated in ${IO.manualAnnotationStatistics}
       |
@@ -71,7 +71,7 @@ object Main extends App {
       IO.remove(sentencesFile)
       IO.remove(tokenizedFile)
 
-      IO.list(IO.manualAnnotationRawDirectory, IO.xmlSuffix).foreach(f ⇒ out(BioC.extractAnnotatedSentences(f, method)))
+      IO.list(IO.manualAnnotationStatistics, IO.xmlSuffix).foreach(f ⇒ out(BioC.extractAnnotatedSentences(f, method)))
 
       IO.write(tokenizedFreqsFile, Utils.stringifyTuples(BioC.calcFrequenciesFromTokensFile(tokenizedFile)))
 
@@ -95,11 +95,11 @@ object Main extends App {
 
   } else if (selection == 3) {
 
-    BioC.annotate(IO.manualAnnotationRawDirectory, IO.xmlSuffix, "baseline.xml")
+    BioC.annotate(IO.manualAnnotationRawDirectory, IO.xmlSuffix, IO.tfrfResultSuffix)
 
   } else if (selection == 4) {
 
-    BioC.evaluate(IO.goldResultDirectory, IO.baselineResultDirectory, IO.xmlSuffix)
+    BioC.evaluate(IO.goldResultDirectory, IO.tfrfResultDirectory, IO.xmlSuffix)
 
   } else if (selection == 5) {
 

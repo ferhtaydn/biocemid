@@ -1,0 +1,12 @@
+To identify novel interactors of TBK1, we generated stable RAW264.7 cell lines that express a GS-TAP-tagged version of TBK1 and purified the TBK1 protein complex by tandem affinity purification (Figure 1A and B) (Burckstummer et al, 2006).
+GS-TAP-tagged DDX3X, isolated by affinity purification using rabbit IgG agarose, was also recruited to the enhanceosome region upon L.
+monocytogenes infection (Figure 5C).
+This recruitment was specific because a control region (Figure 5A) could not be amplified by PCR under these conditions.
+This suggests that DDX3X exerts a direct effect on the IFN-β promoter.
+Tandem affinity purification using the GS-TAP cassette was performed as described previously (Burckstummer et al, 2006).
+The DEAD-box helicase DDX3X is a target of TBK1.
+(A) Schematic representation of the tandem affinity purification protocol: GS-TAP-tagged TBK1 expressed in RAW264.7 cells was purified using rabbit immunoglobulin G (IgG) agarose and eluted by tobacco etch virus (TEV) protease cleavage.
+Next, the remaining complex was purified using streptavidin agarose and eluted by boiling in SDS sample buffer.
+(B) The final TAP eluate was separated on an SDS–PAGE and stained by silver staining.
+Protein complex composition was analysed by LC-MSMS.
+The position of several complex components is depicted next to the region where it was identified.
