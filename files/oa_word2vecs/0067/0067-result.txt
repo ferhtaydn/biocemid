@@ -4,7 +4,6 @@ scattered_light,0.773083
 intrinsic_fluorescence,0.750095
 scattering_intensity,0.74211
 angle_light_scattering,0.72601
-fluorescence_spectroscopy,0.724468
 scattered_light_intensity,0.719442
 fluorescence_emission,0.719361
 refractive_index_ri,0.717972

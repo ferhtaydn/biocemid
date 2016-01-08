@@ -1,0 +1,121 @@
+config11:
+	- stopwords without and of or etc.
+	- -1 +1 before after sentences
+	- non dedupe word2vecs phrases
+	- threshold 0.90 and 0.5
+	- results:
+		TN -> 1071.0, FN -> 12.0, TP -> 369.0, FP -> 664.0
+		accuracy: 0.6805293005671077
+		precision: 0.35721200387221685
+		recall: 0.968503937007874
+		fscore: 0.5219236209335218
+
+config10:
+	- stopwords without and of or etc.
+	- -1 +1 before after sentences
+	- with dedupe word2vecs phrases
+	- threshold 0.85 and 0.5
+	- results:
+		TN -> 1105.0, FN -> 32.0, TP -> 344.0, FP -> 574.0
+		accuracy: 0.7051094890510949
+		precision: 0.3747276688453159
+		recall: 0.9148936170212766
+		fscore: 0.5316846986089644
+
+config9:
+	- stopwords without and of or etc.
+	- -1 +1 before after sentences
+	- with dedupe word2vecs phrases
+	- threshold 0.90 and 0.5
+	- results:
+		TN -> 1157.0, FN -> 36.0, TP -> 339.0, FP -> 486.0
+		accuracy: 0.7413280475718533
+		precision: 0.4109090909090909
+		recall: 0.904
+		fscore: 0.565
+		
+		optimized dedupe
+		TN -> 1101.0, FN -> 19.0, TP -> 357.0, FP -> 597.0
+		accuracy: 0.7029893924783028
+		precision: 0.3742138364779874
+		recall: 0.949468085106383
+		fscore: 0.5368421052631579
+
+config8:
+	- stopwords without and of or etc.
+	- -1 +1 before after sentences
+	- with dedupe word2vecs phrases
+	- threshold 0.95 and 0.5
+	- results:
+		TN -> 1165.0, FN -> 44.0, TP -> 331.0, FP -> 463.0
+		accuracy: 0.7468796804792811
+		precision: 0.4168765743073048
+		recall: 0.8826666666666667
+		fscore: 0.5662959794696322
+
+config7:
+	- stopwords without and of or etc.
+	- -1 +1 before after sentences
+	- with dedupe word2vecs phrases
+	- threshold 1.0 and 0.5
+	- results:
+		TN -> 1165.0, FN -> 44.0, TP -> 331.0, FP -> 463.0
+		accuracy: 0.7468796804792811
+		precision: 0.4168765743073048
+		recall: 0.8826666666666667
+		fscore: 0.5662959794696322
+
+		optimized dedupe
+		TN -> 1107.0, FN -> 24.0, TP -> 351.0, FP -> 576.0
+		accuracy: 0.7084548104956269
+		precision: 0.3786407766990291
+		recall: 0.936
+		fscore: 0.5391705069124425
+
+config6:
+	- stopwords without and of or etc.
+	- -2 +2 before after sentences
+	- with dedupe word2vecs phrases
+	- threshold 1.0 and 0.5
+	- results:
+		TN -> 1165.0, FN -> 43.0, TP -> 332.0, FP -> 489.0
+		accuracy: 0.7378018728437654
+		precision: 0.4043848964677223
+		recall: 0.8853333333333333
+		fscore: 0.5551839464882943
+
+config3:
+	- stopwords without and of or etc.
+	- -1 +1 before after sentences
+	- non dedupe word2vecs phrases
+	- threshold 1.0 and 0.5
+	- results:
+		TN -> 1076.0, FN -> 16.0, TP -> 364.0, FP -> 644.0
+		accuracy: 0.6857142857142857
+		precision: 0.3611111111111111
+		recall: 0.9578947368421052
+		fscore: 0.5244956772334294
+
+config2:
+	- stopwords without and of or etc.
+	- -2 +2 before after sentences
+	- non dedupe word2vecs phrases
+	- threshold 1.0 and 0.5
+	- results:
+		TN -> 1076.0, FN -> 15.0, TP -> 365.0, FP -> 673.0
+		accuracy: 0.6768435885392203
+		precision: 0.3516377649325626
+		recall: 0.9605263157894737
+		fscore: 0.5148095909732017
+
+config1:
+	- stopwords with and of or etc. 
+	- -2 +2 before after sentences
+	- non dedupe word2vecs phrases
+	- threshold 1.0 and 0.5
+	- results:
+		TN -> 1075.0, FN -> 21.0, TP -> 357.0, FP -> 670.0
+		accuracy: 0.6745171926519077
+		precision: 0.3476144109055501
+		recall: 0.9444444444444444
+		fscore: 0.5081850533807829

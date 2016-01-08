@@ -14,7 +14,6 @@ apparent_kd,0.765705
 fluorescence_quenching,0.762635
 steady-state_anisotropy,0.747954
 fret_measurements,0.746264
-fluorescence_spectroscopy,0.74498
 dissociation_kinetics,0.739971
 binding_isotherms,0.737868
 dissociation_constant_kd,0.737808

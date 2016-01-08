@@ -44,23 +44,23 @@ class SentenceConverter3(word2vecsDir: String) extends CopyConverter {
 
   private def annotateSentence(sentence: BioCSentence): BioCSentence = {
 
+    def getWord2vecs(id: String): Seq[(String, Double)] = IO.list(s"$word2vecsDir/$id", IO.word2vecResultDedupeFileSuffix).headOption match {
+      case Some(file) ⇒
+        IO.read(file).map { line ⇒
+          val scoreString = line.split(",").last
+          val word = line.dropRight(scoreString.length + 1)
+          val phrase = word.split("_").mkString(" ")
+          val score = scoreString.toDouble
+          phrase -> score
+        }
+      case None ⇒ Seq()
+    }
+
     def calculateMethodWeights(words: List[String]): List[MethodWeight] = {
 
       BioC.methodsInfo.map {
 
         case info @ MethodInfo(id, name, ss, rs, es, definition, hierarchies) ⇒
-
-          lazy val word2vecs: Seq[(String, Double)] = IO.list(s"$word2vecsDir/$id", IO.word2vecResultFileSuffix).headOption match {
-            case Some(file) ⇒
-              IO.read(file).map { line ⇒
-                val scoreString = line.split(",").last
-                val word = line.dropRight(scoreString.length + 1)
-                val phrase = word.split("_").mkString(" ")
-                val score = scoreString.toDouble
-                phrase -> score
-              }
-            case None ⇒ Seq()
-          }
 
           val synonymNgram = info.nameAndSynonyms.flatMap { s ⇒
             val size = s.split("\\s").size
@@ -70,6 +70,8 @@ class SentenceConverter3(word2vecsDir: String) extends CopyConverter {
               words.filter(_.equalsIgnoreCase(s))
             }
           }
+
+          lazy val word2vecs = getWord2vecs(id)
 
           val matchingVectors = word2vecs.flatMap {
             case (phrase, score) ⇒
@@ -147,7 +149,7 @@ class SentenceConverter3(word2vecsDir: String) extends CopyConverter {
 
         if (sentence.getAnnotations.nonEmpty && sentence.getInfons.isEmpty) {
 
-          ((index - 2) to (index + 2)).foreach { i ⇒
+          ((index - 1) to (index + 1)).foreach { i ⇒
             annotatedSentences.get(i).fold() { sent ⇒
               if (sent.getAnnotations.isEmpty && sent.getInfons.nonEmpty) {
                 annotateInfon(sentence, sent) match {

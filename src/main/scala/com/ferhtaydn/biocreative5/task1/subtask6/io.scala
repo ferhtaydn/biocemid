@@ -10,6 +10,7 @@ object IO {
   val goldResultDirectory = "files/gold_set_30"
   val manualAnnotationStatistics = "files/manually_annotated_data_set_by_2_annotator"
 
+  val word2vecResultDirectory = "files/results/word2vec/config7_30_articles"
   val tfrfResultDirectory = "files/results/tfrf_30_articles"
   val baselineResultDirectory = "files/results/baseline_17_articles"
   val manualAnnotationRawDirectory = "files/manual_annotation_raw_17"
@@ -18,12 +19,14 @@ object IO {
   val oaWord2vecsDirectory = "files/oa_word2vecs"
   val bc3Word2vecAnnotationDirectory = "files/bc3_word2vecAnnotation"
   val oaWord2vecAnnotationDirectory = "files/oa_word2vecAnnotation"
-  val word2vecAnnotationSuffix = "word2vecs_annotated.xml"
+
   val xmlSuffix = ".xml"
   val txtSuffix = ".txt"
   val word2vecResultFileSuffix = "result.txt"
+  val word2vecResultDedupeFileSuffix = "result_dedupe.txt"
   val baselineResultSuffix = "baseline.xml"
   val tfrfResultSuffix = "tfrf.xml"
+  val word2vecAnnotationSuffix = "word2vec.xml"
 
   def write(path: String, txt: String): Unit = {
     Files.write(Paths.get(path), txt.getBytes(StandardCharsets.UTF_8), StandardOpenOption.CREATE)
