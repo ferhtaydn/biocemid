@@ -78,7 +78,6 @@ apparent_dissociation_constants,0.701542
 single-cycle_kinetics,0.700516
 biacore_s51,0.700303
 fluorescence_anisotropy_fa,0.699624
-fluorescence_spectroscopy,0.699496
 differential_scanning_fluorimetry_dsf,0.699107
 tryptophan_fluorescence,0.698713
 isothermal_calorimetric,0.698106

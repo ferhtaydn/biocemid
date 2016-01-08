@@ -71,7 +71,6 @@ surface-plasmon_resonance,0.707374
 microscale_thermophoresis_mst,0.706924
 isothermal_calorimetry_itc,0.706544
 sa_sensor_chips,0.704958
-fluorescence_spectroscopy,0.704026
 fluorescence_polarization_fp,0.703795
 sensograms,0.702737
 impedimetric,0.700929

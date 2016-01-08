@@ -77,7 +77,6 @@ sedimentation_velocity_sv,0.691304
 wyatt_optilab_rex,0.69043
 weight-averaged_molar_mass,0.690409
 sec-uv/ls/ri,0.68799
-fluorescence_spectroscopy,0.685564
 treos,0.685416
 small-angle_neutron_scattering,0.684768
 astra_software,0.682775

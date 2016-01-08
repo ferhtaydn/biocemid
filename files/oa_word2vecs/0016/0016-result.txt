@@ -12,7 +12,6 @@ far-uv_cd_spectroscopy,0.832802
 far_uv,0.830894
 thermal_unfolding,0.818461
 thermal_denaturation_experiments,0.817075
-fluorescence_spectroscopy,0.816936
 far-uv_cd_spectra,0.816546
 cd_spectropolarimetry,0.803577
 near-uv_cd,0.803225

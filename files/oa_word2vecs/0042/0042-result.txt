@@ -47,7 +47,6 @@ westergren_method,0.695384
 mm/1st_hour,0.69508
 epr_spectroscopic,0.694586
 epr_spectrum,0.694074
-fluorescence_spectroscopy,0.693096
 spin-labeling,0.692817
 rate_esr,0.689425
 resonance_raman,0.688551

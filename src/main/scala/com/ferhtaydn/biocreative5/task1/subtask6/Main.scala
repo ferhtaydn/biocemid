@@ -99,7 +99,7 @@ object Main extends App {
 
   } else if (selection == 4) {
 
-    BioC.evaluate(IO.goldResultDirectory, IO.tfrfResultDirectory, IO.xmlSuffix)
+    BioC.evaluate(IO.goldResultDirectory, IO.word2vecResultDirectory, IO.xmlSuffix)
 
   } else if (selection == 5) {
 
@@ -213,12 +213,28 @@ object Main extends App {
     def cleanPreviousResultFiles: String = {
       import scala.sys.process._
       s"find ${IO.oaWord2vecsDirectory} -type f -name *${IO.word2vecResultFileSuffix}" #| "xargs rm" !!
+
+      s"find ${IO.oaWord2vecsDirectory} -type f -name *${IO.word2vecResultDedupeFileSuffix}" #| "xargs rm" !!
+
     }
 
     def cleanPreviousAnnotatedFiles: String = {
       import scala.sys.process._
       s"find ${IO.oaWord2vecAnnotationDirectory} -type f -name *${IO.word2vecAnnotationSuffix}" #| "xargs rm" !!
     }
+
+    def dedupe(elements: Seq[(String, Double)], acc: Seq[(String, Double)]): Seq[(String, Double)] = elements match {
+      case Nil ⇒ acc
+      case (elem @ (p, s)) +: tail ⇒
+
+        val splitted = split(p)
+        tail.find { case (a, b) ⇒ splitted.containsSlice(split(a)) && s < b } match {
+          case None    ⇒ dedupe(tail.filterNot { case (a, b) ⇒ split(a).containsSlice(splitted) && s >= b }, acc :+ elem)
+          case Some(x) ⇒ dedupe(tail, acc)
+        }
+    }
+
+    def split(s: String): List[String] = s.split("_").toList
 
     def generateWord2vecResultFiles(): Unit = {
 
@@ -259,6 +275,10 @@ object Main extends App {
             methodsNames(method).foreach(map.remove)
             IO.write(s"${IO.oaWord2vecsDirectory}/$method/$method-${IO.word2vecResultFileSuffix}",
               Utils.stringifyTuples(map.toSeq.sortBy(_._2).reverse))
+
+            IO.write(s"${IO.oaWord2vecsDirectory}/$method/$method-${IO.word2vecResultDedupeFileSuffix}",
+              Utils.stringifyTuples(dedupe(map.toSeq, Seq()).sortBy(_._2).reverse))
+
         }
       }
     }
