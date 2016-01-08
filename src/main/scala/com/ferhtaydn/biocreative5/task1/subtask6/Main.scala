@@ -11,19 +11,13 @@ object Main extends App {
       |
       |1 - To generate the helper information files and tf-rf results from training data in ${IO.manualAnnotationStatistics}
       |
-      |2 - To get tf-rf results from PSI-MI ontology definitions
+      |2 - Annotate with TFRF/BASELINE raw files in ${IO.manualAnnotationRawDirectory}
       |
-      |3 - Annotate the raw BioC files in ${IO.manualAnnotationRawDirectory}
+      |3 - Generate Eval results in ${IO.goldResultDirectory}
       |
-      |4 - Generate Eval results in ${IO.goldResultDirectory}
+      |4 - Count of each method annotated in ${IO.manualAnnotationStatistics}
       |
-      |5 - Count of each method annotated in ${IO.manualAnnotationStatistics}
-      |
-      |6 - To generate bc3 word2vec results for each method name and synonym
-      |
-      |7 - Gather the bc3 word2vec results for each method
-      |
-      |8 - Gather the open access word2vec results for each method
+      |5 - Annotate with WORD2VEC, raw files in ${IO.oaWord2vecAnnotationDirectory}
       |
     """.stripMargin
 
@@ -79,138 +73,33 @@ object Main extends App {
 
   } else if (selection == 2) {
 
-    BioC.methodsInfo.foreach { m ⇒
-
-      val tfRfTokenizedFile = s"MI${m.id}_ontology_tf-rf.txt"
-
-      val tokenFreqs = BioC.calcTokenFrequencies(Utils.tokenize(m.definition))
-
-      val negativePassages = BioC.methodsInfo.filter(_.id != m.id).map(_.definition).map(Utils.tokenize(_).toSet).toSeq
-
-      val tfrf = BioC.tfRfOntology(tokenFreqs, Seq(m.definition), negativePassages).sortBy(_._2).reverse
-
-      IO.write(tfRfTokenizedFile, Utils.stringifyTuples(tfrf))
-
-    }
+    BioC.annotateWithTfrf(IO.manualAnnotationRawDirectory,
+      IO.xmlSuffix,
+      IO.tfrfResultSuffix,
+      tfrfConfigs = (true, 1, 0.5, 0.25)
+    )
 
   } else if (selection == 3) {
 
-    BioC.annotate(IO.manualAnnotationRawDirectory, IO.xmlSuffix, IO.tfrfResultSuffix)
+    BioC.evaluate(IO.goldResultDirectory, IO.word2vecResultDirectory, IO.xmlSuffix)
 
   } else if (selection == 4) {
 
-    BioC.evaluate(IO.goldResultDirectory, IO.word2vecResultDirectory, IO.xmlSuffix)
+    BioC.countOfMethods(IO.manualAnnotationStatistics, IO.xmlSuffix)
 
   } else if (selection == 5) {
 
-    BioC.countOfMethods(IO.manualAnnotationStatistics, IO.xmlSuffix)
-
-  } else if (selection == 6) {
-
-    deleteWord2vecsDirectory()
-    generateWord2vecs()
-
-    def deleteWord2vecsDirectory(): Unit = {
-      import sys.process._
-      //clean the word2vecs file
-      s"find . -name ${IO.bc3Word2vecsDirectory}" #| "xargs rm -r" !!
-
-      s"mkdir ${IO.bc3Word2vecsDirectory}".!!
-    }
-
-    def generateWord2vecs(): Unit = {
-
-      val methods = BioC.methodsInfo.map { m ⇒
-        val synonyms = m.synonym.map(x ⇒ x.split(" ").mkString("_"))
-        val name = m.name.split(" ").mkString("_")
-        m.id :: (if (!synonyms.contains(name)) name :: synonyms else name :: (synonyms diff List(name)))
-      }
-
-      import sys.process._
-      methods.foreach { m ⇒
-        val seq = Seq("/Users/aydinf/Desktop/word2vec_extension/distance_files",
-          "/Users/aydinf/Desktop/bc3_word2vec_results/phrase1_eval/bc3_phrase1_vectors.bin") ++ m
-        Process(seq, new java.io.File(IO.bc3Word2vecsDirectory)).!!
-      }
-    }
-
-  } else if (selection == 7) {
-
-    cleanPreviousResultFiles
+    cleanPreviousResultFiles()
     generateWord2vecResultFiles()
-    cleanPreviousAnnotatedFiles
-    BioC.annotate(IO.bc3Word2vecAnnotationDirectory, IO.xmlSuffix, IO.word2vecAnnotationSuffix, Some(IO.oaWord2vecsDirectory))
+    cleanPreviousAnnotatedFiles()
 
-    def cleanPreviousResultFiles: String = {
-      import scala.sys.process._
-      s"find ${IO.bc3Word2vecsDirectory} -type f -name *${IO.word2vecResultFileSuffix}" #| "xargs rm" !!
-    }
+    BioC.annotateWithWord2vec(
+      IO.oaWord2vecAnnotationDirectory,
+      IO.xmlSuffix, IO.word2vecAnnotationSuffix,
+      (IO.oaWord2vecsDirectory, IO.word2vecResultDedupeFileSuffix, 1, 0.9, 0.5)
+    )
 
-    def cleanPreviousAnnotatedFiles: String = {
-      import scala.sys.process._
-      s"find ${IO.bc3Word2vecAnnotationDirectory} -type f -name *${IO.word2vecAnnotationSuffix}" #| "xargs rm" !!
-    }
-
-    def generateWord2vecResultFiles(): Unit = {
-
-      def maxMinNormalization(data: Seq[(String, Double)], itemCount: Int) = {
-        val partial = data.sortBy(_._2).reverse.take(itemCount)
-        val min = partial.last._2
-        val max = partial.head._2
-        partial.map { case (w, c) ⇒ (w, (c - min) / (max - min)) }
-      }
-
-      lazy val methodsNames = BioC.methodsInfo.map { m ⇒
-        val synonyms = m.synonym.map(x ⇒ x.split(" ").mkString("_"))
-        val name = m.name.split(" ").mkString("_")
-        (m.id, if (!synonyms.contains(name)) name :: synonyms else name :: (synonyms diff List(name)))
-      }.toMap
-
-      BioC.methodsInfo.foreach { method ⇒
-
-        IO.list(s"${IO.bc3Word2vecsDirectory}/${method.id}", IO.txtSuffix) match {
-          case Nil ⇒ //do nothing
-          case files ⇒
-            val map = scala.collection.mutable.Map.empty[String, Double].withDefaultValue(0d)
-            val list = scala.collection.mutable.MutableList.empty[(String, Double)]
-
-            val otherMethodsNames = methodsNames - method.id
-
-            files.foreach { file ⇒
-              IO.read(file).foreach { line ⇒
-                val cosineString = line.split(",").last
-                val word = line.dropRight(cosineString.length + 1)
-                val cosine = cosineString.toDouble
-                if (!otherMethodsNames.values.exists(_.contains(word))) list += word -> cosine
-              }
-            }
-
-            list.foreach {
-              case (word, cosine) ⇒
-                map.get(word) match {
-                  case Some(cos) ⇒ map.update(word, map(word) + cosine)
-                  case None      ⇒ map(word) = cosine
-                }
-            }
-
-            val numberOfVectors = 101
-            //remove the method name and synonyms, those will be checked in converter.
-            methodsNames(method.id).foreach(map.remove)
-            val maxMinNormalized = maxMinNormalization(map.toSeq, numberOfVectors)
-
-            IO.write(s"${IO.bc3Word2vecsDirectory}/${method.id}/${method.id}-${IO.word2vecResultFileSuffix}", Utils.stringifyTuples(maxMinNormalized))
-        }
-      }
-    }
-
-  } else if (selection == 8) {
-
-    cleanPreviousResultFiles
-    generateWord2vecResultFiles()
-    cleanPreviousAnnotatedFiles
-    BioC.annotate(IO.oaWord2vecAnnotationDirectory, IO.xmlSuffix, IO.word2vecAnnotationSuffix, Some(IO.oaWord2vecsDirectory))
-
-    def cleanPreviousResultFiles: String = {
+    def cleanPreviousResultFiles(): String = {
       import scala.sys.process._
       s"find ${IO.oaWord2vecsDirectory} -type f -name *${IO.word2vecResultFileSuffix}" #| "xargs rm" !!
 
@@ -218,7 +107,7 @@ object Main extends App {
 
     }
 
-    def cleanPreviousAnnotatedFiles: String = {
+    def cleanPreviousAnnotatedFiles(): String = {
       import scala.sys.process._
       s"find ${IO.oaWord2vecAnnotationDirectory} -type f -name *${IO.word2vecAnnotationSuffix}" #| "xargs rm" !!
     }
@@ -285,7 +174,7 @@ object Main extends App {
 
   } else {
 
-    Console.println("Please select the options from 1 until 8.")
+    Console.println("Please select the options from 1 until 5.")
     System.exit(0)
 
   }
