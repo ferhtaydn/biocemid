@@ -103,7 +103,25 @@ object BioC {
     }
   }
 
-  def annotate(dir: String, InputFileSuffix: String, outputFileSuffix: String, word2vecsDir: Option[String] = None): Unit = {
+  def annotateWithTfrf(dir: String, inputFileSuffix: String, outputFileSuffix: String,
+    tfrfConfigs: (Boolean, Int, Double, Double)): Unit = {
+
+    val (isTfrf, beforeAfter, main, small) = tfrfConfigs
+    val converter = new TfrfAndBaselineAnnotator(isTfrf, beforeAfter, main, small)
+    annotate(dir, inputFileSuffix, outputFileSuffix, converter)
+
+  }
+
+  def annotateWithWord2vec(dir: String, inputFileSuffix: String, outputFileSuffix: String,
+    word2vecConfigs: (String, String, Int, Double, Double)): Unit = {
+
+    val (w2vDir, suffix, beforeAfter, main, small) = word2vecConfigs
+    val converter = new Word2vecAnnotator(w2vDir, suffix, beforeAfter, main, small)
+    annotate(dir, inputFileSuffix, outputFileSuffix, converter)
+
+  }
+
+  private def annotate(dir: String, InputFileSuffix: String, outputFileSuffix: String, converter: Annotator): Unit = {
 
     IO.list(dir, InputFileSuffix).foreach { file ⇒
 
@@ -118,11 +136,7 @@ object BioC {
 
       val collection: BioCCollection = reader.readCollectionInfo
 
-      val converter = word2vecsDir match {
-        case None      ⇒ new SentenceConverter2
-        case Some(w2v) ⇒ new SentenceConverter3(w2v)
-      }
-
+      converter.resetAnnotationId()
       val outCollection: BioCCollection = converter.getCollection(collection)
       outCollection.setKey("sentence.key")
       writer.writeCollectionInfo(outCollection)

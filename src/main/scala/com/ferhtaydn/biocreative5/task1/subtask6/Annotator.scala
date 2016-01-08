@@ -7,11 +7,29 @@ import scala.collection.JavaConversions._
 import scala.collection.mutable
 
 /**
- * This class is used for to look for the previous and next sentences of the annotated sentence.
+ * core annotator
  */
-class SentenceConverter2 extends CopyConverter {
+trait Annotator extends CopyConverter {
 
-  private[this] var annotationId: Int = 0
+  var annotationId: Int = 0
+  def mainThreshold: Double
+  def smallThreshold: Double
+  def beforeAfterCount: Int
+
+  def resetAnnotationId(): Unit = annotationId = 0
+
+  def calculateMethodWeights(words: List[String]): List[MethodWeight]
+
+  def searchInSentence(words: List[String], terms: List[String]): List[String] = {
+    terms.flatMap { s ⇒
+      val size = s.split("\\s").size
+      if (size > 1) {
+        Utils.mkNgram(words, size).filter(_.equalsIgnoreCase(s))
+      } else {
+        words.filter(_.equalsIgnoreCase(s))
+      }
+    }
+  }
 
   override def getPassage(in: BioCPassage): BioCPassage = {
 
@@ -41,57 +59,37 @@ class SentenceConverter2 extends CopyConverter {
   }
 
   private def annotateSentence(sentence: BioCSentence): BioCSentence = {
+    setWeights(sentence, calculateMethodWeights(Utils.tokenize(sentence.getText)))
+  }
 
-    def calculateMethodWeights(words: List[String]): List[MethodWeight] = {
+  private def setWeights(sentence: BioCSentence, methodWeights: List[MethodWeight]): BioCSentence = {
 
-      BioC.methodsInfo.map {
+    methodWeights.partition(_.weight >= mainThreshold) match {
+      case (up, down) ⇒
 
-        case info @ MethodInfo(id, name, ss, rs, es, definition, hierarchies) ⇒
+        if (up.nonEmpty) {
 
-          val synonymNgram = info.nameAndSynonyms.flatMap { s ⇒
-            val size = s.split("\\s").size
-            if (size > 1) {
-              Utils.mkNgram(words, size).filter(_.equalsIgnoreCase(s))
-            } else {
-              words.filter(_.equalsIgnoreCase(s))
-            }
+          up.groupBy(_.weight).toSeq.sortBy(_._1).reverse.head._2.foreach {
+            case mw ⇒
+              val annotationInfons = Map("type" -> "ExperimentalMethod", "PSIMI" -> mw.id)
+              val out: BioCAnnotation = new BioCAnnotation
+              out.setInfons(annotationInfons)
+              out.setText(sentence.getText)
+              out.setLocation(sentence.getOffset, sentence.getText.length)
+              sentence.addAnnotation(out)
           }
 
-          val foundWords = synonymNgram.flatMap(_.split("\\s"))
-
-          val related = words.distinct.diff(foundWords).flatMap(w ⇒ rs.filter(_.equalsIgnoreCase(w)))
-
-          val extra = words.distinct.diff(foundWords).flatMap(w ⇒ es.filter(_.equalsIgnoreCase(w)))
-
-          MethodWeight(id, (0.5 * synonymNgram.size) + (0.25 * related.size) + (0.125 * extra.size))
-
-      }.filter(_.weight > 0.0).sortWith(_.weight > _.weight)
-
-    }
-
-    def setWeights(sentence: BioCSentence, methodWeights: List[MethodWeight]) = methodWeights match {
-      case Nil ⇒ sentence
-      case mw :: mws ⇒
-        if (mw.weight >= 0.5) {
-          val annotationInfons = Map("type" -> "ExperimentalMethod", "PSIMI" -> mw.id)
-          val out: BioCAnnotation = new BioCAnnotation
-          out.setInfons(annotationInfons)
-          out.setText(sentence.getText)
-          out.setLocation(sentence.getOffset, sentence.getText.length)
-          sentence.addAnnotation(out)
           sentence
+
         } else {
           import MethodWeight.toInfons
-          sentence.setInfons(mapAsJavaMap(methodWeights))
+          sentence.setInfons(mapAsJavaMap(down))
           sentence
         }
     }
-
-    setWeights(sentence, calculateMethodWeights(Utils.tokenize(sentence.getText)))
-
   }
 
-  private def annotatePreviousAndNextSentences(annotatedSentences: mutable.MutableList[BioCSentence]) = {
+  private def annotatePreviousAndNextSentences(annotatedSentences: mutable.MutableList[BioCSentence]): mutable.MutableList[BioCSentence] = {
 
     annotatedSentences.zipWithIndex.foreach {
 
@@ -99,27 +97,13 @@ class SentenceConverter2 extends CopyConverter {
 
         if (sentence.getAnnotations.nonEmpty && sentence.getInfons.isEmpty) {
 
-          if (index > 0 && index < annotatedSentences.size - 1) {
-
-            annotateInfon(index - 1)
-            annotateInfon(index + 1)
-
-            def annotateInfon(i: Int) = {
-
-              val sentenceAnnotation = sentence.getAnnotations.head.getInfon("PSIMI")
-
-              import MethodWeight.fromInfons
-              val targetSentence = annotatedSentences(i)
-              val targetSentenceInfon: List[MethodWeight] = targetSentence.getInfons.toMap
-
-              targetSentenceInfon.find(mw ⇒ mw.id.equals(sentenceAnnotation) && mw.weight >= 0.25).fold() { mw ⇒
-                val annotationInfons = Map("type" -> "ExperimentalMethod", "PSIMI" -> mw.id)
-                val out: BioCAnnotation = new BioCAnnotation
-                out.setInfons(annotationInfons)
-                out.setText(targetSentence.getText)
-                out.setLocation(targetSentence.getOffset, targetSentence.getText.length)
-                targetSentence.addAnnotation(out)
-                annotatedSentences.updated(i, targetSentence)
+          ((index - beforeAfterCount) to (index + beforeAfterCount)).foreach { i ⇒
+            annotatedSentences.get(i).fold() { sent ⇒
+              if (sent.getAnnotations.isEmpty && sent.getInfons.nonEmpty) {
+                annotateInfon(sentence, sent) match {
+                  case Some(annotation) ⇒ sent.addAnnotation(annotation); annotatedSentences.update(i, sent);
+                  case None             ⇒ // do nothing
+                }
               }
             }
           }
@@ -128,6 +112,23 @@ class SentenceConverter2 extends CopyConverter {
 
     annotatedSentences
 
+  }
+
+  private def annotateInfon(sentence: BioCSentence, targetSentence: BioCSentence): Option[BioCAnnotation] = {
+
+    val sentenceAnnotation = sentence.getAnnotations.head.getInfon("PSIMI")
+
+    import MethodWeight.fromInfons
+    val targetSentenceInfon: List[MethodWeight] = targetSentence.getInfons.toMap
+
+    targetSentenceInfon.find(mw ⇒ mw.id.equals(sentenceAnnotation) && mw.weight >= smallThreshold).map { mw ⇒
+      val annotationInfons = Map("type" -> "ExperimentalMethod", "PSIMI" -> mw.id)
+      val out: BioCAnnotation = new BioCAnnotation
+      out.setInfons(annotationInfons)
+      out.setText(targetSentence.getText)
+      out.setLocation(targetSentence.getOffset, targetSentence.getText.length)
+      out
+    }
   }
 
   private def concatSuccessiveSameAnnotations(annotations: List[BioCAnnotation]): List[BioCAnnotation] = {
@@ -181,4 +182,5 @@ class SentenceConverter2 extends CopyConverter {
     arrangeAnnotationIds(loop(annotations, List[BioCAnnotation]()))
 
   }
+
 }

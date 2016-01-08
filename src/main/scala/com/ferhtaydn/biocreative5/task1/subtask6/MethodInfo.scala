@@ -7,10 +7,7 @@ import scala.collection.JavaConversions._
 case class MethodInfo(id: String, name: String, synonym: List[String], related: List[String], extra: List[String],
     definition: String, isA: List[Hierarchy]) {
 
-  def nameAndSynonyms: List[String] = {
-    if (!synonym.contains(name)) name :: synonym
-    else name :: (synonym diff List(name))
-  }
+  def nameAndSynonyms: List[String] = if (!synonym.contains(name)) name :: synonym else name :: (synonym diff List(name))
 
 }
 
