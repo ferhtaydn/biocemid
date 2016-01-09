@@ -25,7 +25,15 @@ object Main extends App {
 
   val selection = scala.io.StdIn.readInt()
 
-  if (selection == 1) {
+  if (selection == 0) {
+
+    val list = BioC.methodsInfo.map { method ⇒
+      s"${method.id} ${method.nameAndSynonyms.map(x ⇒ x.split("\\s").mkString("_")).mkString(" ")}"
+    }
+
+    IO.write("files/word2vec_distance_files_run_params.txt", list.mkString("\n"))
+
+  } else if (selection == 1) {
 
     BioC.methodIds.foreach(createHelperFiles)
     BioC.methodIds.foreach(calculateTfrf)

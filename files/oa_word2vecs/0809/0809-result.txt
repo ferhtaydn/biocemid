@@ -23,7 +23,6 @@ y2h_assays,0.750969
 bifc-based,0.750461
 bimolecular_fluorescent_complementation_bifc,0.749609
 yfpc,0.746518
-yeast_two-hybrid,0.744205
 arabidopsis_protoplast,0.742715
 rice_protoplasts,0.741512
 fluorescence_complementation,0.740859

@@ -114,7 +114,6 @@ sem_images,0.675661
 nt-mdt,0.675521
 nanomechanical,0.674648
 nanomechanical_properties,0.674201
-x-ray_scattering,0.674126
 supported_lipid_bilayers,0.674117
 ordered_arrays,0.673809
 afm_probe,0.673532

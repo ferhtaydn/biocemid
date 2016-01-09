@@ -108,7 +108,6 @@ cryo-electron_micrographs,0.703327
 vitreous_ice,0.703179
 ice-embedded,0.702224
 freeze-substituted,0.700806
-x-ray_scattering,0.699204
 cryoet,0.694823
 negatively_stained,0.694814
 ultra-thin_sections,0.693077
@@ -131,6 +130,7 @@ bacteriorhodopsin,0.681143
 cryo-negative_stain,0.681114
 stain_em,0.681038
 pseudo-atomic_model,0.680759
+small-angle_x-ray_scattering,0.680551
 atomic_detail,0.680115
 immuno-gold_labeling,0.679488
 stain_electron_microscopy,0.67948

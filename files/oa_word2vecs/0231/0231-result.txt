@@ -9,7 +9,6 @@ yeast_two-hybrid_y2h,0.6812
 large-scale_y2h,0.672766
 hsrrs-v1,0.671177
 mappit_experiments,0.66849
-yeast_two-hybrid,0.664102
 high-throughput_yeast_two-hybrid,0.659793
 y2h_assay,0.654245
 co-ap,0.653853
@@ -75,7 +74,6 @@ y2h_library_screen,0.56954
 py-y2h,0.569275
 split_tev,0.568429
 non-interacting_pairs,0.566704
-mammalian_two-hybrid,0.565463
 two-hybrid_screen,0.564973
 avidity-based_extracellular_interaction,0.560686
 y2h_library_screening,0.559995

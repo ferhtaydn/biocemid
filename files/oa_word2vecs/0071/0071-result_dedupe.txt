@@ -16,7 +16,6 @@ s-200_column,0.858354
 16/60_column,0.855756
 superdex-75,0.853971
 gel_filtration_columns,0.853188
-ion-exchange_chromatography,0.850113
 mono-q,0.846201
 sephacryl_s-200,0.844273
 analytical_gel_filtration,0.843007

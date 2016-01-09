@@ -102,6 +102,7 @@ spinning_disk_microscopy,0.747189
 molecular_tomography_fmt,0.747009
 immunofluorescence_microscopy,0.746576
 two-photon_excitation,0.746124
+microscopy,0.746058
 near-infrared_fluorescence_imaging,0.7448
 phase-contrast,0.74463
 laser-scanning_microscopy,0.743269

@@ -1,7 +1,6 @@
 lumier_assay,0.742805
 y2h_system,0.699673
 co-affinity_purification,0.680139
-yeast_two-hybrid,0.672394
 yeast-two-hybrid,0.660159
 ap-ms,0.658026
 yeast-2-hybrid,0.654216
@@ -58,7 +57,6 @@ large-scale_y2h,0.595473
 two-hybrid_analysis,0.594684
 bifc_assay,0.593672
 interactors,0.592759
-mammalian_two-hybrid,0.592731
 gst-pull-down,0.591855
 gst_pull-down_assay,0.590829
 gcsam,0.58891

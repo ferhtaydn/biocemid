@@ -125,7 +125,6 @@ chromotography,0.815238
 chromatography_hplc,0.81394
 high_performance_liquid,0.813819
 chromatograph,0.81142
-ion-exchange_chromatography,0.811233
 gel_permeation,0.810982
 reversed-phase_column,0.808428
 chromatograpy,0.807118

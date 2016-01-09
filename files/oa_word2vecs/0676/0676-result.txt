@@ -19,7 +19,6 @@ tap-tagging,0.750138
 pull-downs,0.749757
 co-affinity_purification,0.749239
 copurification,0.74484
-yeast_two-hybrid,0.743747
 yeast_two-hybrid_y2h,0.74263
 rigaut_et_al.,0.740053
 gst_pull-down,0.737811

@@ -4,7 +4,6 @@ y1h,0.797575
 yeast_one-hybrid_system,0.736464
 yeast_three-hybrid,0.729807
 protoplast_transactivation,0.722616
-yeast_two-hybrid,0.712015
 w-box,0.709537
 yeast-one-hybrid,0.70897
 y2h_assays,0.705344
@@ -15,6 +14,7 @@ thmyc6,0.696635
 thbzip1_promoter,0.695414
 agl15,0.693422
 osc4ppdk_promoter,0.685471
+yeast_two-hybrid_assays,0.683272
 vp16_activation,0.680557
 two-hybrid_experiments,0.680417
 gal4_dna,0.679494
@@ -22,6 +22,7 @@ bacterial_one-hybrid,0.679228
 protein-dna_interaction,0.676973
 thabf1,0.676544
 yeast-two_hybrid,0.672378
+yeast_two-hybrid_assay,0.669521
 abi4_promoter,0.668963
 gal4_dbd,0.666899
 siareb1,0.665874
@@ -106,7 +107,6 @@ yeast_strain_y190,0.621127
 mel1_reporter,0.620703
 gal4_db,0.619308
 hf7c,0.616746
-mammalian_two-hybrid,0.614546
 phis2,0.613544
 #γl,0.612564
 reporter_assay,0.611996

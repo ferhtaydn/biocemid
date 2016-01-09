@@ -143,7 +143,6 @@ atomic_resolution_structures,0.702672
 ice-embedded,0.702224
 ultrastructural_morphology,0.7021
 freeze-substituted,0.700806
-x-ray_scattering,0.699204
 freeze-fracture_replicas,0.698617
 cryo-electron_microscopy_em,0.698485
 immunogold_em,0.695029

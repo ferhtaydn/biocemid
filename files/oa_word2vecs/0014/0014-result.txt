@@ -58,7 +58,6 @@ bacterial_two-hybrid_assays,0.755816
 inositol_triphosphate,0.755646
 gαi_subunit,0.755525
 camp_signaling,0.755288
-yeast_two-hybrid,0.754791
 gi/o_proteins,0.75442
 phosphodiesterases,0.754297
 g-protein_coupled,0.754184
