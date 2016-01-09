@@ -17,7 +17,7 @@ object Main extends App {
       |
       |4 - Count of each method annotated in ${IO.manualAnnotationStatistics}
       |
-      |5 - Annotate with WORD2VEC, raw files in ${IO.oaWord2vecAnnotationDirectory}
+      |5 - Annotate with WORD2VEC, raw files in ${IO.manualAnnotationRawDirectory}
       |
     """.stripMargin
 
@@ -89,7 +89,7 @@ object Main extends App {
 
   } else if (selection == 3) {
 
-    BioC.evaluate(IO.goldResultDirectory, IO.baselineResultDirectory, IO.xmlSuffix)
+    BioC.evaluate(IO.goldResultDirectory, IO.word2vecResultDirectory, IO.xmlSuffix)
 
   } else if (selection == 4) {
 
@@ -102,7 +102,7 @@ object Main extends App {
     cleanPreviousAnnotatedFiles()
 
     BioC.annotateWithWord2vec(
-      IO.oaWord2vecAnnotationDirectory,
+      IO.manualAnnotationRawDirectory,
       IO.xmlSuffix, IO.word2vecAnnotationSuffix,
       (IO.oaWord2vecsDirectory, IO.word2vecResultDedupeFileSuffix, 1, 0.9, 0.5)
     )
@@ -117,7 +117,7 @@ object Main extends App {
 
     def cleanPreviousAnnotatedFiles(): String = {
       import scala.sys.process._
-      s"find ${IO.oaWord2vecAnnotationDirectory} -type f -name *${IO.word2vecAnnotationSuffix}" #| "xargs rm" !!
+      s"find ${IO.manualAnnotationRawDirectory} -type f -name *${IO.word2vecAnnotationSuffix}" #| "xargs rm" !!
     }
 
     def dedupe(elements: Seq[(String, Double)], acc: Seq[(String, Double)]): Seq[(String, Double)] = elements match {
