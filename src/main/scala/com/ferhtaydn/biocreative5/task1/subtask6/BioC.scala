@@ -121,11 +121,11 @@ object BioC {
 
   }
 
-  private def annotate(dir: String, InputFileSuffix: String, outputFileSuffix: String, converter: Annotator): Unit = {
+  private def annotate(dir: String, inputFileSuffix: String, outputFileSuffix: String, converter: Annotator): Unit = {
 
-    IO.list(dir, InputFileSuffix).foreach { file ⇒
+    IO.list(dir, inputFileSuffix).foreach { file ⇒
 
-      val fileName = Utils.extractFileName(file.getName, InputFileSuffix)
+      val fileName = Utils.extractFileName(file.getName, inputFileSuffix)
       val out = s"$dir/${fileName}_$outputFileSuffix"
 
       val factory: BioCFactory = BioCFactory.newFactory(BioCFactory.WOODSTOX)

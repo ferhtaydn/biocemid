@@ -83,13 +83,13 @@ object Main extends App {
 
     BioC.annotateWithTfrf(IO.manualAnnotationRawDirectory,
       IO.xmlSuffix,
-      IO.tfrfResultSuffix,
-      tfrfConfigs = (true, 1, 0.5, 0.25)
+      IO.baselineResultSuffix,
+      tfrfConfigs = (false, 1, 0.5, 0.25)
     )
 
   } else if (selection == 3) {
 
-    BioC.evaluate(IO.goldResultDirectory, IO.word2vecResultDirectory, IO.xmlSuffix)
+    BioC.evaluate(IO.goldResultDirectory, IO.baselineResultDirectory, IO.xmlSuffix)
 
   } else if (selection == 4) {
 

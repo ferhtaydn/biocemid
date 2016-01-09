@@ -12,8 +12,8 @@ object IO {
 
   val word2vecResultDirectory = "files/results/word2vec/config7_30_articles"
   val tfrfResultDirectory = "files/results/tfrf_30_articles"
-  val baselineResultDirectory = "files/results/baseline_17_articles"
-  val manualAnnotationRawDirectory = "files/manual_annotation_raw_17"
+  val baselineResultDirectory = "files/results/baseline_30_articles"
+  val manualAnnotationRawDirectory = "files/manual_annotation_raw_30"
 
   val bc3Word2vecsDirectory = "files/bc3_word2vecs"
   val oaWord2vecsDirectory = "files/oa_word2vecs"
