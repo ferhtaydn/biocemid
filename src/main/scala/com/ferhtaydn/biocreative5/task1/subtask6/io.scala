@@ -6,19 +6,17 @@ import java.nio.file.{ Files, Paths, StandardOpenOption }
 
 object IO {
 
-  // gold_set_13 and gold_set_17 files contains the articles from $manualAnnotationStatistics
+  // gold_set_13, gold_set_17 and gold_set_30 files contains the articles from $manualAnnotationStatistics
   val goldResultDirectory = "files/gold_set_30"
   val manualAnnotationStatistics = "files/manually_annotated_data_set_by_2_annotator"
 
-  val word2vecResultDirectory = "files/results/word2vec/config7_30_articles"
+  val word2vecResultDirectory = "files/results/word2vec/config_2_2_30_articles"
   val tfrfResultDirectory = "files/results/tfrf_30_articles"
   val baselineResultDirectory = "files/results/baseline_30_articles"
-  val manualAnnotationRawDirectory = "files/manual_annotation_raw_30"
 
-  val bc3Word2vecsDirectory = "files/bc3_word2vecs"
+  val manualAnnotationRawDirectory = "files/manual_annotation_raw_13"
+
   val oaWord2vecsDirectory = "files/oa_word2vecs"
-  val bc3Word2vecAnnotationDirectory = "files/bc3_word2vecAnnotation"
-  val oaWord2vecAnnotationDirectory = "files/oa_word2vecAnnotation"
 
   val xmlSuffix = ".xml"
   val txtSuffix = ".txt"
