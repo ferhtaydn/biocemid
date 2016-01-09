@@ -20,14 +20,13 @@ electron_microscope,0.778733
 microscopic_examination,0.778174
 stained_sections,0.778047
 examined_microscopically,0.776677
-brightfield_microscopy,0.775363
+microscopy,0.776287
 under_bright_field,0.764074
 toluidine_blue,0.763186
 light_microcopy,0.755379
 hematoxylin-eosin,0.747319
 thick_sections_stained,0.746901
 microscopically_examined,0.746534
-fluorescent_microscopy,0.745503
 1000x_magnification,0.745217
 1,000_magnification,0.744284
 photomicroscopy,0.743656
@@ -51,7 +50,6 @@ microscopic_inspection,0.732961
 microscopic_observations,0.731996
 bright-field_microscope,0.731716
 ultrastructural_examination,0.729583
-scanning_electron_microscopy,0.729231
 microcopy,0.728926
 stereomicroscopy,0.727999
 microscopic_examinations,0.727463
@@ -59,11 +57,9 @@ hematoxylin_eosin_h,0.725199
 microscopic_slides,0.72408
 photomicrography,0.723603
 e800_microscope,0.722787
-bright_field_light_microscopy,0.722571
 gomori_silver_impregnation,0.722473
 epon-embedded,0.722037
 serial_sections,0.721979
-brightfield_light_microscopy,0.721655
 light_microscopes,0.721511
 giemsa,0.72114
 haematoxilin/eosin,0.720296

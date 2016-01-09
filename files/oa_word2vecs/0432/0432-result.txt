@@ -8,7 +8,6 @@ yeast_one-hybrid_system,0.736464
 yeast_three-hybrid,0.729807
 yeast_one-hybrid_y1h,0.728896
 protoplast_transactivation,0.722616
-yeast_two-hybrid,0.712015
 w-box,0.709537
 yeast-one-hybrid,0.70897
 y2h_assays,0.705344
@@ -123,7 +122,6 @@ yeast_strain_y187,0.620147
 gal4_db,0.619308
 hf7c,0.616746
 yeast_two-hybrid_system,0.615282
-mammalian_two-hybrid,0.614546
 gal4_two-hybrid_system,0.614434
 phis2,0.613544
 y1h_screen,0.612624

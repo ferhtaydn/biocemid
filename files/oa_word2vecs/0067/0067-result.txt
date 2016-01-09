@@ -76,7 +76,6 @@ quasi-elastic,0.655798
 absorbance_spectrum,0.655621
 emission_peak,0.655182
 polydispersity,0.654746
-x-ray_scattering,0.653663
 light_back-scattered,0.653344
 excitation_wavelength,0.652526
 light-scattering_measurements,0.652464

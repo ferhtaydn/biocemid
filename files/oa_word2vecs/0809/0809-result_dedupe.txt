@@ -23,16 +23,18 @@ y2h_assays,0.750969
 bifc-based,0.750461
 bimolecular_fluorescent_complementation_bifc,0.749609
 yfpc,0.746518
-yeast_two-hybrid,0.744205
 arabidopsis_protoplast,0.742715
 rice_protoplasts,0.741512
 fluorescence_complementation,0.740859
 tobacco_epidermal,0.739643
+yeast_two-hybrid_assays,0.739372
 cyfp,0.739089
 gfp_fusion,0.738892
 non-fluorescent_fragments,0.738129
 planta_bifc,0.738057
 split_yfp,0.734128
+yeast_two-hybrid_assay,0.733993
+yeast_two-hybrid_system,0.733798
 protoplast_transfection,0.733406
 y2h_assay,0.732416
 transiently_co-expressed,0.732107
@@ -102,6 +104,8 @@ fret_flim,0.672984
 yeast_2-hybrid,0.666952
 vha-subunits,0.6669
 mcskd1_mccpn1,0.664021
+yeast_two-hybrid_yth,0.663161
+yeast_two-hybrid_y2h,0.662829
 co-immunoprecipitation_experiments,0.660582
 vitro_gst-pull_down,0.66056
 gfp_tagged,0.660474
@@ -120,4 +124,5 @@ flim-fret,0.651331
 fret_microscopy,0.650646
 yeast-2-hybrid,0.650113
 c-terminally_fused,0.64879
+yeast_two-hybrid_screen,0.646839
 yth_assays,0.6465

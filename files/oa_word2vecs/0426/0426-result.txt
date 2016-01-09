@@ -23,6 +23,7 @@ electron_microscope,0.778733
 microscopic_examination,0.778174
 stained_sections,0.778047
 examined_microscopically,0.776677
+microscopy,0.776287
 brightfield_microscopy,0.775363
 an_optical_microscope,0.76947
 under_bright_field,0.764074

@@ -1,5 +1,4 @@
 split-ubiquitin_system,0.82893
-yeast_two-hybrid,0.746083
 two-hybrid_system,0.733301
 yeast-two_hybrid,0.723859
 mbsus,0.723391

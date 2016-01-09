@@ -10,7 +10,6 @@ affinity_resin,0.860501
 anion_exchange_chromatography,0.858301
 immobilized_metal_affinity_chromatography,0.856218
 ni2_affinity_chromatography,0.855693
-ion-exchange_chromatography,0.848037
 affinity_purifications,0.846015
 ni-affinity_chromatography,0.844844
 nickel_affinity_chromatography,0.842556

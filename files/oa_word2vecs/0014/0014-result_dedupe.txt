@@ -45,7 +45,6 @@ camp,0.757661
 bacterial_two-hybrid_assays,0.755816
 inositol_triphosphate,0.755646
 gαi_subunit,0.755525
-yeast_two-hybrid,0.754791
 gi/o_proteins,0.75442
 phosphodiesterases,0.754297
 camp-independent,0.753958
@@ -81,6 +80,7 @@ chlamydial_mreb,0.724569
 yeast-two-hybrid,0.724233
 two-hybrid_assay,0.716765
 karimova_et_al.,0.716268
+yeast_two-hybrid_assays,0.71587
 b2h_system,0.709871
 two-hybrid_assays,0.709211
 y2h_system,0.702819
@@ -90,6 +90,7 @@ e._coli_bth101,0.691809
 t18_fusions,0.687189
 y2h_assays,0.681867
 put18,0.679644
+yeast_two-hybrid_y2h,0.673698
 bth101,0.672362
 yeast_2-hybrid,0.670843
 two-hybrid_screening,0.667439
@@ -114,6 +115,7 @@ pull-down_experiments,0.639837
 pspa_pspb_pspc,0.63833
 two-hybrid_screen,0.634981
 ftsx,0.634513
+yeast_two-hybrid_screens,0.634395
 y2h_assay,0.634172
 yth_system,0.633922
 gst_pulldown_assays,0.633258
@@ -140,6 +142,7 @@ co-purification,0.620786
 pip501_transfer,0.618393
 bifc_assay,0.618357
 c-terminal_tandem_affinity,0.618297
+yeast_two-hybrid_screenings,0.617768
 copurification,0.617592
 tandem-affinity_purification,0.616766
 cty10-5d,0.61645

@@ -97,7 +97,6 @@ c18_column,0.815515
 chromotography,0.815238
 high_performance_liquid,0.813819
 chromatograph,0.81142
-ion-exchange_chromatography,0.811233
 gel_permeation,0.810982
 chromatograpy,0.807118
 chromatography_column,0.804488

@@ -32,7 +32,6 @@ superdex-75,0.853971
 gel_filtration_columns,0.853188
 superdex_hr_10/30_column,0.85152
 superose_6 10/300_gl_column,0.851452
-ion-exchange_chromatography,0.850113
 superdex_column_equilibrated,0.848724
 superdex_hiload_16/60_column,0.847785
 hiload_26/60_superdex_column,0.847266
