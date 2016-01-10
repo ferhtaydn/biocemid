@@ -1,0 +1,8 @@
+Apoptotic cells with DNA strand breaks were labeled with green fluorescence.We next examined whether Get3, as part of the GET complex, plays a role in recruiting newly synthesized Sed5 in the cytosol and inserting it into membranes.
+We visualized the subcellular localization of Sed5 with an N-terminal fusion protein with GFP (GFP-Sed5) (Weinberger et al., 2005).
+N-terminal GFP fusion was compatible with the correct targeting of Sed5 to the Golgi in control cells (Banfield et al., 1994; Weinberger et al., 2005) (Figure 2B).
+Deletion of Get3 led to a large pool of soluble protein and a corresponding decrease in Golgi-like puncta containing Sed5 (Figure 2B).
+In a Δget1/Δget2 background, this defect was more pronounced; there was only modest Golgi staining and, instead, we observed cytosolic fluorescence and a few large punctate structures that were distinct from the Golgi, as visualized by Anp1-GFP staining (Figure 2B).
+Red fluorescent protein (RFP) fused to Get3 (Get3-tdRFP) and GFP-Sed5 colocalized in these punctate structures (Figure 2C).
+Thus, in the absence of the Get proteins, a substantial fraction of Sed5 remains in the cytosol.
+Consistent with this, subcellular fractionation experiments indicate that deletion of the GET genes leads to reduced levels of endogenous untagged Sed5 in membranes, while not interfering with membrane association of the Golgi protein Emp47 or the ER protein Sec61 (Figure 2D).

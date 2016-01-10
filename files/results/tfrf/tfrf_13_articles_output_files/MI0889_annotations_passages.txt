@@ -1,0 +1,1 @@
+For example, p300/CBP played a major role in the acetylation of p65 in vivo (Chen et al., 2002). Conversely, acetylated p65 was subjected to deacetylation by HDAC3 (Chen et al., 2001). Recent work also revealed that SIRT1 physically interacted with p65 and promoted p65 deacetylation (Yeung et al., 2004).

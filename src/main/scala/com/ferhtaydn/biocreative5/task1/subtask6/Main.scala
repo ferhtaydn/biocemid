@@ -9,11 +9,11 @@ object Main extends App {
       |
       |Please press the key for:
       |
-      |1 - To generate the helper information files and tf-rf results from training data in ${IO.manualAnnotationStatistics}
+      |1 - To generate the helper information files and tf-rf results from labelled data in ${IO.goldResultDirectory}
       |
       |2 - Annotate with TFRF/BASELINE raw files in ${IO.manualAnnotationRawDirectory}
       |
-      |3 - Generate Eval results in ${IO.goldResultDirectory}
+      |3 - Generate Eval results by comparing ${IO.tfrfResultDirectory} and ${IO.goldResultDirectory}
       |
       |4 - Count of each method annotated in ${IO.manualAnnotationStatistics}
       |
@@ -27,11 +27,16 @@ object Main extends App {
 
   if (selection == 0) {
 
-    val list = BioC.methodsInfo.map { method ⇒
-      s"${method.id} ${method.nameAndSynonyms.map(x ⇒ x.split("\\s").mkString("_")).mkString(" ")}"
-    }
+    BioC.methodIds.foreach { method ⇒
 
-    IO.write("files/word2vec_distance_files_run_params.txt", list.mkString("\n"))
+      val tfRfTokenizedFile = s"files/results/tfrf/tfrf_13_articles_output_files/MI${method}_tokenized_tf-rf.txt"
+
+      val terms = IO.read(tfRfTokenizedFile).map(_.split(",").head).map("\"" + _ + "\"")
+
+      if (terms.nonEmpty) {
+        println(s"$method: \n related = [${terms.take(10).mkString(", ")}] \n extra = [${terms.slice(10, 20).mkString(", ")}]")
+      }
+    }
 
   } else if (selection == 1) {
 
@@ -39,8 +44,6 @@ object Main extends App {
     BioC.methodIds.foreach(calculateTfrf)
 
     def calculateTfrf(method: String): Unit = {
-
-      println(s"method id: $method")
 
       val passagesFile = s"MI${method}_annotations_passages.txt"
       val tokenizedFile = s"MI${method}_tokenized_words.txt"
@@ -73,7 +76,7 @@ object Main extends App {
       IO.remove(sentencesFile)
       IO.remove(tokenizedFile)
 
-      IO.list(IO.manualAnnotationStatistics, IO.xmlSuffix).foreach(f ⇒ out(BioC.extractAnnotatedSentences(f, method)))
+      IO.list(IO.goldResultDirectory, IO.xmlSuffix).foreach(f ⇒ out(BioC.extractAnnotatedSentences(f, method)))
 
       IO.write(tokenizedFreqsFile, Utils.stringifyTuples(BioC.calcFrequenciesFromTokensFile(tokenizedFile)))
 
@@ -83,13 +86,13 @@ object Main extends App {
 
     BioC.annotateWithTfrf(IO.manualAnnotationRawDirectory,
       IO.xmlSuffix,
-      IO.baselineResultSuffix,
-      tfrfConfigs = (false, 1, 0.5, 0.25)
+      IO.tfrfResultSuffix,
+      tfrfConfigs = (true, 1, 0.5, 0.25)
     )
 
   } else if (selection == 3) {
 
-    BioC.evaluate(IO.goldResultDirectory, IO.word2vecResultDirectory, IO.xmlSuffix)
+    BioC.evaluate(IO.goldResultDirectory, IO.tfrfResultDirectory, IO.xmlSuffix)
 
   } else if (selection == 4) {
 

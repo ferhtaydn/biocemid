@@ -1,0 +1,4 @@
+After further purification with Resource-QTM anion-exchange chromatography (GE Healthcare), both protein samples were concentrated to ∼30 mg ml−1 in (20 mM Tris–HCl (pH 8.0) and 0.1% (v/v) β-mercaptoethanol (βME)) and stored at −85°C until needed.
+APPL1 (5−419) mutants were expressed similarly.
+Se-Met-substituted proteins were expressed in E.
+coli B834 (DE3) pLysS cells (Novagen) in minimal media supplemented with 40 mg l−1 Se-Met (Sigma) and purified using the same procedure as the native protein.
