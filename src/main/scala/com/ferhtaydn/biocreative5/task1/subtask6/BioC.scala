@@ -12,7 +12,7 @@ import scala.xml.XML
 object BioC {
 
   lazy val methodsInfo = {
-    ConfigFactory.load("methods.conf").getConfigList("bioc.psimi.methods").map(MethodInfo(_)).toList
+    ConfigFactory.load("methods_tfrf_13_articles_f10s10.conf").getConfigList("bioc.psimi.methods").map(MethodInfo(_)).toList
   }
 
   lazy val methodIds = methodsInfo.map(_.id)

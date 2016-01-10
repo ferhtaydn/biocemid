@@ -1,9 +1,0 @@
-tipin,2.0
-depleted,2.0
-mock,2.0
-anti-tipin,1.0
-extracts,1.0
-antibodies,1.0
-immunodepletion,1.0
-δtipin,1.0
-using,1.0

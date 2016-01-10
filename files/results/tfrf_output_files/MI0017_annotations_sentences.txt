@@ -1,5 +1,0 @@
-The greater binding affinity of AIRE–PHD1 for H3K4me0 peptides was confirmed by both tryptophan fluorescence spectroscopy and isothermal titration calorimetry (ITC), yielding dissociation constants of ∼4 μM, ∼20 μM and >0.5 mM for H3K4me0, H3K4me1 and H3K4me2, respectively (supplementary Fig S2C online; Table 1).
-In agreement with the GST fusion pull-down experiments, fluorescence spectroscopy showed no binding of H3K4me0 to AIRE–PHD1 containing the APECED-causing C311Y mutation (Bjorses et al, 2000).
-Nevertheless, a second pathological mutant, V301M (Soderbergh et al, 2000), was still able to bind to H3K4me0, indicating that this mutation is not located in the H3 interaction site (Table 1).
-Indeed, fluorescence spectroscopy and ITC assays showed that the alanine mutations R2A in the H3 peptide and D312A in AIRE–PHD1 markedly reduced the binding affinity (Table 1; Fig 4C) without affecting the protein fold (supplementary Fig S3 online).
-Similarly, pull-down experiments with whole histones and the H3K4me0 peptide, together with fluorescence spectroscopy and ITC measurements performed on AIRE–PHD1-D297A showed reduced binding (Table 1; Fig 4).

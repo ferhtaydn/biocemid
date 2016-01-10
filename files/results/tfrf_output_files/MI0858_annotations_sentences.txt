@@ -1,2 +1,0 @@
-(A) Immunodepletion of Tipin.
-Extracts were mock depleted (Mock) or Tipin depleted using anti-Tipin antibodies (ΔTipin).

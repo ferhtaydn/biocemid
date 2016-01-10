@@ -1,8 +1,0 @@
-In density gradient fractionations, expression of GFP-Rab21 shifted the integrins toward the denser Rab-positive fractions (Hughes et al., 2002), and GFP-Rab21 cofractionated with α2-integrin in fractions 3–9 (Fig.
-3 D).
-A further shift in the endogenous integrin pool (to fractions 5–11) was observed upon expression of GFP-Rab21GTP, and GFP-Rab21GDP was also observed in the denser fractions (Fig.
-3 D).
-In the lighter fractions (3–5), GFP-Rab21 and integrin were found to cosediment with the Golgi-marker GM130, whereas in the denser fractions, cosedimentation was observed with the ER marker P115 (fractions 6–8) and EEA1 (fractions 7–9; Fig.
-S3 A, available at http://www.jcb.org/cgi/content/full/jcb.200509019/DC1).
-This data, together with the abundance of integrin vesicles observed in Rab21-expressing cells (Fig.
-2), suggests that Rab21 targets integrins to the endocytic fraction in human cells.
