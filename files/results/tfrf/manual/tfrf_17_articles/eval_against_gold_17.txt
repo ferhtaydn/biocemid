@@ -1,0 +1,107 @@
+TN -> 733.0, FN -> 27.0, TP -> 172.0, FP -> 333.0
+accuracy: 0.7154150197628458
+precision: 0.3405940594059406
+recall: 0.864321608040201
+fscore: 0.48863636363636365
+
+document id: 1388269
+falseNegatives: 1.0
+falsePositives: 26.0
+trueNegatives: 23.0
+truePositives: 18.0
+
+document id: 1450327
+falseNegatives: 0.0
+falsePositives: 25.0
+trueNegatives: 61.0
+truePositives: 3.0
+
+document id: 1472246
+falseNegatives: 5.0
+falsePositives: 20.0
+trueNegatives: 56.0
+truePositives: 18.0
+
+document id: 2063892
+falseNegatives: 1.0
+falsePositives: 25.0
+trueNegatives: 32.0
+truePositives: 10.0
+
+document id: 1475773
+falseNegatives: 4.0
+falsePositives: 31.0
+trueNegatives: 98.0
+truePositives: 10.0
+
+document id: 1563491
+falseNegatives: 2.0
+falsePositives: 3.0
+trueNegatives: 74.0
+truePositives: 4.0
+
+document id: 1664554
+falseNegatives: 0.0
+falsePositives: 9.0
+trueNegatives: 15.0
+truePositives: 8.0
+
+document id: 1702560
+falseNegatives: 2.0
+falsePositives: 29.0
+trueNegatives: 65.0
+truePositives: 3.0
+
+document id: 2196435
+falseNegatives: 2.0
+falsePositives: 25.0
+trueNegatives: 18.0
+truePositives: 8.0
+
+document id: 2261226
+falseNegatives: 2.0
+falsePositives: 23.0
+trueNegatives: 12.0
+truePositives: 16.0
+
+document id: 2265110
+falseNegatives: 0.0
+falsePositives: 12.0
+trueNegatives: 25.0
+truePositives: 4.0
+
+document id: 2275666
+falseNegatives: 0.0
+falsePositives: 20.0
+trueNegatives: 16.0
+truePositives: 9.0
+
+document id: 2430719
+falseNegatives: 1.0
+falsePositives: 3.0
+trueNegatives: 40.0
+truePositives: 5.0
+
+document id: 2422857
+falseNegatives: 4.0
+falsePositives: 20.0
+trueNegatives: 56.0
+truePositives: 17.0
+
+document id: 2504490
+falseNegatives: 0.0
+falsePositives: 4.0
+trueNegatives: 102.0
+truePositives: 6.0
+
+document id: 2572193
+falseNegatives: 2.0
+falsePositives: 23.0
+trueNegatives: 33.0
+truePositives: 18.0
+
+document id: 2632940
+falseNegatives: 1.0
+falsePositives: 35.0
+trueNegatives: 7.0
+truePositives: 15.0
