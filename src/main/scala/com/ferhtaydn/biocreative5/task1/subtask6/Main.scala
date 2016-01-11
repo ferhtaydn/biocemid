@@ -25,20 +25,7 @@ object Main extends App {
 
   val selection = scala.io.StdIn.readInt()
 
-  if (selection == 0) {
-
-    BioC.methodIds.foreach { method ⇒
-
-      val tfRfTokenizedFile = s"files/results/tfrf/tfrf_13_articles_output_files/MI${method}_tokenized_tf-rf.txt"
-
-      val terms = IO.read(tfRfTokenizedFile).map(_.split(",").head).map("\"" + _ + "\"")
-
-      if (terms.nonEmpty) {
-        println(s"$method: \n related = [${terms.take(10).mkString(", ")}] \n extra = [${terms.slice(10, 20).mkString(", ")}]")
-      }
-    }
-
-  } else if (selection == 1) {
+  if (selection == 1) {
 
     BioC.methodIds.foreach(createHelperFiles)
     BioC.methodIds.foreach(calculateTfrf)
@@ -92,7 +79,7 @@ object Main extends App {
 
   } else if (selection == 3) {
 
-    BioC.evaluate(IO.goldResultDirectory, IO.tfrfResultDirectory, IO.xmlSuffix)
+    BioC.evaluate(IO.goldResultDirectory, IO.word2vecResultDirectory, IO.xmlSuffix)
 
   } else if (selection == 4) {
 
@@ -107,7 +94,7 @@ object Main extends App {
     BioC.annotateWithWord2vec(
       IO.manualAnnotationRawDirectory,
       IO.xmlSuffix, IO.word2vecAnnotationSuffix,
-      (IO.oaWord2vecsDirectory, IO.word2vecResultDedupeFileSuffix, 1, 0.9, 0.5)
+      (IO.oaWord2vecsDirectory, IO.word2vecResultFileSuffix, 1, 1d, 0.5)
     )
 
     def cleanPreviousResultFiles(): String = {
