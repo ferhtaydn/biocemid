@@ -11,7 +11,7 @@ object IO {
   val manualAnnotationStatistics = "files/manually_annotated_data_set_by_2_annotator"
 
   val word2vecResultDirectory = "files/results/word2vec/config_2_2_30_articles"
-  val tfrfResultDirectory = "files/results/tfrf/f10s10/tfrf_30_articles"
+  val tfrfResultDirectory = "files/results/tfrf/manual/tfrf_30_articles"
   val baselineResultDirectory = "files/results/baseline_30_articles"
 
   val manualAnnotationRawDirectory = "files/manual_annotation_raw_30"
