@@ -71,7 +71,8 @@ object Main extends App {
 
   } else if (selection == 2) {
 
-    BioC.annotateWithTfrf(IO.manualAnnotationRawDirectory,
+    BioC.annotateWithTfrf(
+      IO.manualAnnotationRawDirectory,
       IO.xmlSuffix,
       IO.tfrfResultSuffix,
       tfrfConfigs = (true, 1, 0.5, 0.25)
@@ -160,11 +161,15 @@ object Main extends App {
 
             // remove the name/synonyms from word2vecs list.
             methodsNames(method).foreach(map.remove)
-            IO.write(s"${IO.oaWord2vecsDirectory}/$method/$method-${IO.word2vecResultFileSuffix}",
-              Utils.stringifyTuples(map.toSeq.sortBy(_._2).reverse))
+            IO.write(
+              s"${IO.oaWord2vecsDirectory}/$method/$method-${IO.word2vecResultFileSuffix}",
+              Utils.stringifyTuples(map.toSeq.sortBy(_._2).reverse)
+            )
 
-            IO.write(s"${IO.oaWord2vecsDirectory}/$method/$method-${IO.word2vecResultDedupeFileSuffix}",
-              Utils.stringifyTuples(dedupe(map.toSeq, Seq()).sortBy(_._2).reverse))
+            IO.write(
+              s"${IO.oaWord2vecsDirectory}/$method/$method-${IO.word2vecResultDedupeFileSuffix}",
+              Utils.stringifyTuples(dedupe(map.toSeq, Seq()).sortBy(_._2).reverse)
+            )
 
         }
       }

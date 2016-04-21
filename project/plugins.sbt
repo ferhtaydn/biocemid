@@ -1,7 +1,7 @@
 logLevel := Level.Warn
 
-addSbtPlugin("com.typesafe.sbt" % "sbt-scalariform" % "1.3.0")
+resolvers += Resolver.sonatypeRepo("releases")
 
-resolvers += "sonatype-releases" at "https://oss.sonatype.org/content/repositories/releases/"
+addSbtPlugin("org.scalariform" % "sbt-scalariform" % "1.6.0")
 
-addSbtPlugin("org.scalastyle" %% "scalastyle-sbt-plugin" % "0.7.0")
+addSbtPlugin("org.scalastyle" %% "scalastyle-sbt-plugin" % "0.8.0")
