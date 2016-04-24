@@ -1,4 +1,3 @@
-
 MI:0004  affinity chromatography technology
 MI:0006  anti bait coimmunoprecipitation
 MI:0007  anti tag coimmunoprecipitation
@@ -20,8 +19,6 @@ MI:0031  protein cross-linking with a bifunctional reagent
 MI:0038  dynamic light scattering
 MI:0040  electron microscopy
 MI:0042  electron paramagnetic resonance
-MI:0045  experimental interaction detection
-MI:0046  experimental knowledge based
 MI:0047  far western blotting
 MI:0048  filamentous phage display
 MI:0049  filter binding

@@ -71,7 +71,7 @@ trait Annotator extends CopyConverter {
 
           up.groupBy(_.weight).toSeq.sortBy(_._1).reverse.head._2.foreach {
             case mw ⇒
-              val annotationInfons = Map("type" -> "ExperimentalMethod", "PSIMI" -> mw.id)
+              val annotationInfons = Map("type" → "ExperimentalMethod", "PSIMI" → mw.id)
               val out: BioCAnnotation = new BioCAnnotation
               out.setInfons(annotationInfons)
               out.setText(sentence.getText)
@@ -122,7 +122,7 @@ trait Annotator extends CopyConverter {
     val targetSentenceInfon: List[MethodWeight] = targetSentence.getInfons.toMap
 
     targetSentenceInfon.find(mw ⇒ mw.id.equals(sentenceAnnotation) && mw.weight >= smallThreshold).map { mw ⇒
-      val annotationInfons = Map("type" -> "ExperimentalMethod", "PSIMI" -> mw.id)
+      val annotationInfons = Map("type" → "ExperimentalMethod", "PSIMI" → mw.id)
       val out: BioCAnnotation = new BioCAnnotation
       out.setInfons(annotationInfons)
       out.setText(targetSentence.getText)

@@ -19,14 +19,14 @@ object BioC {
 
   def calcFrequenciesFromTokensFile(tokensFile: String): Seq[(String, Double)] = {
     val tokenFreqs = IO.read(tokensFile).foldLeft(Map.empty[String, Double]) {
-      (m, word) ⇒ m + (word -> (m.getOrElse(word, 0.0) + 1.0))
+      (m, word) ⇒ m + (word → (m.getOrElse(word, 0.0) + 1.0))
     }
     tokenFreqs.toSeq.sortBy(_._2).reverse
   }
 
   def calcTokenFrequencies(tokens: List[String]): Seq[(String, Double)] = {
     val tokenFreqs = tokens.foldLeft(Map.empty[String, Double]) {
-      (m, word) ⇒ m + (word -> (m.getOrElse(word, 0.0) + 1.0))
+      (m, word) ⇒ m + (word → (m.getOrElse(word, 0.0) + 1.0))
     }
     tokenFreqs.toSeq.sortBy(_._2).reverse
   }
@@ -39,9 +39,7 @@ object BioC {
 
     val filtered = annotations.filter(annot ⇒
       (annot \ "infon").filter(i ⇒
-        (i \\ "@key").text.equals("PSIMI")
-      ).text.equals(method)
-    )
+        (i \\ "@key").text.equals("PSIMI")).text.equals(method))
 
     filtered.map(m ⇒ (m \\ "text").text).mkString("\n")
 
@@ -49,9 +47,11 @@ object BioC {
 
   private def log2(x: Double) = scala.math.log(x) / scala.math.log(2)
 
-  def tfRf(tokenFreqs: Seq[(String, Double)],
+  def tfRf(
+    tokenFreqs: Seq[(String, Double)],
     positivePassages: Seq[String],
-    negativePassagesFiles: List[File]): Seq[(String, Double)] = {
+    negativePassagesFiles: List[File]
+  ): Seq[(String, Double)] = {
 
     val positiveCategory = positivePassages.map(Utils.tokenize(_).toSet).toList
 
@@ -80,9 +80,11 @@ object BioC {
     }
   }
 
-  def tfRfOntology(tokenFreqs: Seq[(String, Double)],
+  def tfRfOntology(
+    tokenFreqs: Seq[(String, Double)],
     positivePassages: Seq[String],
-    negativePassages: Seq[Set[String]]): Seq[(String, Double)] = {
+    negativePassages: Seq[Set[String]]
+  ): Seq[(String, Double)] = {
 
     val positiveCategory = positivePassages.map(Utils.tokenize(_).toSet).toList
 
@@ -171,7 +173,7 @@ object BioC {
 
       manuPassages.foreach { pas ⇒
 
-        pas.getAnnotations.toList.groupBy(a ⇒ a.getInfon("PSIMI")).map(x ⇒ x._1 -> x._2.size).foreach {
+        pas.getAnnotations.toList.groupBy(a ⇒ a.getInfon("PSIMI")).map(x ⇒ x._1 → x._2.size).foreach {
           case (n, c) ⇒
             methodCountWithinPassages.update(n, methodCountWithinPassages(n) + c)
             methodCountWithinArticles.update(n, methodCountWithinArticles(n) + file.getName)
@@ -361,8 +363,10 @@ object BioC {
 
     def loop(sentences: List[String], count: Int, acc: Seq[(String, Int, Int)]): Seq[(String, Int, Int)] = {
       sentences match {
-        case Nil     ⇒ acc
-        case x :: xs ⇒ loop(xs, x.length + count + 1, acc :+ (x.trim, count + (x.length - x.trim.length), x.trim.length))
+        case Nil ⇒ acc
+        case x :: xs ⇒
+          val t3 = (x.trim, count + (x.length - x.trim.length), x.trim.length)
+          loop(xs, x.length + count + 1, acc :+ t3)
       }
     }
 

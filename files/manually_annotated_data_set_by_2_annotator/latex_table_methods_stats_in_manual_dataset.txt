@@ -1,0 +1,117 @@
+%%%%% TABLE BEGIN %%%%%
+ \begin{longtable}{cccc}
+ \caption{List of experimental interaction detection methods in the annotated data set} \\
+ \label{table:list-of-methods} \\
+ Id       &             Name                       &    Articles   &  Passages \\
+ MI:0004  &  affinity chromatography technology  &  7  &  12  \\
+ MI:0006  &  anti bait coimmunoprecipitation  &  9  &  24  \\
+ MI:0007  &  anti tag coimmunoprecipitation  &  7  &  14  \\
+ MI:0008  &  array technology  &  0  &  0  \\
+ MI:0010  &  beta galactosidase complementation  &  0  &  0  \\
+ MI:0011  &  beta lactamase complementation  &  0  &  0  \\
+ MI:0012  &  bioluminescence resonance energy transfer  &  0  &  0  \\
+ MI:0014  &  adenylate cyclase complementation  &  2  &  2  \\
+ MI:0016  &  circular dichroism  &  0  &  0  \\
+ MI:0017  &  classical fluorescence spectroscopy  &  1  &  4  \\
+ MI:0018  &  two hybrid  &  10  &  55  \\
+ MI:0019  &  coimmunoprecipitation  &  14  &  50  \\
+ MI:0020  &  transmission electron microscopy  &  0  &  0  \\
+ MI:0027  &  cosedimentation  &  0  &  0  \\
+ MI:0028  &  cosedimentation in solution  &  1  &  1  \\
+ MI:0029  &  cosedimentation through density gradient  &  1  &  1  \\
+ MI:0030  &  cross-linking study  &  3  &  11  \\
+ MI:0031  &  protein cross-linking with a bifunctional reagent  &  0  &  0  \\
+ MI:0038  &  dynamic light scattering  &  0  &  0  \\
+ MI:0040  &  electron microscopy  &  2  &  5  \\
+ MI:0042  &  electron paramagnetic resonance  &  0  &  0  \\
+ MI:0047  &  far western blotting  &  0  &  0  \\
+ MI:0048  &  filamentous phage display  &  0  &  0  \\
+ MI:0049  &  filter binding  &  0  &  0  \\
+ MI:0051  &  fluorescence technology  &  4  &  4  \\
+ MI:0052  &  fluorescence correlation spectroscopy  &  0  &  0  \\
+ MI:0053  &  fluorescence polarization spectroscopy  &  1  &  2  \\
+ MI:0054  &  fluorescence-activated cell sorting  &  3  &  9  \\
+ MI:0055  &  fluorescent resonance energy transfer  &  3  &  10  \\
+ MI:0065  &  isothermal titration calorimetry  &  4  &  13  \\
+ MI:0066  &  lambda phage display  &  0  &  0  \\
+ MI:0067  &  light scattering  &  0  &  0  \\
+ MI:0069  &  mass spectrometry studies of complexes  &  0  &  0  \\
+ MI:0071  &  molecular sieving  &  5  &  12  \\
+ MI:0077  &  nuclear magnetic resonance  &  4  &  27  \\
+ MI:0081  &  peptide array  &  1  &  4  \\
+ MI:0084  &  phage display  &  0  &  0  \\
+ MI:0089  &  protein array  &  0  &  0  \\
+ MI:0091  &  chromatography technology  &  1  &  1  \\
+ MI:0096  &  pull down  &  15  &  44  \\
+ MI:0097  &  reverse ras recruitment system  &  0  &  0  \\
+ MI:0099  &  scintillation proximity assay  &  0  &  0  \\
+ MI:0104  &  static light scattering  &  1  &  1  \\
+ MI:0107  &  surface plasmon resonance  &  2  &  3  \\
+ MI:0108  &  t7 phage display  &  0  &  0  \\
+ MI:0111  &  dihydrofolate reductase reconstruction  &  0  &  0  \\
+ MI:0112  &  ubiquitin reconstruction  &  0  &  0  \\
+ MI:0114  &  x-ray crystallography  &  5  &  24  \\
+ MI:0115  &  yeast display  &  0  &  0  \\
+ MI:0226  &  ion exchange chromatography  &  3  &  5  \\
+ MI:0227  &  reverse phase chromatography  &  0  &  0  \\
+ MI:0231  &  mammalian protein protein interaction trap  &  0  &  0  \\
+ MI:0254  &  genetic interference  &  0  &  0  \\
+ MI:0276  &  blue native page  &  2  &  3  \\
+ MI:0369  &  lex-a dimerization assay  &  0  &  0  \\
+ MI:0370  &  tox-r dimerization assay  &  0  &  0  \\
+ MI:0397  &  two hybrid array  &  0  &  0  \\
+ MI:0398  &  two hybrid pooling approach  &  0  &  0  \\
+ MI:0399  &  two hybrid fragment pooling approach  &  0  &  0  \\
+ MI:0402  &  chromatin immunoprecipitation assay  &  5  &  22  \\
+ MI:0404  &  comigration in non denaturing gel electrophoresis  &  0  &  0  \\
+ MI:0405  &  competition binding  &  0  &  0  \\
+ MI:0406  &  deacetylase assay  &  0  &  0  \\
+ MI:0410  &  electron tomography  &  0  &  0  \\
+ MI:0411  &  enzyme linked immunosorbent assay  &  2  &  3  \\
+ MI:0412  &  electrophoretic mobility supershift assay  &  1  &  2  \\
+ MI:0413  &  electrophoretic mobility shift assay  &  1  &  6  \\
+ MI:0415  &  enzymatic study  &  0  &  0  \\
+ MI:0416  &  fluorescence microscopy  &  6  &  17  \\
+ MI:0417  &  footprinting  &  0  &  0  \\
+ MI:0419  &  gtpase assay  &  2  &  6  \\
+ MI:0420  &  kinase homogeneous time resolved fluorescence  &  0  &  0  \\
+ MI:0423  &  in-gel kinase assay  &  1  &  1  \\
+ MI:0424  &  protein kinase assay  &  1  &  1  \\
+ MI:0426  &  light microscopy  &  1  &  1  \\
+ MI:0428  &  imaging technique  &  1  &  1  \\
+ MI:0432  &  one hybrid  &  1  &  1  \\
+ MI:0434  &  phosphatase assay  &  0  &  0  \\
+ MI:0435  &  protease assay  &  0  &  0  \\
+ MI:0437  &  protein three hybrid  &  0  &  0  \\
+ MI:0440  &  saturation binding  &  0  &  0  \\
+ MI:0510  &  homogeneous time resolved fluorescence  &  0  &  0  \\
+ MI:0515  &  methyltransferase assay  &  0  &  0  \\
+ MI:0516  &  methyltransferase radiometric assay  &  0  &  0  \\
+ MI:0588  &  three hybrid  &  0  &  0  \\
+ MI:0605  &  enzymatic footprinting  &  0  &  0  \\
+ MI:0655  &  lambda repressor two hybrid  &  0  &  0  \\
+ MI:0657  &  systematic evolution of ligands by exponential enrichment  &  0  &  0  \\
+ MI:0663  &  confocal microscopy  &  4  &  8  \\
+ MI:0676  &  tandem affinity purification  &  1  &  4  \\
+ MI:0678  &  antibody array  &  0  &  0  \\
+ MI:0697  &  dna directed dna polymerase assay  &  0  &  0  \\
+ MI:0700  &  rna directed rna polymerase assay  &  0  &  0  \\
+ MI:0726  &  reverse two hybrid  &  0  &  0  \\
+ MI:0728  &  gal4 vp16 complementation  &  0  &  0  \\
+ MI:0729  &  luminescence based mammalian interactome mapping  &  0  &  0  \\
+ MI:0807  &  comigration in gel electrophoresis  &  0  &  0  \\
+ MI:0808  &  comigration in sds page  &  0  &  0  \\
+ MI:0809  &  bimolecular fluorescence complementation  &  1  &  10  \\
+ MI:0825  &  x-ray fiber diffraction  &  0  &  0  \\
+ MI:0826  &  x ray scattering  &  0  &  0  \\
+ MI:0841  &  phosphotransferase assay  &  0  &  0  \\
+ MI:0858  &  immunodepleted coimmunoprecipitation  &  1  &  1  \\
+ MI:0859  &  intermolecular force  &  0  &  0  \\
+ MI:0870  &  demethylase assay  &  0  &  0  \\
+ MI:0872  &  atomic force microscopy  &  0  &  0  \\
+ MI:0880  &  atpase assay  &  0  &  0  \\
+ MI:0889  &  acetylase assay  &  2  &  2  \\
+ MI:0892  &  solid phase assay  &  0  &  0  \\
+ MI:0920  &  ribonuclease assay  &  0  &  0  \\
+ \end{longtable}
+%%%%% TABLE END %%%%%

@@ -40,7 +40,7 @@ class Word2vecAnnotator(word2vecsDir: String, suffix: String, val beforeAfterCou
           val word = line.dropRight(scoreString.length + 1)
           val phrase = word.split("_").mkString(" ")
           val score = scoreString.toDouble
-          phrase -> score
+          phrase → score
         }
     }
   }
