@@ -1,5 +1,6 @@
-# BioCreative5Task6
-BioCreative V - Task 6 Implementation.
+#### BioC Experimental Molecular Interaction Detection
+
+[BioCreative V - BioC Track (I) - Task 6 Implementation](http://www.biocreative.org/tasks/biocreative-v/track-1-bioc/)
 
 The versions of the libraries which are used:  
 * [Java Version: 1.8.0_91](http://download.oracle.com/otn-pub/java/jdk/8u91-b14/jdk-8u91-macosx-x64.dmg)

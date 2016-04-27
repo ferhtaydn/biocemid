@@ -1,4 +1,4 @@
-package com.ferhtaydn.biocreative5.task1.subtask6
+package com.ferhtaydn.biocemid.bioc
 
 import com.typesafe.config.Config
 

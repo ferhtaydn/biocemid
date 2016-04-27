@@ -1,4 +1,7 @@
-package com.ferhtaydn.biocreative5.task1.subtask6
+package com.ferhtaydn.biocemid.annotators
+
+import com.ferhtaydn.biocemid._
+import com.ferhtaydn.biocemid.bioc.{ BioC, MethodInfo, MethodWeight }
 
 /**
  * This class is used for to look for the previous and next sentences of the annotated sentence.
@@ -12,21 +15,21 @@ class TfrfAndBaselineAnnotator(isTfrf: Boolean, val beforeAfterCount: Int,
 
       case info @ MethodInfo(id, name, ss, rs, es, definition, hierarchies) ⇒
 
-        val synonymNgram = searchInSentence(words, info.nameAndSynonyms)
+        val synonymNgrams = searchInSentence(words, info.nameAndSynonyms)
 
         if (isTfrf) {
 
-          val foundWords = synonymNgram.flatMap(_.split("\\s"))
+          val foundWords = synonymNgrams.flatMap(split(_, spaceRegex))
 
           val related = words.distinct.diff(foundWords).flatMap(w ⇒ rs.filter(_.equalsIgnoreCase(w)))
 
           val extra = words.distinct.diff(foundWords).flatMap(w ⇒ es.filter(_.equalsIgnoreCase(w)))
 
-          MethodWeight(id, (0.5 * synonymNgram.size) + (0.25 * related.size) + (0.125 * extra.size))
+          MethodWeight(id, (0.5 * synonymNgrams.size) + (0.25 * related.size) + (0.125 * extra.size))
 
         } else {
 
-          MethodWeight(id, 0.5 * synonymNgram.size)
+          MethodWeight(id, 0.5 * synonymNgrams.size)
 
         }
 

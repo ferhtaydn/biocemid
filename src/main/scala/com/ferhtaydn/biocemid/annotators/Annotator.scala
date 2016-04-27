@@ -1,7 +1,9 @@
-package com.ferhtaydn.biocreative5.task1.subtask6
+package com.ferhtaydn.biocemid.annotators
 
 import bioc.util.CopyConverter
 import bioc.{ BioCAnnotation, BioCLocation, BioCPassage, BioCSentence }
+import com.ferhtaydn.biocemid._
+import com.ferhtaydn.biocemid.bioc.{ BioC, MethodWeight }
 
 import scala.collection.JavaConversions._
 import scala.collection.mutable
@@ -22,9 +24,9 @@ trait Annotator extends CopyConverter {
 
   def searchInSentence(words: List[String], terms: List[String]): List[String] = {
     terms.flatMap { s ⇒
-      val size = s.split("\\s").size
+      val size = split(s, spaceRegex).size
       if (size > 1) {
-        Utils.mkNgram(words, size).filter(_.equalsIgnoreCase(s))
+        mkNgram(words, size).filter(_.equalsIgnoreCase(s))
       } else {
         words.filter(_.equalsIgnoreCase(s))
       }
@@ -59,7 +61,7 @@ trait Annotator extends CopyConverter {
   }
 
   private def annotateSentence(sentence: BioCSentence): BioCSentence = {
-    setWeights(sentence, calculateMethodWeights(Utils.tokenize(sentence.getText)))
+    setWeights(sentence, calculateMethodWeights(tokenize(sentence.getText)))
   }
 
   private def setWeights(sentence: BioCSentence, methodWeights: List[MethodWeight]): BioCSentence = {
@@ -161,7 +163,7 @@ trait Annotator extends CopyConverter {
     def concatAnnotations(a: BioCAnnotation, b: BioCAnnotation): BioCAnnotation = {
       val out = new BioCAnnotation
       out.setInfons(a.getInfons)
-      out.setText(a.getText + " " + b.getText)
+      out.setText(a.getText + space + b.getText)
       out.setLocation(locationOf(a).getOffset, locationOf(a).getLength + 1 + locationOf(b).getLength)
       out
     }
