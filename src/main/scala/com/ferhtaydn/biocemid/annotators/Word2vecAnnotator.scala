@@ -7,9 +7,7 @@ import com.ferhtaydn.biocemid.bioc.{ BioC, MethodInfo, MethodWeight }
  * This class is used for to look for the previous and next sentences of the annotated sentence.
  * This converter uses also the word2vecs of the methods.
  */
-//noinspection ScalaStyle
-class Word2vecAnnotator(word2vecsDir: String, suffix: String, val beforeAfterCount: Int,
-    val mainThreshold: Double, val smallThreshold: Double) extends Annotator {
+class Word2vecAnnotator(val annotatorConfig: Word2vecAnnotatorConfig) extends Annotator {
 
   override def calculateMethodWeights(words: List[String]): List[MethodWeight] = {
 
@@ -17,12 +15,10 @@ class Word2vecAnnotator(word2vecsDir: String, suffix: String, val beforeAfterCou
 
       case info @ MethodInfo(id, name, ss, rs, es, definition, hierarchies) ⇒
 
-        lazy val word2vecs = getWord2vecs(id)
+        val word2vecs = getWord2vecs(id)
 
         val synonymNgram = searchInSentence(words, info.nameAndSynonyms)
-
         val matchingVectors = searchInSentence(words, word2vecs.map(_._1).toList)
-
         val word2vecResults = word2vecs.filter { case (p, s) ⇒ matchingVectors.contains(p) }
 
         val n = if (synonymNgram.nonEmpty) 1d else 0d
@@ -35,7 +31,7 @@ class Word2vecAnnotator(word2vecsDir: String, suffix: String, val beforeAfterCou
   }
 
   private[this] def getWord2vecs(id: String): Seq[(String, Double)] = {
-    list(s"$word2vecsDir/$id", suffix).headOption match {
+    list(s"${annotatorConfig.w2vDir}/$id", annotatorConfig.suffix).headOption match {
       case None ⇒ Seq.empty[(String, Double)]
       case Some(file) ⇒
         read(file).map { line ⇒

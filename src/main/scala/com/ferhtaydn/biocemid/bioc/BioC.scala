@@ -5,10 +5,8 @@ import java.nio.charset.StandardCharsets
 
 import bioc.io.{ BioCDocumentReader, BioCDocumentWriter, BioCFactory }
 import bioc.{ BioCCollection, BioCDocument, BioCPassage, BioCSentence }
-
 import com.ferhtaydn.biocemid._
-import com.ferhtaydn.biocemid.annotators.{ Annotator, TfrfAndBaselineAnnotator, Word2vecAnnotator }
-
+import com.ferhtaydn.biocemid.annotators._
 import com.typesafe.config.ConfigFactory
 
 import scala.collection.JavaConversions._
@@ -110,22 +108,15 @@ object BioC {
     }
   }
 
-  def annotateWithTfrf(dir: String, inputFileSuffix: String, outputFileSuffix: String,
-    tfrfConfigs: (Boolean, Int, Double, Double)): Unit = {
+  def annotate(dir: String, inputFileSuffix: String, outputFileSuffix: String, annotatorConfig: AnnotatorConfig): Unit = {
 
-    val (isTfrf, beforeAfter, main, small) = tfrfConfigs
-    val converter = new TfrfAndBaselineAnnotator(isTfrf, beforeAfter, main, small)
+    val converter = annotatorConfig match {
+      case baselineConfigs: BaselineAnnotatorConfig ⇒ new BaselineAnnotator(baselineConfigs)
+      case tfrfConfigs: TfrfAnnotatorConfig         ⇒ new TfrfAnnotator(tfrfConfigs)
+      case word2vecConfigs: Word2vecAnnotatorConfig ⇒ new Word2vecAnnotator(word2vecConfigs)
+    }
+
     annotate(dir, inputFileSuffix, outputFileSuffix, converter)
-
-  }
-
-  def annotateWithWord2vec(dir: String, inputFileSuffix: String, outputFileSuffix: String,
-    word2vecConfigs: (String, String, Int, Double, Double)): Unit = {
-
-    val (w2vDir, suffix, beforeAfter, main, small) = word2vecConfigs
-    val converter = new Word2vecAnnotator(w2vDir, suffix, beforeAfter, main, small)
-    annotate(dir, inputFileSuffix, outputFileSuffix, converter)
-
   }
 
   private def annotate(dir: String, inputFileSuffix: String, outputFileSuffix: String, converter: Annotator): Unit = {

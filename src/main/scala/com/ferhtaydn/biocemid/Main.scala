@@ -1,5 +1,6 @@
 package com.ferhtaydn.biocemid
 
+import com.ferhtaydn.biocemid.annotators.{ TfrfAnnotatorConfig, Word2vecAnnotatorConfig }
 import com.ferhtaydn.biocemid.bioc.BioC
 
 object Main extends App {
@@ -65,11 +66,11 @@ object Main extends App {
 
   } else if (selection == 2) {
 
-    BioC.annotateWithTfrf(
+    BioC.annotate(
       manualAnnotationRawDirectory,
       xmlSuffix,
       tfrfResultSuffix,
-      tfrfConfigs = (true, 1, 0.5, 0.25)
+      TfrfAnnotatorConfig(1, 0.5, 0.25)
     )
 
   } else if (selection == 3) {
@@ -86,10 +87,10 @@ object Main extends App {
     generateWord2vecResultFiles()
     cleanPreviousAnnotatedFiles()
 
-    BioC.annotateWithWord2vec(
+    BioC.annotate(
       manualAnnotationRawDirectory,
       xmlSuffix, word2vecAnnotationSuffix,
-      (oaWord2vecsDirectory, word2vecResultFileSuffix, 1, 1d, 0.5)
+      Word2vecAnnotatorConfig(oaWord2vecsDirectory, word2vecResultFileSuffix, 1, 1d, 0.5)
     )
 
     def cleanPreviousResultFiles(): String = {
