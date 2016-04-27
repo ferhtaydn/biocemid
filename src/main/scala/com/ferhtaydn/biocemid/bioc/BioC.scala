@@ -1,9 +1,14 @@
-package com.ferhtaydn.biocreative5.task1.subtask6
+package com.ferhtaydn.biocemid.bioc
 
 import java.io.{ File, FileOutputStream, FileReader, OutputStreamWriter }
+import java.nio.charset.StandardCharsets
 
 import bioc.io.{ BioCDocumentReader, BioCDocumentWriter, BioCFactory }
-import bioc.{ BioCPassage, BioCSentence, BioCCollection, BioCDocument }
+import bioc.{ BioCCollection, BioCDocument, BioCPassage, BioCSentence }
+
+import com.ferhtaydn.biocemid._
+import com.ferhtaydn.biocemid.annotators.{ Annotator, TfrfAndBaselineAnnotator, Word2vecAnnotator }
+
 import com.typesafe.config.ConfigFactory
 
 import scala.collection.JavaConversions._
@@ -18,7 +23,7 @@ object BioC {
   lazy val methodIds = methodsInfo.map(_.id)
 
   def calcFrequenciesFromTokensFile(tokensFile: String): Seq[(String, Double)] = {
-    val tokenFreqs = IO.read(tokensFile).foldLeft(Map.empty[String, Double]) {
+    val tokenFreqs = read(tokensFile).foldLeft(Map.empty[String, Double]) {
       (m, word) ⇒ m + (word → (m.getOrElse(word, 0.0) + 1.0))
     }
     tokenFreqs.toSeq.sortBy(_._2).reverse
@@ -41,7 +46,7 @@ object BioC {
       (annot \ "infon").filter(i ⇒
         (i \\ "@key").text.equals("PSIMI")).text.equals(method))
 
-    filtered.map(m ⇒ (m \\ "text").text).mkString("\n")
+    filtered.map(m ⇒ (m \\ "text").text).mkString(newline)
 
   }
 
@@ -53,13 +58,13 @@ object BioC {
     negativePassagesFiles: List[File]
   ): Seq[(String, Double)] = {
 
-    val positiveCategory = positivePassages.map(Utils.tokenize(_).toSet).toList
+    val positiveCategory = positivePassages.map(tokenize(_).toSet).toList
 
     val negativeCategory = negativePassagesFiles.flatMap { file ⇒
 
-      val passages = IO.read(file)
+      val passages = read(file)
 
-      val passageTokens = passages.map(Utils.tokenize(_).toSet)
+      val passageTokens = passages.map(tokenize(_).toSet)
 
       passageTokens
 
@@ -86,7 +91,7 @@ object BioC {
     negativePassages: Seq[Set[String]]
   ): Seq[(String, Double)] = {
 
-    val positiveCategory = positivePassages.map(Utils.tokenize(_).toSet).toList
+    val positiveCategory = positivePassages.map(tokenize(_).toSet).toList
 
     val negativeCategory = negativePassages
 
@@ -125,15 +130,15 @@ object BioC {
 
   private def annotate(dir: String, inputFileSuffix: String, outputFileSuffix: String, converter: Annotator): Unit = {
 
-    IO.list(dir, inputFileSuffix).foreach { file ⇒
+    list(dir, inputFileSuffix).foreach { file ⇒
 
-      val fileName = Utils.extractFileName(file.getName, inputFileSuffix)
+      val fileName = extractFileName(file.getName, inputFileSuffix)
       val out = s"$dir/${fileName}_$outputFileSuffix"
 
       val factory: BioCFactory = BioCFactory.newFactory(BioCFactory.WOODSTOX)
       val reader: BioCDocumentReader = factory.createBioCDocumentReader(new FileReader(file))
       val writer: BioCDocumentWriter = factory.createBioCDocumentWriter(
-        new OutputStreamWriter(new FileOutputStream(out), "UTF-8")
+        new OutputStreamWriter(new FileOutputStream(out), StandardCharsets.UTF_8)
       )
 
       val collection: BioCCollection = reader.readCollectionInfo
@@ -160,7 +165,7 @@ object BioC {
     val methodCountWithinPassages: mutable.Map[String, Int] = mutable.Map.empty[String, Int].withDefaultValue(0)
     val methodCountWithinArticles: mutable.Map[String, Set[String]] = mutable.Map.empty[String, Set[String]].withDefaultValue(Set.empty[String])
 
-    IO.list(dir, suffix).foreach { file ⇒
+    list(dir, suffix).foreach { file ⇒
 
       val factory: BioCFactory = BioCFactory.newFactory(BioCFactory.WOODSTOX)
 
@@ -197,8 +202,8 @@ object BioC {
   //noinspection ScalaStyle
   def evaluate(manuResultDir: String, algoResultDir: String, fileSuffix: String): Unit = {
 
-    val manuAnnotationFiles = IO.list(manuResultDir, fileSuffix)
-    val algorithmAnnotationFiles = IO.list(algoResultDir, fileSuffix)
+    val manuAnnotationFiles = list(manuResultDir, fileSuffix)
+    val algorithmAnnotationFiles = list(algoResultDir, fileSuffix)
 
     val results = scala.collection.mutable.Map.empty[String, Double].withDefaultValue(0)
 
@@ -253,13 +258,13 @@ object BioC {
               ap.getAnnotations.foreach { aa ⇒
 
                 var found: Boolean = false
-                val aaSentences = Utils.mkSentences(aa.getText)
+                val aaSentences = mkSentences(aa.getText)
 
                 //println("algo annotation: " + aa.getInfon("PSIMI") + " " + aa.getText)
                 //println(aaSentences.mkString("\n"))
 
                 mp.getAnnotations.foreach { ma ⇒
-                  val maSentences = Utils.mkSentences(ma.getText)
+                  val maSentences = mkSentences(ma.getText)
 
                   //println("manual annotation: " + ma.getInfon("PSIMI") + " " + ma.getText)
                   //println(maSentences.mkString("\n"))
@@ -282,13 +287,13 @@ object BioC {
               mp.getAnnotations.foreach { ma ⇒
 
                 var found: Boolean = false
-                val maSentences = Utils.mkSentences(ma.getText)
+                val maSentences = mkSentences(ma.getText)
 
                 //println("manual annotation: " + ma.getInfon("PSIMI") + " " + ma.getText)
                 //println(maSentences.mkString("\n"))
 
                 ap.getAnnotations.foreach { aa ⇒
-                  val aaSentences = Utils.mkSentences(aa.getText)
+                  val aaSentences = mkSentences(aa.getText)
 
                   //println("algo annotation: " + aa.getInfon("PSIMI") + " " + aa.getText)
                   //println(aaSentences.mkString("\n"))
@@ -308,13 +313,13 @@ object BioC {
               mp.getAnnotations.foreach { ma ⇒
 
                 var found: Boolean = false
-                val maSentences = Utils.mkSentences(ma.getText)
+                val maSentences = mkSentences(ma.getText)
 
                 //println("manual annotation: " + ma.getInfon("PSIMI") + " " + ma.getText)
                 //println(maSentences.mkString("\n"))
 
                 ap.getAnnotations.foreach { aa ⇒
-                  val aaSentences = Utils.mkSentences(aa.getText)
+                  val aaSentences = mkSentences(aa.getText)
 
                   //println("algo annotation: " + aa.getInfon("PSIMI") + " " + aa.getText)
                   //println(aaSentences.mkString("\n"))
@@ -359,7 +364,7 @@ object BioC {
 
   def splitPassageToSentences(bioCPassage: BioCPassage): Seq[BioCSentence] = {
 
-    lazy val sentences: List[String] = Utils.mkSentences(bioCPassage.getText)
+    lazy val sentences: List[String] = mkSentences(bioCPassage.getText)
 
     def loop(sentences: List[String], count: Int, acc: Seq[(String, Int, Int)]): Seq[(String, Int, Int)] = {
       sentences match {

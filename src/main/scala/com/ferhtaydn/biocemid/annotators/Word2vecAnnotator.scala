@@ -1,4 +1,7 @@
-package com.ferhtaydn.biocreative5.task1.subtask6
+package com.ferhtaydn.biocemid.annotators
+
+import com.ferhtaydn.biocemid._
+import com.ferhtaydn.biocemid.bioc.{ BioC, MethodInfo, MethodWeight }
 
 /**
  * This class is used for to look for the previous and next sentences of the annotated sentence.
@@ -32,13 +35,13 @@ class Word2vecAnnotator(word2vecsDir: String, suffix: String, val beforeAfterCou
   }
 
   private[this] def getWord2vecs(id: String): Seq[(String, Double)] = {
-    IO.list(s"$word2vecsDir/$id", suffix).headOption match {
-      case None ⇒ Seq()
+    list(s"$word2vecsDir/$id", suffix).headOption match {
+      case None ⇒ Seq.empty[(String, Double)]
       case Some(file) ⇒
-        IO.read(file).map { line ⇒
-          val scoreString = line.split(",").last
+        read(file).map { line ⇒
+          val scoreString = split(line, commaRegex).last
           val word = line.dropRight(scoreString.length + 1)
-          val phrase = word.split("_").mkString(" ")
+          val phrase = mkStringAfterSplit(word, underscoreRegex, space)
           val score = scoreString.toDouble
           phrase → score
         }
