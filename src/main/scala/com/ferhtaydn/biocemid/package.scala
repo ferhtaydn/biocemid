@@ -55,7 +55,7 @@ package object biocemid {
 
   def mkNgram(elems: List[String], size: Int): List[String] = elems.sliding(size).map(_.mkString(space)).toList
 
-  lazy val stopwords = readOption("files/stopwords.txt").getOrElse(Seq.empty[String])
+  lazy val stopwords = read("files/stopwords.txt")
 
   lazy val initTokenization: StanfordCoreNLP = {
     val properties = new Properties()
@@ -124,18 +124,14 @@ package object biocemid {
 
   def remove(file: String): Boolean = Files.deleteIfExists(Paths.get(file))
 
-  def read(path: String): Seq[String] = scala.io.Source.fromFile(path).getLines().toSeq
-
-  def readOption(path: String): Option[Seq[String]] = Try(scala.io.Source.fromFile(path)).toOption match {
-    case Some(bufferedSource) ⇒ Some(bufferedSource.getLines().toSeq)
-    case None                 ⇒ None
+  def read(path: String): Seq[String] = Try(scala.io.Source.fromFile(path)).toOption match {
+    case Some(bufferedSource) ⇒ bufferedSource.getLines().toSeq
+    case None                 ⇒ Seq.empty[String]
   }
 
-  def read(file: File): Seq[String] = scala.io.Source.fromFile(file).getLines().toSeq
-
-  def readOption(file: File): Option[Seq[String]] = Try(scala.io.Source.fromFile(file)).toOption match {
-    case Some(bufferedSource) ⇒ Some(bufferedSource.getLines().toSeq)
-    case None                 ⇒ None
+  def read(file: File): Seq[String] = Try(scala.io.Source.fromFile(file)).toOption match {
+    case Some(bufferedSource) ⇒ bufferedSource.getLines().toSeq
+    case None                 ⇒ Seq.empty[String]
   }
 
 }

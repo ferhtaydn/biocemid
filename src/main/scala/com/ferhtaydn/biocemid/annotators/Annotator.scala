@@ -11,12 +11,10 @@ import scala.collection.mutable
 /**
  * core annotator
  */
-trait Annotator extends CopyConverter {
+abstract class Annotator extends CopyConverter {
 
   var annotationId: Int = 0
-  def mainThreshold: Double
-  def smallThreshold: Double
-  def beforeAfterCount: Int
+  val annotatorConfig: AnnotatorConfig
 
   def resetAnnotationId(): Unit = annotationId = 0
 
@@ -66,7 +64,7 @@ trait Annotator extends CopyConverter {
 
   private def setWeights(sentence: BioCSentence, methodWeights: List[MethodWeight]): BioCSentence = {
 
-    methodWeights.partition(_.weight >= mainThreshold) match {
+    methodWeights.partition(_.weight >= annotatorConfig.mainThreshold) match {
       case (up, down) ⇒
 
         if (up.nonEmpty) {
@@ -99,7 +97,7 @@ trait Annotator extends CopyConverter {
 
         if (sentence.getAnnotations.nonEmpty && sentence.getInfons.isEmpty) {
 
-          ((index - beforeAfterCount) to (index + beforeAfterCount)).foreach { i ⇒
+          ((index - annotatorConfig.beforeAfterCount) to (index + annotatorConfig.beforeAfterCount)).foreach { i ⇒
             annotatedSentences.get(i).fold() { sent ⇒
               if (sent.getAnnotations.isEmpty && sent.getInfons.nonEmpty) {
                 annotateInfon(sentence, sent) match {
@@ -123,7 +121,7 @@ trait Annotator extends CopyConverter {
     import MethodWeight.fromInfons
     val targetSentenceInfon: List[MethodWeight] = targetSentence.getInfons.toMap
 
-    targetSentenceInfon.find(mw ⇒ mw.id.equals(sentenceAnnotation) && mw.weight >= smallThreshold).map { mw ⇒
+    targetSentenceInfon.find(mw ⇒ mw.id.equals(sentenceAnnotation) && mw.weight >= annotatorConfig.smallThreshold).map { mw ⇒
       val annotationInfons = Map("type" → "ExperimentalMethod", "PSIMI" → mw.id)
       val out: BioCAnnotation = new BioCAnnotation
       out.setInfons(annotationInfons)
