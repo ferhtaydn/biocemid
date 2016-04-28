@@ -1,15 +1,16 @@
-package com.ferhtaydn.biocemid.annotators
+package com.ferhtaydn.biocemid.annotators.baseline
 
-import com.ferhtaydn.biocemid.bioc.{ BioC, MethodInfo, MethodWeight }
+import com.ferhtaydn.biocemid.annotators.{ Annotator, MethodInfo, MethodWeight }
+import com.ferhtaydn.biocemid._
 
 /**
  * This class is used for to look for the previous and next sentences of the annotated sentence.
  */
-class BaselineAnnotator(val annotatorConfig: BaselineAnnotatorConfig) extends Annotator {
+class BaselineAnnotator(val config: BaselineAnnotatorConfig) extends Annotator {
 
   override def calculateMethodWeights(words: List[String]): List[MethodWeight] = {
 
-    BioC.methodsInfo.map {
+    methodsInfo.map {
 
       case info @ MethodInfo(id, name, ss, rs, es, definition, hierarchies) ⇒
 

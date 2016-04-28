@@ -1,154 +1,13 @@
-package com.ferhtaydn.biocemid.bioc
+package com.ferhtaydn.biocemid
 
-import java.io.{ File, FileOutputStream, FileReader, OutputStreamWriter }
-import java.nio.charset.StandardCharsets
+import java.io.FileReader
 
-import bioc.io.{ BioCDocumentReader, BioCDocumentWriter, BioCFactory }
-import bioc.{ BioCCollection, BioCDocument, BioCPassage, BioCSentence }
-import com.ferhtaydn.biocemid._
-import com.ferhtaydn.biocemid.annotators._
-import com.typesafe.config.ConfigFactory
+import bioc.io.{ BioCDocumentReader, BioCFactory }
+import bioc.{ BioCCollection, BioCDocument }
 
 import scala.collection.JavaConversions._
-import scala.xml.XML
 
-object BioC {
-
-  lazy val methodsInfo = {
-    ConfigFactory.load("methods.conf").getConfigList("bioc.psimi.methods").map(MethodInfo(_)).toList
-  }
-
-  lazy val methodIds = methodsInfo.map(_.id)
-
-  def calcFrequenciesFromTokensFile(tokensFile: String): Seq[(String, Double)] = {
-    val tokenFreqs = read(tokensFile).foldLeft(Map.empty[String, Double]) {
-      (m, word) ⇒ m + (word → (m.getOrElse(word, 0.0) + 1.0))
-    }
-    tokenFreqs.toSeq.sortBy(_._2).reverse
-  }
-
-  def calcTokenFrequencies(tokens: List[String]): Seq[(String, Double)] = {
-    val tokenFreqs = tokens.foldLeft(Map.empty[String, Double]) {
-      (m, word) ⇒ m + (word → (m.getOrElse(word, 0.0) + 1.0))
-    }
-    tokenFreqs.toSeq.sortBy(_._2).reverse
-  }
-
-  def extractAnnotatedSentences(file: File, method: String): String = {
-
-    val bioCFile = XML.loadFile(file)
-    val passages = bioCFile \\ "passage"
-    val annotations = passages \\ "annotation"
-
-    val filtered = annotations.filter(annot ⇒
-      (annot \ "infon").filter(i ⇒
-        (i \\ "@key").text.equals("PSIMI")).text.equals(method))
-
-    filtered.map(m ⇒ (m \\ "text").text).mkString(newline)
-
-  }
-
-  private def log2(x: Double) = scala.math.log(x) / scala.math.log(2)
-
-  def tfRf(
-    tokenFreqs: Seq[(String, Double)],
-    positivePassages: Seq[String],
-    negativePassagesFiles: List[File]
-  ): Seq[(String, Double)] = {
-
-    val positiveCategory = positivePassages.map(tokenize(_).toSet).toList
-
-    val negativeCategory = negativePassagesFiles.flatMap { file ⇒
-
-      val passages = read(file)
-
-      val passageTokens = passages.map(tokenize(_).toSet)
-
-      passageTokens
-
-    }
-
-    tokenFreqs map {
-
-      case (word, freq) ⇒
-
-        val a = positiveCategory.count(_.contains(word))
-
-        val c = negativeCategory.count(_.contains(word))
-
-        val rf = log2(2.0 + (a / scala.math.max(1.0, c)))
-        val tfRf = freq * rf
-
-        (word, tfRf)
-    }
-  }
-
-  def tfRfOntology(
-    tokenFreqs: Seq[(String, Double)],
-    positivePassages: Seq[String],
-    negativePassages: Seq[Set[String]]
-  ): Seq[(String, Double)] = {
-
-    val positiveCategory = positivePassages.map(tokenize(_).toSet).toList
-
-    val negativeCategory = negativePassages
-
-    tokenFreqs map {
-
-      case (word, freq) ⇒
-
-        val a = positiveCategory.count(_.contains(word)) / positiveCategory.length
-
-        val c = negativeCategory.count(_.contains(word)) / negativeCategory.length
-
-        val rf = log2(2.0 + (a / scala.math.max(1.0, c)))
-        val tfRf = freq * rf
-
-        (word, tfRf)
-    }
-  }
-
-  def annotate(dir: String, inputFileSuffix: String, outputFileSuffix: String, annotatorConfig: AnnotatorConfig): Unit = {
-
-    val converter = annotatorConfig match {
-      case baselineConfigs: BaselineAnnotatorConfig ⇒ new BaselineAnnotator(baselineConfigs)
-      case tfrfConfigs: TfrfAnnotatorConfig         ⇒ new TfrfAnnotator(tfrfConfigs)
-      case word2vecConfigs: Word2vecAnnotatorConfig ⇒ new Word2vecAnnotator(word2vecConfigs)
-    }
-
-    annotate(dir, inputFileSuffix, outputFileSuffix, converter)
-  }
-
-  private def annotate(dir: String, inputFileSuffix: String, outputFileSuffix: String, converter: Annotator): Unit = {
-
-    list(dir, inputFileSuffix).foreach { file ⇒
-
-      val fileName = extractFileName(file.getName, inputFileSuffix)
-      val out = s"$dir/${fileName}_$outputFileSuffix"
-
-      val factory: BioCFactory = BioCFactory.newFactory(BioCFactory.WOODSTOX)
-      val reader: BioCDocumentReader = factory.createBioCDocumentReader(new FileReader(file))
-      val writer: BioCDocumentWriter = factory.createBioCDocumentWriter(
-        new OutputStreamWriter(new FileOutputStream(out), StandardCharsets.UTF_8)
-      )
-
-      val collection: BioCCollection = reader.readCollectionInfo
-
-      converter.resetAnnotationId()
-      val outCollection: BioCCollection = converter.getCollection(collection)
-      outCollection.setKey("sentence.key")
-      writer.writeCollectionInfo(outCollection)
-
-      for (document ← reader) {
-        val outDocument: BioCDocument = converter.getDocument(document)
-        writer.writeDocument(outDocument)
-      }
-
-      reader.close()
-      writer.close()
-
-    }
-  }
+object Evaluator {
 
   def countOfMethods(dir: String, suffix: String): Unit = {
 
@@ -165,7 +24,7 @@ object BioC {
       val manuCollection: BioCCollection = manuReader.readCollectionInfo
       val manuDocument: BioCDocument = manuReader.readDocument()
 
-      val manuPassages = manuDocument.getPassages.filterNot(checkPassageType)
+      val manuPassages = manuDocument.getPassages.filterNot(_.skip)
 
       manuPassages.foreach { pas ⇒
 
@@ -219,8 +78,8 @@ object BioC {
         var trueNegatives: Double = 0d
         var truePositives: Double = 0d
 
-        val algoPassages = algoDocument.getPassages.filterNot(checkPassageType)
-        val manuPassages = manuDocument.getPassages.filterNot(checkPassageType)
+        val algoPassages = algoDocument.getPassages.filterNot(_.skip)
+        val manuPassages = manuDocument.getPassages.filterNot(_.skip)
 
         manuPassages.zip(algoPassages).foreach {
           case (mp, ap) ⇒
@@ -353,34 +212,4 @@ object BioC {
 
   }
 
-  def splitPassageToSentences(bioCPassage: BioCPassage): Seq[BioCSentence] = {
-
-    lazy val sentences: List[String] = mkSentences(bioCPassage.getText)
-
-    def loop(sentences: List[String], count: Int, acc: Seq[(String, Int, Int)]): Seq[(String, Int, Int)] = {
-      sentences match {
-        case Nil ⇒ acc
-        case x :: xs ⇒
-          val t3 = (x.trim, count + (x.length - x.trim.length), x.trim.length)
-          loop(xs, x.length + count + 1, acc :+ t3)
-      }
-    }
-
-    loop(sentences, 0, Seq.empty[(String, Int, Int)]).map {
-      case (s, o, l) ⇒
-        val sentence: BioCSentence = new BioCSentence
-        sentence.setOffset(bioCPassage.getOffset + o)
-        sentence.setText(s)
-        sentence
-    }
-  }
-
-  def checkPassageType(bioCPassage: BioCPassage): Boolean = {
-    bioCPassage.getInfon("type").contains("title") ||
-      bioCPassage.getInfon("type").equalsIgnoreCase("table_caption") ||
-      bioCPassage.getInfon("type").equalsIgnoreCase("table") ||
-      bioCPassage.getInfon("type").equalsIgnoreCase("ref") ||
-      bioCPassage.getInfon("type").equalsIgnoreCase("footnote") ||
-      bioCPassage.getInfon("type").equalsIgnoreCase("front")
-  }
 }
