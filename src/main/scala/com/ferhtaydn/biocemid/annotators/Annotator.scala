@@ -1,12 +1,20 @@
 package com.ferhtaydn.biocemid.annotators
 
+import bioc.{ BioCAnnotation, BioCLocation, BioCPassage, BioCSentence, BioCCollection, BioCDocument }
 import bioc.util.CopyConverter
-import bioc.{ BioCAnnotation, BioCLocation, BioCPassage, BioCSentence }
+import bioc.io.{ BioCDocumentReader, BioCDocumentWriter, BioCFactory }
+
+import scala.collection.mutable
+
+import java.io.{ FileOutputStream, FileReader, OutputStreamWriter }
+import java.nio.charset.StandardCharsets
+
 import com.ferhtaydn.biocemid._
-import com.ferhtaydn.biocemid.bioc.{ BioC, MethodWeight }
+import com.ferhtaydn.biocemid.annotators.baseline.{ BaselineAnnotator, BaselineAnnotatorConfig }
+import com.ferhtaydn.biocemid.annotators.tfrf.{ TfrfAnnotator, TfrfAnnotatorConfig }
+import com.ferhtaydn.biocemid.annotators.word2vec.{ Word2vecAnnotator, Word2vecAnnotatorConfig }
 
 import scala.collection.JavaConversions._
-import scala.collection.mutable
 
 /**
  * core annotator
@@ -14,7 +22,9 @@ import scala.collection.mutable
 abstract class Annotator extends CopyConverter {
 
   var annotationId: Int = 0
-  val annotatorConfig: AnnotatorConfig
+  val psimi: String = "PSIMI"
+
+  val config: AnnotatorConfig
 
   def resetAnnotationId(): Unit = annotationId = 0
 
@@ -38,24 +48,39 @@ abstract class Annotator extends CopyConverter {
     out.setInfons(in.getInfons)
     out.setText(in.getText)
 
-    if (BioC.checkPassageType(in)) {
-
-      // do nothing for these cases.
+    if (in.skip) {
       out
-
     } else {
 
-      val annotatedSentences = mutable.MutableList(BioC.splitPassageToSentences(in).map(annotateSentence)).flatten
+      val annotatedSentences = mutable.MutableList(splitPassageToSentences(in).map(annotateSentence)).flatten
 
       out.setAnnotations(
         concatSuccessiveSameAnnotations(
           annotatePreviousAndNextSentences(annotatedSentences).flatMap(_.getAnnotations).toList
         )
       )
-
       out
     }
+  }
 
+  private def splitPassageToSentences(bioCPassage: BioCPassage): Seq[BioCSentence] = {
+
+    def go(sentences: List[String], count: Int, acc: Seq[(String, Int, Int)]): Seq[(String, Int, Int)] = {
+      sentences match {
+        case Nil ⇒ acc
+        case x :: xs ⇒
+          val t3 = (x.trim, count + (x.length - x.trim.length), x.trim.length)
+          go(xs, x.length + count + 1, acc :+ t3)
+      }
+    }
+
+    go(mkSentences(bioCPassage.getText), 0, Seq.empty[(String, Int, Int)]).map {
+      case (s, o, l) ⇒
+        val sentence: BioCSentence = new BioCSentence
+        sentence.setOffset(bioCPassage.getOffset + o)
+        sentence.setText(s)
+        sentence
+    }
   }
 
   private def annotateSentence(sentence: BioCSentence): BioCSentence = {
@@ -64,23 +89,13 @@ abstract class Annotator extends CopyConverter {
 
   private def setWeights(sentence: BioCSentence, methodWeights: List[MethodWeight]): BioCSentence = {
 
-    methodWeights.partition(_.weight >= annotatorConfig.mainThreshold) match {
+    methodWeights.partition(_.weight >= config.mainThreshold) match {
       case (up, down) ⇒
-
         if (up.nonEmpty) {
-
           up.groupBy(_.weight).toSeq.sortBy(_._1).reverse.head._2.foreach {
-            case mw ⇒
-              val annotationInfons = Map("type" → "ExperimentalMethod", "PSIMI" → mw.id)
-              val out: BioCAnnotation = new BioCAnnotation
-              out.setInfons(annotationInfons)
-              out.setText(sentence.getText)
-              out.setLocation(sentence.getOffset, sentence.getText.length)
-              sentence.addAnnotation(out)
+            case mw ⇒ sentence.addAnnotation(prepareAnnotation(sentence, mw.id))
           }
-
           sentence
-
         } else {
           import MethodWeight.toInfons
           sentence.setInfons(mapAsJavaMap(down))
@@ -97,7 +112,7 @@ abstract class Annotator extends CopyConverter {
 
         if (sentence.getAnnotations.nonEmpty && sentence.getInfons.isEmpty) {
 
-          ((index - annotatorConfig.beforeAfterCount) to (index + annotatorConfig.beforeAfterCount)).foreach { i ⇒
+          ((index - config.beforeAfterCount) to (index + config.beforeAfterCount)).foreach { i ⇒
             annotatedSentences.get(i).fold() { sent ⇒
               if (sent.getAnnotations.isEmpty && sent.getInfons.nonEmpty) {
                 annotateInfon(sentence, sent) match {
@@ -116,19 +131,22 @@ abstract class Annotator extends CopyConverter {
 
   private def annotateInfon(sentence: BioCSentence, targetSentence: BioCSentence): Option[BioCAnnotation] = {
 
-    val sentenceAnnotation = sentence.getAnnotations.head.getInfon("PSIMI")
+    val sentenceAnnotation = sentence.getAnnotations.head.getInfon(psimi)
 
     import MethodWeight.fromInfons
     val targetSentenceInfon: List[MethodWeight] = targetSentence.getInfons.toMap
 
-    targetSentenceInfon.find(mw ⇒ mw.id.equals(sentenceAnnotation) && mw.weight >= annotatorConfig.smallThreshold).map { mw ⇒
-      val annotationInfons = Map("type" → "ExperimentalMethod", "PSIMI" → mw.id)
-      val out: BioCAnnotation = new BioCAnnotation
-      out.setInfons(annotationInfons)
-      out.setText(targetSentence.getText)
-      out.setLocation(targetSentence.getOffset, targetSentence.getText.length)
-      out
+    targetSentenceInfon.find(mw ⇒ mw.id.equals(sentenceAnnotation) && mw.weight >= config.smallThreshold).map { mw ⇒
+      prepareAnnotation(targetSentence, mw.id)
     }
+  }
+
+  private def prepareAnnotation(targetSentence: BioCSentence, methodId: String): BioCAnnotation = {
+    val out: BioCAnnotation = new BioCAnnotation
+    out.setInfons(Map("type" → "ExperimentalMethod", psimi → methodId))
+    out.setText(targetSentence.getText)
+    out.setLocation(targetSentence.getOffset, targetSentence.getText.length)
+    out
   }
 
   private def concatSuccessiveSameAnnotations(annotations: List[BioCAnnotation]): List[BioCAnnotation] = {
@@ -150,7 +168,7 @@ abstract class Annotator extends CopyConverter {
     def successive(a: BioCAnnotation, b: BioCAnnotation): Boolean = {
 
       val endOfA = locationOf(a).getOffset + locationOf(a).getLength + 1
-      val result = a.getInfon("PSIMI").equals(b.getInfon("PSIMI")) && endOfA == locationOf(b).getOffset
+      val result = a.getInfon(psimi).equals(b.getInfon(psimi)) && endOfA == locationOf(b).getOffset
 
       result
     }
@@ -166,21 +184,67 @@ abstract class Annotator extends CopyConverter {
       out
     }
 
-    def loop(annots: List[BioCAnnotation], acc: List[BioCAnnotation]): List[BioCAnnotation] = annots match {
+    def go(annots: List[BioCAnnotation], acc: List[BioCAnnotation]): List[BioCAnnotation] = annots match {
       case Nil                   ⇒ acc
-      case x :: xs if xs.isEmpty ⇒ loop(xs, acc :+ x)
+      case x :: xs if xs.isEmpty ⇒ go(xs, acc :+ x)
       case x :: xs ⇒
         val y = xs.head
         if (successive(x, y)) {
           val newAnnot = concatAnnotations(x, y)
-          loop(newAnnot :: xs.tail, acc)
+          go(newAnnot :: xs.tail, acc)
         } else {
-          loop(xs, acc :+ x)
+          go(xs, acc :+ x)
         }
     }
 
-    arrangeAnnotationIds(loop(annotations, List[BioCAnnotation]()))
+    arrangeAnnotationIds(go(annotations, List[BioCAnnotation]()))
 
+  }
+
+}
+
+object Annotator {
+
+  def annotate(dir: String, annotatorConfig: AnnotatorConfig): Unit = {
+
+    val annotator = annotatorConfig match {
+      case baselineConfigs: BaselineAnnotatorConfig ⇒ new BaselineAnnotator(baselineConfigs)
+      case tfrfConfigs: TfrfAnnotatorConfig         ⇒ new TfrfAnnotator(tfrfConfigs)
+      case word2vecConfigs: Word2vecAnnotatorConfig ⇒ new Word2vecAnnotator(word2vecConfigs)
+    }
+
+    annotate(dir, annotator)
+  }
+
+  private def annotate(dir: String, annotator: Annotator): Unit = {
+
+    list(dir, xmlSuffix).foreach { file ⇒
+
+      val fileName = extractFileName(file.getName, xmlSuffix)
+      val out = s"$dir/${fileName}_${annotator.config.outputFileSuffix}"
+
+      val factory: BioCFactory = BioCFactory.newFactory(BioCFactory.WOODSTOX)
+      val reader: BioCDocumentReader = factory.createBioCDocumentReader(new FileReader(file))
+      val writer: BioCDocumentWriter = factory.createBioCDocumentWriter(
+        new OutputStreamWriter(new FileOutputStream(out), StandardCharsets.UTF_8)
+      )
+
+      val collection: BioCCollection = reader.readCollectionInfo
+
+      annotator.resetAnnotationId()
+      val outCollection: BioCCollection = annotator.getCollection(collection)
+      outCollection.setKey("sentence.key")
+      writer.writeCollectionInfo(outCollection)
+
+      for (document ← reader) {
+        val outDocument: BioCDocument = annotator.getDocument(document)
+        writer.writeDocument(outDocument)
+      }
+
+      reader.close()
+      writer.close()
+
+    }
   }
 
 }

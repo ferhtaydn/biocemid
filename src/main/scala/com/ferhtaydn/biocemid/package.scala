@@ -5,6 +5,9 @@ import java.io.{ File, FileWriter }
 import java.nio.charset.StandardCharsets
 import java.nio.file.{ Files, Paths, StandardOpenOption }
 
+import bioc.BioCPassage
+import com.ferhtaydn.biocemid.annotators.MethodInfo
+import com.typesafe.config.ConfigFactory
 import edu.stanford.nlp.ling.CoreAnnotations.TokensAnnotation
 import edu.stanford.nlp.pipeline.{ Annotation, StanfordCoreNLP }
 
@@ -12,6 +15,12 @@ import scala.collection.JavaConversions._
 import scala.util.Try
 
 package object biocemid {
+
+  lazy val methodsInfo = {
+    ConfigFactory.load("methods.conf").getConfigList("bioc.psimi.methods").map(MethodInfo(_)).toList
+  }
+
+  lazy val methodIds = methodsInfo.map(_.id)
 
   // ...regex to split, normals to mkString
   val period: String = "."
@@ -77,6 +86,17 @@ package object biocemid {
     def isDigit: Boolean = s.matches("[+-]?\\d+")
   }
 
+  implicit class BioCPassageOps(val passage: BioCPassage) extends AnyVal {
+    def skip: Boolean = {
+      passage.getInfon("type").contains("title") ||
+        passage.getInfon("type").equalsIgnoreCase("table_caption") ||
+        passage.getInfon("type").equalsIgnoreCase("table") ||
+        passage.getInfon("type").equalsIgnoreCase("ref") ||
+        passage.getInfon("type").equalsIgnoreCase("footnote") ||
+        passage.getInfon("type").equalsIgnoreCase("front")
+    }
+  }
+
   // gold_set_13, gold_set_17 and gold_set_30 files contains the articles from $manualAnnotationStatistics
   val goldResultDirectory = "files/gold_set_30"
   val manualAnnotationStatistics = "files/manually_annotated_data_set_by_2_annotator"
@@ -93,9 +113,9 @@ package object biocemid {
   val txtSuffix = ".txt"
   val word2vecResultFileSuffix = "result.txt"
   val word2vecResultDedupeFileSuffix = "result_dedupe.txt"
-  val baselineResultSuffix = "baseline.xml"
-  val tfrfResultSuffix = "tfrf.xml"
-  val word2vecAnnotationSuffix = "word2vec.xml"
+  val baselineAnnotatedSuffix = "baseline.xml"
+  val tfrfAnnotatedSuffix = "tfrf.xml"
+  val word2vecAnnotatedSuffix = "word2vec.xml"
 
   def write(path: String, txt: String): Unit = {
     Files.write(Paths.get(path), txt.getBytes(StandardCharsets.UTF_8), StandardOpenOption.CREATE)

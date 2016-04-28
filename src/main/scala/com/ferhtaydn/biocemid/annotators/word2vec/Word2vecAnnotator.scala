@@ -1,17 +1,17 @@
-package com.ferhtaydn.biocemid.annotators
+package com.ferhtaydn.biocemid.annotators.word2vec
 
 import com.ferhtaydn.biocemid._
-import com.ferhtaydn.biocemid.bioc.{ BioC, MethodInfo, MethodWeight }
+import com.ferhtaydn.biocemid.annotators.{ Annotator, MethodInfo, MethodWeight }
 
 /**
  * This class is used for to look for the previous and next sentences of the annotated sentence.
  * This converter uses also the word2vecs of the methods.
  */
-class Word2vecAnnotator(val annotatorConfig: Word2vecAnnotatorConfig) extends Annotator {
+class Word2vecAnnotator(val config: Word2vecAnnotatorConfig) extends Annotator {
 
   override def calculateMethodWeights(words: List[String]): List[MethodWeight] = {
 
-    BioC.methodsInfo.map {
+    methodsInfo.map {
 
       case info @ MethodInfo(id, name, ss, rs, es, definition, hierarchies) ⇒
 
@@ -31,7 +31,7 @@ class Word2vecAnnotator(val annotatorConfig: Word2vecAnnotatorConfig) extends An
   }
 
   private[this] def getWord2vecs(id: String): Seq[(String, Double)] = {
-    list(s"${annotatorConfig.w2vDir}/$id", annotatorConfig.suffix).headOption match {
+    list(s"${config.w2vDir}/$id", config.suffix).headOption match {
       case None ⇒ Seq.empty[(String, Double)]
       case Some(file) ⇒
         read(file).map { line ⇒

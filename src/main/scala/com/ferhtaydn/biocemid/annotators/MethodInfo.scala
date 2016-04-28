@@ -1,4 +1,4 @@
-package com.ferhtaydn.biocemid.bioc
+package com.ferhtaydn.biocemid.annotators
 
 import com.typesafe.config.Config
 
