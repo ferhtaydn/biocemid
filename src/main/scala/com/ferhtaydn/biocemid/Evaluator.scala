@@ -3,53 +3,47 @@ package com.ferhtaydn.biocemid
 import java.io.FileReader
 
 import bioc.io.{ BioCDocumentReader, BioCFactory }
-import bioc.{ BioCCollection, BioCDocument }
+import bioc.{ BioCCollection, BioCDocument, BioCPassage }
 
 import scala.collection.JavaConversions._
+import scala.collection.mutable
 
+//noinspection ScalaStyle
 object Evaluator {
 
   def countOfMethods(dir: String, suffix: String): Unit = {
 
-    import scala.collection.mutable
-    val methodCountWithinPassages: mutable.Map[String, Int] = mutable.Map.empty[String, Int].withDefaultValue(0)
-    val methodCountWithinArticles: mutable.Map[String, Set[String]] = mutable.Map.empty[String, Set[String]].withDefaultValue(Set.empty[String])
+    val methodCountWithinPassages = mutable.Map.empty[String, Int].withDefaultValue(0)
+    val methodCountWithinArticles = mutable.Map.empty[String, Set[String]].withDefaultValue(Set.empty[String])
 
     list(dir, suffix).foreach { file ⇒
 
       val factory: BioCFactory = BioCFactory.newFactory(BioCFactory.WOODSTOX)
-
       val manuReader: BioCDocumentReader = factory.createBioCDocumentReader(new FileReader(file))
-
       val manuCollection: BioCCollection = manuReader.readCollectionInfo
       val manuDocument: BioCDocument = manuReader.readDocument()
-
       val manuPassages = manuDocument.getPassages.filterNot(_.skip)
 
       manuPassages.foreach { pas ⇒
-
-        pas.getAnnotations.toList.groupBy(a ⇒ a.getInfon("PSIMI")).map(x ⇒ x._1 → x._2.size).foreach {
+        pas.getAnnotations.toList.groupBy(a ⇒ a.getInfon(psimi)).map(x ⇒ x._1 → x._2.size).foreach {
           case (n, c) ⇒
             methodCountWithinPassages.update(n, methodCountWithinPassages(n) + c)
             methodCountWithinArticles.update(n, methodCountWithinArticles(n) + file.getName)
         }
-
       }
     }
 
-    methodIds.foreach { m ⇒
-      val str =
+    methodIds.foreach { id ⇒
+      Console.println(
         s"""
-           |MI:$m
-           |In ${methodCountWithinArticles(m).size} articles: ${methodCountWithinArticles(m)}
-           |In ${methodCountWithinPassages(m)} passages
+           |MI:$id
+           |In ${methodCountWithinArticles(id).size} articles: ${methodCountWithinArticles(id)}
+           |In ${methodCountWithinPassages(id)} passages
          """.stripMargin
-
-      println(str)
+      )
     }
   }
 
-  //noinspection ScalaStyle
   def evaluate(manuResultDir: String, algoResultDir: String, fileSuffix: String): Unit = {
 
     val manuAnnotationFiles = list(manuResultDir, fileSuffix)
@@ -57,17 +51,22 @@ object Evaluator {
 
     val results = scala.collection.mutable.Map.empty[String, Double].withDefaultValue(0)
 
+    def combineCoImmunoPrecipitations(mp: BioCPassage): Unit = {
+      mp.getAnnotations.foreach { a ⇒
+        if (a.getInfon(psimi).equals("0006") || a.getInfon(psimi).equals("0007")) {
+          a.putInfon(psimi, "0019")
+        }
+      }
+    }
+
     manuAnnotationFiles.zip(algorithmAnnotationFiles).foreach {
       case (manu, algo) ⇒
 
         val factory: BioCFactory = BioCFactory.newFactory(BioCFactory.WOODSTOX)
-
         val manuReader: BioCDocumentReader = factory.createBioCDocumentReader(new FileReader(manu))
         val algoReader: BioCDocumentReader = factory.createBioCDocumentReader(new FileReader(algo))
-
         val manuCollection: BioCCollection = manuReader.readCollectionInfo
         val manuDocument: BioCDocument = manuReader.readDocument()
-
         val algoCollection: BioCCollection = algoReader.readCollectionInfo
         val algoDocument: BioCDocument = algoReader.readDocument()
 
@@ -84,43 +83,24 @@ object Evaluator {
         manuPassages.zip(algoPassages).foreach {
           case (mp, ap) ⇒
 
-            mp.getAnnotations.foreach { a ⇒
-
-              if (a.getInfon("PSIMI").equals("0006") || a.getInfon("PSIMI").equals("0007")) {
-                a.putInfon("PSIMI", "0019")
-              }
-            }
+            combineCoImmunoPrecipitations(mp)
 
             if (mp.getAnnotations.isEmpty && ap.getAnnotations.isEmpty) {
               trueNegatives += 1
             } else if (mp.getAnnotations.isEmpty && ap.getAnnotations.nonEmpty) {
-              //println("mp empty, ap nonEmpty size: " + ap.getAnnotations.size)
               falsePositives += ap.getAnnotations.size
             } else if (mp.getAnnotations.nonEmpty && ap.getAnnotations.isEmpty) {
-              //println("ap empty, mp nonEmpty size: " + mp.getAnnotations.size)
               falseNegatives += mp.getAnnotations.size
             } else if (mp.getAnnotations.size > ap.getAnnotations.size) {
-
               falseNegatives += (mp.getAnnotations.size - ap.getAnnotations.size)
 
-              //println("mp > ap -> " + mp.getAnnotations.size + " > " + ap.getAnnotations.size)
-
               ap.getAnnotations.foreach { aa ⇒
-
                 var found: Boolean = false
                 val aaSentences = mkSentences(aa.getText)
 
-                //println("algo annotation: " + aa.getInfon("PSIMI") + " " + aa.getText)
-                //println(aaSentences.mkString("\n"))
-
                 mp.getAnnotations.foreach { ma ⇒
                   val maSentences = mkSentences(ma.getText)
-
-                  //println("manual annotation: " + ma.getInfon("PSIMI") + " " + ma.getText)
-                  //println(maSentences.mkString("\n"))
-
-                  if (aa.getInfon("PSIMI").equals(ma.getInfon("PSIMI")) && maSentences.intersect(aaSentences).nonEmpty) {
-                    //println("found")
+                  if (aa.getInfon(psimi).equals(ma.getInfon(psimi)) && maSentences.intersect(aaSentences).nonEmpty) {
                     found = true
                   }
                 }
@@ -129,9 +109,6 @@ object Evaluator {
               }
 
             } else if (mp.getAnnotations.size < ap.getAnnotations.size) {
-
-              //println("mp < ap -> " + mp.getAnnotations.size + " < " + ap.getAnnotations.size)
-
               falsePositives += (ap.getAnnotations.size - mp.getAnnotations.size)
 
               mp.getAnnotations.foreach { ma ⇒
@@ -139,17 +116,10 @@ object Evaluator {
                 var found: Boolean = false
                 val maSentences = mkSentences(ma.getText)
 
-                //println("manual annotation: " + ma.getInfon("PSIMI") + " " + ma.getText)
-                //println(maSentences.mkString("\n"))
-
                 ap.getAnnotations.foreach { aa ⇒
                   val aaSentences = mkSentences(aa.getText)
 
-                  //println("algo annotation: " + aa.getInfon("PSIMI") + " " + aa.getText)
-                  //println(aaSentences.mkString("\n"))
-
-                  if (aa.getInfon("PSIMI").equals(ma.getInfon("PSIMI")) && maSentences.intersect(aaSentences).nonEmpty) {
-                    //println("found")
+                  if (aa.getInfon(psimi).equals(ma.getInfon(psimi)) && maSentences.intersect(aaSentences).nonEmpty) {
                     found = true
                   }
                 }
@@ -158,31 +128,20 @@ object Evaluator {
 
             } else if (mp.getAnnotations.size == ap.getAnnotations.size) {
 
-              //println("mp == ap")
-
               mp.getAnnotations.foreach { ma ⇒
 
                 var found: Boolean = false
                 val maSentences = mkSentences(ma.getText)
 
-                //println("manual annotation: " + ma.getInfon("PSIMI") + " " + ma.getText)
-                //println(maSentences.mkString("\n"))
-
                 ap.getAnnotations.foreach { aa ⇒
                   val aaSentences = mkSentences(aa.getText)
 
-                  //println("algo annotation: " + aa.getInfon("PSIMI") + " " + aa.getText)
-                  //println(aaSentences.mkString("\n"))
-
-                  if (aa.getInfon("PSIMI").equals(ma.getInfon("PSIMI")) && maSentences.intersect(aaSentences).nonEmpty) {
-                    //println("found")
+                  if (aa.getInfon(psimi).equals(ma.getInfon(psimi)) && maSentences.intersect(aaSentences).nonEmpty) {
                     found = true
                   }
                 }
                 if (found) truePositives += 1 else falsePositives += 1
-
               }
-
             }
         }
 
@@ -199,6 +158,11 @@ object Evaluator {
 
     }
 
+    calculateResults(results)
+
+  }
+
+  def calculateResults(results: mutable.Map[String, Double]): Unit = {
     println(results)
     val accuracy = (results("TP") + results("TN")) / results.values.toList.sum
     val precision = results("TP") / (results("TP") + results("FP"))
@@ -209,7 +173,5 @@ object Evaluator {
     println(s"precision: $precision")
     println(s"recall: $recall")
     println(s"fscore: $fscore")
-
   }
-
 }

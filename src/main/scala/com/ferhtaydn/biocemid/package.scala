@@ -16,6 +16,8 @@ import scala.util.Try
 
 package object biocemid {
 
+  val psimi: String = "PSIMI"
+
   lazy val methodsInfo = {
     ConfigFactory.load("methods.conf").getConfigList("bioc.psimi.methods").map(MethodInfo(_)).toList
   }

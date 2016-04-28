@@ -21,8 +21,7 @@ import scala.collection.JavaConversions._
  */
 abstract class Annotator extends CopyConverter {
 
-  var annotationId: Int = 0
-  val psimi: String = "PSIMI"
+  private var annotationId: Int = 0
 
   val config: AnnotatorConfig
 
