@@ -18,11 +18,11 @@ class Word2vecAnnotator(val config: Word2vecAnnotatorConfig) extends Annotator {
         val word2vecs = getWord2vecs(id)
 
         val synonymNgram = searchInSentence(words, info.nameAndSynonyms)
-        val matchingVectors = searchInSentence(words, word2vecs.map(_._1).toList)
-        val word2vecResults = word2vecs.filter { case (p, s) ⇒ matchingVectors.contains(p) }
+        val matchingVectors = searchInSentence(words, word2vecs.map(_.phrase).toList)
+        val word2vecResults = word2vecs.filter { case Word2vecItem(p, s) ⇒ matchingVectors.contains(p) }
 
         val n = if (synonymNgram.nonEmpty) 1d else 0d
-        val w = if (word2vecResults.nonEmpty) word2vecResults.map(_._2).sum else 0d
+        val w = if (word2vecResults.nonEmpty) word2vecResults.map(_.score).sum else 0d
 
         MethodWeight(id, n + w)
 
@@ -30,17 +30,10 @@ class Word2vecAnnotator(val config: Word2vecAnnotatorConfig) extends Annotator {
 
   }
 
-  private[this] def getWord2vecs(id: String): Seq[(String, Double)] = {
+  private[this] def getWord2vecs(id: String): Seq[Word2vecItem] = {
     list(s"${config.w2vDir}/$id", config.suffix).headOption match {
-      case None ⇒ Seq.empty[(String, Double)]
-      case Some(file) ⇒
-        read(file).map { line ⇒
-          val scoreString = split(line, commaRegex).last
-          val word = line.dropRight(scoreString.length + 1)
-          val phrase = mkStringAfterSplit(word, underscoreRegex, space)
-          val score = scoreString.toDouble
-          phrase → score
-        }
+      case None       ⇒ Seq.empty[Word2vecItem]
+      case Some(file) ⇒ read(file).map(line ⇒ Word2vecItem.spacedPhrases(line))
     }
   }
 }
