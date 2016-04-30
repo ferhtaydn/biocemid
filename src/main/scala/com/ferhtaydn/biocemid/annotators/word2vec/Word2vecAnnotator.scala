@@ -1,7 +1,7 @@
 package com.ferhtaydn.biocemid.annotators.word2vec
 
 import com.ferhtaydn.biocemid._
-import com.ferhtaydn.biocemid.annotators.{ Annotator, MethodInfo, MethodWeight }
+import com.ferhtaydn.biocemid.annotators.{ Annotator, MethodWeight }
 
 /**
  * This class is used for to look for the previous and next sentences of the annotated sentence.
@@ -12,10 +12,8 @@ class Word2vecAnnotator(val config: Word2vecAnnotatorConfig) extends Annotator {
   override def calculateMethodWeights(words: List[String]): List[MethodWeight] = {
 
     methodsInfo.map {
-
-      case info @ MethodInfo(id, name, ss, rs, es, definition, hierarchies) ⇒
-
-        val word2vecs = getWord2vecs(id)
+      case info ⇒
+        val word2vecs = getWord2vecs(info.id)
 
         val synonymNgram = searchInSentence(words, info.nameAndSynonyms)
         val matchingVectors = searchInSentence(words, word2vecs.map(_.phrase).toList)
@@ -24,10 +22,9 @@ class Word2vecAnnotator(val config: Word2vecAnnotatorConfig) extends Annotator {
         val n = if (synonymNgram.nonEmpty) 1d else 0d
         val w = if (word2vecResults.nonEmpty) word2vecResults.map(_.score).sum else 0d
 
-        MethodWeight(id, n + w)
+        MethodWeight(info.id, n + w)
 
     }.filter(_.weight > 0.0).sortWith(_.weight > _.weight)
-
   }
 
   private[this] def getWord2vecs(id: String): Seq[Word2vecItem] = {

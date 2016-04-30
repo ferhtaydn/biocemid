@@ -3,9 +3,6 @@ Wrong Annotation => WA
 Missing Annotation => MA
 Extra Annotation => EA
 
-
 18724936:
-	passage_offset_10525:
-		Melce: 1 MA (0051)
 	passage_offset_48196:
 		Melce: 1 EA (0007)

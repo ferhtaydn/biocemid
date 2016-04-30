@@ -4,10 +4,14 @@ import com.typesafe.config.Config
 
 import scala.collection.JavaConversions._
 
-case class MethodInfo(id: String, name: String, synonym: List[String], related: List[String], extra: List[String],
-    definition: String, isA: List[Hierarchy]) {
+import com.ferhtaydn.biocemid._
 
-  def nameAndSynonyms: List[String] = if (!synonym.contains(name)) name :: synonym else name :: (synonym diff List(name))
+case class MethodInfo(id: String, name: String, ontologySynonyms: List[String], addedSynonyms: List[String],
+    relatedTerms: List[String], extraTerms: List[String], definition: String, isA: List[Hierarchy]) {
+
+  val nameAndSynonyms: List[String] = name :: ontologySynonyms ++ addedSynonyms
+
+  val nameAndSynonymsWithUnderscore = nameAndSynonyms.map(mkStringAfterSplit(_, spaceRegex, underscore))
 
 }
 
@@ -18,15 +22,16 @@ object MethodInfo {
   def apply(config: Config): MethodInfo = {
     val id = config.getString("id")
     val name = config.getString("name")
-    val synonym = config.getStringList("synonym").toList
-    val related = config.getStringList("related").toList
-    val extra = config.getStringList("extra").toList
+    val ontologySynonyms = config.getStringList("ontologySynonyms").toList
+    val addedSynonyms = config.getStringList("addedSynonyms").toList
+    val relatedTerms = config.getStringList("relatedTerms").toList
+    val extraTerms = config.getStringList("extraTerms").toList
     val definition = config.getString("definition")
     val isA = config.getStringList("isA").toList.map { y ⇒
       val x = y.split("!")
       Hierarchy(x.head, x.last)
     }
-    new MethodInfo(id, name, synonym, related, extra, definition, isA)
+    new MethodInfo(id, name, ontologySynonyms, addedSynonyms, relatedTerms, extraTerms, definition, isA)
   }
 
 }

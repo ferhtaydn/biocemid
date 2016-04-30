@@ -1,0 +1,100 @@
+size_exclusion_chromatography,0.961963
+gel_filtration,0.960026
+gel_filtration_chromatography,0.945695
+gel-filtration,0.937326
+size-exclusion_chromatography_sec,0.930998
+gel-filtration_chromatography,0.922447
+superdex_column,0.907428
+gel_filtration_column,0.906818
+superdex,0.900623
+size-exclusion,0.891911
+gel-filtration_column,0.891343
+size-exclusion_column,0.889195
+superdex-200,0.882339
+superdex_gel_filtration_column,0.881466
+superdex_ge_healthcare,0.867321
+superdex-200_column,0.867310
+analytical_gel_filtration,0.865043
+superose,0.860948
+superdex_gel_filtration,0.860246
+superdex_s200,0.855065
+superdex_s200_column,0.854462
+superdex_200 10/300_gl_column,0.853639
+superdex_s-200,0.853581
+anion_exchange_chromatography,0.852342
+anion-exchange_chromatography,0.851024
+superdex_hr,0.848823
+superdex_hiload_16/60_column,0.847232
+superdex_s75,0.847182
+superdex-75,0.845541
+superdex200_10/300,0.845230
+superdex_column_ge_healthcare,0.843077
+superose_column,0.842860
+hiload_26/60_superdex_column,0.841690
+hiload_16/60_superdex_column,0.840689
+superdex_200 10/300_gl,0.838288
+superdex_200 10/300,0.837807
+superdex_column_equilibrated,0.837522
+s-200_column,0.837049
+16/60_column,0.836998
+superose_6 10/300_gl_column,0.836577
+superose-6,0.836304
+superdex_gel_filtration_chromatography,0.836006
+column_ge_healthcare,0.835070
+superdextm,0.834651
+superose_ge_healthcare,0.834066
+superdex200,0.832981
+gelfiltration,0.832156
+superdex_75 26/60,0.832057
+hiload_16/60,0.831889
+hiload_superdex,0.830669
+16/60_column_ge_healthcare,0.830336
+superdex_200 16/60,0.830067
+superdex_hr_10/30_column,0.829819
+superdex-75_column_ge_healthcare,0.829463
+superdex75,0.829035
+calibrated_superdex,0.828698
+10/300_column_ge_healthcare,0.828087
+gl_column_ge_healthcare,0.827455
+superdex_75 16/60,0.827269
+sec-mals,0.826971
+monoq,0.826892
+superdex_columns,0.826829
+analytical_size-exclusion_chromatography,0.825890
+hiload,0.825574
+mono_q_column,0.825385
+hiload_16/600,0.824844
+superdex_g75,0.824795
+ion-exchange_chromatography,0.822221
+superdex_size-exclusion,0.821656
+gel-filtration_column_ge_healthcare,0.821423
+superdex_s200_ge_healthcare,0.820954
+size-exclusion_column_ge_healthcare,0.820747
+hiload_16/600_superdex_column,0.820520
+hiload_26/60,0.820486
+hiload_16/60_superdex_prep-grade,0.820404
+10/300_gl,0.820294
+hr_10/30,0.819574
+superdex75_column,0.818673
+hitrap_q,0.818601
+superdex_size,0.818544
+sephacryl_s200,0.818517
+fplc,0.818299
+superdex200_column_ge_healthcare,0.818237
+superdex-75_column,0.817068
+superdex_75 10/300_gl,0.817042
+hiload_26/60_superdex_pg,0.816713
+hr10/30,0.816541
+size-exclusion_gel_filtration,0.816151
+ion_exchange_chromatography,0.816002
+superdex_200 10/300_gel_filtration,0.816002
+superdex-200_column_ge_healthcare,0.815665
+superdex_prep_grade,0.815314
+superose_hr_10/30_column,0.815192
+superdex_75 10/300,0.815137
+gel_filtration_buffer,0.815085
+monoq_column,0.814994
+source_15s,0.813092
+sec-malls,0.812937
+gl_ge_healthcare,0.812587
+superdex_75 10/300_gl_column,0.812458

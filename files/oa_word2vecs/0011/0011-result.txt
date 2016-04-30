@@ -58,7 +58,6 @@ penicillin-binding_protein,0.754625
 beta-lactams,0.75427
 spectrum_β-lactamase,0.754134
 methicillin,0.753149
-derepressed_ampc,0.753026
 ampc_producers,0.751154
 carbapenem-hydrolyzing,0.750737
 extended-spectrum_beta-lactamase,0.750639
@@ -80,7 +79,6 @@ beta-lactamase_esbl,0.74413
 esbl_extended,0.743996
 methicillin_resistance,0.743303
 cephamycin,0.743264
-bla_tem-1,0.743069
 oxa-type,0.742874
 extended_spectrum_β-lactamase,0.742671
 carbapenem_resistance,0.742589
@@ -103,7 +101,6 @@ serine_carbapenemases,0.736692
 aac_ib,0.736603
 aph_ic,0.736198
 b-lactamases,0.735977
-tem_shv_ctx-m,0.735852
 blaz_gene,0.735822
 plasmid-mediated,0.735008
 ampc-ch,0.734507

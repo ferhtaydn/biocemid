@@ -100,7 +100,6 @@ polymerizes,0.631514
 adducts,0.629746
 intermolecular_crosslinks,0.629192
 cross_linkers,0.62824
-bifunctional_reagent,0.627728
 intrastrand,0.627645
 non-covalent_interaction,0.627555
 intermolecular_covalent,0.627107
