@@ -48,7 +48,6 @@ yfp_acceptor,0.750585
 apparent_fret_efficiencies,0.748465
 fluorophores_attached,0.748398
 donor-only,0.748211
-fluorescence_lifetimes,0.746929
 cfp_emission,0.744718
 acceptor_cy5,0.744583
 donor_cy3,0.74407
@@ -65,7 +64,6 @@ homomeric_p2x_receptors,0.735889
 single-molecule_fluorescence,0.735773
 flim,0.735726
 yfp_emission,0.735715
-correlation_spectroscopy_fcs,0.735174
 sensitized_acceptor,0.735056
 acceptor-labeled,0.735045
 fret_microscopy,0.734981
@@ -87,12 +85,8 @@ fret-measurements,0.723868
 donor_acceptor_pairs,0.723599
 yfp_fret,0.722881
 fret_probes,0.720922
-photoswitching,0.720458
 yfp_fluorophore,0.718629
 homofret,0.71649
-fluorescence_emission,0.715734
 crt-gfp_donor,0.715533
 donor-acceptor_pair,0.713811
-tryptophan_fluorescence,0.713809
 acceptor_excitation,0.713414
-emission_intensities,0.713392

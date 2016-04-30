@@ -9,16 +9,10 @@ import com.ferhtaydn.biocemid._
 class BaselineAnnotator(val config: BaselineAnnotatorConfig) extends Annotator {
 
   override def calculateMethodWeights(words: List[String]): List[MethodWeight] = {
-
     methodsInfo.map {
-
-      case info @ MethodInfo(id, name, ss, rs, es, definition, hierarchies) ⇒
-
+      case info ⇒
         val synonymNgrams = searchInSentence(words, info.nameAndSynonyms)
-
-        MethodWeight(id, 0.5 * synonymNgrams.size)
-
+        MethodWeight(info.id, 0.5 * synonymNgrams.size)
     }.filter(_.weight > 0.0).sortWith(_.weight > _.weight)
   }
-
 }

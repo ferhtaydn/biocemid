@@ -3,7 +3,6 @@ adck3-tm,0.686052
 tm_domain,0.664726
 tm_helix,0.663674
 tm_segments,0.650621
-cysteine_cross-linking,0.639291
 tm_domains,0.633793
 gtav,0.63298
 transmembrane_helix,0.632332
@@ -49,8 +48,6 @@ transmembrane_domain,0.582146
 t4_lysozyme,0.580662
 tm3a,0.580647
 large_periplasmic_loops,0.580553
-disulfide_cross-linking,0.580532
-disulfide_crosslinking,0.580182
 cys_substitutions,0.580086
 tmd1,0.579746
 attic20δn20,0.579072

@@ -2,7 +2,7 @@ import scalariform.formatter.preferences._
 import com.typesafe.sbt.SbtScalariform
 import com.typesafe.sbt.SbtScalariform.ScalariformKeys
 
-name := "BioCreative5Task6"
+name := "biocemid"
 
 organization := "com.ferhtaydn"
 

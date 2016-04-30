@@ -43,17 +43,12 @@ object Word2vecHelper {
 
   private def generateWord2vecResultFiles(): Unit = {
 
-    lazy val methodsNames: Map[String, List[String]] = methodsInfo.map { m ⇒
-      val synonyms = m.synonym.map(x ⇒ mkStringAfterSplit(x, spaceRegex, underscore))
-      val name = mkStringAfterSplit(m.name, spaceRegex, underscore)
-      (m.id, if (!synonyms.contains(name)) name :: synonyms else name :: (synonyms diff List(name)))
-    }.toMap
+    lazy val methodsNames: Map[String, List[String]] = methodsInfo.map(m ⇒ m.id → m.nameAndSynonymsWithUnderscore).toMap
 
-    lazy val methodPhraseScores: Map[String, Seq[Word2vecItem]] = methodIds.map { methodId ⇒
+    lazy val methodWord2vecItems: Map[String, Seq[Word2vecItem]] = methodIds.map { methodId ⇒
       list(s"$oaWord2vecsDirectory/$methodId", txtSuffix) match {
-        case Nil ⇒ methodId → Seq.empty[Word2vecItem]
-        case files ⇒
-          methodId → combineWord2vecs(methodId, files)
+        case Nil   ⇒ methodId → Seq.empty[Word2vecItem]
+        case files ⇒ methodId → combineWord2vecs(methodId, files)
       }
     }.filter(_._2.nonEmpty).toMap
 
@@ -62,12 +57,12 @@ object Word2vecHelper {
       val otherMethodsNames = methodsNames - methodId
       files.foreach { file ⇒
         read(file).foreach { line ⇒
-          val ps = Word2vecItem.underscoredPhrases(line)
-          if (!otherMethodsNames.values.exists(_.contains(ps.phrase))) {
-            map.get(ps.phrase) match {
-              case Some(cos) if cos < ps.score ⇒ map(ps.phrase) = ps.score
-              case None                        ⇒ map(ps.phrase) = ps.score
-              case _                           ⇒ // do not modify
+          val item = Word2vecItem.underscoredPhrases(line)
+          if (!otherMethodsNames.values.exists(_.contains(item.phrase))) {
+            map.get(item.phrase) match {
+              case Some(cos) if cos < item.score ⇒ map(item.phrase) = item.score
+              case None                          ⇒ map(item.phrase) = item.score
+              case _                             ⇒ // do not modify
             }
           }
         }
@@ -77,16 +72,40 @@ object Word2vecHelper {
       map.toSeq.sortBy(_._2).reverse.map { case (p, s) ⇒ Word2vecItem(p, s) }
     }
 
-    methodPhraseScores.foreach {
-      case (methodId, pss) ⇒
+    def cleanWord2vecResults(methodId: String, items: Seq[Word2vecItem]): Seq[Word2vecItem] = {
+
+      val otherMethodItems = methodWord2vecItems - methodId
+      val namesOfMethod = methodsNames(methodId)
+
+      val results = items.foldLeft(Seq.empty[Word2vecItem]) {
+        case (acc, i) ⇒
+          if (namesOfMethod.exists(n ⇒ n.contains(i.phrase) || i.phrase.contains(n))) {
+            acc :+ i
+          } else {
+            val skipItem = otherMethodItems.exists {
+              case (oId, oItems) ⇒
+                val namesOfOtherMethod = methodsNames(oId)
+                namesOfOtherMethod.exists(n ⇒ n.contains(i.phrase) || i.phrase.contains(n)) ||
+                  oItems.exists(oi ⇒ oi.phrase.equalsIgnoreCase(i.phrase) && oi.score > i.score)
+            }
+            if (skipItem) acc else acc :+ i
+          }
+      }
+      results
+    }
+
+    methodWord2vecItems.foreach {
+      case (methodId, items) ⇒
+
+        val results: Seq[Word2vecItem] = cleanWord2vecResults(methodId, items)
 
         write(
           s"$oaWord2vecsDirectory/$methodId/$methodId-$word2vecResultFileSuffix",
-          Word2vecItem.stringifyItems(pss)
+          Word2vecItem.stringifyItems(results)
         )
         write(
           s"$oaWord2vecsDirectory/$methodId/$methodId-$word2vecResultDedupeFileSuffix",
-          Word2vecItem.stringifyItems(dedupe(pss, Seq.empty[Word2vecItem]))
+          Word2vecItem.stringifyItems(dedupe(results, Seq.empty[Word2vecItem]))
         )
     }
   }

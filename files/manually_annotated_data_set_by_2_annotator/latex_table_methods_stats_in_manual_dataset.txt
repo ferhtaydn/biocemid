@@ -27,21 +27,18 @@
  MI:0047  &  far western blotting  &  0  &  0  \\
  MI:0048  &  filamentous phage display  &  0  &  0  \\
  MI:0049  &  filter binding  &  0  &  0  \\
- MI:0051  &  fluorescence technology  &  4  &  4  \\
  MI:0052  &  fluorescence correlation spectroscopy  &  0  &  0  \\
  MI:0053  &  fluorescence polarization spectroscopy  &  1  &  2  \\
  MI:0054  &  fluorescence-activated cell sorting  &  3  &  9  \\
  MI:0055  &  fluorescent resonance energy transfer  &  3  &  10  \\
  MI:0065  &  isothermal titration calorimetry  &  4  &  13  \\
  MI:0066  &  lambda phage display  &  0  &  0  \\
- MI:0067  &  light scattering  &  0  &  0  \\
  MI:0069  &  mass spectrometry studies of complexes  &  0  &  0  \\
  MI:0071  &  molecular sieving  &  5  &  12  \\
  MI:0077  &  nuclear magnetic resonance  &  4  &  27  \\
  MI:0081  &  peptide array  &  1  &  4  \\
  MI:0084  &  phage display  &  0  &  0  \\
  MI:0089  &  protein array  &  0  &  0  \\
- MI:0091  &  chromatography technology  &  1  &  1  \\
  MI:0096  &  pull down  &  15  &  44  \\
  MI:0097  &  reverse ras recruitment system  &  0  &  0  \\
  MI:0099  &  scintillation proximity assay  &  0  &  0  \\
@@ -55,7 +52,6 @@
  MI:0226  &  ion exchange chromatography  &  3  &  5  \\
  MI:0227  &  reverse phase chromatography  &  0  &  0  \\
  MI:0231  &  mammalian protein protein interaction trap  &  0  &  0  \\
- MI:0254  &  genetic interference  &  0  &  0  \\
  MI:0276  &  blue native page  &  2  &  3  \\
  MI:0369  &  lex-a dimerization assay  &  0  &  0  \\
  MI:0370  &  tox-r dimerization assay  &  0  &  0  \\
@@ -70,7 +66,6 @@
  MI:0411  &  enzyme linked immunosorbent assay  &  2  &  3  \\
  MI:0412  &  electrophoretic mobility supershift assay  &  1  &  2  \\
  MI:0413  &  electrophoretic mobility shift assay  &  1  &  6  \\
- MI:0415  &  enzymatic study  &  0  &  0  \\
  MI:0416  &  fluorescence microscopy  &  6  &  17  \\
  MI:0417  &  footprinting  &  0  &  0  \\
  MI:0419  &  gtpase assay  &  2  &  6  \\
@@ -78,7 +73,6 @@
  MI:0423  &  in-gel kinase assay  &  1  &  1  \\
  MI:0424  &  protein kinase assay  &  1  &  1  \\
  MI:0426  &  light microscopy  &  1  &  1  \\
- MI:0428  &  imaging technique  &  1  &  1  \\
  MI:0432  &  one hybrid  &  1  &  1  \\
  MI:0434  &  phosphatase assay  &  0  &  0  \\
  MI:0435  &  protease assay  &  0  &  0  \\
@@ -111,7 +105,6 @@
  MI:0872  &  atomic force microscopy  &  0  &  0  \\
  MI:0880  &  atpase assay  &  0  &  0  \\
  MI:0889  &  acetylase assay  &  2  &  2  \\
- MI:0892  &  solid phase assay  &  0  &  0  \\
  MI:0920  &  ribonuclease assay  &  0  &  0  \\
  \end{longtable}
 %%%%% TABLE END %%%%%

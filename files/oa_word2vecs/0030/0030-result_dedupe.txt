@@ -71,7 +71,6 @@ uv-induced_crosslinking,0.632034
 polymerizes,0.631514
 adducts,0.629746
 cross_linkers,0.62824
-bifunctional_reagent,0.627728
 intrastrand,0.627645
 amide_bonds,0.626848
 noncovalent,0.6244

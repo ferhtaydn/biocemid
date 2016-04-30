@@ -1,0 +1,16 @@
+three-hybrid_system,0.619688
+yeast_3-hybrid,0.606015
+yeast_three-hybrid,0.603936
+split-ub,0.570592
+arabidopsis_escrt,0.560436
+rna15p,0.550763
+protein-fragment_complementation_assay,0.546005
+psltir1/afbs,0.545074
+split-ubiquitin_yeast,0.539574
+library_screens,0.538895
+array_sga,0.532371
+rrp1p,0.532352
+maspit,0.532252
+protein-protein_interaction_screens,0.528367
+proteome-wide_screen,0.526228
+split-ubiquitin_based,0.52579

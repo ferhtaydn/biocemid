@@ -82,14 +82,6 @@ MI:0042
 In 0 articles: Set()
 In 0 passages
 
-MI:0045
-In 0 articles: Set()
-In 0 passages
-
-MI:0046
-In 0 articles: Set()
-In 0 passages
-
 MI:0047
 In 0 articles: Set()
 In 0 passages
@@ -101,10 +93,6 @@ In 0 passages
 MI:0049
 In 0 articles: Set()
 In 0 passages
-
-MI:0051
-In 4 articles: Set(16968134.xml, 17280616.xml, 18547146.xml, 18724936.xml)
-In 4 passages
 
 MI:0052
 In 0 articles: Set()
@@ -127,10 +115,6 @@ In 4 articles: Set(16732694.xml, 18292755.xml, 18354501.xml, 18940607.xml)
 In 13 passages
 
 MI:0066
-In 0 articles: Set()
-In 0 passages
-
-MI:0067
 In 0 articles: Set()
 In 0 passages
 
@@ -157,10 +141,6 @@ In 0 passages
 MI:0089
 In 0 articles: Set()
 In 0 passages
-
-MI:0091
-In 1 articles: Set(18354501.xml)
-In 1 passages
 
 MI:0096
 In 15 articles: Set(18354501.xml, 17511879.xml, 16968134.xml, 18940607.xml, 17341134.xml, 17280616.xml, 17581628.xml, 18309293.xml, 18518979.xml, 18188154.xml, 17608567.xml, 18292755.xml, 18775702.xml, 18583988.xml, 19131970.xml)
@@ -211,10 +191,6 @@ In 0 articles: Set()
 In 0 passages
 
 MI:0231
-In 0 articles: Set()
-In 0 passages
-
-MI:0254
 In 0 articles: Set()
 In 0 passages
 
@@ -274,13 +250,9 @@ MI:0413
 In 1 articles: Set(17620405.xml)
 In 6 passages
 
-MI:0415
-In 0 articles: Set()
-In 0 passages
-
 MI:0416
-In 6 articles: Set(18724936.xml, 16756390.xml, 17341134.xml, 18775702.xml, 17620405.xml, 18583988.xml)
-In 17 passages
+In 7 articles: Set(18724936.xml, 16756390.xml, 17341134.xml, 16754960.xml, 18775702.xml, 17620405.xml, 18583988.xml)
+In 18 passages
 
 MI:0417
 In 0 articles: Set()
@@ -304,10 +276,6 @@ In 1 passages
 
 MI:0426
 In 1 articles: Set(17620405.xml)
-In 1 passages
-
-MI:0428
-In 1 articles: Set(16754960.xml)
 In 1 passages
 
 MI:0432
@@ -437,10 +405,6 @@ In 0 passages
 MI:0889
 In 2 articles: Set(16513846.xml, 17620405.xml)
 In 2 passages
-
-MI:0892
-In 0 articles: Set()
-In 0 passages
 
 MI:0920
 In 0 articles: Set()

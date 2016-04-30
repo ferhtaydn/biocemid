@@ -19,7 +19,7 @@ package object biocemid {
   val psimi: String = "PSIMI"
 
   lazy val methodsInfo = {
-    ConfigFactory.load("methods.conf").getConfigList("bioc.psimi.methods").map(MethodInfo(_)).toList
+    ConfigFactory.load("methods.conf").getConfigList("psimi.methods").map(MethodInfo(_)).toList
   }
 
   lazy val methodIds = methodsInfo.map(_.id)
@@ -89,13 +89,18 @@ package object biocemid {
   }
 
   implicit class BioCPassageOps(val passage: BioCPassage) extends AnyVal {
+
     def skip: Boolean = {
-      passage.getInfon("type").contains("title") ||
-        passage.getInfon("type").equalsIgnoreCase("table_caption") ||
-        passage.getInfon("type").equalsIgnoreCase("table") ||
-        passage.getInfon("type").equalsIgnoreCase("ref") ||
-        passage.getInfon("type").equalsIgnoreCase("footnote") ||
-        passage.getInfon("type").equalsIgnoreCase("front")
+
+      val infonType = passage.getInfon("type")
+
+      split(passage.getText, spaceRegex).length < 5 ||
+        infonType.contains("title") ||
+        infonType.equalsIgnoreCase("table_caption") ||
+        infonType.equalsIgnoreCase("table") ||
+        infonType.equalsIgnoreCase("ref") ||
+        infonType.equalsIgnoreCase("footnote") ||
+        infonType.equalsIgnoreCase("front")
     }
   }
 

@@ -32,7 +32,6 @@ shikimate_kinase,0.704351
 polyphosphate_kinase,0.703433
 pfkb_family,0.702196
 phosphate_decarboxylase,0.701584
-operon_repressor,0.700962
 inositol_monophosphatase,0.700542
 phosphoribosyltransferase,0.700469
 undecaprenyl_pyrophosphate,0.700412

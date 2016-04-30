@@ -31,8 +31,6 @@ Extra Annotation => EA
 		Melce: 1 MA (0019)
 	passage_offset_54039:
 		Melce: 1 MA (0004)
-	passage_offset_54728:
-		Melce: 1 MA (0051)
 	passage_offset_56228:
 		Melce: 1 MA (0071)
 	passage_offset_57875:

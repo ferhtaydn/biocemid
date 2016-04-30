@@ -7,7 +7,6 @@ nmr_spectra,0.848406
 two-dimensional_nmr,0.835199
 nmr_chemical_shifts,0.834566
 solid-state_nmr,0.830907
-spectroscopy,0.829775
 1h_13c,0.82915
 ssnmr,0.828288
 resonance_nmr,0.824991
@@ -96,7 +95,6 @@ nmr-derived,0.756647
 hsqc_nmr_experiments,0.755507
 tocsy,0.755299
 2d_nuclear_overhauser,0.755074
-x-ray_crystallographic,0.754952
 nmr_relaxation,0.754726
 nmr_resonance,0.754559
 heteronuclear,0.753973
@@ -111,7 +109,6 @@ spectroscopic_methods,0.73177
 spectroscopies,0.729047
 mass_spectroscopy,0.720524
 nmr_spectrometry,0.718776
-spectroscopic_techniques,0.715605
 13c_nmr_spectroscopy,0.714315
 resonance_spectroscopy_nmr,0.711913
 mhz_bruker,0.711759
@@ -120,7 +117,6 @@ infrared_ir_spectroscopy,0.709958
 resonance_1h-nmr,0.707868
 resonance_spectroscopic,0.705828
 nmr-spectroscopy,0.703556
-correlation_spectroscopy,0.702042
 solid-state_nuclear_magnetic,0.700704
 proton_nmr_spectra,0.699115
 carbon-13,0.695892
@@ -136,7 +132,6 @@ infrared_spectroscopy_ir,0.687849
 bruker_mhz,0.687008
 13c-nmr,0.686614
 carbon-13_nmr,0.686361
-vibrational_spectroscopy,0.686271
 magnetic_resonance,0.685571
 nuclear_magnetic_resonance_spectroscopic,0.68545
 nuclear_magnetic_resonance_1h-nmr,0.68504
@@ -157,6 +152,5 @@ nuclear_overhauser,0.678389
 mhz_nmr,0.678178
 nmr_spectroscopies,0.677493
 1d-nmr,0.677083
-electrospray_ionization_mass_spectrometry,0.677017
 mhz_varian,0.676961
 chemical-shift,0.67679

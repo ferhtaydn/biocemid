@@ -50,7 +50,6 @@ aminoglycoside-modifying_enzyme,0.74572
 expanded-spectrum_cephalosporins,0.74534
 qnr,0.744549
 cephamycin,0.743264
-bla_tem-1,0.743069
 oxa-type,0.742874
 oxa-48,0.74243
 shv-1,0.742143
@@ -66,7 +65,6 @@ cefotaxime_ceftazidime_ceftriaxone,0.738
 aac_ib,0.736603
 aph_ic,0.736198
 b-lactamases,0.735977
-tem_shv_ctx-m,0.735852
 plasmid-mediated,0.735008
 ampc-ch,0.734507
 oxa-10,0.733719
