@@ -66,7 +66,7 @@
  MI:0411  &  enzyme linked immunosorbent assay  &  2  &  3  \\
  MI:0412  &  electrophoretic mobility supershift assay  &  1  &  2  \\
  MI:0413  &  electrophoretic mobility shift assay  &  1  &  6  \\
- MI:0416  &  fluorescence microscopy  &  6  &  17  \\
+ MI:0416  &  fluorescence microscopy  &  7  &  18  \\
  MI:0417  &  footprinting  &  0  &  0  \\
  MI:0419  &  gtpase assay  &  2  &  6  \\
  MI:0420  &  kinase homogeneous time resolved fluorescence  &  0  &  0  \\
