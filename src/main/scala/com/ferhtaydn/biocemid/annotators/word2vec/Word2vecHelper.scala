@@ -10,7 +10,10 @@ object Word2vecHelper {
   def help(): Unit = {
     cleanPreviousResultFiles()
     cleanPreviousAnnotatedFiles()
+    generateRawWord2vecResultFiles()
     generateWord2vecResultFiles()
+    //generateRawLatexTableContext("0018")
+    //generateDedupeLatexTableContext("0018")
   }
 
   private def cleanPreviousResultFiles(): String = {
@@ -39,6 +42,104 @@ object Word2vecHelper {
           )
         case Some(x) ⇒ dedupe(tail, acc)
       }
+  }
+
+  private def generateRawWord2vecResultFiles(): Unit = {
+
+    def combineRawWord2vecs(methodId: String, files: List[File]): Seq[Word2vecItem] = {
+      val map = scala.collection.mutable.Map.empty[String, Double].withDefaultValue(0d)
+      files.foreach { file ⇒
+        read(file).foreach { line ⇒
+          val item = Word2vecItem.underscoredPhrases(line)
+          map.get(item.phrase) match {
+            case Some(cos) if cos < item.score ⇒ map(item.phrase) = item.score
+            case None                          ⇒ map(item.phrase) = item.score
+            case _                             ⇒ // do not modify
+          }
+        }
+      }
+      map.toSeq.sortBy(_._2).reverse.map { case (p, s) ⇒ Word2vecItem(p, s) }
+    }
+
+    lazy val rawMethodWord2vecItems: Map[String, Seq[Word2vecItem]] = methodIds.map { methodId ⇒
+      list(s"$oaWord2vecsDirectory/$methodId", txtSuffix) match {
+        case Nil   ⇒ methodId → Seq.empty[Word2vecItem]
+        case files ⇒ methodId → combineRawWord2vecs(methodId, files)
+      }
+    }.filter(_._2.nonEmpty).toMap
+
+    rawMethodWord2vecItems.foreach {
+      case (methodId, items) ⇒
+        write(
+          s"$oaWord2vecsDirectory/$methodId/$methodId-$word2vecResultRawFileSuffix",
+          Word2vecItem.stringifyItems(items)
+        )
+    }
+  }
+
+  private def generateRawLatexTableContext(methodId: String): Unit = {
+
+    val rawFileName = s"$methodId-result_raw.txt"
+    val fileName = s"$methodId-result.txt"
+    val raw = read(s"$oaWord2vecsDirectory/$methodId/$rawFileName").map { line ⇒
+      Word2vecItem.underscoredPhrases(line)
+    }
+    val normal = read(s"$oaWord2vecsDirectory/$methodId/$fileName").map { line ⇒
+      Word2vecItem.underscoredPhrases(line)
+    }
+
+    val diff = raw diff normal
+
+    val a = raw.take(45)
+    val b = raw.slice(45, 90)
+
+    a zip b foreach {
+      case (x, y) ⇒
+        val itX = if (diff.contains(x))
+          s"\\textit{${x.phrase}} & \\textit{${x.score}} & "
+        else
+          s"\\textbf{${x.phrase}} & \\textbf{${x.score}} & "
+
+        val itY = if (diff.contains(y))
+          s"\\textit{${y.phrase}} & \\textit{${y.score}} \\\\"
+        else
+          s"\\textbf{${y.phrase}} & \\textbf{${y.score}} \\\\"
+
+        println(s"$itX $itY")
+    }
+  }
+
+  private def generateDedupeLatexTableContext(methodId: String): Unit = {
+
+    val dedupeFileName = s"$methodId-result_dedupe.txt"
+    val fileName = s"$methodId-result.txt"
+
+    val dedupe = read(s"$oaWord2vecsDirectory/$methodId/$dedupeFileName").map { line ⇒
+      Word2vecItem.underscoredPhrases(line)
+    }
+    val normal = read(s"$oaWord2vecsDirectory/$methodId/$fileName").map { line ⇒
+      Word2vecItem.underscoredPhrases(line)
+    }
+
+    val diff = normal diff dedupe
+
+    val a = normal.take(45)
+    val b = normal.slice(45, 90)
+
+    a zip b foreach {
+      case (x, y) ⇒
+        val itX = if (diff.contains(x))
+          s"\\textit{${x.phrase}} & \\textit{${x.score}} & "
+        else
+          s"\\textbf{${x.phrase}} & \\textbf{${x.score}} & "
+
+        val itY = if (diff.contains(y))
+          s"\\textit{${y.phrase}} & \\textit{${y.score}} \\\\"
+        else
+          s"\\textbf{${y.phrase}} & \\textbf{${y.score}} \\\\"
+
+        println(s"$itX $itY")
+    }
   }
 
   private def generateWord2vecResultFiles(): Unit = {
