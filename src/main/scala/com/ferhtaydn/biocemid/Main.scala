@@ -1,9 +1,9 @@
 package com.ferhtaydn.biocemid
 
-import com.ferhtaydn.biocemid.annotators.Annotator
 import com.ferhtaydn.biocemid.annotators.baseline.BaselineAnnotatorConfig
 import com.ferhtaydn.biocemid.annotators.tfrf.{ TfrfAnnotatorConfig, TfrfHelper }
 import com.ferhtaydn.biocemid.annotators.word2vec.{ Word2vecAnnotatorConfig, Word2vecHelper }
+import com.ferhtaydn.biocemid.evals.Evaluator
 
 //noinspection ScalaStyle
 object Main extends App {
@@ -17,8 +17,8 @@ object Main extends App {
        |2 - Annotate with BASELINE raw files in $manualAnnotationRawDirectory
        |3 - Annotate with TFRF raw files in $manualAnnotationRawDirectory
        |4 - Annotate with WORD2VEC, raw files in $manualAnnotationRawDirectory
-       |5 - Generate Eval results by comparing $tfrfResultDirectory and $goldResultDirectory
-       |6 - Count of each method annotated in $manualAnnotationStatistics
+       |5 - Generate Eval results by comparing $goldResultDirectory and $word2vecResultDirectory
+       |6 - Count of each method annotated in $publishedDataSet
      """.stripMargin
   )
 
@@ -26,19 +26,19 @@ object Main extends App {
     case 1 ⇒
       TfrfHelper.help()
     case 2 ⇒
-      Annotator.annotate(manualAnnotationRawDirectory, BaselineAnnotatorConfig(1, 0.5, 0.25, baselineAnnotatedSuffix))
+      annotators.annotate(manualAnnotationRawDirectory, BaselineAnnotatorConfig(1, 0.5, 0.25, baselineAnnotatedSuffix))
     case 3 ⇒
-      Annotator.annotate(manualAnnotationRawDirectory, TfrfAnnotatorConfig(1, 0.5, 0.25, tfrfAnnotatedSuffix))
+      annotators.annotate(manualAnnotationRawDirectory, TfrfAnnotatorConfig(1, 0.5, 0.25, tfrfAnnotatedSuffix))
     case 4 ⇒
       Word2vecHelper.help()
-      Annotator.annotate(
+      annotators.annotate(
         manualAnnotationRawDirectory,
         Word2vecAnnotatorConfig(oaWord2vecsDirectory, word2vecResultFileSuffix, 1, 1d, 0.5, word2vecAnnotatedSuffix)
       )
     case 5 ⇒
       Evaluator.evaluate(goldResultDirectory, word2vecResultDirectory, xmlSuffix)
     case 6 ⇒
-      Evaluator.countOfMethods(manualAnnotationStatistics, xmlSuffix)
+      Evaluator.countOfMethods(publishedDataSet, xmlSuffix)
     case _ ⇒
       Console.println("Please select the options from 1 to 6.")
       System.exit(0)

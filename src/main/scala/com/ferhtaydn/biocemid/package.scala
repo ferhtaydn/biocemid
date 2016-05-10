@@ -106,11 +106,11 @@ package object biocemid {
 
   // gold_set_13, gold_set_17 and gold_set_30 files contains the articles from $manualAnnotationStatistics
   val goldResultDirectory = "files/gold_set_30"
-  val manualAnnotationStatistics = "files/published_dataset"
+  val publishedDataSet = "files/published_dataset"
 
   val word2vecResultDirectory = "files/results/word2vec/config_2_2_30_articles"
   val tfrfResultDirectory = "files/results/tfrf/manual/tfrf_30_articles"
-  val baselineResultDirectory = "files/results/baseline_30_articles"
+  val baselineResultDirectory = "files/results/baseline/baseline_30_articles"
 
   val manualAnnotationRawDirectory = "files/manual_annotation_raw_30"
 
