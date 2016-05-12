@@ -1,185 +1,185 @@
-TN -> 1267.0, FN -> 99.0, TP -> 288.0, FP -> 319.0
-accuracy: 0.7881398884946782
-precision: 0.4744645799011532
-recall: 0.7441860465116279
-fscore: 0.579476861167002
+TN -> 1067.0, FN -> 174.0, TP -> 161.5085870089653, FP -> 247.0
+accuracy: 0.7447724714404825
+precision: 0.3953615472112971
+recall: 0.4813843617202249
+fscore: 0.43415284659833137
 
-document id: 1388269
-falseNegatives: 3.0
-falsePositives: 18.0
+16513846.xml
+falseNegatives: 9.0
+falsePositives: 8.0
 trueNegatives: 24.0
-truePositives: 16.0
+truePositives: 11.290211034946559
 
-document id: 1450327
-falseNegatives: 1.0
-falsePositives: 6.0
-trueNegatives: 76.0
-truePositives: 2.0
-
-document id: 1472246
-falseNegatives: 5.0
-falsePositives: 21.0
-trueNegatives: 60.0
-truePositives: 18.0
-
-document id: 2063892
-falseNegatives: 6.0
-falsePositives: 14.0
-trueNegatives: 34.0
-truePositives: 10.0
-
-document id: 1475773
-falseNegatives: 5.0
-falsePositives: 22.0
-trueNegatives: 98.0
-truePositives: 10.0
-
-document id: 1563491
+16646632.xml
 falseNegatives: 1.0
 falsePositives: 3.0
-trueNegatives: 74.0
-truePositives: 5.0
+trueNegatives: 56.0
+truePositives: 2.2419599754759867
 
-document id: 1664554
-falseNegatives: 0.0
-falsePositives: 8.0
-trueNegatives: 16.0
-truePositives: 8.0
+16732694.xml
+falseNegatives: 9.0
+falsePositives: 18.0
+trueNegatives: 48.0
+truePositives: 12.169809707813437
 
-document id: 1702560
-falseNegatives: 2.0
-falsePositives: 24.0
-trueNegatives: 67.0
-truePositives: 3.0
+16754960.xml
+falseNegatives: 9.0
+falsePositives: 11.0
+trueNegatives: 35.0
+truePositives: 4.352785423390989
 
-document id: 1851384
-falseNegatives: 4.0
-falsePositives: 4.0
-trueNegatives: 37.0
-truePositives: 14.0
+16756390.xml
+falseNegatives: 8.0
+falsePositives: 16.0
+trueNegatives: 56.0
+truePositives: 5.22402511704518
 
-document id: 1808488
-falseNegatives: 16.0
-falsePositives: 0.0
-trueNegatives: 80.0
-truePositives: 4.0
-
-document id: 1906825
+16968134.xml
 falseNegatives: 3.0
+falsePositives: 3.0
+trueNegatives: 58.0
+truePositives: 1.3289473684210527
+
+17112379.xml
+falseNegatives: 0.0
+falsePositives: 7.0
+trueNegatives: 16.0
+truePositives: 4.790978281895869
+
+17177603.xml
+falseNegatives: 8.0
+falsePositives: 21.0
+trueNegatives: 46.0
+truePositives: 0.0
+
+17280616.xml
+falseNegatives: 5.0
+falsePositives: 5.0
+trueNegatives: 37.0
+truePositives: 9.685777514101561
+
+17341134.xml
+falseNegatives: 17.0
+falsePositives: 1.0
+trueNegatives: 48.0
+truePositives: 1.3314008916588247
+
+17511879.xml
+falseNegatives: 4.0
 falsePositives: 6.0
 trueNegatives: 27.0
-truePositives: 7.0
+truePositives: 2.7769048862343673
 
-document id: 1933402
-falseNegatives: 6.0
-falsePositives: 11.0
-trueNegatives: 31.0
-truePositives: 11.0
+17581628.xml
+falseNegatives: 11.0
+falsePositives: 5.0
+trueNegatives: 32.0
+truePositives: 4.468020125226401
 
-document id: 1945078
+17608567.xml
 falseNegatives: 10.0
 falsePositives: 1.0
-trueNegatives: 56.0
+trueNegatives: 35.0
 truePositives: 1.0
 
-document id: 2064443
-falseNegatives: 3.0
-falsePositives: 16.0
-trueNegatives: 35.0
-truePositives: 18.0
-
-document id: 2196435
-falseNegatives: 4.0
-falsePositives: 5.0
-trueNegatives: 22.0
-truePositives: 8.0
-
-document id: 2261226
-falseNegatives: 1.0
-falsePositives: 24.0
-trueNegatives: 13.0
-truePositives: 17.0
-
-document id: 2265110
-falseNegatives: 0.0
-falsePositives: 4.0
-trueNegatives: 29.0
-truePositives: 4.0
-
-document id: 2275666
-falseNegatives: 0.0
-falsePositives: 8.0
-trueNegatives: 23.0
-truePositives: 9.0
-
-document id: 2291449
-falseNegatives: 1.0
-falsePositives: 5.0
-trueNegatives: 38.0
-truePositives: 7.0
-
-document id: 2430719
-falseNegatives: 2.0
-falsePositives: 3.0
-trueNegatives: 41.0
-truePositives: 4.0
-
-document id: 2422857
-falseNegatives: 5.0
+17620405.xml
+falseNegatives: 12.0
 falsePositives: 18.0
-trueNegatives: 57.0
-truePositives: 17.0
+trueNegatives: 35.0
+truePositives: 8.553371788498561
 
-document id: 2453059
-falseNegatives: 0.0
-falsePositives: 22.0
-trueNegatives: 37.0
-truePositives: 12.0
+18188154.xml
+falseNegatives: 5.0
+falsePositives: 4.0
+trueNegatives: 22.0
+truePositives: 5.033282888716105
 
-document id: 2442910
+18292755.xml
+falseNegatives: 1.0
+falsePositives: 16.0
+trueNegatives: 13.0
+truePositives: 12.386659340279525
+
+18309293.xml
+falseNegatives: 1.0
+falsePositives: 2.0
+trueNegatives: 29.0
+truePositives: 0.6046439233344657
+
+18354501.xml
+falseNegatives: 4.0
+falsePositives: 9.0
+trueNegatives: 23.0
+truePositives: 4.547519773395085
+
+18388858.xml
+falseNegatives: 1.0
+falsePositives: 3.0
+trueNegatives: 38.0
+truePositives: 1.7046291492836538
+
+18518979.xml
+falseNegatives: 6.0
+falsePositives: 0.0
+trueNegatives: 42.0
+truePositives: 1.0
+
+18547146.xml
+falseNegatives: 10.0
+falsePositives: 13.0
+trueNegatives: 49.0
+truePositives: 6.11367459759623
+
+18583960.xml
+falseNegatives: 5.0
+falsePositives: 19.0
+trueNegatives: 39.0
+truePositives: 6.4917390509268
+
+18583988.xml
 falseNegatives: 3.0
 falsePositives: 0.0
 trueNegatives: 17.0
-truePositives: 4.0
+truePositives: 2.4185823754789273
 
-document id: 2504490
-falseNegatives: 0.0
-falsePositives: 4.0
-trueNegatives: 102.0
-truePositives: 6.0
-
-document id: 2572727
-falseNegatives: 0.0
-falsePositives: 9.0
-trueNegatives: 56.0
-truePositives: 11.0
-
-document id: 2577129
-falseNegatives: 5.0
-falsePositives: 8.0
-trueNegatives: 26.0
-truePositives: 9.0
-
-document id: 2532794
+18700817.xml
 falseNegatives: 1.0
-falsePositives: 4.0
-trueNegatives: 21.0
-truePositives: 6.0
+falsePositives: 3.0
+trueNegatives: 68.0
+truePositives: 5.230418943533698
 
-document id: 2576630
-falseNegatives: 4.0
-falsePositives: 12.0
-trueNegatives: 19.0
-truePositives: 19.0
+18724936.xml
+falseNegatives: 0.0
+falsePositives: 2.0
+trueNegatives: 57.0
+truePositives: 8.448992108063862
 
-document id: 2572193
+18775702.xml
 falseNegatives: 7.0
-falsePositives: 10.0
-trueNegatives: 42.0
-truePositives: 12.0
+falsePositives: 5.0
+trueNegatives: 24.0
+truePositives: 5.796109950350482
 
-document id: 2632940
-falseNegatives: 1.0
-falsePositives: 29.0
-trueNegatives: 9.0
-truePositives: 16.0
+18781224.xml
+falseNegatives: 3.0
+falsePositives: 3.0
+trueNegatives: 23.0
+truePositives: 2.8217763894537184
+
+18836139.xml
+falseNegatives: 8.0
+falsePositives: 11.0
+trueNegatives: 19.0
+truePositives: 9.948410224189397
+
+18940607.xml
+falseNegatives: 9.0
+falsePositives: 6.0
+trueNegatives: 41.0
+truePositives: 9.787368621033817
+
+19131970.xml
+falseNegatives: 4.0
+falsePositives: 28.0
+trueNegatives: 10.0
+truePositives: 9.960587558620773
