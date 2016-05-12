@@ -11,6 +11,19 @@ object TfrfHelper {
   def help(): Unit = {
     methodIds.foreach(createHelperFiles)
     methodIds.foreach(createTfrfFile)
+    methodIds.foreach(relatedAndExtraTerms(_, 7))
+    methodIds.foreach(relatedAndExtraTerms(_, 10))
+  }
+
+  private def relatedAndExtraTerms(methodId: String, x: Int) = {
+
+    val tfRfTokenizedFile = s"MI${methodId}_tokenized_tf-rf.txt"
+
+    val terms = read(tfRfTokenizedFile).map(_.split(",").head).map("\"" + _ + "\"")
+
+    if (terms.nonEmpty) {
+      println(s"$methodId: \n relatedTerms = [${terms.take(x).mkString(", ")}] \n extraTerms = [${terms.slice(x, 2 * x).mkString(", ")}]")
+    }
   }
 
   private def createHelperFiles(methodId: String): Unit = {
