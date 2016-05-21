@@ -1,32 +1,32 @@
-TN -> 431.0, FN -> 86.0, TP -> 65.44571445346655, FP -> 79.0
-accuracy: 0.7505464221862339
-precision: 0.4530817317847806
-recall: 0.43213975839227525
-fscore: 0.4423630295425098
+TN -> 431.0, FN -> 72.0, TP -> 75.72067730929385, FP -> 47.0
+accuracy: 0.8098192942708552
+precision: 0.617016455331765
+recall: 0.5125936239159788
+fscore: 0.5599785389041938
 
 17280616.xml
-falseNegatives: 5.0
-falsePositives: 5.0
+falseNegatives: 6.0
+falsePositives: 2.0
 trueNegatives: 37.0
-truePositives: 9.685777514101561
+truePositives: 10.83460272447113
 
 17341134.xml
-falseNegatives: 17.0
-falsePositives: 1.0
+falseNegatives: 16.0
+falsePositives: 0.0
 trueNegatives: 48.0
-truePositives: 1.3314008916588247
+truePositives: 1.8444427793485998
 
 17511879.xml
 falseNegatives: 4.0
-falsePositives: 6.0
+falsePositives: 1.0
 trueNegatives: 27.0
-truePositives: 2.7769048862343673
+truePositives: 3.995213871045856
 
 17581628.xml
-falseNegatives: 11.0
-falsePositives: 5.0
+falseNegatives: 10.0
+falsePositives: 3.0
 trueNegatives: 32.0
-truePositives: 4.468020125226401
+truePositives: 5.115885195819947
 
 17608567.xml
 falseNegatives: 10.0
@@ -35,22 +35,22 @@ trueNegatives: 35.0
 truePositives: 1.0
 
 17620405.xml
-falseNegatives: 12.0
-falsePositives: 18.0
+falseNegatives: 7.0
+falsePositives: 12.0
 trueNegatives: 35.0
-truePositives: 8.553371788498561
+truePositives: 9.787839692122205
 
 18388858.xml
 falseNegatives: 1.0
-falsePositives: 3.0
+falsePositives: 1.0
 trueNegatives: 38.0
-truePositives: 1.7046291492836538
+truePositives: 2.7823972974876683
 
 18583960.xml
-falseNegatives: 5.0
-falsePositives: 19.0
+falseNegatives: 1.0
+falsePositives: 14.0
 trueNegatives: 39.0
-truePositives: 6.4917390509268
+truePositives: 8.159176843472698
 
 18583988.xml
 falseNegatives: 3.0
@@ -65,19 +65,19 @@ trueNegatives: 57.0
 truePositives: 8.448992108063862
 
 18775702.xml
-falseNegatives: 7.0
-falsePositives: 5.0
+falseNegatives: 6.0
+falsePositives: 3.0
 trueNegatives: 24.0
-truePositives: 5.796109950350482
+truePositives: 6.126668808852266
 
 18781224.xml
-falseNegatives: 3.0
-falsePositives: 3.0
+falseNegatives: 2.0
+falsePositives: 1.0
 trueNegatives: 23.0
-truePositives: 2.8217763894537184
+truePositives: 3.9633352202424774
 
 18836139.xml
-falseNegatives: 8.0
-falsePositives: 11.0
+falseNegatives: 6.0
+falsePositives: 7.0
 trueNegatives: 19.0
-truePositives: 9.948410224189397
+truePositives: 11.2435403928882
