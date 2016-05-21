@@ -36,47 +36,6 @@ object Evaluator {
     }
   }
 
-  private def matchAnnotations(manualAnnotations: List[BioCAnnotation], annotations: List[BioCAnnotation],
-    fileRate: FileRate) = {
-
-    if (manualAnnotations.isEmpty && annotations.isEmpty) {
-      fileRate.incTN(1)
-    } else if (manualAnnotations.isEmpty && annotations.nonEmpty) {
-      fileRate.incFP(annotations.length)
-    } else if (manualAnnotations.nonEmpty && annotations.isEmpty) {
-      fileRate.incFN(manualAnnotations.length)
-    } else {
-      // manualAnnotations.nonEmpty && annotations.nonEmpty
-      val consumedAnnotations = manualAnnotations.foldLeft(List.empty[BioCAnnotation]) {
-        case (acc, manualAnnotation) ⇒
-
-          val manualAnnotationText = manualAnnotation.getText
-
-          annotations.filter { annotation ⇒
-            annotation.getInfon(psimi).equalsIgnoreCase(manualAnnotation.getInfon(psimi)) &&
-              containsCommonText(manualAnnotationText, annotation.getText)
-          } match {
-
-            case Nil ⇒
-              fileRate.incFN(1)
-              acc
-            case matchedAnnotations ⇒
-
-              // big manual annotated text with multi small code annotated text.
-              matchedAnnotations.foreach { annotation ⇒
-                val matchingText = getCommonText(manualAnnotationText, annotation.getText)
-                val rate = matchingText.length.toDouble / manualAnnotationText.length
-                fileRate.incTP(rate)
-              }
-              acc ++ matchedAnnotations
-          }
-      }
-
-      fileRate.incFP((annotations diff consumedAnnotations).length)
-
-    }
-  }
-
   def evaluate(manuallyAnnotatedFilesDirectory: String, annotatedFilesDirectory: String, fileSuffix: String): Unit = {
 
     val manuallyAnnotatedFiles = list(manuallyAnnotatedFilesDirectory, fileSuffix)
@@ -107,6 +66,38 @@ object Evaluator {
 
     calculateTotalResults(results.toMap)
 
+  }
+
+  private def matchAnnotations(manualAnnotations: List[BioCAnnotation], annotations: List[BioCAnnotation],
+    fileRate: FileRate) = {
+
+    if (manualAnnotations.isEmpty && annotations.isEmpty) {
+      fileRate.incTN(1)
+    } else if (manualAnnotations.isEmpty && annotations.nonEmpty) {
+      fileRate.incFP(annotations.length)
+    } else if (manualAnnotations.nonEmpty && annotations.isEmpty) {
+      fileRate.incFN(manualAnnotations.length)
+    } else {
+      // manualAnnotations.nonEmpty && annotations.nonEmpty
+      val consumedAnnotations = manualAnnotations.foldLeft(List.empty[BioCAnnotation]) {
+        case (acc, manualAnnotation) ⇒
+          annotations.filter { annotation ⇒
+            annotation.getInfon(psimi).equalsIgnoreCase(manualAnnotation.getInfon(psimi)) &&
+              matchesLocations(manualAnnotation, annotation)
+          } match {
+            case Nil ⇒
+              fileRate.incFN(1)
+              acc
+            case matchedAnnotations ⇒
+              // big manual annotated text with multi small code annotated text.
+              matchedAnnotations.foreach(a ⇒ fileRate.incTP(calculateTP(manualAnnotation.getText, a.getText)))
+              acc ++ matchedAnnotations
+          }
+      }
+
+      fileRate.incFP((annotations diff consumedAnnotations).length)
+
+    }
   }
 
 }
