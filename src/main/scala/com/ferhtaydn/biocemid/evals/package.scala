@@ -24,7 +24,7 @@ package object evals {
     document.getPassages.filterNot(_.skip).toList
   }
 
-  private def getCommonText(a: String, b: String): String = {
+  def getCommonText(a: String, b: String): String = {
     if (a.equalsIgnoreCase(b)) {
       a
     } else if (a.containsSlice(b)) {
@@ -40,12 +40,6 @@ package object evals {
       val y = longestCommonSubstring(b, a)
       if (x.length >= y.length) x else y
     }
-  }
-
-  def calculateTP(manualAnnotationText: String, annotationText: String): Double = {
-    val matchingTextLength = getCommonText(manualAnnotationText, annotationText).length.toDouble
-    val unionLength = manualAnnotationText.length + annotationText.length - matchingTextLength
-    matchingTextLength / unionLength
   }
 
   def matchesLocations(a: BioCAnnotation, b: BioCAnnotation): Boolean = {

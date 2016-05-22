@@ -17,8 +17,10 @@ object Main extends App {
        |2 - Annotate with BASELINE raw files in $manualAnnotationRawDirectory
        |3 - Annotate with TFRF raw files in $manualAnnotationRawDirectory
        |4 - Annotate with WORD2VEC, raw files in $manualAnnotationRawDirectory
-       |5 - Generate Eval results by comparing $goldResultDirectory and $word2vecResultDirectory
-       |6 - Count of each method annotated in $publishedDataSet
+       |5 - Generate Eval results by comparing $goldResultDirectory and $baselineResultDirectory
+       |6 - Generate Eval results by comparing $goldResultDirectory and $tfrfResultDirectory
+       |7 - Generate Eval results by comparing $goldResultDirectory and $word2vecResultDirectory
+       |8 - Count of each method annotated in $publishedDataSet
      """.stripMargin
   )
 
@@ -36,11 +38,15 @@ object Main extends App {
         Word2vecAnnotatorConfig(oaWord2vecsDirectory, word2vecResultFileSuffix, 1, 1d, 0.5, word2vecAnnotatedSuffix)
       )
     case 5 ⇒
-      Evaluator.evaluate(goldResultDirectory, word2vecResultDirectory, xmlSuffix)
+      Evaluator.evaluate(goldResultDirectory, baselineResultDirectory, xmlSuffix)
     case 6 ⇒
+      Evaluator.evaluate(goldResultDirectory, tfrfResultDirectory, xmlSuffix)
+    case 7 ⇒
+      Evaluator.evaluate(goldResultDirectory, word2vecResultDirectory, xmlSuffix)
+    case 8 ⇒
       Evaluator.countOfMethods(publishedDataSet, xmlSuffix)
     case _ ⇒
-      Console.println("Please select the options from 1 to 6.")
+      Console.println("Please select the options from 1 to 8.")
       System.exit(0)
   }
 }

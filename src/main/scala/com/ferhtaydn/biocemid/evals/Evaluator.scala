@@ -81,6 +81,7 @@ object Evaluator {
       // manualAnnotations.nonEmpty && annotations.nonEmpty
       val consumedAnnotations = manualAnnotations.foldLeft(List.empty[BioCAnnotation]) {
         case (acc, manualAnnotation) ⇒
+          val manualAnnotationText = manualAnnotation.getText
           annotations.filter { annotation ⇒
             annotation.getInfon(psimi).equalsIgnoreCase(manualAnnotation.getInfon(psimi)) &&
               matchesLocations(manualAnnotation, annotation)
@@ -90,7 +91,24 @@ object Evaluator {
               acc
             case matchedAnnotations ⇒
               // big manual annotated text with multi small code annotated text.
-              matchedAnnotations.foreach(a ⇒ fileRate.incTP(calculateTP(manualAnnotation.getText, a.getText)))
+              val (matchingTextLength, annotationTextLength) = matchedAnnotations.foldLeft((0d, 0d)) {
+                case ((mtl, atl), annotation) ⇒
+                  val annotationText = annotation.getText
+                  val matchingText = getCommonText(manualAnnotationText, annotationText)
+                  (mtl + matchingText.length.toDouble, atl + annotationText.length.toDouble)
+              }
+
+              val unionLength = manualAnnotationText.length + annotationTextLength - matchingTextLength
+
+              // tpScore + fnScore + fpScore = 1.0
+              val tpScore = matchingTextLength / unionLength
+              val fpScore = (annotationTextLength - matchingTextLength) / unionLength
+              val fnScore = (manualAnnotationText.length - matchingTextLength) / unionLength
+
+              fileRate.incTP(tpScore)
+              fileRate.incFP(fpScore)
+              fileRate.incFN(fnScore)
+
               acc ++ matchedAnnotations
           }
       }
