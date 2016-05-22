@@ -1,3 +1,112 @@
+16513846.xml
+falseNegatives: 10.086208041158805
+falsePositives: 3.0
+trueNegatives: 24.0
+truePositives: 12.913791958841193
+
+16646632.xml
+falseNegatives: 2.7580400245240138
+falsePositives: 3.0
+trueNegatives: 56.0
+truePositives: 2.2419599754759867
+
+16732694.xml
+falseNegatives: 10.246413335110123
+falsePositives: 12.0
+trueNegatives: 48.0
+truePositives: 14.753586664889877
+
+16754960.xml
+falseNegatives: 10.291322258145607
+falsePositives: 7.0
+trueNegatives: 35.0
+truePositives: 6.708677741854392
+
+16756390.xml
+falseNegatives: 9.28797801000131
+falsePositives: 10.213973799126638
+trueNegatives: 56.0
+truePositives: 7.498048190872051
+
+16968134.xml
+falseNegatives: 3.6710526315789473
+falsePositives: 3.0
+trueNegatives: 58.0
+truePositives: 1.3289473684210527
+
+17112379.xml
+falseNegatives: 2.6414955928046453
+falsePositives: 7.0
+trueNegatives: 16.0
+truePositives: 5.358504407195354
+
+17177603.xml
+falseNegatives: 7.124768780965755
+falsePositives: 18.0
+trueNegatives: 46.0
+truePositives: 0.8752312190342454
+
+18188154.xml
+falseNegatives: 5.956733101193825
+falsePositives: 2.0
+trueNegatives: 22.0
+truePositives: 6.043266898806176
+
+18292755.xml
+falseNegatives: 4.562243478058547
+falsePositives: 12.0
+trueNegatives: 13.0
+truePositives: 13.437756521941454
+
+18309293.xml
+falseNegatives: 3.8597556515858313
+falsePositives: 1.0
+trueNegatives: 29.0
+truePositives: 1.1402443484141682
+
+18354501.xml
+falseNegatives: 6.2056183019187205
+falsePositives: 8.0
+trueNegatives: 23.0
+truePositives: 4.794381698081278
+
+18518979.xml
+falseNegatives: 6.0
+falsePositives: 0.0
+trueNegatives: 42.0
+truePositives: 1.0
+
+18547146.xml
+falseNegatives: 10.782945110737527
+falsePositives: 2.0
+trueNegatives: 49.0
+truePositives: 10.217054889262474
+
+18700817.xml
+falseNegatives: 1.5664845173041895
+falsePositives: 2.0
+trueNegatives: 68.0
+truePositives: 5.43351548269581
+
+18940607.xml
+falseNegatives: 10.869050908803434
+falsePositives: 5.542274052478135
+trueNegatives: 41.0
+truePositives: 9.588675038718431
+
+19131970.xml
+falseNegatives: 7.524555010424088
+falsePositives: 26.0
+trueNegatives: 10.0
+truePositives: 10.475444989575912
+
+TN -> 636.0, FN -> 113.43466475431535, TP -> 113.80908739407988, FP -> 121.75624785160477
+accuracy: 0.7612274998924669
+precision: 0.4831317276601068
+recall: 0.5008238348386362
+fscore: 0.49181872393604037
+
+----------------------------------OLD_RESULT---------------------------------------------------------
 TN -> 636.0, FN -> 69.0, TP -> 113.80908739407988, FP -> 121.0
 accuracy: 0.7978312802583815
 precision: 0.48468774636083056
