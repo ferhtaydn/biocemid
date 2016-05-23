@@ -20,6 +20,16 @@ config_1.1:
         recall: 0.5641903327061744
         fscore: 0.4590163896610587
 
+config_1.1.2:
+    - -2 +2 before after sentences
+    - threshold 1.0 and 0.5
+    - results:
+        TN -> 941.0, FN -> 178.68746420621682, TP -> 238.50483285992738, FP -> 394.8077029338558
+        accuracy: 0.672849305681647
+        precision: 0.37659894503902325
+        recall: 0.5716904040107753
+        fscore: 0.45407660279032575
+
 config_1.2:
 	- -1 +1 before after sentences
 	- threshold 0.90 and 0.5
@@ -41,6 +51,16 @@ config_1.2:
         precision: 0.37653308258486196
         recall: 0.5712008114508901
         fscore: 0.4538742439498839
+
+config_1.2.2:
+    - -2 +2 before after sentences
+    - threshold 0.9 and 0.5
+    - results:
+        TN -> 932.0, FN -> 176.01002551555382, TP -> 240.8717125443792, FP -> 416.11826194006704
+        accuracy: 0.6645165510166454
+        precision: 0.3666292057704476
+        recall: 0.5777938694684445
+        fscore: 0.4486042601376835
 
 -------
 
@@ -67,6 +87,17 @@ config_2.1:
         recall: 0.5633412551561681
         fscore: 0.4809278185696706
 
+config_2.1.2:
+    - -2 +2 before after sentences
+    - with dedupe word2vecs phrases
+    - threshold 1.0 and 0.5
+    - results:
+        TN -> 957.0, FN -> 179.05558687114348, TP -> 238.638825850854, FP -> 344.3055872780025
+        accuracy: 0.6955432378422652
+        precision: 0.40936806404919485
+        recall: 0.5713239597717183
+        fscore: 0.4769729490516958
+
 config_2.2:
 	- -1 +1 before after sentences
 	- with dedupe word2vecs phrases
@@ -89,3 +120,14 @@ config_2.2:
         precision: 0.4061044901707681
         recall: 0.5731254696358388
         fscore: 0.47537113079406007
+
+config_2.2.2:
+    - -2 +2 before after sentences
+    - with dedupe word2vecs phrases
+    - threshold 0.9 and 0.5
+    - results:
+        TN -> 947.0, FN -> 175.42118837390865, TP -> 241.9626653418776, FP -> 368.6161462842137
+        accuracy: 0.6860719361464961
+        precision: 0.39628408443700086
+        recall: 0.5797125671915423
+        fscore: 0.47076158210747115
