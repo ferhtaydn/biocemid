@@ -12,27 +12,41 @@ object Evaluator {
   def countOfMethods(dir: String, suffix: String): Unit = {
 
     val methodCountWithinPassages = mutable.Map.empty[String, Int].withDefaultValue(0)
+    val totalMethodCountWithinPassages = mutable.Map.empty[String, Int].withDefaultValue(0)
     val methodCountWithinArticles = mutable.Map.empty[String, Set[String]].withDefaultValue(Set.empty[String])
+    val textsOfMethods = mutable.Map.empty[String, List[String]].withDefaultValue(List.empty[String])
 
     list(dir, suffix).foreach { file ⇒
 
       getBioCPassages(file).foreach { passage ⇒
-        passage.getAnnotations.toList.groupBy(a ⇒ a.getInfon(psimi)).map(x ⇒ x._1 → x._2.size).foreach {
-          case (n, c) ⇒
-            methodCountWithinPassages.update(n, methodCountWithinPassages(n) + c)
-            methodCountWithinArticles.update(n, methodCountWithinArticles(n) + file.getName)
+        passage.getAnnotations.toList.groupBy(a ⇒ a.getInfon(psimi)).foreach {
+          case (id, c) ⇒
+            methodCountWithinPassages.update(id, methodCountWithinPassages(id) + 1)
+            methodCountWithinArticles.update(id, methodCountWithinArticles(id) + file.getName)
+            totalMethodCountWithinPassages.update(id, totalMethodCountWithinPassages(id) + c.length)
+            textsOfMethods.update(id, textsOfMethods(id) ++ c.map(_.getText))
         }
       }
     }
 
     methodIds.foreach { id ⇒
+
       Console.println(
         s"""
+           |---------------------------------------------
+           |
            |MI:$id
-           |In ${methodCountWithinArticles(id).size} articles: ${methodCountWithinArticles(id)}
-           |In ${methodCountWithinPassages(id)} passages
+           |In ${methodCountWithinArticles(id).size} article(s): ${methodCountWithinArticles(id)}
+           |In ${methodCountWithinPassages(id)} passage(s)
+           |Total: ${totalMethodCountWithinPassages(id)}
+           |Texts:
          """.stripMargin
       )
+
+      textsOfMethods(id).foreach { t ⇒
+        Console.println(t)
+        Console.println()
+      }
     }
   }
 
