@@ -28,9 +28,9 @@ object Main extends App {
     case 1 ⇒
       TfrfHelper.help()
     case 2 ⇒
-      annotators.annotate(manualAnnotationRawDirectory, BaselineAnnotatorConfig(1, 0.5, 0.25, baselineAnnotatedSuffix))
+      annotators.annotate(manualAnnotationRawDirectory, BaselineAnnotatorConfig(1, 1d, 0.5, baselineAnnotatedSuffix))
     case 3 ⇒
-      annotators.annotate(manualAnnotationRawDirectory, TfrfAnnotatorConfig(1, 0.5, 0.25, tfrfAnnotatedSuffix))
+      annotators.annotate(manualAnnotationRawDirectory, TfrfAnnotatorConfig(1, 1d, 0.5, tfrfAnnotatedSuffix))
     case 4 ⇒
       Word2vecHelper.help()
       annotators.annotate(

@@ -1,30 +1,22 @@
 package com.ferhtaydn.biocemid.annotators.word2vec
 
 import com.ferhtaydn.biocemid._
-import com.ferhtaydn.biocemid.annotators.{ Annotator, MethodWeight }
+import com.ferhtaydn.biocemid.annotators.{ Annotator, MethodInfo, MethodWeight }
 
-/**
- * This class is used for to look for the previous and next sentences of the annotated sentence.
- * This converter uses also the word2vecs of the methods.
- */
 class Word2vecAnnotator(val config: Word2vecAnnotatorConfig) extends Annotator {
 
-  override def calculateMethodWeights(words: List[String]): List[MethodWeight] = {
+  override def calculateWeight(sentenceTokens: List[String], info: MethodInfo): MethodWeight = {
 
-    methodsInfo.map {
-      case info ⇒
-        val word2vecs = getWord2vecs(info.id)
+    val word2vecs = getWord2vecs(info.id)
 
-        val synonymNgram = searchInSentence(words, info.nameAndSynonyms)
-        val matchingVectors = searchInSentence(words, word2vecs.map(_.phrase).toList)
-        val word2vecResults = word2vecs.filter { case Word2vecItem(p, s) ⇒ matchingVectors.contains(p) }
+    val synonymNgram = searchInSentence(sentenceTokens, info.nameAndSynonyms)
+    val matchingVectors = searchInSentence(sentenceTokens, word2vecs.map(_.phrase).toList)
+    val word2vecResults = word2vecs.filter { case Word2vecItem(p, s) ⇒ matchingVectors.contains(p) }
 
-        val n = if (synonymNgram.nonEmpty) 1d else 0d
-        val w = if (word2vecResults.nonEmpty) word2vecResults.map(_.score).sum else 0d
+    val n = 1d * synonymNgram.length
+    val w = word2vecResults.map(_.score).sum
 
-        MethodWeight(info.id, n + w)
-
-    }.filter(_.weight > 0.0).sortWith(_.weight > _.weight)
+    MethodWeight(info.id, n + w)
   }
 
   private[this] def getWord2vecs(id: String): Seq[Word2vecItem] = {
