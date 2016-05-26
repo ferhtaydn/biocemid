@@ -20,15 +20,22 @@ abstract class Annotator extends CopyConverter {
 
   def resetAnnotationId(): Unit = annotationId = 0
 
-  def calculateMethodWeights(words: List[String]): List[MethodWeight]
+  def calculateWeight(sentenceTokens: List[String], info: MethodInfo): MethodWeight
 
-  def searchInSentence(words: List[String], terms: List[String]): List[String] = {
+  def calculateMethodWeights(sentenceTokens: List[String]): List[MethodWeight] = {
+    methodsInfo.map {
+      case info ⇒
+        calculateWeight(sentenceTokens, info)
+    }.filter(_.weight > 0.0).sortWith(_.weight > _.weight)
+  }
+
+  def searchInSentence(sentenceTokens: List[String], terms: List[String]): List[String] = {
     terms.flatMap { s ⇒
       val size = split(s, spaceRegex).size
       if (size > 1) {
-        mkNgram(words, size).filter(_.equalsIgnoreCase(s))
+        mkNgram(sentenceTokens, size).filter(_.equalsIgnoreCase(s))
       } else {
-        words.filter(_.equalsIgnoreCase(s))
+        sentenceTokens.filter(_.equalsIgnoreCase(s))
       }
     }
   }
