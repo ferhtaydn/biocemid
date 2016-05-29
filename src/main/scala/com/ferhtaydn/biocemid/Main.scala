@@ -35,7 +35,7 @@ object Main extends App {
       Word2vecHelper.help()
       annotators.annotate(
         manualAnnotationRawDirectory,
-        Word2vecAnnotatorConfig(oaWord2vecsDirectory, word2vecResultFileSuffix, 1, 1d, 0.5, word2vecAnnotatedSuffix)
+        Word2vecAnnotatorConfig(oaWord2vecsDirectory, word2vecResultFileSuffix, 2, 1d, 0.5, word2vecAnnotatedSuffix)
       )
     case 5 ⇒
       Evaluator.evaluate(goldResultDirectory, baselineResultDirectory, xmlSuffix)

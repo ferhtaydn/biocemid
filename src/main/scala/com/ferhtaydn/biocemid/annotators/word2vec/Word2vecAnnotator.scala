@@ -9,14 +9,14 @@ class Word2vecAnnotator(val config: Word2vecAnnotatorConfig) extends Annotator {
 
     val word2vecs = getWord2vecs(info.id)
 
-    val synonymNgram = searchInSentence(sentenceTokens, info.nameAndSynonyms)
+    val synonymNgrams = searchInSentence(sentenceTokens, info.nameAndSynonyms)
     val matchingVectors = searchInSentence(sentenceTokens, word2vecs.map(_.phrase).toList)
     val word2vecResults = word2vecs.filter { case Word2vecItem(p, s) ⇒ matchingVectors.contains(p) }
 
-    val n = 1d * synonymNgram.length
+    val n = 1d * synonymNgrams.length
     val w = word2vecResults.map(_.score).sum
 
-    MethodWeight(info.id, n + w)
+    MethodWeight(info.id, n + w, synonymNgrams ++ word2vecResults.map(_.phrase))
   }
 
   private[this] def getWord2vecs(id: String): Seq[Word2vecItem] = {

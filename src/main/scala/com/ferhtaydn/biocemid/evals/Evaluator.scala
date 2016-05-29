@@ -68,7 +68,8 @@ object Evaluator {
         manuallyAnnotatedPassages.zip(annotatedPassages).foreach {
           case (manuallyAnnotatedPassage, annotatedPassage) ⇒
 
-            combineCoImmunoPrecipitations(manuallyAnnotatedPassage)
+            //TODO: take separate run results with that line.
+            //combineCoImmunoPrecipitations(manuallyAnnotatedPassage)
 
             val manualAnnotations = manuallyAnnotatedPassage.getAnnotations.toList
             val annotations = annotatedPassage.getAnnotations.toList

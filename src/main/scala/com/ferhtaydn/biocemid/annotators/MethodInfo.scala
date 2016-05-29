@@ -36,7 +36,7 @@ object MethodInfo {
 
 }
 
-case class MethodWeight(id: String, weight: Double)
+case class MethodWeight(id: String, weight: Double, terms: List[String] = Nil)
 
 object MethodWeight {
   private def toInfon(mw: MethodWeight): (String, String) = mw.id → mw.weight.toString
