@@ -111,6 +111,7 @@ package object biocemid {
   val word2vecResultDirectory = "files/results/word2vec/config_2_2_30_articles"
   val tfrfResultDirectory = "files/results/tfrf/manual/tfrf_30_articles"
   val baselineResultDirectory = "files/results/baseline/baseline_30_articles"
+  val pureBaselineResultDirectory = "files/results/pure-baseline/pure-baseline_30_articles"
 
   val manualAnnotationRawDirectory = "files/manual_annotation_raw_30"
 

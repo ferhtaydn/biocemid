@@ -38,7 +38,7 @@ object Main extends App {
         Word2vecAnnotatorConfig(oaWord2vecsDirectory, word2vecResultFileSuffix, 2, 1d, 0.5, word2vecAnnotatedSuffix)
       )
     case 5 ⇒
-      Evaluator.evaluate(goldResultDirectory, baselineResultDirectory, xmlSuffix)
+      Evaluator.evaluate(goldResultDirectory, pureBaselineResultDirectory, xmlSuffix)
     case 6 ⇒
       Evaluator.evaluate(goldResultDirectory, tfrfResultDirectory, xmlSuffix)
     case 7 ⇒
