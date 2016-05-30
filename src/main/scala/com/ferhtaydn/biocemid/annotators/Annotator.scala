@@ -29,6 +29,22 @@ abstract class Annotator extends CopyConverter {
     }.filter(_.weight > 0.0).sortWith(_.weight > _.weight)
   }
 
+  // "bacterial two-hybrid" vs "two-hybrid". calculateMethodWeights results should be filtered.
+  def filterShorterMethod(methodWeights: List[MethodWeight]): List[MethodWeight] = {
+
+    methodWeights.foldLeft(List.empty[MethodWeight]) {
+      case (acc, mw) ⇒
+        val accTerms = acc.flatMap(_.terms)
+        if (accTerms.exists(a ⇒ mw.terms.exists(b ⇒ a.contains(b)))) {
+          acc
+        } else if (accTerms.exists(a ⇒ mw.terms.exists(b ⇒ b.contains(a)))) {
+          mw :: acc.filterNot(a ⇒ mw.terms.exists(b ⇒ a.terms.exists(at ⇒ b.contains(at))))
+        } else {
+          mw :: acc
+        }
+    }
+  }
+
   def searchInSentence(sentenceTokens: List[String], terms: List[String]): List[String] = {
     terms.flatMap { s ⇒
       val size = split(s, spaceRegex).size
@@ -83,7 +99,7 @@ abstract class Annotator extends CopyConverter {
   }
 
   private def annotateSentence(sentence: BioCSentence): BioCSentence = {
-    setWeights(sentence, calculateMethodWeights(tokenize(sentence.getText)))
+    setWeights(sentence, filterShorterMethod(calculateMethodWeights(tokenize(sentence.getText))))
   }
 
   private def setWeights(sentence: BioCSentence, methodWeights: List[MethodWeight]): BioCSentence = {
@@ -91,7 +107,10 @@ abstract class Annotator extends CopyConverter {
     methodWeights.partition(_.weight >= config.mainThreshold) match {
       case (up, down) ⇒
         if (up.nonEmpty) {
-          up.groupBy(_.weight).toSeq.sortBy(_._1).reverse.head._2.foreach {
+          /*up.groupBy(_.weight).toSeq.sortBy(_._1).reverse.head._2.foreach {
+            case mw ⇒ sentence.addAnnotation(prepareAnnotation(sentence, mw.id))
+          }*/
+          up.foreach {
             case mw ⇒ sentence.addAnnotation(prepareAnnotation(sentence, mw.id))
           }
           sentence

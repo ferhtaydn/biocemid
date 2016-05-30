@@ -1,32 +1,32 @@
 16513846.xml
-falseNegatives: 8.691983468738744
-falsePositives: 25.350596859351352
+falseNegatives: 7.929531531442087
+falsePositives: 30.86880414226452
 trueNegatives: 18.0
-truePositives: 12.957419671909902
+truePositives: 14.201664326293393
 
 16646632.xml
-falseNegatives: 2.0566146620390304
-falsePositives: 49.54744538870393
+falseNegatives: 1.9174252173891029
+falsePositives: 53.170842824601365
 trueNegatives: 35.0
-truePositives: 2.395939949257039
+truePositives: 2.9117319580095304
 
 16732694.xml
-falseNegatives: 10.896874398383973
-falsePositives: 27.0
+falseNegatives: 7.788349344979238
+falsePositives: 33.434697855750485
 trueNegatives: 38.0
-truePositives: 14.10312560161603
+truePositives: 16.776952799270276
 
 16754960.xml
-falseNegatives: 7.899035416639946
-falsePositives: 94.41666666666666
+falseNegatives: 8.200277652664791
+falsePositives: 105.41666666666666
 trueNegatives: 9.0
-truePositives: 8.684297916693385
+truePositives: 8.38305568066854
 
 16756390.xml
-falseNegatives: 7.985413144253717
-falsePositives: 59.213973799126634
+falseNegatives: 8.201794894508444
+falsePositives: 66.21397379912663
 trueNegatives: 35.0
-truePositives: 8.800613056619646
+truePositives: 8.584231306364918
 
 16968134.xml
 falseNegatives: 3.6710526315789473
@@ -36,181 +36,72 @@ truePositives: 1.3289473684210527
 
 17112379.xml
 falseNegatives: 1.620381739792184
-falsePositives: 13.448087431693988
+falsePositives: 14.448087431693988
 trueNegatives: 12.0
 truePositives: 5.931530828513826
 
 17177603.xml
 falseNegatives: 7.124768780965755
-falsePositives: 80.0
+falsePositives: 94.0
 trueNegatives: 27.0
 truePositives: 0.8752312190342454
 
 18188154.xml
-falseNegatives: 5.485865134659432
-falsePositives: 11.536479184975425
+falseNegatives: 7.300796812749004
+falsePositives: 21.47108843537415
 trueNegatives: 17.0
-truePositives: 5.977655680365143
+truePositives: 4.228114751876847
 
 18292755.xml
-falseNegatives: 6.979037883103297
-falsePositives: 25.520162584685565
+falseNegatives: 3.4829339869994
+falsePositives: 24.97431105630129
 trueNegatives: 8.0
-truePositives: 9.50079953221114
+truePositives: 13.542754956699316
 
 18309293.xml
-falseNegatives: 2.6669133028254
-falsePositives: 21.432907447560872
+falseNegatives: 2.5842735881999546
+falsePositives: 23.432907447560872
 trueNegatives: 16.0
-truePositives: 1.9001792496137284
+truePositives: 1.9828189642391743
 
 18354501.xml
 falseNegatives: 5.255839368717626
-falsePositives: 40.48243414739839
+falsePositives: 47.48243414739839
 trueNegatives: 11.0
 truePositives: 5.261726483883977
 
 18518979.xml
 falseNegatives: 4.139383387967857
-falsePositives: 32.0
-trueNegatives: 26.0
-truePositives: 2.860616612032143
-
-18547146.xml
-falseNegatives: 10.090516317849126
-falsePositives: 39.0
-trueNegatives: 35.0
-truePositives: 10.909483682150876
-
-18700817.xml
-falseNegatives: 2.56827663199953
-falsePositives: 23.0
-trueNegatives: 55.0
-truePositives: 4.431723368000471
-
-18940607.xml
-falseNegatives: 9.692681174469374
-falsePositives: 68.0
-trueNegatives: 29.0
-truePositives: 11.307318825530626
-
-19131970.xml
-falseNegatives: 7.240222321836081
-falsePositives: 39.148911798396334
-trueNegatives: 8.0
-truePositives: 9.610865879767585
-
-TN -> 416.0, FN -> 104.06485976582002, TP -> 116.83747492562084, FP -> 685.097665308559
-accuracy: 0.40305406575311714
-precision: 0.14569441974010783
-recall: 0.5289100954447624
-fscore: 0.2284575561412962
-
-----------------------------------OLD_RESULT---------------------------------------------------------
-TN -> 416.0, FN -> 64.0, TP -> 117.10027405508413, FP -> 678.0
-accuracy: 0.4180849811597282
-precision: 0.14727736598286154
-recall: 0.6466046209265618
-fscore: 0.23991028130803482
-
-16513846.xml
-falseNegatives: 6.0
-falsePositives: 24.0
-trueNegatives: 18.0
-truePositives: 12.957419671909902
-
-16646632.xml
-falseNegatives: 0.0
-falsePositives: 49.0
-trueNegatives: 35.0
-truePositives: 2.4466295785343677
-
-16732694.xml
-falseNegatives: 6.0
-falsePositives: 27.0
-trueNegatives: 38.0
-truePositives: 14.10312560161603
-
-16754960.xml
-falseNegatives: 5.0
-falsePositives: 94.0
-trueNegatives: 9.0
-truePositives: 8.684297916693385
-
-16756390.xml
-falseNegatives: 5.0
-falsePositives: 59.0
-trueNegatives: 35.0
-truePositives: 8.800613056619644
-
-16968134.xml
-falseNegatives: 3.0
 falsePositives: 36.0
-trueNegatives: 37.0
-truePositives: 1.3289473684210527
-
-17112379.xml
-falseNegatives: 0.0
-falsePositives: 13.0
-trueNegatives: 12.0
-truePositives: 5.931530828513826
-
-17177603.xml
-falseNegatives: 5.0
-falsePositives: 80.0
-trueNegatives: 27.0
-truePositives: 0.8752312190342454
-
-18188154.xml
-falseNegatives: 4.0
-falsePositives: 11.0
-trueNegatives: 17.0
-truePositives: 5.997295222907506
-
-18292755.xml
-falseNegatives: 4.0
-falsePositives: 24.0
-trueNegatives: 8.0
-truePositives: 9.624447400161621
-
-18309293.xml
-falseNegatives: 1.0
-falsePositives: 21.0
-trueNegatives: 16.0
-truePositives: 1.96900133930684
-
-18354501.xml
-falseNegatives: 3.0
-falsePositives: 40.0
-trueNegatives: 11.0
-truePositives: 5.261726483883977
-
-18518979.xml
-falseNegatives: 3.0
-falsePositives: 32.0
 trueNegatives: 26.0
 truePositives: 2.860616612032143
 
 18547146.xml
-falseNegatives: 6.0
-falsePositives: 39.0
+falseNegatives: 10.039158551527855
+falsePositives: 48.0
 trueNegatives: 35.0
-truePositives: 10.909483682150876
+truePositives: 10.960841448472145
 
 18700817.xml
-falseNegatives: 2.0
-falsePositives: 23.0
+falseNegatives: 1.5664845173041895
+falsePositives: 24.0
 trueNegatives: 55.0
-truePositives: 4.43172336800047
+truePositives: 5.43351548269581
 
 18940607.xml
-falseNegatives: 8.0
-falsePositives: 68.0
+falseNegatives: 7.649193866937122
+falsePositives: 94.0
 trueNegatives: 29.0
-truePositives: 11.307318825530626
+truePositives: 13.350806133062877
 
 19131970.xml
-falseNegatives: 3.0
-falsePositives: 38.0
+falseNegatives: 8.24022232183608
+falsePositives: 42.68260730116697
 trueNegatives: 8.0
-truePositives: 9.610865879767585
+truePositives: 9.07717037699695
+
+TN -> 416.0, FN -> 96.71186819555963, TP -> 125.69171069653503, FP -> 795.5964211079053
+accuracy: 0.37774875222910387
+precision: 0.13643040256076513
+recall: 0.5651514751816017
+fscore: 0.21979998546983584

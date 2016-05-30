@@ -16,6 +16,6 @@ class TfrfAnnotator(val config: TfrfAnnotatorConfig) extends Annotator {
     val n = 1d * synonymNgrams.length
     val t = (0.5 * related.length) + (0.25 * extra.length)
 
-    MethodWeight(info.id, n + t)
+    MethodWeight(info.id, n + t, synonymNgrams)
   }
 }
