@@ -5,7 +5,7 @@ import com.ferhtaydn.biocemid.annotators.{ Annotator, MethodInfo, MethodWeight }
 class BaselineAnnotator(val config: BaselineAnnotatorConfig) extends Annotator {
 
   override def calculateWeight(sentenceTokens: List[String], info: MethodInfo): MethodWeight = {
-    val synonymNgrams = searchInSentence(sentenceTokens, info.nameAndSynonyms)
+    val synonymNgrams = searchInSentence(sentenceTokens, info.pureNameAndSynonyms)
     MethodWeight(info.id, 1d * synonymNgrams.length, synonymNgrams)
   }
 }

@@ -10,6 +10,7 @@ case class MethodInfo(id: String, name: String, ontologySynonyms: List[String], 
     relatedTerms: List[String], extraTerms: List[String], definition: String, isA: List[Hierarchy]) {
 
   val nameAndSynonyms: List[String] = name :: ontologySynonyms ++ addedSynonyms
+  val pureNameAndSynonyms: List[String] = name :: ontologySynonyms
 
   val nameAndSynonymsWithUnderscore = nameAndSynonyms.map(mkStringAfterSplit(_, spaceRegex, underscore))
 
