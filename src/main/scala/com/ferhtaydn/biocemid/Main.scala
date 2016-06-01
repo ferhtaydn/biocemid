@@ -17,10 +17,11 @@ object Main extends App {
        |2 - Annotate with BASELINE raw files in $manualAnnotationRawDirectory
        |3 - Annotate with TFRF raw files in $manualAnnotationRawDirectory
        |4 - Annotate with WORD2VEC, raw files in $manualAnnotationRawDirectory
-       |5 - Generate Eval results by comparing $goldResultDirectory and $baselineResultDirectory
-       |6 - Generate Eval results by comparing $goldResultDirectory and $tfrfResultDirectory
-       |7 - Generate Eval results by comparing $goldResultDirectory and $word2vecResultDirectory
-       |8 - Count of each method annotated in $publishedDataSet
+       |5 - Annotate with WORD2VEC + GENIATAGGER, raw files in $manualAnnotationRawDirectory
+       |6 - Generate Eval results by comparing $goldResultDirectory and $baselineResultDirectory
+       |7 - Generate Eval results by comparing $goldResultDirectory and $tfrfResultDirectory
+       |8 - Generate Eval results by comparing $goldResultDirectory and $word2vecResultDirectory
+       |9 - Count of each method annotated in $publishedDataSet
      """.stripMargin
   )
 
@@ -35,18 +36,26 @@ object Main extends App {
       Word2vecHelper.help()
       annotators.annotate(
         manualAnnotationRawDirectory,
-        Word2vecAnnotatorConfig(oaWord2vecsDirectory, word2vecResultFileSuffix, 2, 1d, 0.5, word2vecAnnotatedSuffix)
+        Word2vecAnnotatorConfig(oaWord2vecsDirectory, word2vecResultFileSuffix, 1, 1d, 0.5, word2vecAnnotatedSuffix)
       )
     case 5 ⇒
-      Evaluator.evaluate(goldResultDirectory, pureBaselineResultDirectory, xmlSuffix)
+      Word2vecHelper.help()
+      annotators.annotate(
+        manualAnnotationRawDirectory,
+        Word2vecAnnotatorConfig(oaWord2vecsDirectory, word2vecResultDedupeFileSuffix,
+          1, 1d, 0.5, word2vecAnnotatedSuffix,
+          useNamedEntity = true)
+      )
     case 6 ⇒
-      Evaluator.evaluate(goldResultDirectory, tfrfResultDirectory, xmlSuffix)
+      Evaluator.evaluate(goldResultDirectory, pureBaselineResultDirectory, xmlSuffix)
     case 7 ⇒
-      Evaluator.evaluate(goldResultDirectory, word2vecResultDirectory, xmlSuffix)
+      Evaluator.evaluate(goldResultDirectory, tfrfResultDirectory, xmlSuffix)
     case 8 ⇒
+      Evaluator.evaluate(goldResultDirectory, word2vecResultDirectory, xmlSuffix)
+    case 9 ⇒
       Evaluator.countOfMethods(publishedDataSet, xmlSuffix)
     case _ ⇒
-      Console.println("Please select the options from 1 to 8.")
+      Console.println("Please select the options from 1 to 9.")
       System.exit(0)
   }
 }

@@ -22,6 +22,7 @@ object Word2vecHelper {
 
     s"find $oaWord2vecsDirectory -type f -name *$word2vecResultDedupeFileSuffix" #| "xargs rm" !!
 
+    s"find $oaWord2vecsDirectory -type f -name *$word2vecResultRawFileSuffix" #| "xargs rm" !!
   }
 
   private def cleanPreviousAnnotatedFiles(): String = {
