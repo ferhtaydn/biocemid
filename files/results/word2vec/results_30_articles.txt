@@ -51,6 +51,62 @@ config_2.1:
         recall: 0.5369799787168001
         fscore: 0.4376719160678066
 
+        GENIA 1: containsDifferentProteinsInPassage (skipPassage)
+        TN -> 983.0, FN -> 200.3781701279636, TP -> 217.13928414140585, FP -> 350.4825457306305
+        accuracy: 0.685402218241808
+        precision: 0.3825421657767415
+        recall: 0.5200723512778325
+        fscore: 0.4408296118871206
+
+        GENIA 2: containsDifferentProteinsInOneOfTheSentences (skipPassage)
+        TN -> 994.0, FN -> 207.52832422136456, TP -> 209.9891300480049, FP -> 332.4825457306305
+        accuracy: 0.6903607397064249
+        precision: 0.387096947958799
+        recall: 0.502946949644233
+        fscore: 0.4374823078205152
+
+        GENIA 3: containsProteinInSentence (skipSentence)
+        TN -> 1003.0, FN -> 226.24337233489803, TP -> 193.21227761377017, FP -> 285.54435005133183
+        accuracy: 0.7003584763546663
+        precision: 0.4035709720741982
+        recall: 0.46062623697502925
+        fscore: 0.4302151783697865
+
+        GENIA 4: containsDifferentProteinsInSentence (skipSentence)
+        TN -> 1054.0, FN -> 287.1234437542082, TP -> 133.2185194222641, FP -> 194.6580368235277
+        accuracy: 0.7113352423141187
+        precision: 0.40630693742677104
+        recall: 0.31692890810983565
+        fscore: 0.3560952207521637
+
+        GENIA 5: containsDifferentProteinsInSentence (skipSentence) + containsDifferentProteinsInOneOfTheSentences (skipPassage)
+        TN -> 1054.0, FN -> 287.1234437542082, TP -> 133.2185194222641, FP -> 194.6580368235277
+        accuracy: 0.7113352423141187
+        precision: 0.40630693742677104
+        recall: 0.31692890810983565
+        fscore: 0.3560952207521637
+
+        GENIA 6: containsProteinInSentence (skipSentence) + containsDifferentProteinsInOneOfTheSentences (skipPassage)
+        TN -> 1020.0, FN -> 237.29347286366485, TP -> 182.1621770850033, FP -> 265.54435005133183
+        accuracy: 0.7050804557683304
+        precision: 0.40687853771122584
+        recall: 0.43428233022322105
+        fscore: 0.42013404619963474
+
+        GENIA 7: containsDifferentProteinsInSentence (skipSentence) + containsDifferentProteinsInPassage (skipPassage)
+        TN -> 1054.0, FN -> 287.1234437542082, TP -> 133.2185194222641, FP -> 194.6580368235277
+        accuracy: 0.7113352423141187
+        precision: 0.40630693742677104
+        recall: 0.31692890810983565
+        fscore: 0.3560952207521637
+
+        GENIA 8: containsProteinInSentence (skipSentence) + containsDifferentProteinsInPassage (skipPassage)
+        TN -> 1014.0, FN -> 232.51122030613584, TP -> 186.94442964253238, FP -> 273.54435005133183)
+        accuracy: 0.7035409663986716
+        precision: 0.40596956513644955
+        recall: 0.44568342246769144
+        fscore: 0.4249005354087564
+
 config_2.1.2:
     - -2 +2 before after sentences
     - with dedupe word2vecs phrases

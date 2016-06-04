@@ -4,8 +4,8 @@ import bioc.{ BioCAnnotation, BioCLocation, BioCPassage, BioCSentence }
 import bioc.util.CopyConverter
 
 import scala.collection.mutable
-
 import com.ferhtaydn.biocemid._
+import com.ferhtaydn.biocemid.tagger.GeniaTagger
 
 import scala.collection.JavaConversions._
 
@@ -17,6 +17,8 @@ abstract class Annotator extends CopyConverter {
   private var annotationId: Int = 0
 
   val config: AnnotatorConfig
+
+  val geniaTagger: Option[GeniaTagger] = if (config.useNamedEntity) Some(new GeniaTagger) else None
 
   def resetAnnotationId(): Unit = annotationId = 0
 
@@ -63,18 +65,30 @@ abstract class Annotator extends CopyConverter {
     out.setInfons(in.getInfons)
     out.setText(in.getText)
 
-    if (in.skip) {
-      out
-    } else {
+    if (!in.skip) {
 
-      val annotatedSentences = mutable.MutableList(splitPassageToSentences(in).map(annotateSentence)).flatten
+      if (!skipPassageSinceGeniaTagger(in)) {
 
-      out.setAnnotations(
-        concatSuccessiveSameAnnotations(
-          annotatePreviousAndNextSentences(annotatedSentences).flatMap(_.getAnnotations).toList
+        val annotatedSentences = mutable.MutableList(splitPassageToSentences(in).map(annotateSentence)).flatten
+
+        out.setAnnotations(
+          concatSuccessiveSameAnnotations(
+            annotatePreviousAndNextSentences(annotatedSentences).flatMap(_.getAnnotations).toList
+          )
         )
-      )
-      out
+      }
+    }
+    out
+  }
+
+  //TODO: do not forget to change for different configs.
+  private def skipPassageSinceGeniaTagger(bioCPassage: BioCPassage): Boolean = {
+    geniaTagger match {
+      case Some(gt) ⇒
+        val passageTokens = mkSentences(bioCPassage.getText).map(s ⇒ tokenizeForGeniaTagger(s))
+        !gt.containsDifferentProteinsInPassage(passageTokens)
+      //!gt.containsDifferentProteinsInOneOfTheSentences(passageTokens)
+      case None ⇒ false
     }
   }
 
@@ -102,16 +116,29 @@ abstract class Annotator extends CopyConverter {
     setWeights(sentence, filterShorterMethod(calculateMethodWeights(tokenize(sentence.getText))))
   }
 
+  //TODO: do not forget to change for different configs.
+  private def skipSentenceSinceGeniaTagger(bioCSentence: BioCSentence): Boolean = {
+    geniaTagger match {
+      case Some(gt) ⇒
+        val sentenceTokens = tokenizeForGeniaTagger(bioCSentence.getText)
+        !gt.containsProteinInSentence(sentenceTokens)
+      //!gt.containsDifferentProteinsInSentence(sentenceTokens)
+      case None ⇒ false
+    }
+  }
+
   private def setWeights(sentence: BioCSentence, methodWeights: List[MethodWeight]): BioCSentence = {
 
     methodWeights.partition(_.weight >= config.mainThreshold) match {
       case (up, down) ⇒
         if (up.nonEmpty) {
-          /*up.groupBy(_.weight).toSeq.sortBy(_._1).reverse.head._2.foreach {
-            case mw ⇒ sentence.addAnnotation(prepareAnnotation(sentence, mw.id))
-          }*/
-          up.foreach {
-            case mw ⇒ sentence.addAnnotation(prepareAnnotation(sentence, mw.id))
+          if (!skipSentenceSinceGeniaTagger(sentence)) {
+            /*up.groupBy(_.weight).toSeq.sortBy(_._1).reverse.head._2.foreach {
+              case mw ⇒ sentence.addAnnotation(prepareAnnotation(sentence, mw.id))
+            }*/
+            up.foreach {
+              case mw ⇒ sentence.addAnnotation(prepareAnnotation(sentence, mw.id))
+            }
           }
           sentence
         } else {

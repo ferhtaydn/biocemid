@@ -83,6 +83,12 @@ package object biocemid {
     }
   }
 
+  def tokenizeForGeniaTagger(sentence: String): Seq[String] = {
+    val annotation = new Annotation(sentence)
+    initTokenization.annotate(annotation)
+    annotation.get(classOf[TokensAnnotation]).map(_.value)
+  }
+
   implicit class StringUtils(val s: String) extends AnyVal {
     def isFloat: Boolean = s.matches("[+-]?\\d+.?\\d+")
     def isDigit: Boolean = s.matches("[+-]?\\d+")
@@ -108,7 +114,7 @@ package object biocemid {
   val goldResultDirectory = "files/gold_set_30"
   val publishedDataSet = "files/published_dataset"
 
-  val word2vecResultDirectory = "files/results/word2vec/config_2_2_30_articles"
+  val word2vecResultDirectory = "files/results/word2vec/config_2_1_30_articles_genia_2"
   val tfrfResultDirectory = "files/results/tfrf/manual/tfrf_30_articles"
   val baselineResultDirectory = "files/results/baseline/baseline_30_articles"
   val pureBaselineResultDirectory = "files/results/pure-baseline/pure-baseline_30_articles"
