@@ -18,13 +18,13 @@ abstract class Annotator extends CopyConverter {
 
   val config: AnnotatorConfig
 
-  val geniaTagger: Option[GeniaTagger] = if (config.useNamedEntity) Some(new GeniaTagger) else None
+  private val geniaTagger: Option[GeniaTagger] = if (config.useNamedEntity) Some(new GeniaTagger) else None
 
   def resetAnnotationId(): Unit = annotationId = 0
 
   def calculateWeight(sentenceTokens: List[String], info: MethodInfo): MethodWeight
 
-  def calculateMethodWeights(sentenceTokens: List[String]): List[MethodWeight] = {
+  private def calculateMethodWeights(sentenceTokens: List[String]): List[MethodWeight] = {
     methodsInfo.map {
       case info ⇒
         calculateWeight(sentenceTokens, info)
@@ -32,7 +32,7 @@ abstract class Annotator extends CopyConverter {
   }
 
   // "bacterial two-hybrid" vs "two-hybrid". calculateMethodWeights results should be filtered.
-  def filterShorterMethod(methodWeights: List[MethodWeight]): List[MethodWeight] = {
+  private def filterShorterMethod(methodWeights: List[MethodWeight]): List[MethodWeight] = {
 
     methodWeights.foldLeft(List.empty[MethodWeight]) {
       case (acc, mw) ⇒

@@ -7,7 +7,8 @@ class TfrfAnnotator(val config: TfrfAnnotatorConfig) extends Annotator {
 
   override def calculateWeight(sentenceTokens: List[String], info: MethodInfo): MethodWeight = {
 
-    val synonymNgrams = searchInSentence(sentenceTokens, info.nameAndSynonyms)
+    val terms = if (config.pureBaseline) info.pureNameAndSynonyms else info.nameAndSynonyms
+    val synonymNgrams = searchInSentence(sentenceTokens, terms)
 
     val foundWords = synonymNgrams.flatMap(split(_, spaceRegex))
     val related = sentenceTokens.distinct.diff(foundWords).flatMap(w ⇒ info.relatedTerms.filter(_.equalsIgnoreCase(w)))

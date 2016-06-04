@@ -6,4 +6,5 @@ abstract class AnnotatorConfig {
   val smallThreshold: Double
   val outputFileSuffix: String
   val useNamedEntity: Boolean
+  val pureBaseline: Boolean
 }

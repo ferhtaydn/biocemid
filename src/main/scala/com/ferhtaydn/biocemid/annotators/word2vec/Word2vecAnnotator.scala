@@ -7,9 +7,10 @@ class Word2vecAnnotator(val config: Word2vecAnnotatorConfig) extends Annotator {
 
   override def calculateWeight(sentenceTokens: List[String], info: MethodInfo): MethodWeight = {
 
-    val word2vecs = getWord2vecs(info.id)
+    val terms = if (config.pureBaseline) info.pureNameAndSynonyms else info.nameAndSynonyms
+    val synonymNgrams = searchInSentence(sentenceTokens, terms)
 
-    val synonymNgrams = searchInSentence(sentenceTokens, info.nameAndSynonyms)
+    val word2vecs = getWord2vecs(info.id)
     val matchingVectors = searchInSentence(sentenceTokens, word2vecs.map(_.phrase).toList)
     val word2vecResults = word2vecs.filter { case Word2vecItem(p, s) ⇒ matchingVectors.contains(p) }
 
