@@ -7,11 +7,11 @@ import com.ferhtaydn.biocemid._
 //noinspection ScalaStyle
 object Word2vecHelper {
 
-  def help(): Unit = {
+  def help(config: Word2vecAnnotatorConfig): Unit = {
     cleanPreviousResultFiles()
     cleanPreviousAnnotatedFiles()
     generateRawWord2vecResultFiles()
-    generateWord2vecResultFiles()
+    generateWord2vecResultFiles(config.pureBaseline)
     //generateRawLatexTableContext("0018")
     //generateDedupeLatexTableContext("0018")
   }
@@ -80,8 +80,9 @@ object Word2vecHelper {
 
   private def generateRawLatexTableContext(methodId: String): Unit = {
 
-    val rawFileName = s"$methodId-result_raw.txt"
-    val fileName = s"$methodId-result.txt"
+    val rawFileName = s"$methodId-$word2vecResultRawFileSuffix"
+    val fileName = s"$methodId-$word2vecResultFileSuffix"
+
     val raw = read(s"$oaWord2vecsDirectory/$methodId/$rawFileName").map { line ⇒
       Word2vecItem.underscoredPhrases(line)
     }
@@ -112,8 +113,8 @@ object Word2vecHelper {
 
   private def generateDedupeLatexTableContext(methodId: String): Unit = {
 
-    val dedupeFileName = s"$methodId-result_dedupe.txt"
-    val fileName = s"$methodId-result.txt"
+    val dedupeFileName = s"$methodId-$word2vecResultDedupeFileSuffix"
+    val fileName = s"$methodId-$word2vecResultFileSuffix"
 
     val dedupe = read(s"$oaWord2vecsDirectory/$methodId/$dedupeFileName").map { line ⇒
       Word2vecItem.underscoredPhrases(line)
@@ -143,9 +144,12 @@ object Word2vecHelper {
     }
   }
 
-  private def generateWord2vecResultFiles(): Unit = {
+  private def generateWord2vecResultFiles(pureBaseline: Boolean): Unit = {
 
-    lazy val methodsNames: Map[String, List[String]] = methodsInfo.map(m ⇒ m.id → m.nameAndSynonymsWithUnderscore).toMap
+    lazy val methodsNames: Map[String, List[String]] = methodsInfo.map { m ⇒
+      val names = if (pureBaseline) m.pureNameAndSynonymsWithUnderscore else m.nameAndSynonymsWithUnderscore
+      m.id → names
+    }.toMap
 
     lazy val methodWord2vecItems: Map[String, Seq[Word2vecItem]] = methodIds.map { methodId ⇒
       list(s"$oaWord2vecsDirectory/$methodId", txtSuffix) match {
