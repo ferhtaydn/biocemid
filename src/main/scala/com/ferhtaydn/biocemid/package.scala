@@ -18,11 +18,17 @@ package object biocemid {
 
   val psimi: String = "PSIMI"
 
-  lazy val methodsInfo = {
+  lazy val methodsInfo: List[MethodInfo] = {
     ConfigFactory.load("methods.conf").getConfigList("psimi.methods").map(MethodInfo(_)).toList
   }
 
-  lazy val methodIds = methodsInfo.map(_.id)
+  lazy val inoTerms: Seq[String] = {
+    read("files/ino/literature_mining_keywords_protein.txt")
+      .filterNot(line ⇒ line.contains(":") || line.isEmpty)
+      .flatMap(line ⇒ split(line, commaRegex))
+  }
+
+  lazy val methodIds: List[String] = methodsInfo.map(_.id)
 
   // ...regex to split, normals to mkString
   val period: String = "."
@@ -39,9 +45,9 @@ package object biocemid {
   val underscore: String = "_"
   val underscoreRegex: String = "\\_"
 
-  def split(s: String, regex: String): List[String] = s.split(regex).toList
+  def split(s: String, regex: String): List[String] = s.split(regex).map(_.trim).toList
 
-  def mkStringAfterSplit(s: String, regex: String, sep: String): String = s.split(regex).mkString(sep)
+  def mkStringAfterSplit(s: String, regex: String, sep: String): String = split(s, regex).mkString(sep)
 
   def extractFileName(fileName: String, suffix: String): String = split(fileName, suffix).head
 
@@ -114,7 +120,7 @@ package object biocemid {
   val goldResultDirectory = "files/gold_set_30"
   val publishedDataSet = "files/published_dataset"
 
-  val word2vecResultDirectory = "files/results/word2vec/config_2_1_30_articles_genia_2"
+  val word2vecResultDirectory = "files/results/word2vec/config_2_1_30_articles_ino"
   val tfrfResultDirectory = "files/results/tfrf/manual/tfrf_30_articles"
   val baselineResultDirectory = "files/results/baseline/baseline_30_articles"
   val pureBaselineResultDirectory = "files/results/pure-baseline/pure-baseline_30_articles"

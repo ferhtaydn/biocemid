@@ -7,4 +7,5 @@ abstract class AnnotatorConfig {
   val outputFileSuffix: String
   val useNamedEntity: Boolean
   val pureBaseline: Boolean
+  val useINO: Boolean
 }

@@ -1,0 +1,287 @@
+phosphorylation:
+phosphoryates, phosphorylate, phosphorylated, phosphorylates, phosphorylating, phosphorylation, phosphorylations, phosphorylated
+
+protein myristoylation:
+myristoylate, myristoylated, myristoylates, myristoylating, myristoylation
+
+interaction:
+interact, interacted, interacting, interaction, interaction, interactor, interactors, interacts, participates, plays a role, contribute, contributed, contributes, contributing, engagement, engagements, engages, engaging, involve, involved, involves, involving, act, acted, acting, acts
+
+up-regulation:
+up-regulate, up-regulations, up-regulated, up-regulating,  upregulate, upregulations, upregulated, upregulating
+
+up-regulation of secretion:
+up-regulate, up-regulations, up-regulated, up-regulating,  upregulate, upregulations, upregulated, upregulating
+
+activation:
+activate, activated, activates, activating, activation, activator, activators, activity
+
+protein activation:
+protein activation, protein activated, activates protein, activating protein, activated protein
+
+antagonism:
+antagonise, antagonised, antagonises, antagonising, antagonist, antagonists, antagonize, antagonized, antagonizes, antagonizing
+
+autophosphorylation:
+autophosphorylate, autophosphorylated, autophosphorylates, autophosphorylating, autophosphorylation
+
+negative regulation of protein translation:
+negatively regulated // translation, negatively regulates // translation, limits // production, limited // production
+
+protein translation:
+translation, translated, translating, encoding, encodes, protein production
+
+coimmunoprecipitation:
+coimmunoprecipitate, coimmunoprecipitated, coimmunoprecipitates, coimmunoprecipitating, coimmunoprecipitation, coimmunopreticipate, coimmunopreticipated, coimmunopreticipates, coimmunopreticipating, co-immunoprecipitate, co-immunoprecipitated, co-immunoprecipitates, co-immunoprecipitating, co-immunoprecipitation, co-immunopreticipate, co-immunopreticipated, co-immunopreticipates, co-immunopreticipating
+
+competition:
+compete, competed, competes, competing
+
+positive regulation of protein translation:
+positively regulated // translation, positively regulates // translation, increases // production, increased // production, increasing // production, increasing // production
+
+regulation of protein activity:
+regulated // activity, regulates // activity, essential // activity, controlled // activity, controls // activity, activity under control, essential for // activity
+
+controling:
+control, controled, controling, controlled, controlling, controls
+
+conversion:
+conversion, convert, converted, converting, converts, derived, derives, derivation
+
+cooperation:
+cooperate, cooperated, cooperates, cooperating
+
+coprecipitation:
+coprecipitate, coprecipitated, coprecipitates, coprecipitating, coprecipitation, copreticipate, copreticipated, copreticipates, copreticipating, co-precipitate, co-precipitated, co-precipitates, co-precipitating, co-precipitation, co-preticipate, co-preticipated, co-preticipates, co-preticipating
+
+correlation:
+correlate, correlated, correlating
+
+costimulation:
+costimulate, costimulated, costimulating
+
+cross-immunoprecipitation interaction:
+cross-immunoprecipitate, cross-immunoprecipitated, cross-immunoprecipitates, cross-immunoprecipitating, cross-immunoprecipitation, crossimmunoprecipitate, crossimmunoprecipitated, crossimmunoprecipitates, crossimmunoprecipitating, crossimmunoprecipitation
+
+negative regulation of protein activity:
+negatively regulated // activity, negatively regulates // activity
+
+negative regulation:
+down-regulate, down-regulations, down-regulated, down-regulating,  downregulate, downregulations, downregulated, downregulating
+
+inhibition of protein activity:
+inhibited // activity, inhibites // activity, inhibition // activity
+
+decrease:
+decrease, decreased, decreases, decreasing, decreasing, reduce, reduced, reduces, reducing, diminish, diminished, diminishes, diminishing, declining, declines, declination,   limit, limited, limiting, limits
+
+biochemical degradation:
+degradation, degradations, degrade, degraded, degrades, degrading
+
+destabilization:
+destabilization, destabilize, destabilized, destabilizes, destabilizing
+
+dominant regulation:
+determine, determined, determines, determining, cause, caused, causes, causing,  lead, leading, leads, led, govern, governed, governing, governs
+
+protein dimerization:
+dimerize, dimerized, dimerizes, dimerizing
+
+co-regulation:
+co-regulation, co-regulated, co-regulate, co-regulating
+
+disruption:
+disrupt, disrupted, disrupting, disrupts
+
+dissociation:
+dissociate, dissociated, dissociating, dissociation
+
+down-regulation:
+down-regulate, down-regulated, down-regulates, down-regulating, down-regulation, downregulate, downregulated, downregulates, downregulating, downregulation, downmodulation, depress, depressed, depresses, depressing, suppress, suppressed, suppresses, suppressing, suppression, suppressor,  repress, repressed, represses, repressing, repression, repressor, repressors
+
+induction of production:
+induction of the production, induces the production, induced the production
+
+elimination:
+eliminate, eliminated, eliminates, eliminating, abolish, abolished, abolishes, abolishing, abrogation
+
+accessory regulation:
+facilitate, facilitates, facilitating, faciliteted, help, helps, helped
+
+protein heterodimerization:
+heterodimerize, heterodimerized, heterodimerizes, heterodimerizing
+
+protein homodimerization:
+homodimerize, homodimerized, homodimerizes, homodimerizing
+
+hyperphosphorylation:
+hyperphosphorylate, hyperphosphorylated, hyperphosphorylates, hyperphosphorylation
+
+immuno-precipitation:
+immuno-precipitate, immuno-precipitated, immuno-precipitates, immuno-precipitating, immuno-precipitation, immunoprecipitate, immunoprecipitated, immunoprecipitates, immunoprecipitating, immunoprecipitation, immunopreticipate, immunopreticipated, immunopreticipates, immunopreticipating
+
+positive regulation:
+positively regulate, positive regulations, positively regulated, positively regulating,  promote, promoted, promotes, promoting
+
+impairment:
+impair, impaired, impairing, impairs, cripple, crippled, cripples, crippling, sever, severed, severs
+
+inactivation:
+inactivate, inactivated, inactivates, inactivating, inactivation
+
+increase:
+increase, increased, increases, increasing, augment, augmented, augmenting, augments, elavating, elevate, elevated, elevates, elevating, raise, raised, raises, raising,  enhance, enhanced, enhances, enhancing, enhancement
+
+induction:
+induce, induced, induces, inducing, induction,  trigger, triggered, triggering, triggerring, triggers, initiate, initiated, initiates, initiating, stimulate, stimulation, stimulated, stimulating
+
+inhibition:
+inhibit, inhibited, inhibiting, inhibition, inhibitor, inhibitors, inhibits, block, blocked, blocking, blocks
+
+interference:
+interfere, interferes, interfered, interfering, perturb, perturbed, perturbing, perturbs, obstruction
+
+neutralization:
+neutralise, neutralised, neutralises, neutralising, neutralize, neutralized, neutralizes, neutralizing
+
+precedence:
+precede, preceded, precedes, preceding
+
+prevention:
+prevent, prevented, preventing, prevents
+
+recruitment:
+recruit, recruite, recruited, recruites, recruiting, recruits
+
+regulation:
+regulate, regulated, regulates, regulating, regulation, regulator, modulate, modulated, modulates, modulating, modulation, mediate, mediated, mediates, mediating, influence, influenced, influences, influencing, affect, affected, affecting, affects, impact, impacted, impacting, impacts, effect, effected, effecting, effects, require, required, requires, requiring, respond, responded, responding, responds, responsive, change, changed, changes, changing, alter, altered, altering, alters, modified, modifies, modify, modifying, depend, depended, depending, depends, direct, directed, directing, directs, drive, driven, drives, driving, cause, caused, causes, causing,  lead, leading, leads, led, target, targeted, targeting, targets, dependent, essential for
+
+stabilization:
+stabilization, stabilize, stabilized, stabilizes, stabilizing
+
+synergization:
+synergise, synergised, synergises, synergising, synergize, synergized, synergizes, synergizing
+
+termination:
+terminate, terminated, terminates, terminating
+
+translocation:
+translocation, transloated, translocating, translocates, migrated, migration, migrates migrating, mobilization, mobilize, mobilized, mobilizes, mobilizing, mobilisation, mobilise, mobilised, mobilises, mobilising
+
+tyrosine-phosphorylation:
+tyrosine-phosphorylated
+
+acetylation reaction:
+acetylatable, acetylate, acetylated, acetylates, acetylating, acetylation, acetylations, acetylator
+
+amidation reaction:
+amidate, amidated, amidates, amidating, amidation
+
+cleavage reaction:
+cleavable, cleavage, cleavages, cleave, cleaved, cleaves, clove, breakdown, deconjugate, deconjugated, deconjugates, deconjugating, deconjugation, deconjugations
+
+covalent binding:
+covalent binding, covalently bound, covalently binds, conjugate, conjugated, conjugates, conjugating, conjugation, conjugations
+
+deacetylation reaction:
+deacetylate, deacetylated, deacetylates, deacetylating, deacetylation
+
+defarnesylation reaction:
+defarnesylation
+
+deformylation reaction:
+deformylate, deformylated, deformylates, deformylating, deformylation
+
+degeranylation reaction:
+degeranylation
+
+demyristoylation reaction:
+demyristoylation
+
+depalmitoylation reaction:
+depalmitoylation
+
+dephosphorylation reaction:
+dephosphorylate, dephosphorylated, dephosphorylates, dephosphorylating, dephosphorylation, dephosphorylations
+
+deubiquitination reaction:
+deubiquitinate, deubiquitinated, deubiquitinates, deubiquitinating, deubiquitination
+
+farnesylation reaction:
+farnesylate, farnesylated, farnesylates, farnesylating, farnesylation
+
+formylation reaction:
+formylate, formylated, formylates, formylating, formylation
+
+geranylgeranylation reaction:
+geranylgeranylate, geranylgeranylated, geranylgeranylates, geranylgeranylating, geranylgeranylation
+
+hydroxylation reaction:
+hydroxylate, hydroxylated, hydroxylates, hydroxylating, hydroxylation
+
+lipid cleavage reaction:
+lipid // cleavage, lipid // cleaved
+
+methylation reaction:
+methylate, methylated, methylates, methylating, methylation
+
+palmitoylation reaction:
+palmitoylate, palmitoylated, palmitoylates, palmitoylating, palmitoylation
+
+ubiquitination reaction:
+ubiquitin, ubiquitinate, ubiquitinated, ubiquitinates, ubiquitinating, ubiquitination, ubiquitinylation, ubiquitylated, ubiquitylates, ubiquitylation
+
+colocalization:
+colocalisation, colocalise, colocalised, colocalization, colocalize, colocalized, co-localisation, co-localise, co-localised, co-localization, co-localize, co-localized
+
+direct interaction:
+bind, binding, binds, bound,  attach, attached, attaches, attachment, adhere, adhered, adheres, adhering, link, linked, linking, links, crosslink, crosslinkage, crosslinkages, crosslinked, crosslinking, crosslinks, crosstalk, crosstalked, crosstalking, cross-link, cross-linkage, cross-linkages, cross-linked, cross-linking, cross-links, ligand, ligands, ligate, ligated, ligates, ligating, ligation
+
+adp ribosylation reaction:
+ribosylate, ribosylated, ribosylates, ribosylating, ribosylation
+
+glycosylation reaction:
+glucosylate, glucosylated, glucosylates, glucosylating, glucosylation, glucosylations, glycosylate, glycosylated, glycosylates, glycosylating, glycosylation, glycosylations
+
+sumoylation reaction:
+sumoylate, sumoylated, sumoylates, sumoylating, sumoylation
+
+neddylation reaction:
+neddylate, neddylated, neddylates, neddylating, neddylation
+
+desumoylation reaction:
+desumoylate, desumoylated, desumoylates, desumoylating, desumoylation
+
+deneddylation reaction:
+deneddylate, deneddylated, deneddylates, deneddylating, deneddylation
+
+protein cleavage:
+protein cleavage, (protein) // cleaved, (protein) // cleavage
+
+phosphotransfer reaction:
+phosphotransfer, phosphotransfered, phosphotransfering, phosphotransfers
+
+demethylation reaction:
+demethylate, demethylated, demethylates, demethylating, demethylation
+
+association:
+associate, associated, associates, associating, association, associations, accompanied, accompanies, accompany, accompanying
+
+diphtamidation reaction:
+diphthamidation
+
+carboxylation reaction:
+carboxylases, carboxylate, carboxylated, carboxylates, carboxylating, carboxylation
+
+decarboxylation reaction:
+decarboxylate, decarboxylated, decarboxylates, decarboxylating, decarboxylmethylate, decarboxylmethylated, decarboxylmethylates, decarboxylmethylating, decarboxylmethylation
+
+aminoacylation reaction:
+aminoacylation
+
+ampylation reaction:
+ampylation
+
+de-ADP-ribosylation reaction:
+de-ADP-ribosylation

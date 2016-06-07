@@ -18,10 +18,11 @@ object Main extends App {
        |3 - Annotate with TFRF raw files in $manualAnnotationRawDirectory
        |4 - Annotate with WORD2VEC, raw files in $manualAnnotationRawDirectory
        |5 - Annotate with WORD2VEC + GENIATAGGER, raw files in $manualAnnotationRawDirectory
-       |6 - Generate Eval results by comparing $goldResultDirectory and $baselineResultDirectory
-       |7 - Generate Eval results by comparing $goldResultDirectory and $tfrfResultDirectory
-       |8 - Generate Eval results by comparing $goldResultDirectory and $word2vecResultDirectory
-       |9 - Count of each method annotated in $publishedDataSet
+       |6 - Annotate with WORD2VEC + GENIATAGGER + INO, raw files in $manualAnnotationRawDirectory
+       |7 - Generate Eval results by comparing $goldResultDirectory and $baselineResultDirectory
+       |8 - Generate Eval results by comparing $goldResultDirectory and $tfrfResultDirectory
+       |9 - Generate Eval results by comparing $goldResultDirectory and $word2vecResultDirectory
+       |10 - Count of each method annotated in $publishedDataSet
      """.stripMargin
   )
 
@@ -45,12 +46,17 @@ object Main extends App {
       Word2vecHelper.help(config)
       annotators.annotate(manualAnnotationRawDirectory, config)
     case 6 ⇒
-      Evaluator.evaluate(goldResultDirectory, pureBaselineResultDirectory, xmlSuffix)
+      val config = Word2vecAnnotatorConfig(oaWord2vecsDirectory, word2vecResultDedupeFileSuffix, 1, 1d, 0.5,
+        word2vecAnnotatedSuffix, useNamedEntity = false, useINO = true)
+      Word2vecHelper.help(config)
+      annotators.annotate(manualAnnotationRawDirectory, config)
     case 7 ⇒
-      Evaluator.evaluate(goldResultDirectory, tfrfResultDirectory, xmlSuffix)
+      Evaluator.evaluate(goldResultDirectory, pureBaselineResultDirectory, xmlSuffix)
     case 8 ⇒
-      Evaluator.evaluate(goldResultDirectory, word2vecResultDirectory, xmlSuffix)
+      Evaluator.evaluate(goldResultDirectory, tfrfResultDirectory, xmlSuffix)
     case 9 ⇒
+      Evaluator.evaluate(goldResultDirectory, word2vecResultDirectory, xmlSuffix)
+    case 10 ⇒
       Evaluator.countOfMethods(publishedDataSet, xmlSuffix)
     case _ ⇒
       Console.println("Please select the options from 1 to 9.")

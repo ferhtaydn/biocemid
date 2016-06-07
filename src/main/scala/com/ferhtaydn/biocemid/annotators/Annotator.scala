@@ -67,29 +67,36 @@ abstract class Annotator extends CopyConverter {
 
     if (!in.skip) {
 
-      if (!skipPassageSinceGeniaTagger(in)) {
+      if (usePassageSinceGeniaTagger(in.getText)) {
 
-        val annotatedSentences = mutable.MutableList(splitPassageToSentences(in).map(annotateSentence)).flatten
+        if (usePassageSinceINO(in.getText)) {
 
-        out.setAnnotations(
-          concatSuccessiveSameAnnotations(
-            annotatePreviousAndNextSentences(annotatedSentences).flatMap(_.getAnnotations).toList
+          val annotatedSentences = mutable.MutableList(splitPassageToSentences(in).map(annotateSentence)).flatten
+
+          out.setAnnotations(
+            concatSuccessiveSameAnnotations(
+              annotatePreviousAndNextSentences(annotatedSentences).flatMap(_.getAnnotations).toList
+            )
           )
-        )
+        }
       }
     }
     out
   }
 
-  //TODO: do not forget to change for different configs.
-  private def skipPassageSinceGeniaTagger(bioCPassage: BioCPassage): Boolean = {
+  //TODO: do not forget to change commented parts for different configs.
+  private def usePassageSinceGeniaTagger(passage: String): Boolean = {
     geniaTagger match {
       case Some(gt) ⇒
-        val passageTokens = mkSentences(bioCPassage.getText).map(s ⇒ tokenizeForGeniaTagger(s))
-        !gt.containsDifferentProteinsInPassage(passageTokens)
-      //!gt.containsDifferentProteinsInOneOfTheSentences(passageTokens)
-      case None ⇒ false
+        val passageTokens = mkSentences(passage).map(s ⇒ tokenizeForGeniaTagger(s))
+        gt.containsDifferentProteinsInPassage(passageTokens)
+      //gt.containsDifferentProteinsInOneOfTheSentences(passageTokens)
+      case None ⇒ true
     }
+  }
+
+  private def usePassageSinceINO(passage: String): Boolean = {
+    if (config.useINO) inoTerms.exists(t ⇒ passage.contains(t)) else true
   }
 
   private def splitPassageToSentences(bioCPassage: BioCPassage): Seq[BioCSentence] = {
@@ -116,14 +123,14 @@ abstract class Annotator extends CopyConverter {
     setWeights(sentence, filterShorterMethod(calculateMethodWeights(tokenize(sentence.getText))))
   }
 
-  //TODO: do not forget to change for different configs.
-  private def skipSentenceSinceGeniaTagger(bioCSentence: BioCSentence): Boolean = {
+  //TODO: do not forget to change commented parts for different configs.
+  private def useSentenceSinceGeniaTagger(sentence: String): Boolean = {
     geniaTagger match {
       case Some(gt) ⇒
-        val sentenceTokens = tokenizeForGeniaTagger(bioCSentence.getText)
-        !gt.containsProteinInSentence(sentenceTokens)
-      //!gt.containsDifferentProteinsInSentence(sentenceTokens)
-      case None ⇒ false
+        val sentenceTokens = tokenizeForGeniaTagger(sentence)
+        //gt.containsProteinInSentence(sentenceTokens)
+        gt.containsDifferentProteinsInSentence(sentenceTokens)
+      case None ⇒ true
     }
   }
 
@@ -132,7 +139,7 @@ abstract class Annotator extends CopyConverter {
     methodWeights.partition(_.weight >= config.mainThreshold) match {
       case (up, down) ⇒
         if (up.nonEmpty) {
-          if (!skipSentenceSinceGeniaTagger(sentence)) {
+          if (useSentenceSinceGeniaTagger(sentence.getText)) {
             /*up.groupBy(_.weight).toSeq.sortBy(_._1).reverse.head._2.foreach {
               case mw ⇒ sentence.addAnnotation(prepareAnnotation(sentence, mw.id))
             }*/
