@@ -13,7 +13,7 @@ import scala.collection.JavaConversions._
 
 package object annotators {
 
-  def annotate(dir: String, annotatorConfig: AnnotatorConfig): Unit = {
+  def annotate(annotatorConfig: AnnotatorConfig): Unit = {
 
     val annotator = annotatorConfig match {
       case baselineConfigs: BaselineAnnotatorConfig ⇒ new BaselineAnnotator(baselineConfigs)
@@ -21,15 +21,15 @@ package object annotators {
       case word2vecConfigs: Word2vecAnnotatorConfig ⇒ new Word2vecAnnotator(word2vecConfigs)
     }
 
-    annotate(dir, annotator)
+    annotate(annotator)
   }
 
-  private def annotate(dir: String, annotator: Annotator): Unit = {
+  private def annotate(annotator: Annotator): Unit = {
 
-    list(dir, xmlSuffix).foreach { file ⇒
+    list(annotator.config.rawDirectory, xmlSuffix).foreach { file ⇒
 
       val fileName = extractFileName(file.getName, xmlSuffix)
-      val out = s"$dir/${fileName}_${annotator.config.outputFileSuffix}"
+      val out = s"${annotator.config.rawDirectory}/${fileName}_${annotator.config.outputFileSuffix}"
 
       val factory: BioCFactory = BioCFactory.newFactory(BioCFactory.WOODSTOX)
       val reader: BioCDocumentReader = factory.createBioCDocumentReader(new FileReader(file))

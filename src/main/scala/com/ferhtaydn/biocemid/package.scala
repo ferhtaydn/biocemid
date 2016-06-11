@@ -126,14 +126,15 @@ package object biocemid {
   val goldResultDirectory = "files/gold_set_30"
   val publishedDataSet = "files/published_dataset"
 
-  val word2vecResultDirectory = "files/results/word2vec/config_2_1_30_articles_ino"
-  val tfrfResultDirectory = "files/results/tfrf/manual/tfrf_30_articles"
+  val word2vecResultDirectory = "files/results/word2vec/pure-baseline/config_2_1_30_articles"
+  val tfrfResultDirectory = "files/results/tfrf/pure-baseline/manual/config_1_30_articles_genia_8_ino"
   val baselineResultDirectory = "files/results/baseline/baseline_30_articles"
   val pureBaselineResultDirectory = "files/results/pure-baseline/pure-baseline_30_articles"
 
-  val manualAnnotationRawDirectory = "files/manual_annotation_raw_30"
+  val rawDirectory = "files/manual_annotation_raw_30"
 
   val oaWord2vecsDirectory = "files/oa_word2vecs"
+  val oaWord2vecsPureBaselineDirectory = "files/oa_word2vecs_pure_baseline"
 
   val xmlSuffix = ".xml"
   val txtSuffix = ".txt"

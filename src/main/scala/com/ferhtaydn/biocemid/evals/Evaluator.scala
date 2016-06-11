@@ -90,8 +90,10 @@ object Evaluator {
       fileRate.incTN(1)
     } else if (manualAnnotations.isEmpty && annotations.nonEmpty) {
       fileRate.incFP(annotations.length)
+      //append("files/FP_annotations.txt", annotations.map(x ⇒ x.getInfon(psimi) + newline + x.getText + newline).mkString(newline))
     } else if (manualAnnotations.nonEmpty && annotations.isEmpty) {
       fileRate.incFN(manualAnnotations.length)
+      //append("files/FN_annotations.txt", manualAnnotations.map(x ⇒ x.getInfon(psimi) + newline + x.getText + newline).mkString(newline))
     } else {
       // manualAnnotations.nonEmpty && annotations.nonEmpty
       val consumedAnnotations = manualAnnotations.foldLeft(List.empty[BioCAnnotation]) {
@@ -103,6 +105,7 @@ object Evaluator {
           } match {
             case Nil ⇒
               fileRate.incFN(1)
+              //append("files/FN_annotations.txt", manualAnnotation.getInfon(psimi) + newline + manualAnnotation.getText + newline)
               acc
             case matchedAnnotations ⇒
               // big manual annotated text with multi small code annotated text.
@@ -129,6 +132,7 @@ object Evaluator {
       }
 
       fileRate.incFP((annotations diff consumedAnnotations).length)
+      //append("files/FP_annotations.txt", (annotations diff consumedAnnotations).map(x ⇒ x.getInfon(psimi) + newline + x.getText + newline).mkString(newline))
 
     }
   }

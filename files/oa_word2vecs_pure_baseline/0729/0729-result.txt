@@ -1,0 +1,12 @@
+lumier_assay,0.742805
+fragment_complementation,0.625445
+bifluorescence_complementation,0.620618
+lumier_assays,0.618575
+ap-ms_experiments,0.60901
+lrrk2_roc-cor_tandem,0.602039
+interactome_mapping,0.600273
+hcips,0.596892
+gcsam,0.58891
+rluc-pca,0.587626
+candidate_interactors,0.587609
+comppass,0.582229

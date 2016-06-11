@@ -1,0 +1,43 @@
+config_1.1:
+	- -1 +1 before after sentences
+	- threshold 1.0 and 0.5
+	- results:
+		TN -> 387.0, FN -> 104.84677502790653, TP -> 88.59055577986202, FP -> 162.56266919223148
+        accuracy: 0.6400949606727618
+        precision: 0.3527350914554477
+        recall: 0.4579806566287885
+        fscore: 0.3985264852262288
+
+config_1.2:
+	- -1 +1 before after sentences
+	- threshold 0.90 and 0.5
+	- results:
+		TN -> 382.0, FN -> 104.84677502790653, TP -> 88.59055577986202, FP -> 174.56266919223145
+        accuracy: 0.6274540743731494
+        precision: 0.33665008585494915
+        recall: 0.4579806566287885
+        fscore: 0.38805251076009806
+
+-------
+
+config_2.1:
+	- -1 +1 before after sentences
+	- with dedupe word2vecs phrases
+	- threshold 1.0 and 0.5
+	- results:
+        TN -> 392.0, FN -> 104.92566050215886, TP -> 88.73081924177988, FP -> 144.34352025606125
+        accuracy: 0.658535368824356
+        precision: 0.3806975037790539
+        recall: 0.45818667859244233
+        fscore: 0.4158631870059809
+
+config_2.2:
+	- -1 +1 before after sentences
+	- with dedupe word2vecs phrases
+	- threshold 0.90 and 0.5
+	- results:
+		TN -> 387.0, FN -> 104.43390181786536, TP -> 89.22257792607338, FP -> 157.34352025606125
+        accuracy: 0.6452880459702891
+        precision: 0.36186068800166526
+        recall: 0.4607260136301531
+        fscore: 0.40535212140371657
