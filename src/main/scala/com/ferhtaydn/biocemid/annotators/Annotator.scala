@@ -140,12 +140,7 @@ abstract class Annotator extends CopyConverter {
       case (up, down) ⇒
         if (up.nonEmpty) {
           if (useSentenceSinceGeniaTagger(sentence.getText)) {
-            /*up.groupBy(_.weight).toSeq.sortBy(_._1).reverse.head._2.foreach {
-              case mw ⇒ sentence.addAnnotation(prepareAnnotation(sentence, mw.id))
-            }*/
-            up.foreach {
-              case mw ⇒ sentence.addAnnotation(prepareAnnotation(sentence, mw.id))
-            }
+            up.foreach(mw ⇒ sentence.addAnnotation(prepareAnnotation(sentence, mw.id)))
           }
           sentence
         } else {
@@ -165,11 +160,14 @@ abstract class Annotator extends CopyConverter {
         if (sentence.getAnnotations.nonEmpty && sentence.getInfons.isEmpty) {
 
           ((index - config.beforeAfterCount) to (index + config.beforeAfterCount)).foreach { i ⇒
-            annotatedSentences.get(i).fold() { sent ⇒
-              if (sent.getAnnotations.isEmpty && sent.getInfons.nonEmpty) {
-                annotateInfon(sentence, sent) match {
-                  case Some(annotation) ⇒ sent.addAnnotation(annotation); annotatedSentences.update(i, sent);
-                  case None             ⇒ // do nothing
+            annotatedSentences.get(i).fold() { auxSentence ⇒
+              if (auxSentence.getAnnotations.isEmpty && auxSentence.getInfons.nonEmpty) {
+                sentence.getAnnotations.foreach { sentenceAnnotation ⇒
+                  val sentenceAnnotationId = sentenceAnnotation.getInfon(psimi)
+                  annotateAuxSentence(sentenceAnnotationId, auxSentence) match {
+                    case Some(annotation) ⇒ auxSentence.addAnnotation(annotation); annotatedSentences.update(i, auxSentence);
+                    case None             ⇒ // do nothing
+                  }
                 }
               }
             }
@@ -181,15 +179,11 @@ abstract class Annotator extends CopyConverter {
 
   }
 
-  private def annotateInfon(sentence: BioCSentence, targetSentence: BioCSentence): Option[BioCAnnotation] = {
-
-    val sentenceAnnotation = sentence.getAnnotations.head.getInfon(psimi)
-
+  private def annotateAuxSentence(mainSentenceAnnotationId: String, auxSentence: BioCSentence): Option[BioCAnnotation] = {
     import MethodWeight.fromInfons
-    val targetSentenceInfon: List[MethodWeight] = targetSentence.getInfons.toMap
-
-    targetSentenceInfon.find(mw ⇒ mw.id.equals(sentenceAnnotation) && mw.weight >= config.smallThreshold).map { mw ⇒
-      prepareAnnotation(targetSentence, mw.id)
+    val auxSentenceInfons: List[MethodWeight] = auxSentence.getInfons.toMap
+    auxSentenceInfons.find(mw ⇒ mw.id.equals(mainSentenceAnnotationId) && mw.weight >= config.smallThreshold).map { mw ⇒
+      prepareAnnotation(auxSentence, mw.id)
     }
   }
 
@@ -240,12 +234,11 @@ abstract class Annotator extends CopyConverter {
       case Nil                   ⇒ acc
       case x :: xs if xs.isEmpty ⇒ go(xs, acc :+ x)
       case x :: xs ⇒
-        val y = xs.head
-        if (successive(x, y)) {
-          val newAnnot = concatAnnotations(x, y)
-          go(newAnnot :: xs.tail, acc)
-        } else {
-          go(xs, acc :+ x)
+        xs.find(y ⇒ successive(x, y)) match {
+          case Some(a) ⇒
+            val newAnnot = concatAnnotations(x, a)
+            go(newAnnot :: xs.filterNot(_ == a), acc)
+          case None ⇒ go(xs, acc :+ x)
         }
     }
 
