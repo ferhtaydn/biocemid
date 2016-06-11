@@ -59,7 +59,7 @@ package object biocemid {
 
   def mkSentence(text: String): String = mkStringAfterSplit(text, periodSpaceRegex, periodNewline)
 
-  def mkSentences(text: String): List[String] = split(text, periodSpaceRegex) match {
+  def mkSentences(text: String): List[String] = text.split(periodSpaceRegex).toList match {
     case Nil                         ⇒ Nil
     case lst @ x :: xs if xs.isEmpty ⇒ lst
     case lst @ x :: xs ⇒

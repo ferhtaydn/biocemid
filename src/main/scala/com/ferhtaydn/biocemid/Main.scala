@@ -59,7 +59,7 @@ object Main extends App {
     case 10 ⇒
       Evaluator.countOfMethods(publishedDataSet, xmlSuffix)
     case _ ⇒
-      Console.println("Please select the options from 1 to 9.")
+      Console.println("Please select the options from 1 to 10.")
       System.exit(0)
   }
 }
