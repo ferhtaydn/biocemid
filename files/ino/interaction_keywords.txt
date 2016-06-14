@@ -1,0 +1,5 @@
+interaction:
+interact, interacted, interacting, interaction, interaction, interactor, interactors, interacts, participates, plays a role, contribute, contributed, contributes, contributing, engagement, engagements, engages, engaging, involve, involved, involves, involving, act, acted, acting, acts
+
+direct interaction:
+bind, binding, binds, bound,  attach, attached, attaches, attachment, adhere, adhered, adheres, adhering, link, linked, linking, links, crosslink, crosslinkage, crosslinkages, crosslinked, crosslinking, crosslinks, crosstalk, crosstalked, crosstalking, cross-link, cross-linkage, cross-linkages, cross-linked, cross-linking, cross-links, ligand, ligands, ligate, ligated, ligates, ligating, ligation

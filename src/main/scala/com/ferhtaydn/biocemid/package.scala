@@ -23,7 +23,7 @@ package object biocemid {
   }
 
   lazy val inoTerms: Seq[String] = {
-    read("files/ino/literature_mining_keywords_protein.txt")
+    read("files/ino/literature_mining_keywords_related_to_proteins.txt")
       .filterNot(line ⇒ line.contains(":") || line.isEmpty)
       .flatMap(line ⇒ split(line, commaRegex))
   }
