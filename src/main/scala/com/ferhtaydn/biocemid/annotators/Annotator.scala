@@ -84,13 +84,11 @@ abstract class Annotator extends CopyConverter {
     out
   }
 
-  //TODO: do not forget to change commented parts for different configs.
   private def usePassageSinceGeniaTagger(passage: String): Boolean = {
     geniaTagger match {
       case Some(gt) ⇒
         val passageTokens = mkSentences(passage).map(s ⇒ tokenizeForGeniaTagger(s))
         gt.containsDifferentProteinsInPassage(passageTokens)
-      //gt.containsDifferentProteinsInOneOfTheSentences(passageTokens)
       case None ⇒ true
     }
   }
@@ -123,25 +121,12 @@ abstract class Annotator extends CopyConverter {
     setWeights(sentence, filterShorterMethod(calculateMethodWeights(tokenize(sentence.getText))))
   }
 
-  //TODO: do not forget to change commented parts for different configs.
-  private def useSentenceSinceGeniaTagger(sentence: String): Boolean = {
-    geniaTagger match {
-      case Some(gt) ⇒
-        val sentenceTokens = tokenizeForGeniaTagger(sentence)
-        //gt.containsProteinInSentence(sentenceTokens)
-        gt.containsDifferentProteinsInSentence(sentenceTokens)
-      case None ⇒ true
-    }
-  }
-
   private def setWeights(sentence: BioCSentence, methodWeights: List[MethodWeight]): BioCSentence = {
 
     methodWeights.partition(_.weight >= config.mainThreshold) match {
       case (up, down) ⇒
         if (up.nonEmpty) {
-          if (useSentenceSinceGeniaTagger(sentence.getText)) {
-            up.foreach(mw ⇒ sentence.addAnnotation(prepareAnnotation(sentence, mw.id)))
-          }
+          up.foreach(mw ⇒ sentence.addAnnotation(prepareAnnotation(sentence, mw.id)))
           sentence
         } else {
           import MethodWeight.toInfons

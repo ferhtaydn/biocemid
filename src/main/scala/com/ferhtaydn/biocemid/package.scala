@@ -28,6 +28,12 @@ package object biocemid {
       .flatMap(line ⇒ split(line, commaRegex))
   }
 
+  lazy val inoInteractionTerms: Seq[String] = {
+    read("files/ino/interaction_keywords.txt")
+      .filterNot(line ⇒ line.contains(":") || line.isEmpty)
+      .flatMap(line ⇒ split(line, commaRegex))
+  }
+
   lazy val methodIds: List[String] = methodsInfo.map(_.id)
 
   // ...regex to split, normals to mkString
