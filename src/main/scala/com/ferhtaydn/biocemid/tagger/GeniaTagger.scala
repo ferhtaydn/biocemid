@@ -12,18 +12,6 @@ class GeniaTagger extends GeniaTaggerWrapper {
     tag(sentenceTokens).map(_.tokenNamedEntity)
   }
 
-  def containsProteinInSentence(sentenceTokens: Seq[String], moreThan: Int = 0): Boolean = {
-    tagNer(sentenceTokens).count {
-      case TokenNamedEntity(token, namedEntity) ⇒ namedEntity.equals("B-protein")
-    } > moreThan
-  }
-
-  def containsDifferentProteinsInSentence(sentenceTokens: Seq[String], moreThan: Int = 1): Boolean = {
-    tagNer(sentenceTokens).filter {
-      case TokenNamedEntity(token, namedEntity) ⇒ namedEntity.equals("B-protein")
-    }.groupBy(_.token).size > moreThan
-  }
-
   def containsDifferentProteinsInPassage(passageTokens: Seq[Seq[String]], moreThan: Int = 1): Boolean = {
     passageTokens.flatMap {
       case sentenceTokens ⇒
@@ -31,15 +19,6 @@ class GeniaTagger extends GeniaTaggerWrapper {
           case TokenNamedEntity(token, namedEntity) ⇒ namedEntity.equals("B-protein")
         }
     }.groupBy(_.token).size > moreThan
-  }
-
-  def containsDifferentProteinsInOneOfTheSentences(passageTokens: Seq[Seq[String]], moreThan: Int = 1): Boolean = {
-    passageTokens.exists {
-      case sentenceTokens ⇒
-        tagNer(sentenceTokens).filter {
-          case TokenNamedEntity(token, namedEntity) ⇒ namedEntity.equals("B-protein")
-        }.groupBy(_.token).size > moreThan
-    }
   }
 
 }
