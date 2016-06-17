@@ -1,0 +1,16 @@
+config.1: (MAIN CONFIG)
+    - -1 +1 before after sentences
+	- threshold 1.0 and 0.5
+	- results:
+	    TN -> 564.0, FN -> 166.03216914190116, TP -> 226.06649067199373, FP -> 1953.901340186105
+        accuracy: 0.2715005122584171
+        precision: 0.10370175535251241
+        recall: 0.5765551220687507
+        fscore: 0.17578588383454286
+
+        GENIA1: containsDifferentProteinsInPassage (moreThan 1)
+        TN -> 604.0, FN -> 171.7745933843254, TP -> 220.3240664295695, FP -> 1879.901340186105)
+        accuracy: 0.2866217198990158
+        precision: 0.104904961979582
+        recall: 0.5619097666238997
+        fscore: 0.1768021016185101

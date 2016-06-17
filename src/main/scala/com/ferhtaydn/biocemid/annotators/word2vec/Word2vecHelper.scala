@@ -8,26 +8,26 @@ import com.ferhtaydn.biocemid._
 object Word2vecHelper {
 
   def help(config: Word2vecAnnotatorConfig): Unit = {
-    cleanPreviousResultFiles()
-    cleanPreviousAnnotatedFiles()
-    generateRawWord2vecResultFiles()
-    generateWord2vecResultFiles(config.pureBaseline)
+    cleanPreviousResultFiles(config)
+    cleanPreviousAnnotatedFiles(config)
+    generateRawWord2vecResultFiles(config)
+    generateWord2vecResultFiles(config)
     //generateRawLatexTableContext("0018")
     //generateDedupeLatexTableContext("0018")
   }
 
-  private def cleanPreviousResultFiles(): String = {
+  private def cleanPreviousResultFiles(config: Word2vecAnnotatorConfig): String = {
     import scala.sys.process._
-    s"find $oaWord2vecsDirectory -type f -name *$word2vecResultFileSuffix" #| "xargs rm" !!
+    s"find ${config.w2vDir} -type f -name *$word2vecResultFileSuffix" #| "xargs rm" !!
 
-    s"find $oaWord2vecsDirectory -type f -name *$word2vecResultDedupeFileSuffix" #| "xargs rm" !!
+    s"find ${config.w2vDir} -type f -name *$word2vecResultDedupeFileSuffix" #| "xargs rm" !!
 
-    s"find $oaWord2vecsDirectory -type f -name *$word2vecResultRawFileSuffix" #| "xargs rm" !!
+    s"find ${config.w2vDir} -type f -name *$word2vecResultRawFileSuffix" #| "xargs rm" !!
   }
 
-  private def cleanPreviousAnnotatedFiles(): String = {
+  private def cleanPreviousAnnotatedFiles(config: Word2vecAnnotatorConfig): String = {
     import scala.sys.process._
-    s"find $manualAnnotationRawDirectory -type f -name *$word2vecAnnotatedSuffix" #| "xargs rm" !!
+    s"find ${config.rawDirectory} -type f -name *${config.outputFileSuffix}" #| "xargs rm" !!
   }
 
   private def dedupe(elements: Seq[Word2vecItem], acc: Seq[Word2vecItem]): Seq[Word2vecItem] = elements match {
@@ -45,7 +45,7 @@ object Word2vecHelper {
       }
   }
 
-  private def generateRawWord2vecResultFiles(): Unit = {
+  private def generateRawWord2vecResultFiles(config: Word2vecAnnotatorConfig): Unit = {
 
     def combineRawWord2vecs(methodId: String, files: List[File]): Seq[Word2vecItem] = {
       val map = scala.collection.mutable.Map.empty[String, Double].withDefaultValue(0d)
@@ -63,7 +63,7 @@ object Word2vecHelper {
     }
 
     lazy val rawMethodWord2vecItems: Map[String, Seq[Word2vecItem]] = methodIds.map { methodId ⇒
-      list(s"$oaWord2vecsDirectory/$methodId", txtSuffix) match {
+      list(s"${config.w2vDir}/$methodId", txtSuffix) match {
         case Nil   ⇒ methodId → Seq.empty[Word2vecItem]
         case files ⇒ methodId → combineRawWord2vecs(methodId, files)
       }
@@ -72,7 +72,7 @@ object Word2vecHelper {
     rawMethodWord2vecItems.foreach {
       case (methodId, items) ⇒
         write(
-          s"$oaWord2vecsDirectory/$methodId/$methodId-$word2vecResultRawFileSuffix",
+          s"${config.w2vDir}/$methodId/$methodId-$word2vecResultRawFileSuffix",
           Word2vecItem.stringifyItems(items)
         )
     }
@@ -144,15 +144,15 @@ object Word2vecHelper {
     }
   }
 
-  private def generateWord2vecResultFiles(pureBaseline: Boolean): Unit = {
+  private def generateWord2vecResultFiles(config: Word2vecAnnotatorConfig): Unit = {
 
     lazy val methodsNames: Map[String, List[String]] = methodsInfo.map { m ⇒
-      val names = if (pureBaseline) m.pureNameAndSynonymsWithUnderscore else m.nameAndSynonymsWithUnderscore
+      val names = if (config.pureBaseline) m.pureNameAndSynonymsWithUnderscore else m.nameAndSynonymsWithUnderscore
       m.id → names
     }.toMap
 
     lazy val methodWord2vecItems: Map[String, Seq[Word2vecItem]] = methodIds.map { methodId ⇒
-      list(s"$oaWord2vecsDirectory/$methodId", txtSuffix) match {
+      list(s"${config.w2vDir}/$methodId", txtSuffix) match {
         case Nil   ⇒ methodId → Seq.empty[Word2vecItem]
         case files ⇒ methodId → combineWord2vecs(methodId, files)
       }
@@ -206,11 +206,11 @@ object Word2vecHelper {
         val results: Seq[Word2vecItem] = cleanWord2vecResults(methodId, items)
 
         write(
-          s"$oaWord2vecsDirectory/$methodId/$methodId-$word2vecResultFileSuffix",
+          s"${config.w2vDir}/$methodId/$methodId-$word2vecResultFileSuffix",
           Word2vecItem.stringifyItems(results)
         )
         write(
-          s"$oaWord2vecsDirectory/$methodId/$methodId-$word2vecResultDedupeFileSuffix",
+          s"${config.w2vDir}/$methodId/$methodId-$word2vecResultDedupeFileSuffix",
           Word2vecItem.stringifyItems(dedupe(results, Seq.empty[Word2vecItem]))
         )
     }

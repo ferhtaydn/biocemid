@@ -1,6 +1,7 @@
 package com.ferhtaydn.biocemid.annotators
 
 abstract class AnnotatorConfig {
+  val rawDirectory: String
   val beforeAfterCount: Int
   val mainThreshold: Double
   val smallThreshold: Double
