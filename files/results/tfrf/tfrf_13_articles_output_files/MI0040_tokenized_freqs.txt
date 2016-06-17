@@ -29,6 +29,7 @@ primary,2.0
 v/v,2.0
 room,2.0
 control,2.0
+under,2.0
 specimens,2.0
 rinsed,2.0
 diluted,2.0
@@ -37,6 +38,7 @@ times,2.0
 h.,2.0
 nm,2.0
 electron,2.0
+each,2.0
 secondary,2.0
 fig.,2.0
 temperature,2.0
@@ -80,6 +82,7 @@ lr,1.0
 significant,1.0
 boxed,1.0
 fixed,1.0
+from,1.0
 ultracut,1.0
 fish,1.0
 ph,1.0
@@ -100,6 +103,7 @@ water,1.0
 2-week-old,1.0
 ethanol,1.0
 sigma,1.0
+out,1.0
 ch,1.0
 citrate,1.0
 dsred,1.0

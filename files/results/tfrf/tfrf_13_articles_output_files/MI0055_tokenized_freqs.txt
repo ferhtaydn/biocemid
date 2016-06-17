@@ -9,6 +9,7 @@ dsred,7.0
 acbp4,5.0
 atebp,5.0
 using,5.0
+between,4.0
 figure,4.0
 fluorescence,4.0
 plant,4.0
@@ -17,6 +18,7 @@ photobleaching,3.0
 occurred,3.0
 4c,3.0
 nucleus,3.0
+from,3.0
 bp,3.0
 detected,3.0
 also,3.0
@@ -55,6 +57,7 @@ interaction,2.0
 channel,2.0
 expressing,2.0
 panel,2.0
+only,1.0
 signal,1.0
 physical,1.0
 acceptor,1.0
@@ -81,6 +84,7 @@ bent,1.0
 colocalize,1.0
 agrobacterium,1.0
 suc2,1.0
+both,1.0
 detection,1.0
 al.,1.0
 separate,1.0

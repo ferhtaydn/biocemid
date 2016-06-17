@@ -22,9 +22,11 @@ find
 general
 ph
 domain
+more
 conserved
 bar
 domain
+most
 highly
 conserved
 positions
@@ -107,6 +109,7 @@ determined
 crystal
 structure
 indicated
+above
 aligned
 sequences
 solid
@@ -128,6 +131,7 @@ represent
 residues
 involved
 interactions
+between
 domain
 unique
 domain
@@ -165,6 +169,7 @@ however
 substantial
 structural
 flexibility
+between
 two
 structural
 blocks
@@ -255,6 +260,7 @@ conserved
 cys103
 his122
 respectively
+both
 zinc
 ions
 interact

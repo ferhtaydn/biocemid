@@ -19,6 +19,7 @@ cell,6.0
 immunoprecipitated,6.0
 atebp,6.0
 experiments,6.0
+between,5.0
 region,5.0
 sirt3,5.0
 protein,5.0
@@ -38,12 +39,15 @@ brca1,4.0
 uxt,4.0
 amino,4.0
 co-immunoprecipitated,4.0
+against,3.0
 mrn,3.0
 performed,3.0
 1b,3.0
 whole,3.0
+both,3.0
 al.,3.0
 anti-gal4,3.0
+from,3.0
 expression,3.0
 293t,3.0
 deletion,3.0
@@ -55,6 +59,7 @@ adf3,3.0
 binding,3.0
 fusion,3.0
 mutants,3.0
+only,2.0
 observed,2.0
 mutant,2.0
 made,2.0
@@ -176,6 +181,7 @@ chen,1.0
 target,1.0
 myc-crel,1.0
 control,1.0
+under,1.0
 repeated,1.0
 kb,1.0
 kidney,1.0
@@ -254,6 +260,7 @@ cytoplasmic,1.0
 laubinger,1.0
 resulted,1.0
 following,1.0
+each,1.0
 nuclear,1.0
 indicate,1.0
 mediated,1.0

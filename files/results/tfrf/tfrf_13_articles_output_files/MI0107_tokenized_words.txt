@@ -1,5 +1,6 @@
 binding
 affinity
+between
 full-length
 rab5-q79l
 appl1
@@ -30,6 +31,7 @@ rab5
 appl1
 interaction
 measured
+from
 experiment
 kon
 koff
@@ -38,6 +40,7 @@ kd
 value
 typical
 interaction
+between
 rab
 effectors
 eathiraj

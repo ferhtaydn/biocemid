@@ -4,6 +4,7 @@ anion-exchange
 chromatography
 ge
 healthcare
+both
 protein
 samples
 concentrated

@@ -38,6 +38,7 @@ lysed
 lysis
 buffer
 described
+above
 lysates
 pre-cleaned
 normal
@@ -74,6 +75,7 @@ sample
 buffer
 validate
 interaction
+between
 wt-melk
 bcl-gl
 constructed
@@ -138,6 +140,7 @@ interaction
 melk
 bcl-gl
 extracts
+from
 hela-cells
 transfected
 ha
@@ -184,6 +187,7 @@ bcl-gl
 figure
 3e
 pulled
+down
 immunoprecipitation
 flag-m2
 antibody
@@ -204,6 +208,7 @@ analysis
 control
 immunoprecipitation
 performed
+from
 cells
 co-transfected
 pcaggsn3fc
@@ -222,6 +227,7 @@ catalytic
 domains
 distinct
 roles
+each
 isoform
 yet
 determined
@@ -244,6 +250,7 @@ within
 brca1
 domain
 found
+other
 pp1
 regulatory
 proteins

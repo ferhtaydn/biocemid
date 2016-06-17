@@ -128,6 +128,7 @@ interacting
 protein
 important
 consequences
+both
 activity
 brca1
 regulation
@@ -206,7 +207,9 @@ e.g.
 iκbα
 pias3
 screened
+out
 interaction
+between
 p65
 uxt
 yeast
@@ -216,10 +219,12 @@ two-hybrid
 system
 detected
 interaction
+between
 co
 cop1
 although
 interaction
+between
 cop1
 co-related
 protein
@@ -238,6 +243,7 @@ identify
 factors
 might
 shuttled
+from
 cytosol
 er
 get
@@ -302,6 +308,7 @@ lacking
 histidine
 strongest
 hit
+from
 screen
 fragment
 sed5
@@ -318,6 +325,7 @@ vesicular
 traffic
 within
 golgi
+between
 golgi
 er
 hardwick
@@ -338,6 +346,7 @@ approach
 detected
 physical
 interactions
+between
 get3
 several
 additional
@@ -383,6 +392,7 @@ bait
 sed5197
 strongest
 hit
+from
 y2h
 screen
 prey
@@ -418,6 +428,7 @@ interactionexplore
 potential
 targets
 p30
+during
 infection
 used
 yeast
@@ -477,6 +488,7 @@ screen
 pact2
 cdna
 library
+from
 pig
 macrophages
 saccharomyces
@@ -509,6 +521,7 @@ gal4-dependent
 β-galactosidase
 plasmid
 dna
+from
 clones
 exhibiting
 β-galactosidase
@@ -568,6 +581,7 @@ macrophage
 cdna
 library
 selection
+from
 total
 transformants
 screened
@@ -596,10 +610,12 @@ encoding
 hnrnp-k
 cdna
 sequences
+from
 positive
 clones
 represent
 nucleotides
+from
 hnrnp-k
 cdna
 sequence
@@ -642,10 +658,12 @@ interacted
 hnrnp-k
 fig.
 2a
+other
 hand
 determine
 hnrnp-k
 fragment
+from
 amino
 acid
 residue
@@ -704,6 +722,7 @@ using
 cdna
 library
 derived
+from
 a.
 thaliana
 identify
@@ -835,6 +854,7 @@ lack
 β-galactosidase
 activity
 confirmed
+before
 bait
 used
 cdna
@@ -897,6 +917,7 @@ confirm
 presence
 in-frame
 fusion
+before
 use
 transformation
 s.
@@ -1004,9 +1025,11 @@ retrieved
 nucleotide
 sequences
 searched
+against
 blast
 server
 http://www.ncbi.nlm.nih.gov/cgi-bin/blast
+only
 one
 clone
 in-frame
@@ -1089,10 +1112,12 @@ nucleotide
 sequence
 analysis
 results
+from
 analysis
 using
 blast
 revealed
+only
 one
 clone
 in-frame
@@ -1150,6 +1175,7 @@ indicated
 blue
 colour
 arising
+from
 production
 significant
 levels
@@ -1175,6 +1201,7 @@ atebp
 fig.
 1ac
 therefore
+from
 yeast
 two-hybrid
 analysis
@@ -1191,6 +1218,7 @@ assays
 candidate
 proteins
 atebp
+from
 yeast
 two-hybrid
 screens
@@ -1218,6 +1246,7 @@ bait
 yeast
 two-hybrid
 screens
+from
 interactor
 atebp
 retrieved

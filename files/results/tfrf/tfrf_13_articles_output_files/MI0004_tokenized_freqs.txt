@@ -74,10 +74,13 @@ instructions,1.0
 ril,1.0
 s-transferase,1.0
 target,1.0
+under,1.0
 sample,1.0
+both,1.0
 zhai,1.0
 bar,1.0
 c734s,1.0
+from,1.0
 reduce,1.0
 saline,1.0
 prescission,1.0

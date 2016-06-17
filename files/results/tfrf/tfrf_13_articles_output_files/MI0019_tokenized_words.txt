@@ -2,8 +2,10 @@ protein
 immunoprecipitated
 using
 antibodies
+against
 brca1
 antibody
+against
 flag
 epitope
 immunoprecipitate
@@ -23,6 +25,7 @@ brca1
 figure
 indicating
 interaction
+between
 brca1
 pp1
 specific293t
@@ -118,7 +121,9 @@ mutants
 p65
 amino
 acids
+each
 contained
+only
 one
 ig-like
 domain
@@ -277,8 +282,10 @@ co
 previously
 observed
 interactions
+between
 cop1
 col3
+between
 co
 spa1
 datta
@@ -289,6 +296,7 @@ et
 al
 vitro
 interaction
+between
 co
 cop1
 detected
@@ -349,11 +357,13 @@ irf3
 significantly
 weaker
 interaction
+between
 tbk1
 tank
 therefore
 detected
 coimmunoprecipitation
+under
 stringent
 conditions
 supplementary
@@ -368,6 +378,7 @@ physiological
 salt
 concentrations
 whereas
+only
 low
 levels
 mrn
@@ -449,6 +460,7 @@ foxo3a
 found
 interact
 sirt3
+both
 whole
 cell
 fig.
@@ -490,6 +502,7 @@ data
 shown
 experiments
 demonstrate
+both
 wild
 type
 mutant
@@ -501,6 +514,7 @@ foxo3a
 mitochondrial
 extractscorroborate
 interaction
+from
 yeast
 two-hybrid
 analysis
@@ -522,6 +536,7 @@ ks
 pks
 hindiii-saci
 fragment
+from
 pbi-771
 carrying
 gal4
@@ -542,6 +557,7 @@ prepared
 inserting
 acbp4
 cdna
+from
 pat181
 kb
 ecori-bamhi
@@ -623,6 +639,7 @@ beads
 using
 monoclonal
 antibody
+against
 gal4
 ta
 showed
@@ -676,6 +693,7 @@ expression
 patterns
 leaves
 stems
+both
 inducible
 acc
 meja

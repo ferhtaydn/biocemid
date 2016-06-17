@@ -95,6 +95,7 @@ showed
 strong
 preference
 serine
+over
 threonine
 fact
 none
@@ -112,10 +113,12 @@ site
 ddx3x
 peptides
 derived
+from
 ddx3x
 control
 peptides
 derived
+from
 tbk1
 irf3
 along
@@ -126,6 +129,7 @@ tbk1
 presence
 γ-32p
 atp
+each
 array
 contained
 total
@@ -135,6 +139,7 @@ triplicate
 phosphorylation
 sites
 obtained
+from
 peptide
 array
 see

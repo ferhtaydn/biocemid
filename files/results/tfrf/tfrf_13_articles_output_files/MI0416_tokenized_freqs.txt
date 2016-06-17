@@ -9,10 +9,12 @@ asfv,6.0
 wt,5.0
 subcellular,5.0
 immunofluorescence,5.0
+from,5.0
 detected,5.0
 fluorescence,5.0
 δget1,5.0
 antibody,5.0
+under,4.0
 promoter,4.0
 nucleus,4.0
 strains,4.0
@@ -27,6 +29,7 @@ mdc1,3.0
 time,3.0
 ba71v,3.0
 cell,3.0
+both,3.0
 transfected,3.0
 gfp-sed5,3.0
 pcmv-p30,3.0
@@ -76,6 +79,7 @@ demonstrating,2.0
 examined,2.0
 expressed,2.0
 corresponding,2.0
+only,1.0
 observed,1.0
 without,1.0
 rabbit,1.0
@@ -88,8 +92,10 @@ compartment,1.0
 compared,1.0
 acids,1.0
 top,1.0
+during,1.0
 iriffluorescence,1.0
 showing,1.0
+against,1.0
 anti-mouse,1.0
 mock-infected,1.0
 stained,1.0
@@ -122,6 +128,7 @@ gal,1.0
 specific,1.0
 vero,1.0
 sdtd-phosphorylated,1.0
+few,1.0
 acid,1.0
 either,1.0
 note,1.0
@@ -160,6 +167,7 @@ induction,1.0
 intensification,1.0
 resulted,1.0
 following,1.0
+each,1.0
 damage,1.0
 mouse,1.0
 gfp-scs2,1.0

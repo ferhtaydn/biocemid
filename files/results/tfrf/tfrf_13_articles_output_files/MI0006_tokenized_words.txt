@@ -1,6 +1,7 @@
 explore
 potential
 interplay
+between
 trk
 receptors
 cdk5
@@ -45,6 +46,7 @@ performed
 igg
 control
 since
+both
 trkb
 ligand
 bdnf
@@ -57,6 +59,7 @@ next
 proceeded
 verify
 interaction
+between
 trkb
 cdk5/p35
 postnatal
@@ -64,6 +67,7 @@ brains
 found
 trkb
 associated
+both
 p35
 cdk5
 postnatal
@@ -120,6 +124,7 @@ gst
 fusion
 protein
 containing
+only
 juxtamembrane
 region
 trkb
@@ -158,6 +163,7 @@ western
 blotting
 cell
 lysates
+from
 hek293t
 cells
 overexpressing
@@ -180,6 +186,7 @@ associate
 cdk5
 cell
 lysates
+from
 hek293t
 cells
 overexpressing
@@ -201,6 +208,7 @@ associate
 p35
 brain
 lysate
+from
 p7
 rat
 brain
@@ -222,6 +230,7 @@ control
 trkb
 observed
 associate
+both
 p35
 cdk5
 p7
@@ -229,6 +238,7 @@ rat
 brain
 brain
 lysates
+from
 p7
 p35
 p35
@@ -249,6 +259,7 @@ igg
 served
 control
 association
+between
 cdk5
 trkb
 abolished
@@ -258,9 +269,11 @@ indicating
 p35
 required
 association
+between
 cdk5
 trkb
 lysates
+from
 cos7
 cells
 overexpressing
@@ -356,6 +369,7 @@ stimulation
 normalized
 value
 obtained
+from
 untreated
 cultures
 time
@@ -378,6 +392,7 @@ control
 dmso
 k252a
 min
+before
 stimulation
 bdnf
 min
@@ -426,6 +441,7 @@ treatment
 normalized
 value
 obtained
+from
 untreated
 cultures
 time
@@ -446,12 +462,14 @@ p35
 cdk5
 antibody
 association
+between
 cdk5
 p35
 affected
 bdnf
 stimulation
 association
+between
 p35
 trkb
 increased
@@ -459,6 +477,7 @@ following
 min
 bdnf
 stimulationgst-pull
+down
 co-immunoprecipitation
 assays
 performed
@@ -475,6 +494,7 @@ vectors
 encoding
 untagged
 brca1
+under
 control
 cmv
 promoter
@@ -490,6 +510,7 @@ shows
 immunoprecipitation
 protein
 antibody
+against
 flag-pp1α
 proteins
 laf4
@@ -515,6 +536,7 @@ immunoprecipitation
 brca1
 using
 antibodies
+against
 amino
 carboxy
 termini
@@ -523,6 +545,7 @@ western
 blot
 probed
 antibody
+against
 flag
 epitope
 lanes
@@ -539,6 +562,7 @@ show
 co-immunoprecipitation
 flag-pp1α
 antibodies
+against
 brca1
 lane
 2h
@@ -556,6 +580,7 @@ almost
 exclusively
 inside
 nucleus
+most
 cells
 markus
 et
@@ -598,6 +623,7 @@ fig.
 uxt
 coprecipitated
 antibody
+against
 ha
 epitope
 control
@@ -651,6 +677,7 @@ subcellular
 location
 uxt
 addition
+only
 marginal
 amount
 endogenous
@@ -662,6 +689,7 @@ treatment
 consequently
 uxt
 coimmunoprecipitated
+from
 nuclear
 extract
 even
@@ -674,6 +702,7 @@ contrast
 exhibited
 strong
 interaction
+between
 nuclear
 p65
 uxt
@@ -696,6 +725,7 @@ uxt
 coimmunoprecipitated
 p65
 antibody
+from
 cells
 treated
 tnf-α
@@ -711,6 +741,7 @@ one
 possible
 explanation
 phenomenon
+only
 p65
 translocation
 nucleus
@@ -720,6 +751,7 @@ p65
 however
 formally
 rule
+out
 possibility
 posttranslational
 modifications
@@ -814,6 +846,7 @@ anti-foxo3a
 antibody
 mitochondrial
 factions
+from
 hct116
 cells
 ipd

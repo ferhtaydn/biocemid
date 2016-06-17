@@ -4,6 +4,7 @@ appl1,17.0
 proteins,17.0
 rab5,15.0
 protein,14.0
+down,14.0
 binding,13.0
 melk,12.0
 interaction,11.0
@@ -18,6 +19,7 @@ using,7.0
 fusion,7.0
 cells,7.0
 incubated,6.0
+from,6.0
 either,6.0
 gst-hnrnp-k,6.0
 affinity,6.0
@@ -41,6 +43,7 @@ p54,4.0
 wt,4.0
 western,4.0
 mrn,4.0
+between,4.0
 pull,4.0
 alone,4.0
 ph,4.0
@@ -57,6 +60,7 @@ gdp,3.0
 complex,3.0
 bcl-gl,3.0
 variants,3.0
+other,3.0
 4b,3.0
 wild-type,3.0
 analog,3.0
@@ -77,6 +81,7 @@ lysate,3.0
 coli,3.0
 breast,3.0
 infected,3.0
+each,3.0
 ge,3.0
 kinase-dead,3.0
 bind,3.0
@@ -253,6 +258,7 @@ mode,1.0
 nature,1.0
 sample,1.0
 judged,1.0
+both,1.0
 visualized,1.0
 gtpase,1.0
 first,1.0
@@ -331,6 +337,7 @@ naf,1.0
 characterize,1.0
 1a,1.0
 markers,1.0
+out,1.0
 ha,1.0
 downstream,1.0
 assumption,1.0
@@ -344,6 +351,7 @@ bcl-g,1.0
 following,1.0
 kvtf,1.0
 x-100,1.0
+such,1.0
 analyses,1.0
 others,1.0
 equivalent,1.0
@@ -352,6 +360,7 @@ lane,1.0
 aprotinin,1.0
 looking,1.0
 antibodies,1.0
+above,1.0
 subjected,1.0
 removed,1.0
 electrostatic,1.0

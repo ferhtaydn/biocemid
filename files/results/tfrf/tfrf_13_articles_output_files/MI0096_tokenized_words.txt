@@ -5,6 +5,7 @@ role
 mammary
 carcinogenesis
 knocked
+down
 expression
 endogenous
 melk
@@ -132,6 +133,7 @@ cell
 lysate
 obtained
 described
+above
 cell
 lysate
 obtained
@@ -146,6 +148,7 @@ rotation
 flag-tagged
 protein
 pulled
+down
 affinity
 gel
 affinity
@@ -178,6 +181,7 @@ two
 milligrams
 proteins
 prepared
+from
 brain
 tissues
 incubated
@@ -186,6 +190,7 @@ gel
 flag-tagged
 protein
 pulled
+down
 affinity
 gel
 h.
@@ -200,6 +205,7 @@ protease
 inhibitors
 proteins
 pulled
+down
 flag-tagged
 protein
 subjected
@@ -218,7 +224,9 @@ cdk5
 flag-tagged
 cdk5
 pulled
+down
 trkb
+from
 membrane
 fraction
 adult
@@ -237,12 +245,14 @@ verified
 coomassie
 blue
 staininggst-pull
+down
 co-immunoprecipitation
 assays
 performed
 characterize
 interaction
 gst-pull
+down
 assay
 identify
 region
@@ -253,6 +263,7 @@ fragments
 used
 gst
 pull
+down
 assays
 br
 diagrammed
@@ -322,8 +333,10 @@ downstream
 ph
 domain
 appl1
+each
 effectively
 pulled
+down
 gtp-bound
 gst
 rab5
@@ -333,6 +346,7 @@ figure
 appl1
 protein
 pulled
+down
 either
 wt
 rab5
@@ -351,6 +365,7 @@ gtp
 analog
 effectively
 pulled
+down
 either
 wt
 rab5
@@ -369,6 +384,7 @@ appl1
 binding
 specificity
 towards
+other
 members
 rab5
 subfamily
@@ -380,11 +396,14 @@ length
 gst
 rab22
 pull
+down
 appl1
+other
 hand
 unable
 detect
 binding
+between
 appl1
 rab22
 pull-down
@@ -399,6 +418,7 @@ performed
 extensive
 pull-down
 analyses
+between
 variants
 rab5
 appl1
@@ -412,6 +432,7 @@ ability
 others
 identified
 one
+such
 pair
 appl1-n308d
 abolished
@@ -426,6 +447,7 @@ rab5-l38r
 found
 bind
 appl1-n308d
+other
 tested
 appl1
 variants
@@ -462,6 +484,7 @@ rab5
 complex
 combined
 results
+from
 mutagenesis
 pull-down
 experiments
@@ -496,9 +519,11 @@ available
 information
 modeled
 interaction
+between
 two
 proteins
 assumption
+both
 proteins
 remain
 rigid
@@ -563,6 +588,7 @@ rab21
 rab22
 used
 pull
+down
 his-tagged
 appl1
 fragments
@@ -586,6 +612,7 @@ background
 gst
 fusion
 construct
+each
 mutant
 expressed
 e.
@@ -593,10 +620,12 @@ coli
 purified
 equal
 amounts
+each
 rab5
 sample
 used
 pull
+down
 recombinant
 proteins
 his-tagged
@@ -620,6 +649,7 @@ observe
 stable
 direct
 interaction
+between
 purified
 st
 pp2a
@@ -706,6 +736,7 @@ equivalent
 bead-interacting
 proteins
 removed
+from
 extracts
 pre-clearing
 step
@@ -799,6 +830,7 @@ gst-hnrnp-k
 gst
 alone
 purified
+from
 cleared
 lysates
 mixing
@@ -872,6 +904,7 @@ gst
 pull-down
 experiments
 carried
+out
 followed
 western
 blot
@@ -951,6 +984,7 @@ using
 either
 p30
 obtained
+from
 baculovirus
 system
 asfv
