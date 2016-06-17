@@ -1,5 +1,6 @@
 whether
 interaction
+between
 co
 cop1
 also
@@ -70,10 +71,12 @@ signals
 demonstrated
 fret
 occurred
+between
 yfp
 co
 cfp
 cop1
+both
 nucleus
 specifically
 nuclear
@@ -123,6 +126,7 @@ bp
 reaction
 gateway
 system
+from
 invitrogen
 entry
 clone
@@ -161,6 +165,7 @@ bent
 quantification
 fret
 vivo
+between
 cfp
 co
 yfp
@@ -186,6 +191,7 @@ data
 mean
 s.d.
 cells
+from
 three
 separate
 experiments
@@ -236,6 +242,7 @@ dsred
 emission
 zero
 contribution
+from
 gfp
 accomplished
 described
@@ -299,6 +306,7 @@ gfp
 atebp
 acbp4
 dsred
+only
 gfp
 atebp
 green
@@ -321,6 +329,7 @@ detected
 indicating
 fret
 occurred
+between
 gfp
 atebp
 acbp4

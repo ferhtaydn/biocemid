@@ -1,5 +1,6 @@
 appl1,3.0
 experiment,2.0
+between,2.0
 spr,2.0
 interaction,2.0
 rab5,2.0
@@ -12,6 +13,7 @@ measured,1.0
 typical,1.0
 resonance,1.0
 coupled,1.0
+from,1.0
 analyte,1.0
 kon,1.0
 quantitatively,1.0

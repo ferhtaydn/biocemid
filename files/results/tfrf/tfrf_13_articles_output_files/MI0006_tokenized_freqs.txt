@@ -8,12 +8,14 @@ uxt,13.0
 lysates,11.0
 p65,10.0
 bdnf,10.0
+from,10.0
 trkc,10.0
 trka,10.0
 control,9.0
 tnf-α,8.0
 either,8.0
 brca1,8.0
+between,7.0
 brain,7.0
 stimulation,7.0
 protein,7.0
@@ -25,6 +27,7 @@ observed,6.0
 pan-trk,6.0
 igg,6.0
 anti-foxo3a,6.0
+against,5.0
 figure,5.0
 overexpressed,5.0
 association,5.0
@@ -51,10 +54,12 @@ hek293t,4.0
 assay,4.0
 p7,4.0
 using,4.0
+only,3.0
 increase,3.0
 without,3.0
 time,3.0
 performed,3.0
+both,3.0
 nucleus,3.0
 transfected,3.0
 co-immunoprecipitation,3.0
@@ -196,6 +201,7 @@ inhibitor,1.0
 biosciences,1.0
 almost,1.0
 rotated,1.0
+under,1.0
 markedly,1.0
 incubation,1.0
 kidney,1.0
@@ -254,6 +260,7 @@ response,1.0
 reduced,1.0
 modifications,1.0
 extracts,1.0
+most,1.0
 anti-ha,1.0
 mixed,1.0
 untagged,1.0
@@ -265,6 +272,7 @@ overexpression,1.0
 characterize,1.0
 1a,1.0
 protein-dna,1.0
+out,1.0
 ha,1.0
 methionine,1.0
 increased,1.0
@@ -302,6 +310,7 @@ essentially,1.0
 lysis,1.0
 noted,1.0
 examine,1.0
+before,1.0
 washing,1.0
 dmso,1.0
 mammalian,1.0
@@ -348,6 +357,7 @@ corresponding,1.0
 cmv,1.0
 1c,1.0
 fusion,1.0
+down,1.0
 explore,1.0
 used,1.0
 ser478-phosphorylated,1.0

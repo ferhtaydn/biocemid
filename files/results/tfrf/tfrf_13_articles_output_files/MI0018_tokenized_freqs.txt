@@ -3,6 +3,7 @@ two-hybrid,26.0
 protein,19.0
 bait,17.0
 proteins,17.0
+from,15.0
 gal4,14.0
 interaction,13.0
 ta,13.0
@@ -46,6 +47,7 @@ assays,6.0
 amino,6.0
 system,6.0
 x-gal,5.0
+between,5.0
 positive,5.0
 positives,5.0
 histidine,5.0
@@ -120,6 +122,7 @@ fusion,3.0
 full-length,3.0
 number,3.0
 cells,3.0
+only,2.0
 wisconsin,2.0
 observed,2.0
 resulting,2.0
@@ -185,6 +188,7 @@ negative,2.0
 interacted,2.0
 determined,2.0
 unrelated,2.0
+before,2.0
 data,2.0
 hit,2.0
 asfv,2.0
@@ -231,6 +235,7 @@ intensities,1.0
 necrosis,1.0
 nine,1.0
 ap2/erebp,1.0
+other,1.0
 might,1.0
 interactor,1.0
 pelham,1.0
@@ -253,7 +258,9 @@ interactors,1.0
 genomic,1.0
 sources,1.0
 gal1-his3,1.0
+during,1.0
 showing,1.0
+against,1.0
 ubiquitously,1.0
 ura3,1.0
 cloned,1.0
@@ -300,6 +307,7 @@ eliminate,1.0
 use,1.0
 acts,1.0
 at5g59880,1.0
+both,1.0
 traffic,1.0
 kelch-motif,1.0
 alone,1.0
@@ -376,6 +384,7 @@ at3g16770,1.0
 polypeptides,1.0
 components,1.0
 interactionhelp,1.0
+out,1.0
 accession,1.0
 kanamycin-resistant,1.0
 chevray,1.0

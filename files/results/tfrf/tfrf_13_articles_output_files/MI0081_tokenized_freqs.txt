@@ -7,6 +7,7 @@ figure,4.0
 sites,4.0
 ddx3x,4.0
 site,4.0
+from,3.0
 control,2.0
 7a,2.0
 consensus,2.0
@@ -46,11 +47,13 @@ sequence,1.0
 exclusively,1.0
 presence,1.0
 also,1.0
+over,1.0
 found,1.0
 purified,1.0
 analysing,1.0
 fact,1.0
 atpase,1.0
+each,1.0
 total,1.0
 spotted,1.0
 strong,1.0

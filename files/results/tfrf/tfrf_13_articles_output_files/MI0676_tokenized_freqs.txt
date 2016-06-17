@@ -44,6 +44,7 @@ protease,1.0
 cell,1.0
 target,1.0
 control,1.0
+under,1.0
 position,1.0
 promoter,1.0
 sample,1.0

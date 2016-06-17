@@ -2,6 +2,7 @@ extended
 binding
 studies
 confirmed
+above
 rab5-binding
 site
 vivo
@@ -120,8 +121,10 @@ bartobacco
 leaf
 epidermal
 cells
+from
 agroinfiltration
 examined
+under
 zeiss
 lsm
 inverted
@@ -145,8 +148,10 @@ sections
 scanned
 resulting
 images
+each
 transient
 expression
+each
 plasmid
 construct
 cells
@@ -212,6 +217,7 @@ dsred
 emission
 zero
 contribution
+from
 gfp
 accomplished
 described
@@ -235,12 +241,14 @@ following
 agroinfiltration
 tobacco
 leaves
+both
 acbp4
 dsred
 gfp
 atebp
 observations
 carried
+out
 confocal
 microscopy
 using
@@ -281,6 +289,7 @@ nucleus
 fig.
 2b
 signals
+both
 fusion
 proteins
 common

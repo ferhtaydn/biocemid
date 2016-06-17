@@ -37,10 +37,12 @@ primary,2.0
 settings,2.0
 rab5-binding,2.0
 target,2.0
+both,2.0
 pmt,2.0
 al.,2.0
 nucleus,2.0
 leaf,2.0
+from,2.0
 filters,2.0
 plasmid,2.0
 bp,2.0
@@ -48,6 +50,7 @@ shown,2.0
 coexpressed,2.0
 epidermal,2.0
 et,2.0
+each,2.0
 secondary,2.0
 detector,2.0
 excited,2.0
@@ -93,6 +96,7 @@ co-localization,1.0
 mainly,1.0
 length,1.0
 followed,1.0
+under,1.0
 visualize,1.0
 2a,1.0
 contribution,1.0
@@ -124,9 +128,11 @@ excitation,1.0
 gfp/dsred,1.0
 plasma,1.0
 2b,1.0
+out,1.0
 vivo,1.0
 analysed,1.0
 optical,1.0
+above,1.0
 finally,1.0
 indicated,1.0
 accomplished,1.0

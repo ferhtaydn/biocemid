@@ -83,6 +83,7 @@ described
 materials
 methods
 turned
+out
 uxt
 indeed
 present
@@ -94,6 +95,7 @@ notably
 presence
 became
 much
+more
 prominent
 upon
 stimulation
@@ -124,6 +126,7 @@ similar
 chip
 assays
 confirm
+again
 endogenous
 uxt
 recruited
@@ -202,6 +205,7 @@ figure
 5a
 irf3
 absent
+under
 non-stimulated
 conditions
 recruited
@@ -239,6 +243,7 @@ using
 chip
 assay
 kit
+from
 upstate
 biotechnology
 inc.
@@ -306,6 +311,7 @@ regulatory
 regions
 gene
 promoters
+each
 contain
 two
 canonical
@@ -323,6 +329,7 @@ fig
 s3
 foxo3a
 binding
+both
 mnsod
 fig.
 3d

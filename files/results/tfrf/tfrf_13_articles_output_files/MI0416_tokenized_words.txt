@@ -1,6 +1,7 @@
 mounted
 cells
 visualized
+under
 fluorescent
 microscope
 leica
@@ -31,6 +32,7 @@ interestingly
 transfecting
 cells
 sirna
+against
 uxt
 stimulating
 tnf-α
@@ -52,6 +54,7 @@ nucleus
 upon
 stimulation
 whereas
+only
 displayed
 p65
 case
@@ -64,6 +67,7 @@ s329/t331-phosphorylated
 mdc1
 detected
 immunofluorescence
+both
 control
 γ-irradiated
 cells
@@ -94,6 +98,7 @@ shift
 subcellular
 localization
 gfp-sed5
+from
 golgi
 control
 wt
@@ -103,7 +108,9 @@ cytosolic
 localization
 δget3
 strain
+both
 cytosolic
+few
 large
 puncta
 δget1
@@ -141,12 +148,15 @@ proteins
 gfp-scs2
 gfp-sbh1
 gfp-ysy6
+under
 galactose-inducible
 gal
 promoter
 cherry-sbh2
 expressed
+from
 plasmid
+under
 constitutive
 tef2
 promoter
@@ -164,7 +174,9 @@ proteins
 cherry-fis1
 cherry-tom22
 expressed
+from
 plasmid
+under
 constitutive
 tef2
 promoter
@@ -200,6 +212,7 @@ mts-rfp
 following
 induction
 pex15
+from
 galactose
 inducible
 promoter
@@ -230,6 +243,7 @@ least
 infected
 cells
 analyzed
+each
 time
 point
 hpi
@@ -291,6 +305,7 @@ involvement
 p30
 changes
 fig.
+during
 asfv
 infection
 colocalization
@@ -314,6 +329,7 @@ microscopy
 acquiring
 optical
 sections
+from
 z-axis
 representative
 image
@@ -346,6 +362,7 @@ green
 discrete
 spots
 colocalization
+both
 proteins
 orange
 discerned

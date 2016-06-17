@@ -9,6 +9,7 @@ purification,1.0
 v/v,1.0
 healthcare,1.0
 appl1,1.0
+both,1.0
 media,1.0
 ph,1.0
 stored,1.0
