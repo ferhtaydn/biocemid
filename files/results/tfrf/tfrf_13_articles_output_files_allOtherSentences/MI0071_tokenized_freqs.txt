@@ -1,0 +1,15 @@
+column,2.0
+biotech,1.0
+ph,1.0
+superdex,1.0
+amersham,1.0
+tris-hcl,1.0
+flow-through,1.0
+concentrated,1.0
+applied,1.0
+dtt,1.0
+pre-equilibrated,1.0
+size-exclusion,1.0
+nacl,1.0
+fraction,1.0
+ni-nta,1.0

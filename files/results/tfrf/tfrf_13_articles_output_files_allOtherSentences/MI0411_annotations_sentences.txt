@@ -1,0 +1,6 @@
+HEK293 cells were seeded at 5 × 105 cells per well in six-well plates.
+Cells were transfected with 500 ng of pDM128 (Rev reporter plasmid), 30 ng of Rev expression plasmid, 300 ng of DDX3X expression plasmid and 500 ng of TBK1 expression plasmid.
+All samples were normalized for DNA content using an empty plasmid.
+Cells were harvested 24 h post-transfection and CAT levels were analysed by ELISA (Roche) according to the manufacturer's instructions.
+(B) HEK293 cells were transfected with the reporter plasmid pDM128 and constant amounts of Rev DDX3X wt or K230A and TBK1 wt or K38M were added as indicated.
+CAT expression was measured 24 h post-transfection by ELISA (Roche).

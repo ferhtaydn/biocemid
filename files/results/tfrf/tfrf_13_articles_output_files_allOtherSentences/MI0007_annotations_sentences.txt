@@ -1,0 +1,22 @@
+HeLa cells were transiently co-transfected for 48 hours with 8 μg of plasmid constructs encoding Flag-tagged full-length Bcl-GL or a series of Flag-tagged partial Bcl-GL proteins (FL, N-1, N-2, N-3, N-4, C-1, C-2 and C-3) as well as the same amount of plasmid encoding HA-tagged WT-MELK, using the FuGENE6 transfection reagent (Roche).
+Cells were lysed with lysis buffer as described above.
+The lysates were pre-cleaned with normal mouse IgG (1.2 μg) and rec-Protein G Sepharose 4B (Zymed, San Francisco, CA, USA) at 4°C for 30 minutes.
+Subsequently, the lysate was incubated with anti-Flag agarose M2 gel (Sigma-Aldrich) at 4°C for 12 hours.
+After washing three times with lysis buffer, proteins on beads were eluted with SDS sample buffer.
+To validate an interaction between WT-MELK and Bcl-GL, we constructed plasmids designed to express HA-tagged WT-MELK (HA-WT-MELK) and Flag-tagged Bcl-GL (Flag-Bcl-GL).
+These plasmids were co-transfected into HeLa cells and the proteins immunoprecipitated with anti-Flag antibody.
+Immunoblotting of the precipitates using anti-HA antibodies indicated that Flag-Bcl-GL was co-precipitated with HA-WT-MELK (Figure 3c).
+To further determine which segment of Bcl-GL can interact with WT-MELK, we performed co-immunoprecipitation analyses using HA-WT-MELK and partial Bcl-GL proteins tagged with Flag (Figure 3e).
+After co-transfection of plasmid clones into HeLa cells, we performed immunoprecipitation with an anti-Flag antibody, and then immunoblotting with an anti-HA antibody.
+(c) Interaction of MELK with Bcl-GL.
+Extracts from HeLa-cells transfected with HA (hemagglutinin)-tagged WT-MELK (HA-WT-MELK) or Flag-tagged Bcl-GL (Flag-Bcl-GL), or a combination of these, were harvested 36 hours after transfection.
+The cell lysates were immunoprecipitated with anti-Flag M2 antibody.
+Precipitated proteins were separated by SDS-PAGE and western blotting analysis was performed with an anti-HA antibody.
+(f) Determination of the WT-MELK binding regions of Bcl-GL by immunoprecipitation.
+The HA-tagged WT-MELK and various peptide sequences of Flag-tagged Bcl-GL (Figure 3e) were pulled down by immunoprecipitation with Flag-M2 antibody and then immunoblotted with rabbit anti-Flag antibody.
+The expression of HA-tagged WT-MELK in total cell lysates was confirmed by western blotting analysis.
+As a control, immunoprecipitation was performed from cells co-transfected with pCAGGSn3FC (Mock) and HA-tagged WT-MELK (HA-WT-MELK) through all steps.PP1 has 3 isoforms encoded by different genes that are 97% conserved across their catalytic domains and distinct roles for each isoform have yet to be determined.
+When we coimmunoprecipitated Flag-epitope tagged PP1α, β or γ with BRCA1, we observed that all 3 isoforms interacted with BRCA1.
+Additionally, we have identified the functional PP1 interacting domain within BRCA1.
+This domain is found in other PP1 regulatory proteins, suggesting that BRCA1 may regulate the activity of PP1 and could act as a scaffold protein to promote the dephosphorylation of BRCA1 associated proteins by PP1.Co-immunoprecipitation assays were used to confirm the protein–protein interactions.
+Subsequently, localization of ACBP4 and its interacting protein, AtEBP, was confirmed using transient expression of GFP- and DsRed-tagged fusion proteins in Nicotiana tabacum.

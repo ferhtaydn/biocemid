@@ -1,0 +1,15 @@
+bcl-gl,2.0
+melk,2.0
+region,1.0
+kinase,1.0
+also,1.0
+found,1.0
+phosphorylated,1.0
+amino-terminal,1.0
+showed,1.0
+interacted,1.0
+assay,1.0
+specifically,1.0
+immunocomplex,1.0
+vitro,1.0
+physically,1.0
