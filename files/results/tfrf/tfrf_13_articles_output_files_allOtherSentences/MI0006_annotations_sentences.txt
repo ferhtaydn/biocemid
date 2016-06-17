@@ -1,0 +1,76 @@
+To explore the potential interplay between Trk receptors and Cdk5, we first examined if Trk receptors associated with Cdk5 or p35.
+TrkA, TrkB, or TrkC was overexpressed together with Cdk5 or p35 in COS7 cells, and immunoprecipitation was performed with Cdk5, p35, or pan-Trk antibody.
+Interestingly, all three Trk receptors were observed to associate with Cdk5 (Figure 1B) and p35 (Figure 1C), while no association was observed when immunoprecipitation was performed with IgG control.
+Since both TrkB and its ligand BDNF are abundantly expressed in the brain throughout development, we next proceeded to verify the interaction between TrkB and Cdk5/p35 in postnatal brains.
+We found that TrkB associated with both p35 and Cdk5 in postnatal day 7 (P7) rat brain lysates (Figure 1D).
+TrkA, TrkB, and TrkC were overexpressed in COS7 cells and immunoprecipitated by pan-Trk antibody.
+Incubation with Cdk5/p25 revealed that TrkB and TrkC, but not TrkA, were phosphorylated by Cdk5/p25 in vitro (Figure 2A).
+This is in agreement with the lack of Cdk5 consensus sites in TrkA, and points to the possibility that Cdk5 may phosphorylate TrkB and TrkC at the Cdk5 consensus sites at the juxtamembrane region (Figure 1A).
+To examine this possibility, a GST fusion protein containing only the juxtamembrane region of TrkB was prepared.
+For immunoprecipitation, 1–2 mg of protein lysates was incubated with 1 μg of the corresponding antibody at 4 °C overnight with rotation.
+Forty microliters of protein G Sepharose (Amersham Biosciences) pre-washed with 1× PBS was added and rotated at 4 °C for 1 h.
+After intense washing with the lysis buffer, the immunoprecipitated protein and its associated proteins were analyzed by SDS-PAGE and Western blotting.
+(B) Cell lysates from HEK293T cells overexpressing Cdk5 and TrkA, TrkB, or TrkC were immunoprecipitated (IP) with Cdk5 antibody and immunoblotted with pan-Trk antibody.
+TrkA, TrkB, and TrkC were all observed to associate with Cdk5.
+(C) Cell lysates from HEK293T cells overexpressing p35 and TrkA, TrkB, or TrkC were immunoprecipitated with p35 antibody and immunoblotted with pan-Trk antibody.
+TrkA, TrkB, and TrkC were all observed to associate with p35.
+(D) Brain lysate from P7 rat brain was immunoprecipitated with pan-Trk, p35, or Cdk5 antibody and immunoblotted with p35, Cdk5, and TrkB antibodies.
+Rabbit normal IgG was used as a control.
+TrkB was observed to associate with both p35 and Cdk5 in P7 rat brain.
+(F) Brain lysates from P7 p35+/+ or p35−/− mouse brains were immunoprecipitated with p35 and Cdk5 antibodies and immunoblotted with p35, Cdk5, and TrkB antibodies.
+Rabbit normal IgG served as a control.
+Association between Cdk5 and TrkB was abolished in p35−/− brain, indicating that p35 was required for the association between Cdk5 and TrkB.
+(A) Lysates from COS7 cells overexpressing TrkA, TrkB, and TrkC were immunoprecipitated with pan-Trk antibody and incubated with Cdk5/p25 in an in vitro kinase assay.
+TrkB and TrkC, but not TrkA, were phosphorylated by Cdk5/p25.
+(E) Full-length TrkB WT, M1, M2, and DM were overexpressed with or without Cdk5/p35 in HEK293T cells.
+In the absence of Cdk5/p35, Ser478-phosphorylated TrkB (p-Ser TrkB) was not detected.
+Overexpression of Cdk5/p35 resulted in phosphorylation of TrkB WT at Ser478, but phosphorylation at Ser478 was essentially abolished when TrkB M1 and DM were overexpressed.
+IP, immunoprecipitation.
+(A) Cortical neurons were stimulated with BDNF for different time intervals.
+Lysates were immunoprecipitated (IP) with p35 antibody and subjected to in vitro kinase assay using histone H1 as substrate.
+BDNF stimulation for 15 min resulted in a marked increase in Cdk5 activity in cortical neurons.
+Quantification of the changes in phospho-Histone H1 level following BDNF stimulation was normalized to the value obtained from untreated cultures (time 0) and is shown in the histogram.
+*, p < 0.05.
+(B) Addition of Trk inhibitor K252a abolished BDNF-induced increase in Cdk5 activity.
+Cortical neurons were pretreated with vehicle control (DMSO) or K252a for 30 min before stimulation with BDNF for 15 min.
+Lysates were immunoprecipitated with p35 antibody and subjected to in vitro kinase assay using histone H1 as substrate.
+We found that K252a pretreatment markedly reduced the increase in Cdk5 activity triggered by BDNF stimulation, indicating that the induction of Cdk5 activity was dependent on TrkB activation.
+Quantification of the changes in phospho-Histone H1 level following BDNF stimulation in the presence or absence of K252a treatment was normalized to the value obtained from untreated cultures (time 0) and is shown in the histogram.
+*, p < 0.05.
+(C) Cortical neurons were treated with BDNF for 20 min.
+Lysates were immunoprecipitated with p35 antibody and immunoblotted with TrkB, p35, or Cdk5 antibody.
+While association between Cdk5 and p35 was not affected by BDNF stimulation, association between p35 and TrkB increased following 20 min of BDNF stimulation.GST-pull down and co-immunoprecipitation assays were performed to further characterize this interaction.
+Coimmunoprecipitation of BRCA1 and PP1.
+HEK293T kidney cells were transfected with vectors encoding untagged BRCA1 under the control of a CMV promoter, and vectors encoding Flag-PP1α, β, γ or Flag-Laf4.
+(A) A western blot probed with BRCA1 shows that immunoprecipitation of protein with an antibody against the Flag-PP1α, β or γ proteins, but not Laf4, co-immunoprecipitates BRCA1 (Lanes 1A-1D).
+It should be noted that the band observed slightly lower than BRCA1 in lane 1D is a non-specific background band.
+Lanes 1E-1H show immunoprecipitation of BRCA1 using antibodies against the amino and carboxy termini of BRCA1.
+(B) A western blot probed with an antibody against the Flag epitope.
+Lanes 2A-2D indicate immunoprecipitation of the Flag-epitope tagged PP1α, β or γ or Flag-Laf4.
+Lanes 2E-2G show co-immunoprecipitation of Flag-PP1α, β or γ with antibodies against BRCA1, and lane 2H shows a lack of coimmunoprecipitation of the negative control Flag-Laf4 by BRCA1.UXT was previously reported to be expressed almost exclusively inside the nucleus of most cells (Markus et al., 2002).
+This was confirmed in our investigation for either endogenous or overexpressed UXT (Fig.
+1 B).
+To further substantiate its interaction with p65, an in vitro coimmunoprecipitation assay was applied in which full-length HA-p65 and FLAG-UXT proteins were generated and labeled, respectively, with [35S]methionine by in vitro translation.
+The products were mixed and immunoprecipitated with either control IgG or anti-HA antibody.
+As shown in Fig.
+1 C, UXT could be coprecipitated by antibody against the HA epitope but not by control IgG, which suggests that UXT indeed interacts directly with full-length p65.
+To address the physiological relevance of this interaction in mammalian cells, we expressed HA-UXT in 293T cells and then stimulated cells with or without TNF-α for the indicated times.
+The fractionated cytoplasmic or nuclear extracts were immunoprecipitated with either anti-p65 antibody or IgG as a control, respectively.
+There was no detectable UXT that interacted with cytoplasmic p65 in the presence or absence of TNF-α (Fig.
+1 D), which was consistent with the unique subcellular location of UXT.
+In addition, there was only a marginal amount of endogenous p65 in the nucleus devoid of TNF-α treatment.
+Consequently, no UXT was coimmunoprecipitated from this nuclear extract even though there existed a large amount of UXT.
+In contrast, there exhibited a strong interaction between nuclear p65 and UXT upon TNF-α stimulation.
+Furthermore, we tested whether endogenous UXT and p65 could interact in response to TNF-α.
+As shown in Fig.
+1 E, endogenous UXT was coimmunoprecipitated by p65 antibody from cells treated with TNF-α.
+In contrast, UXT was barely detected in the immunoprecipitates without TNF-α treatment.
+One possible explanation for this phenomenon is that only after p65 translocation into the nucleus could UXT have access to p65.
+However, we could not formally rule out the possibility that posttranslational modifications of either protein were prerequisites for this interaction in vivo.
+Collectively, these results indicate that UXT interacts in vivo with p65 upon TNF-α stimulation.We sought to establish whether the mitochondrial localized SIRT3 may also form a physical interaction with the FOXO family protein, FOXO3a, using co-immunoprecipitation (Co-IP) techniques.
+Carboxy-terminally myc tagged wild-type (p-myc-hSIRT3-wt), and mutant (p-myc-hSIRT3-mt) SIRT3 expression vectors were transfected into Cos-7 cells followed by Co-IP with an anti-myc antibody.
+(A) FOXO3a binds to SIRT3 in vitro.
+Cos-7 cells were transfected with either SIRT3 wild-type (p-myc-hSIRT3-wt) or deacetylation mutant (p-myc-hSIRT3-mt) vectors and cell lysates were immunoprecipitated (IPd) with an anti-Myc antibody followed by Western analysis with an anti-FOXO3a antibody.
+(B) HCT116 cell lysates were IPd with either an anti-FOXO3a or anti-SIRT3 antibody, resolved by SDS-PAGE, and immunoblotted with anti-FOXO3a antibody.
+(C) Mitochondrial factions from HCT116 cells were IPd with either an anti-FOXO3a or anti-SIRT3 antibody and immunoblotted with anti-FOXO3a antibody.
+Cells were fixed with 1% formaldehyde to crosslink protein-DNA interactions, sonicated, and fixed cells were immunoprecipitated with either an anti-FOXO3a antibody.

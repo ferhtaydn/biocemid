@@ -10,6 +10,7 @@ object TfrfHelper {
 
   def help(): Unit = {
     methodIds.foreach(createHelperFiles)
+    //methodIds.foreach(allOtherSentences)
     methodIds.foreach(createTfrfFile)
     methodIds.foreach(relatedAndExtraTerms(_, 7))
     methodIds.foreach(relatedAndExtraTerms(_, 10))
@@ -43,7 +44,7 @@ object TfrfHelper {
     remove(sentencesFile)
     remove(tokenizedFile)
 
-    list(goldResultDirectory, xmlSuffix).foreach(f ⇒ out(extractAnnotatedSentences(f, methodId)))
+    list(goldResultDirectory, xmlSuffix).foreach(f ⇒ out(extractAnnotatedSentences(f, methodId).mkString(newline)))
 
     write(tokenizedFreqsFile, stringifyTuples(calcFrequenciesFromTokensFile(tokenizedFile)))
 
@@ -59,8 +60,10 @@ object TfrfHelper {
 
     val positivePassages = read(passagesFile)
     val negativePassagesFiles = listOthers(methodId, "annotations_passages.txt")
+    //val negativePassagesFile = s"MI${methodId}_allOtherSentences.txt"
 
     val tfrf = tfRf(tokenFreqs, positivePassages, negativePassagesFiles).sortBy(_._2).reverse
+    //val tfrf = tfRfAllOtherSentences(tokenFreqs, positivePassages, negativePassagesFile).sortBy(_._2).reverse
 
     write(tfRfTokenizedFile, stringifyTuples(tfrf))
   }
@@ -76,7 +79,7 @@ object TfrfHelper {
     tokenFreqs.toSeq.sortBy(_._2).reverse
   }
 
-  private def extractAnnotatedSentences(file: File, method: String): String = {
+  private def extractAnnotatedSentences(file: File, methodId: String): Seq[String] = {
 
     val bioCFile = XML.loadFile(file)
     val passages = bioCFile \\ "passage"
@@ -84,10 +87,27 @@ object TfrfHelper {
 
     val filtered = annotations.filter(annot ⇒
       (annot \ "infon").filter(i ⇒
-        (i \\ "@key").text.equals("PSIMI")).text.equals(method))
+        (i \\ "@key").text.equals("PSIMI")).text.equals(methodId))
 
-    filtered.map(m ⇒ (m \\ "text").text).mkString(newline)
+    filtered.map(m ⇒ (m \\ "text").text)
 
+  }
+
+  def allOtherSentences(methodId: String): Unit = {
+
+    list(goldResultDirectory, xmlSuffix).foreach { file ⇒
+
+      val bioCFile = XML.loadFile(file)
+      val passages = bioCFile \\ "passage"
+
+      val allTextSentences = passages.map(p ⇒ (p \ "text").text).flatMap(mkSentences)
+
+      val annotatedSentence = extractAnnotatedSentences(file, methodId).flatMap(mkSentences)
+
+      val allOtherSentence = s"MI${methodId}_allOtherSentences.txt"
+
+      append(allOtherSentence, (allTextSentences diff annotatedSentence).mkString(newline))
+    }
   }
 
   private def log2(x: Double) = scala.math.log(x) / scala.math.log(2)
@@ -97,6 +117,26 @@ object TfrfHelper {
 
     val positiveCategory = positivePassages.map(tokenize(_).toSet).toList
     val negativeCategory = negativePassagesFiles.flatMap(read(_).map(tokenize(_).toSet))
+
+    tokenFreqs map {
+
+      case (word, freq) ⇒
+
+        val a = positiveCategory.count(_.contains(word))
+        val c = negativeCategory.count(_.contains(word))
+
+        val rf = log2(2.0 + (a / scala.math.max(1.0, c)))
+        val tfRf = freq * rf
+
+        (word, tfRf)
+    }
+  }
+
+  private def tfRfAllOtherSentences(tokenFreqs: Seq[(String, Double)], positivePassages: Seq[String],
+    negativePassagesFile: String): Seq[(String, Double)] = {
+
+    val positiveCategory = positivePassages.map(tokenize(_).toSet).toList
+    val negativeCategory = read(negativePassagesFile).map(tokenize(_).toSet)
 
     tokenFreqs map {
 

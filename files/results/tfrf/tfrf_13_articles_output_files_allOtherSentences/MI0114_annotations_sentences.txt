@@ -1,0 +1,19 @@
+The samples were crystallized after removing the tag with thrombin, which generated a four-residue (Gly–Ser–His–Met) peptide N-terminal to the native Asp5 residue.
+Based on the APPL1 BAR-PH crystal structure, we find that, in general, the PH domain is more conserved than the BAR domain, and most of the highly conserved positions are located closer to the BAR−PH interface rather than the central region of the symmetric dimer.We have determined the crystal structure of full-length SV40 ST in complex with the full-length Aα subunit of PP2A.
+This structure reveals two novel zinc-binding motifs formed by the unique C-terminal domain, the structural linkage of the J and unique domain of ST, and the interaction site of ST with the structural A subunit.
+Together with our biochemical data, we provide a structural basis for understanding the tumorigenic activity of ST protein.
+Crystal structure of the complex was determined by a combination of molecular replacement, using the PP2A A subunit structure as the searching model, and single-wavelength anomalous dispersion of intrinsic zinc atoms in ST, and was refined at 3.1 Å resolution (Table 1).
+Secondary structures in the determined crystal structure are indicated above the aligned sequences.
+Solid and empty stars indicate residues interacting with PP2A A subunit using side-chain and main-chain, respectively.
+Solid and empty squares represent residues involved in interactions between the J domain and the unique domain with side-chain and main-chain atoms, respectively.
+Structural comparison of the A-ST crystal structure with previously reported crystal structures of A, AC complex, and A-B56-C complexes [25,26,45,46] also support the conclusion that HEAT repeats 2–10 and HEAT repeats 13–15 form two relatively rigid blocks.
+However, there is substantial structural flexibility between these two structural blocks, due to the result of accumulative conformational changes in HEAT repeats 10–13 (Figures S1 and S2).
+Here we report the crystal structure of SV40 ST in complex with the murine PP2A A subunit.
+It is striking that all four A-ST complexes in the asymmetric unit of our crystal lattice have essentially the same structure, except the flexible HEAT repeats 11–15 of the A subunit that are not involved in the A-ST interaction.
+This observation argues strongly that the ST structure as well as the A-ST interface observed in our crystal structure are independent of crystal packing and should be physiologically relevant.
+In our ST crystal structure, instead of forming a binuclear cluster, these two zinc ions are located in two separate positions and form two novel zinc-binding motifs.
+The first and second cysteine clusters (residues 111–116, 138–143, respectively) form two zinc-binding motifs together with the conserved Cys103 and His122, respectively.
+Both zinc ions interact with helix α5 and stabilize the structure of the C-terminal unique domain.
+However, the first zinc-binding motif does not interact with the A subunit of PP2A in the crystal structure.
+Instead, the crystal structure suggests that the first zinc-binding motif may directly interact with the C subunit near its active site, since the first zinc-binding motif is spatially close to the active site of the PP2A C subunit in the structural superposition of PP2A and A-ST complexes (Figure 5).
+In addition to the inhibition of the phosphatase activity of the PP2A AC dimer, the J domain may also play a role in the oncogenic activity of ST by providing an additional binding site for Hsp70, even when in complex with the PP2A AC complex, as suggested by our crystal structure.

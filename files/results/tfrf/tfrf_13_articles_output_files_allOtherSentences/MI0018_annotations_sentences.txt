@@ -1,0 +1,89 @@
+We performed a yeast two-hybrid study to identify proteins that interact with exon11 of BRCA1 and identified Protein Phosphatase 1β (PP1β), an isoform of the serine threonine phosphatase, PP1.
+We have used a yeast two-hybrid assay to detect proteins that interact with exon11 of BRCA1.
+This large exon encodes roughly 60% of the protein, and we wished to identify potentially important interacting proteins outside of the intensely studied RING and C-terminal regions of BRCA1.
+We performed a yeast two-hybrid assay to identify proteins that interact with exon11 of BRCA1.
+In this study, 9 putative positives were identified including PP1β, an isoform of the serine/threonine phosphatase PP1 (not shown).
+These initial yeast two-hybrid studies led to further examination on the interaction of BRCA1 with PP1β.
+We performed a yeast two-hybrid study to identify proteins that interact with exon11 of BRCA1.
+The region of BRCA1 encoded by exon 11 is known to interact with a number of proteins involved in DNA repair [23], as well as γ-tubulin [3] and several kinases including Aurora-A kinase [24] and ChkII [25].
+Identification of additional interacting partners, particularly ones that could modify the activity of a BRCA1 through changes in phosphorylation, may further aid in clarifying its function and regulation.
+In this yeast two-hybrid study, we identified the serine/threonine phosphatase PP1β as a BRCA1 interacting protein, which could have important consequences on both the activity of BRCA1 and the regulation of PP1β activity.By a two-hybrid approach, we identify a prefoldin-like protein, ubiquitously expressed transcript (UXT), that is expressed predominantly and interacts specifically with NF-κB inside the nucleus.
+RNA interference knockdown of UXT leads to impaired NF-κB activity and dramatically attenuates the expression of NF-κB–dependent genes.
+This interference also sensitizes cells to apoptosis by tumor necrosis factor-α.
+To identify new components of the NF-κB enhanceosome, we performed a systematic yeast two-hybrid screening in which the cDNA fragment harboring the RHD of p65 (amino acids 1–312) was used as bait.
+Several positive clones were identified to encode full-length UXT (Fig.
+1 A).
+In addition, previously confirmed p65-interacting proteins (e.g., IκBα and PIAS3) were screened out.
+(A) Interaction between p65 and UXT in a yeast two-hybrid assay.In the yeast two-hybrid system, we detected no interaction between CO and COP1, although an interaction between COP1 and the CO-related protein CO-LIKE3 (COL3) was previously detected by this method (Datta et al, 2006), and we were able to confirm this interaction.To help identify factors that might be shuttled from the cytosol to the ER by the GET system, we performed a yeast two-hybrid (Y2H) screen for polypeptides that can interact with Get3.
+Y2H analysis, which reports on weak interactions occurring within the nucleus of assayed strains, is well suited for identifying Get3 binding proteins, as it can detect transient interactions that are independent of the presence of Get1 and Get2.
+We used yeast expressing Get3 as bait to screen a genomic library encoding prey proteins (James et al., 1996).
+Physical interactions caused activation of the Gal4-driven HIS3 reporter gene, allowing growth on plates lacking histidine.
+The strongest hit from the screen was a fragment of Sed5 (amino acid 197 to the C terminus) (Figure 2A), a TA protein that acts as a SNARE in vesicular traffic within the Golgi and between the Golgi and the ER (Hardwick and Pelham, 1992).
+The Get3-Sed5 interaction was dependent on the presence of the C-terminal TMD (Figure 2A).
+Consistent with this idea, by a directed Y2H approach, we detected physical interactions between Get3 and several additional secretory pathway TA proteins, including the SNAREs Tlg2 and Sec22 and the peroxisomal TA protein Pex15.
+These interactions, as observed for Sed5, were dependent on the presence of the C-terminal TMD (Figure 3A).
+First, our Y2H analysis indicates that Get3 can bind multiple secretory pathway TA proteins in a TMD-dependent manner.
+(A) Yeast two-hybrid assay with Get3 as bait and Sed5197–340 (the strongest hit from the Y2H screen) as prey (in the presence or absence of its TMD).
+The growth on medium lacking histidine (−HIS) is indicative of a physical interaction.
+(A) Y2H assay showing Get3 as bait and various TA proteins (in the presence or absence of their TMDs) as prey.
+The growth on medium lacking histidine (−HIS) is indicative of a physical interaction.To explore the potential targets of p30 during infection, we have used the yeast two-hybrid system to screen a porcine macrophage (the natural viral host cell) cDNA library for cellular proteins that may interact with p30.
+We have identified heterogeneous nuclear ribonucleoprotein K (hnRNP-K) as the first cellular ligand of p30.
+For the yeast two-hybrid assay, plasmids pGBT9 and pACT2 (BD Sciences) were used as sources of the GAL4 DNA-binding domain (BD) and transcriptional activation domain (AD), respectively.
+pGBT9-p30 and unrelated control protein pGBT9-p54 were independently used as baits to screen a pACT2 cDNA library from pig macrophages in Saccharomyces cerevisiae reporter strain Y190 as previously published [18,20,21].
+Yeast were sequentially transformed with bait plasmid and pACT2 library by the lithium acetate method.
+After auxotrophic and colony size selection, resulting clones were analyzed for expression of GAL4-dependent β-galactosidase.
+Plasmid DNA from those clones exhibiting β-galactosidase activity was isolated and retransformed into yeast strain Y190 with pGBT9-p30 to eliminate false positives.
+The sequence of inserts was determined by sequencing using specific primers and compared with the data base of the NCBI using the BLAST program.
+pGBT9-p30, pGBT9-p54 and pACT2-K were individually transformed in yeast and tested for β-galactosidase activity to exclude activation of gene reporter by itselves.
+To identify cellular proteins interacting with ASFV early protein p30, yeast two-hybrid system was used to screen a porcine macrophage cDNA library.
+After selection from a total of 5 × 106 transformants screened, two potential positive clones were obtained in the reporter gene assay.
+DNA sequence analysis showed that cDNA contained in these clones, identical in size and composition, matched the cDNA sequence encoding hnRNP-K.
+cDNA sequences from positive clones represent nucleotides from 169 to 870 of the hnRNP-K cDNA sequence (GeneBank™ accession number 241477), with 98% nucleotide identity, corresponding to amino acid residues 13–246 of hnRNP-K protein.
+In addition, diverse truncations of hnRNP-K were performed attending to previously well characterized functional domains [10] and tested for interaction using the yeast two-hybrid system.
+The results showed that none of the three different p30 truncations interacted with hnRNP-K (Fig.
+2A).
+On the other hand, we could determine that the hnRNP-K fragment from amino acid residue 35–197 contained the interacting region with p30 (Fig.
+2B).
+By using the yeast two-hybrid system, we identified cellular hnRNP-K as an interacting protein with ASFV early protein p30.
+(A) Schematic representation of the diverse p30 truncations tested for interaction with full length hnRNP-K in the yeast two-hybrid assay.
+(B) Schematic representation of the diverse hnRNP-K truncations tested for interaction with complete p30 in the yeast two-hybrid assay.A bait-containing sequence encoding ACBP4 was constructed for yeast two-hybrid screens using a cDNA library derived from A.
+thaliana to identify proteins that interact directly with ACBP4.
+The two-hybrid library screens were performed in the Saccharomyces cerevisiae strain YPB2 [MATa ara3 his3 ade2 lys2 trp1 leu2, 112 canr gal4 gal80 LYS2::GAL1-HIS3, URA3::(GAL1UAS17mers)-lacZ] (Kohalmi et al., 1998).
+Cotransformants were plated on synthetic dextrose agar plates lacking leucine, tryptophan, and histidine [SD-leu-trp-his] supplemented with 10 mM 3-AT (Kohalmi et al., 1998).
+S.
+cerevisiae strain YPB2 was transformed with bait plasmid pAT188 and transformants were plated on synthetic dextrose agar plates lacking leucine [SD-leu].
+An aliquot of transformants was also tested on [SD-leu-his] medium supplemented with 10 mM 3-amino-1, 2, 4-triazole (3-AT) because an absence of growth on this medium would confirm that the DB-‘bait’ fusion protein is unable to initiate transcription of HIS3.
+Subsequently, the bait-carrying strain was tested negative for β-galactosidase activity using the X-Gal (5-bromo-4-chloro-3-indolyl-β-D-galactopyranoside) colony filter assay.
+This further showed that the bait was not able to activate transcription of the lacZ reporter gene.
+The prey vector pBI-771, a variant of pPC86 (Chevray and Nathans, 1992; Kohalmi et al., 1998), was introduced into this strain and its inability to grow on [SD-leu-trp-his] medium supplemented with 10 mM 3-AT and its lack of β-galactosidase activity were confirmed before the bait was further used in cDNA library screening.
+To ensure sufficient coverage in the identification of potential proteins interacting with ACBP4, yeast two-hybrid screenings were also performed at the Molecular Interaction Facility, University of Wisconsin–Madison using yeast strains and vectors as previously described by James et al.
+(1996).
+For bait preparation, ACBP4 (amino acids 1–669) was cloned in-frame with the GAL4 DNA-binding domain of bait vector pBUTE (a kanamycin-resistant version of GAL4 bait vector pGBDUC1).
+The resulting vector was subject to DNA sequence analysis to confirm the presence of an in-frame fusion, before use in transformation of S.
+cerevisiae mating type strain PJ69-4A, followed by testing for autoactivation of the β-galactosidase reporter gene.
+The yeast YPB2 transformed with the bait GAL4(DB)-ACBP4 could not grow on [SD-leu-his] and was tested negative on X-Gal colony filter assays (data not shown), suggesting that the pAT188 bait alone could not activate the transcription of reporter genes HIS3 and lacZ and was deemed appropriate for two-hybrid screens.
+A GAL4(TA) tagged A.
+thaliana cDNA library was introduced into the yeast YPB2 harbouring plasmid pAT188.
+The number of independent transformants was determined to be 2×106 following transformation and plating of an aliquot of the yeast transformation mixture on [SD-leu-trp].
+A total of 100 putative positives were selected on [SD-leu-trp-his] supplemented with 10 mM 3-AT medium.
+When these putative positives were further screened for β-galactosidase activity using the X-Gal colony filter assay, nine yeast clones that appeared blue, at varying intensities, were identified as putative clones encoding interactors.
+Putative library plasmids were retrieved and their nucleotide sequences were searched against the BLAST server http://www.ncbi.nlm.nih.gov/cgi-bin/BLAST.
+Only one clone was in-frame to GAL4(TA), encoding a full-length ethylene-responsive element binding factor (ERF) protein AtEBP (Arabidopsis genome locus: AT3G16770).
+An AP2/EREBP (ethylene-responsive element binding protein) domain is present in AtEBP at amino acids 76–143 (Okamuro et al., 1997).
+In another independent yeast two-hybrid screen using the Molecular Interaction Facility (University of Wisconsin–Madison), six putative positives were identified following selection on histidine drop-out and β-galactosidase assays.
+Subsequently, they were used to retransform yeast mating type strain PJ69-4A, and were validated in mating and selection assays using the ACBP4 bait, the empty bait vector, and unrelated baits.
+Five clones were tested positive and further identified by nucleotide sequence analysis.
+Results from analysis using the BLAST revealed that only one clone was in-frame and it encoded a full-length actin-depolymerizing factor 3 (ADF3, At5g59880) protein.
+Results of X-Gal filter assays are shown in Fig.
+1A.
+Positive protein–protein interaction results in activation of the reporter gene β-galactosidase in yeast cells, which turns yeast colonies blue in filter assays using X-Gal.
+Without interaction, the yeast colonies remain ‘colourless’.
+As shown in Fig.
+1Aa, the GAL4(DB)-ACBP4 fusion interacted with GAL4(TA)-AtEBP, as indicated by the blue colour arising from the production of significant levels of β-galactosidase.
+No interactions were observed in control yeast cells harbouring GAL4(DB)-ACBP4+GAL4(TA) (Fig.
+1Ab) and GAL4(DB)+GAL(TA)-AtEBP (Fig.
+1Ac).
+Therefore, from yeast two-hybrid analysis, AtEBP was identified as a putative protein that interacts with ACBP4.
+(A) Colony filter β-galactosidase assays of candidate proteins AtEBP from yeast two-hybrid screens.
+(a) YPB2/GAL4(DB)-ACBP4+GAL4(TA)-AtEBP; (b) YPB2/GAL4(DB)-ACBP4+GAL4(TA); (c) YPB2/GAL4(DB)+GAL(TA)-AtEBP.
+Kelch-motif containing ACBP4 was used as bait in yeast two-hybrid screens from which an interactor (AtEBP) was retrieved.

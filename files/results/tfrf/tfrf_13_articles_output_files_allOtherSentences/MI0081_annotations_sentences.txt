@@ -1,0 +1,13 @@
+To map the phosphorylation site systematically, we decided for a peptide array that displays 73 peptides containing all serine and threonine residues of DDX3X (Supplementary Figure 5).
+Incubation of the peptide array with purified TBK1 produced a number of phosphorylation signals (Figure 7A).
+The TBK1 control peptide was phosphorylated by TBK1, suggesting that the activation loop is indeed an autophosphorylation site.
+Analysing the remaining hits in the peptide array, we identified 11 potential phosphorylation sites in 9 DDX3X-derived peptides (Figure 7A).
+Four of these target sites (S181, S183, S240 and S269) were found in the DEAD domain that contains the ATPase activity of DDX3X.
+The seven remaining sites were scattered throughout the helicase domain (S429, T438, S442, S456, S520, T542 and S543).
+We used the information gathered in the peptide array to derive a TBK1 consensus phosphorylation site (Figure 7B).
+Strikingly, TBK1 showed a strong preference for serine over threonine.
+In fact, none of the 12 peptides displayed on the array that contain exclusively threonines was phosphorylated.
+Mapping of the TBK1 phosphorylation site in DDX3X.
+(A) Peptides derived from DDX3X or control peptides derived from TBK1 or IRF3 along with alanine mutants were incubated with TBK1 in the presence of [γ-32P]ATP.
+Each array contained a total of 82 peptides spotted in triplicate.
+(B) Phosphorylation sites obtained from the peptide array (see also text) were used to build a TBK1 phosphorylation consensus sequence.
