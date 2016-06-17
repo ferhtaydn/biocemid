@@ -33,8 +33,7 @@ object Main extends App {
       val config = BaselineAnnotatorConfig(rawDirectory, 1, 1d, 0.5, baselineAnnotatedSuffix, pureBaseline = true)
       annotators.annotate(config)
     case 3 ⇒
-      val config = TfrfAnnotatorConfig(rawDirectory, 1, 1d, 0.5, tfrfAnnotatedSuffix, pureBaseline = true,
-        useINO = true, useNamedEntity = true)
+      val config = TfrfAnnotatorConfig(rawDirectory, 1, 1d, 0.5, tfrfAnnotatedSuffix, pureBaseline = true)
       annotators.annotate(config)
     case 4 ⇒
       val config = Word2vecAnnotatorConfig(oaWord2vecsPureBaselineDirectory, word2vecResultDedupeFileSuffix, rawDirectory,
