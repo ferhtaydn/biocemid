@@ -1,6 +1,4 @@
 confocal_imaging,0.937961
-fluorescence_confocal_microscopy,0.892986
-laser_scanning_confocal_microscopy,0.890094
 confocal,0.88236
 lscm,0.835143
 deconvolution_microscopy,0.834113

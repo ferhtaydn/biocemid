@@ -1,5 +1,4 @@
 fluorescent_microscopy,0.950329
-confocal_fluorescence_microscopy,0.904069
 epifluorescence_microscopy,0.902131
 confocal_laser_scanning_microscopy,0.868694
 fluorescence_microscope,0.8432
@@ -28,7 +27,6 @@ multi-photon_microscopy,0.779527
 live-cell,0.779136
 florescence_microscopy,0.778578
 confocal_laser_scanning_microscope,0.777389
-fluorescence_microscopy_images,0.776535
 near-infrared_imaging,0.772783
 confocal_laser_microscope,0.770655
 gfp_fluorescence,0.767636
@@ -41,7 +39,6 @@ multispectral_fluorescence,0.764719
 bright_field,0.763134
 an_epifluorescent_microscope,0.762838
 laser_scanning,0.762706
-wide-field_fluorescence_microscopy,0.760586
 laser_confocal,0.760424
 multi-photon_imaging,0.759374
 multi-photon,0.758654
@@ -79,7 +76,6 @@ multicolor,0.732353
 super-resolution_imaging,0.73129
 high-contrast_imaging,0.730451
 rhodamine_filter,0.73028
-wide-field_fluorescence_imaging,0.730068
 bright-field,0.729552
 egfp_fluorescence,0.728718
 meta_zeiss,0.728345

@@ -1,8 +1,6 @@
 co-sedimentation,0.840537
 sedimentation_assays,0.803882
 cosedimented,0.78163
-cosedimentation_assays,0.781327
-cosedimentation_assay,0.775094
 pelleting_assay,0.730152
 microtubule_pelleting,0.728438
 co-sedimented,0.72722
@@ -16,7 +14,6 @@ f-actin_sedimentation,0.694146
 velocity_gradient_centrifugation,0.690533
 coprecipitations,0.687063
 co-sediment,0.686495
-cosedimentation_experiments,0.677926
 co-fractionation,0.677325
 co-pelleting,0.676277
 co-sedimenting,0.675145
@@ -48,7 +45,6 @@ abd_ne1,0.641874
 mt-pelleting,0.640963
 mdia2-fh1fh2c,0.63971
 steady-state_atpase_activity,0.639591
-f-actin_cosedimentation,0.63937
 pfcor-n,0.639262
 cl-containing_liposomes,0.636262
 phalloidin_stabilized,0.63583

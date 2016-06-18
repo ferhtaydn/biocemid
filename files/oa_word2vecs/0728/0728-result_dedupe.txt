@@ -1,6 +1,3 @@
-mammalian_two-hybrid_assay,0.834058
-mammalian_two-hybrid_assays,0.800097
-mammalian_two-hybrid_system,0.772493
 truncation_mutants,0.703739
 deletion_constructs,0.697611
 gal4-dna_binding_domain,0.691277

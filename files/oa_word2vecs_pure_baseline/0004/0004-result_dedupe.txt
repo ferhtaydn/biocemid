@@ -8,7 +8,6 @@ immunoaffinity_chromatography,0.816671
 immunoaffinity,0.812829
 affinity_resins,0.810916
 purifications,0.802243
-tandem_affinity_purification_tap,0.801858
 affinity_resin,0.801263
 ni-nta,0.794936
 affinity_pull-down,0.794195
@@ -26,7 +25,6 @@ co-purified,0.761024
 streptactin,0.760719
 nickel_beads,0.759348
 affinity_tags,0.757477
-two-step_affinity_purification,0.754005
 one-step_purification,0.753452
 ni2_nta_agarose,0.753424
 two-step_purification,0.752137

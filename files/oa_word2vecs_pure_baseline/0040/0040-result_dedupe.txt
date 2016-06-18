@@ -1,4 +1,3 @@
-electron_microscopy_em,0.903091
 cryo-electron_microscopy,0.897599
 electron_microscopic,0.894135
 cryo-em,0.874322
@@ -8,7 +7,6 @@ electron_cryo-microscopy,0.847908
 single-particle_analysis,0.828079
 ultrastructural,0.826301
 two-dimensional_crystals,0.814568
-transmission_electron_microscopy_tem,0.81052
 electron_micrographs,0.808088
 single-particle_reconstruction,0.807273
 immunoelectron_microscopy,0.80599
@@ -25,7 +23,6 @@ electron_cryo-tomography,0.770615
 2d_crystals,0.770449
 electron_microscope_em,0.767418
 ultra-structural,0.766455
-cryo_electron_microscopy,0.765718
 immunogold_labeling,0.762876
 electron-microscopy,0.761293
 negative-stain_em,0.757613
@@ -36,12 +33,7 @@ negative-stain,0.749416
 chemically_fixed,0.749068
 electron_micrographic,0.746933
 single-particle_image,0.745967
-immunogold_electron_microscopy,0.742188
-single-particle_electron_microscopy,0.741876
-electron_microscopy_electron_microscopy,0.739848
 sub-tomogram_averaging,0.739799
-scanning_electron_microscopy,0.738462
-particle_electron_cryomicroscopy,0.738092
 light_microscopical,0.736863
 sub-nanometer_resolution,0.735172
 correlative_light,0.733979
@@ -50,9 +42,7 @@ frozen_hydrated,0.73363
 high-pressure_freezing,0.733474
 immunogold,0.731123
 immunoelectron,0.730717
-high-resolution_electron_microscopy,0.729686
 sub-tomogram_average,0.72819
-immuno_electron_microscopy,0.728007
 electron_crystallographic,0.725665
 freeze_fracture,0.724712
 crystallography,0.723993
@@ -85,14 +75,12 @@ cryo-negative_stain,0.681114
 stain_em,0.681038
 pseudo-atomic_model,0.680759
 immuno-gold_labeling,0.679488
-stain_electron_microscopy,0.67948
 electron-dense_structures,0.679167
 cryo-sections,0.679056
 single-particle_reconstructions,0.678254
 iterative_helical,0.67722
 cryo-ns,0.67509
 low-resolution_em,0.674362
-cryogenic_electron_microscopy,0.674108
 grigorieff_n.,0.670744
 sub-tomogram,0.669751
 random_conical_tilt,0.668673

@@ -28,7 +28,6 @@ polymerisation,0.633859
 non-cross-linked,0.632463
 polymerizes,0.631514
 uncrosslinked,0.630097
-crosslink_formation,0.629272
 crosslinkage,0.621926
 polymerization,0.618342
 interchain,0.616143

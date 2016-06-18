@@ -10,7 +10,6 @@ cryo_em,0.82302
 two-dimensional_crystals,0.814568
 electron_cryotomography,0.813402
 cryo-em_images,0.81114
-transmission_electron_microscopy_tem,0.81052
 cryo-em_structure,0.80909
 cryo-em_structures,0.808891
 electron_micrographs,0.808088
@@ -31,7 +30,6 @@ electron_microcopy,0.789964
 electron_microscopical,0.789658
 negative-stain,0.788702
 single_particle_cryo-em,0.788358
-transmission_electron_microscopy_em,0.785554
 negative-stain_em,0.784264
 ultrastructural_examination,0.782198
 immuno-electron_microscopy,0.781495

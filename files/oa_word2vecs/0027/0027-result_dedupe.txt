@@ -1,10 +1,6 @@
-co-sedimentation_assays,0.808676
 co-sedimented,0.807512
 cosedimented,0.804252
 sedimentation_assays,0.803882
-co-sedimentation_assay,0.784599
-cosedimentation_assays,0.781327
-cosedimentation_assay,0.775094
 pelleting_assays,0.760572
 pelleting_assay,0.730152
 microtubule_pelleting,0.728438
@@ -22,7 +18,6 @@ co-fractionation,0.691013
 velocity_gradient_centrifugation,0.690533
 coprecipitations,0.687063
 gst-pakb-1-120,0.6852
-cosedimentation_experiments,0.684964
 co-sediments,0.68383
 g-actin,0.680403
 pellet_fraction,0.674648
@@ -37,11 +32,9 @@ gfp-cobl1001,0.665738
 recombinant_pbcpα,0.665155
 microtubule_sedimentation,0.664953
 mutant_vps1,0.664084
-actin_cosedimentation,0.662089
 biochemical_fractionation,0.660797
 cosediments,0.660725
 velocity_sedimentation,0.658702
-microtubule_co-sedimentation,0.654932
 6x-his-aa,0.653455
 inf2-fh1fh2,0.650321
 detergent-extracted,0.649148
@@ -62,7 +55,6 @@ mt-pelleting,0.640963
 mdia2-fh1fh2c,0.63971
 steady-state_atpase_activity,0.639591
 g-buffer,0.639443
-f-actin_cosedimentation,0.63937
 sedimentation_profile,0.636843
 formin_fragments,0.636353
 cl-containing_liposomes,0.636262
@@ -79,7 +71,6 @@ inf2-fh1fh2c,0.632832
 purified_bacterially_expressed,0.63279
 did_not_coprecipitate,0.632779
 myo-x,0.632451
-co-sedimentation_experiments,0.631045
 folch_liposomes,0.630573
 fragment_p20-21,0.630117
 1w-vcd,0.630048

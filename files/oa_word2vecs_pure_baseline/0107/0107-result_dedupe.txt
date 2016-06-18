@@ -1,14 +1,7 @@
-surface_plasmon_resonance_spr,0.961921
-spr_measurements,0.863539
 biacore,0.863222
-surface_plasmon_resonance_spectroscopy,0.84347
-spr_spectroscopy,0.807572
-spr_experiments,0.80032
 biolayer_interferometry,0.799698
 biacore2000,0.79467
 reflectometric_interference_spectroscopy,0.790745
-spr_biosensor,0.774844
-resonance_spr,0.768273
 fortebio_octet,0.765175
 surface_plasmon_resonance-based,0.757773
 spr-based,0.746468
@@ -21,7 +14,6 @@ quartz_crystal_microbalance,0.735924
 sensor_chip,0.735722
 label-free_detection,0.734709
 biosensor_chip,0.720621
-spr_chip,0.71587
 sensor_chips,0.715446
 iasys,0.711122
 sensorchip,0.710979
@@ -36,10 +28,8 @@ competitive_binding,0.6974
 immunosensors,0.696997
 biosensor,0.696507
 biacoretm,0.693598
-surface_plasmon_resonance_imaging,0.693543
 cm5_chips,0.692732
 solid-phase_binding,0.689533
-spr_sensor,0.687241
 octet_red_instrument,0.686721
 aptasensor,0.686179
 attana,0.681942
@@ -47,14 +37,12 @@ sensorgram,0.679732
 affinity_kd,0.678158
 amine-coupled,0.675112
 biosensor-based,0.673435
-spr_sensing,0.672048
 label-free_biosensing,0.662325
 real-time_label-free,0.662305
 biosensing,0.66117
 sensing_platform,0.655944
 immunosensing,0.653423
 immunosensor,0.651936
-spr_biosensors,0.651348
 resonant_waveguide_grating,0.646722
 biosensors,0.646306
 reagentless,0.645926
@@ -83,7 +71,6 @@ ni-nta_chip,0.604747
 response_units_ru,0.60102
 cd115_constructs,0.591422
 ka_kd_kd,0.587741
-spr_spr,0.584448
 octet_red96,0.562785
 gfp_cbd500,0.56028
 sensogram,0.559433

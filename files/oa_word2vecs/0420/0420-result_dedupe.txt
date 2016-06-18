@@ -1,5 +1,3 @@
-homogeneous_time-resolved_fluorescence_htrf,0.739591
-homogenous_time-resolved_fluorescence_htrf,0.68739
 pherastar,0.684722
 cisbio_bioassays_codolet_france,0.669455
 plate_reader,0.664002

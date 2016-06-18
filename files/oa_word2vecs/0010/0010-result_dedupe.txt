@@ -7,7 +7,6 @@ ec_3.2.1.23,0.713724
 glucosidase,0.712722
 alpha-galactosidase,0.704482
 beta-mannosidase,0.683183
-beta-galactosidase_β-gal,0.67824
 b-galactosidase,0.675792
 α-galactosidase,0.669603
 galactose-1-phosphate_uridylyltransferase,0.663131
@@ -58,7 +57,6 @@ aldose_1-epimerase,0.614293
 α-amylase_amy,0.613836
 beta-n-acetylhexosaminidase,0.612972
 α-l-arabinofuranosidase,0.612327
-beta-galactosidase_lacz,0.612212
 galactanase,0.612101
 n-acetyl-beta-glucosaminidase,0.611534
 glycosyl_transferase,0.61099

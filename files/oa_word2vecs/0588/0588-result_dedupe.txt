@@ -1,6 +1,3 @@
-three-hybrid_system,0.619688
-yeast_3-hybrid,0.606015
-yeast_three-hybrid,0.603936
 split-ub,0.570592
 arabidopsis_escrt,0.560436
 rna15p,0.550763

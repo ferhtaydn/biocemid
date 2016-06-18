@@ -22,7 +22,6 @@ an_optilab_rex,0.755522
 multiple-angle_light,0.753947
 multi-angle_light_scattering_sec-mals,0.750593
 sedimentation_equilibrium,0.74676
-multi-angle_static_light_scattering,0.74632
 sv-auc,0.746297
 hydrodynamic_radii,0.745726
 wyatt_technologies,0.745707
