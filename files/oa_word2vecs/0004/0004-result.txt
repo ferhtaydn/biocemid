@@ -71,7 +71,6 @@ ni-nta_affinity,0.802407
 purifications,0.802243
 metal_chelate_affinity_chromatography,0.802218
 nickel_nitrilotriacetic_acid,0.802015
-tandem_affinity_purification_tap,0.801858
 ni2_nta_column,0.800898
 nickel_nta,0.800735
 ni-nta_agarose_column,0.800484

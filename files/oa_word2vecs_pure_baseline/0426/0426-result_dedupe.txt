@@ -1,12 +1,9 @@
-under_light_microscopy,0.876467
 light_microscope,0.865947
-light_microscopy_lm,0.853107
 light_microscopic,0.852648
 optical_microscopy,0.83766
 bright-field_microscopy,0.816199
 light-microscopy,0.808478
 bright_field_microscopy,0.805834
-conventional_light_microscopy,0.796299
 semi-thin_sections,0.795408
 microscopic_observation,0.795013
 optical_microscope,0.789272

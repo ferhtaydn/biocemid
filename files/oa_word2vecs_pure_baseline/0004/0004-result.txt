@@ -8,7 +8,6 @@ immunoaffinity_chromatography,0.816671
 immunoaffinity,0.812829
 affinity_resins,0.810916
 purifications,0.802243
-tandem_affinity_purification_tap,0.801858
 affinity_resin,0.801263
 ni-nta,0.794936
 affinity_pull-down,0.794195

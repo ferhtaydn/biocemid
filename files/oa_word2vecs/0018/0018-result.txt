@@ -81,7 +81,6 @@ mating-based,0.696109
 co-ap,0.695304
 mbsus,0.694528
 interacting_partners,0.694077
-bacterial_two-hybrid_system,0.6935
 protein-interaction,0.692748
 protein-protein_interactions,0.692531
 ht-y2h,0.6908

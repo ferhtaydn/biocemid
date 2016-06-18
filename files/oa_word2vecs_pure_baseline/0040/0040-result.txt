@@ -8,7 +8,6 @@ electron_cryo-microscopy,0.847908
 single-particle_analysis,0.828079
 ultrastructural,0.826301
 two-dimensional_crystals,0.814568
-transmission_electron_microscopy_tem,0.81052
 electron_micrographs,0.808088
 single-particle_reconstruction,0.807273
 electron_microscopic_em,0.806277
@@ -21,7 +20,6 @@ electron-microscopic,0.791906
 electron_microcopy,0.789964
 electron_microscopical,0.789658
 cryo_em,0.788722
-transmission_electron_microscopy_em,0.785554
 ultrastructural_examination,0.782198
 immuno-electron_microscopy,0.781495
 electron_microscopic_observation,0.779357

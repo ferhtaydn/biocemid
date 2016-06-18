@@ -33,7 +33,6 @@ emission_intensities,0.796568
 maximum_emission_wavelength,0.789686
 fluorescence_quenching,0.788949
 absorption_spectroscopy,0.788353
-steady-state_fluorescence_spectroscopy,0.787573
 uv_vis,0.787337
 wavelength_maxima,0.784346
 spectroscopic_measurements,0.784319
@@ -73,7 +72,6 @@ pyrene_monomer,0.752693
 cary_eclipse_spectrofluorimeter,0.752412
 fluorescence_spectrophotometer,0.75223
 cary_eclipse_varian,0.751878
-fluorescence_spectroscopy_fluorescence,0.750893
 ultraviolet_visible,0.750839
 spectrofluorophotometer,0.749902
 spectrofluorimeter,0.74978
@@ -81,7 +79,6 @@ shimadzu_rf-5301pc,0.749424
 fluorescence_lifetimes,0.749093
 intrinsic_tryptophan,0.743114
 uv/vis_spectroscopy,0.741246
-time-resolved_fluorescence_spectroscopy,0.73924
 biophysical_techniques,0.737141
 spectroscopic_techniques,0.736062
 spectroscopy,0.734976

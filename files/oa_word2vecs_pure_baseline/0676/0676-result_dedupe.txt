@@ -1,4 +1,3 @@
-tandem_affinity_purification_tap,0.885279
 tandem_affinity,0.807978
 tap-tag,0.803701
 tap-tagged,0.796368

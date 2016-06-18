@@ -71,7 +71,6 @@ oxa-10,0.733719
 oxacillinases,0.733616
 crpa_isolates,0.733399
 carbapenems,0.732805
-extended_spectrum_beta-lactamase,0.732509
 ß-lactams,0.732413
 pampc,0.732317
 kanamycin_neomycin,0.732102

@@ -1,7 +1,5 @@
-gel_filtration_chromatography,0.967516
 size-exclusion_chromatography,0.961963
 gel-filtration,0.946247
-gel_filtration_column,0.934452
 superdex,0.925838
 superdex-200,0.898064
 superose,0.894611
@@ -13,9 +11,7 @@ monoq,0.861874
 s-200_column,0.858354
 16/60_column,0.855756
 superdex-75,0.853971
-gel_filtration_columns,0.853188
 mono-q,0.846201
-analytical_gel_filtration,0.843007
 sephacryl_s200,0.840744
 column_ge_healthcare,0.840353
 sephacryl_s-300_column,0.839524
@@ -35,7 +31,6 @@ multi-angle_laser_light_scattering,0.831809
 hiload,0.83093
 fplc,0.830668
 q_sepharose,0.828528
-gel_filtration_buffer,0.827696
 10/300_gl,0.825508
 elution_profile,0.825355
 sec-mals,0.822785
@@ -44,7 +39,6 @@ multi-angle_light_scattering,0.817683
 sec-malls,0.817624
 gl_ge_healthcare,0.814449
 s200_10/300,0.809788
-gel_filtration_fractions,0.786364
 elution_fractions,0.763757
 fractions_eluted,0.761793
 glycerol_gradient,0.760475

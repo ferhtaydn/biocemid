@@ -1,7 +1,6 @@
 ccsb-hi1,0.708269
 hsrrs-v1_pairs,0.695448
 hsrrs-v1,0.671177
-mappit_experiments,0.66849
 tool-kit_assays,0.649675
 wnappa,0.630009
 mdc-hi1,0.620741

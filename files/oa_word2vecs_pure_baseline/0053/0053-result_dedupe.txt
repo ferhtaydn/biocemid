@@ -1,17 +1,13 @@
-fluorescence_anisotropy_measurements,0.882902
 fluorescence_polarization,0.867801
 tryptophan_fluorescence,0.811475
 fluorescence_titrations,0.795181
-fluorescence_anisotropy_titrations,0.788863
 trp_fluorescence,0.778131
 equilibrium_titrations,0.777231
-fluorescence_anisotropy_fa,0.767128
 apparent_kd,0.765705
 fluorescence_quenching,0.762635
 steady-state_anisotropy,0.747954
 dissociation_kinetics,0.739971
 mant_nucleotides,0.734794
-fluorescence_anisotropy_assay,0.73102
 pip2-c6,0.73001
 mant_nucleotide,0.722378
 fam-ikkβkk_rr,0.722067
@@ -24,7 +20,6 @@ apparent_dissociation_constants,0.716774
 stopped-flow_fluorescence,0.714622
 pyrene_fluorescence,0.713512
 cx32_peptide,0.71264
-steady-state_fluorescence_anisotropy,0.709401
 fluorescence_emission_spectra,0.70897
 mdcc-pbp,0.708869
 mant-labelled,0.707657

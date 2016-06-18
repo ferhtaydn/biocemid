@@ -72,7 +72,6 @@ co-ap,0.695304
 yeast_co-transformation,0.695194
 mbsus,0.694528
 interacting_partners,0.694077
-bacterial_two-hybrid_system,0.6935
 protein-interaction,0.692748
 protein-protein_interactions,0.692531
 yeast_strain_y190,0.692009

@@ -1,13 +1,9 @@
-isothermal_titration_calorimetry_itc,0.94789
-itc_experiments,0.887907
-itc_measurements,0.87606
 isothermal_calorimetry,0.871388
 isothermal_titration,0.799553
 vp-itc_microcalorimeter_microcal,0.797262
 vp-itc_microcal,0.783309
 vp-itc_calorimeter,0.773577
 microcal_vp-itc,0.772206
-itc_titration,0.764459
 chemical_shift_mapping,0.764212
 dissociation_constants_kd,0.759233
 binding_isotherms,0.758415
@@ -19,7 +15,6 @@ microcal_itc200,0.749738
 thermal_shift,0.749567
 dissociation_constant_kd,0.748479
 vp-itc_microcalorimeter,0.746486
-itc_titrations,0.745461
 binding_constants,0.739502
 differential_scanning_fluorimetry,0.738517
 titrations,0.733218
@@ -29,7 +24,6 @@ thermodynamic_parameters,0.725188
 chemical_shift_perturbation,0.722816
 titration_calorimeter,0.721872
 thermofluor,0.720514
-microcal_itc,0.715478
 binding_isotherm,0.713083
 itc-200,0.706948
 isothermal_calorimetric,0.698106
@@ -38,14 +32,11 @@ vp-itc_instrument,0.697193
 differential_scanning_fluorometry,0.694727
 binding_affinities,0.692989
 two-site_binding_model,0.692401
-itc_itc,0.570922
-nano_itc,0.569626
 calorimetric_titration,0.568154
 vp-itc_titration,0.560864
 microcalorimeter_microcal,0.559741
 microcal_inc._northampton_ma,0.551545
 microcal,0.55126
-itc_thermogram,0.549237
 vp-itc,0.549197
 cal/mol/deg,0.548852
 binding_enthalpy,0.533509
@@ -53,4 +44,3 @@ competition-binding_assay,0.533317
 cul2ntd,0.524623
 itc200_instrument,0.524001
 itc200_system,0.523359
-itc_kd,0.521258

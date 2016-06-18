@@ -5,7 +5,6 @@ em_tomography,0.807625
 electron_tomograms,0.806315
 electron_cryotomography,0.797963
 electron_microscope_tomography,0.795469
-cryo_electron_tomography,0.786457
 frozen-hydrated,0.779793
 cryoelectron_tomography,0.772796
 subtomogram_averaging,0.766819

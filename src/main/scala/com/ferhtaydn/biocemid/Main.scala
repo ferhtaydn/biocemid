@@ -37,7 +37,7 @@ object Main extends App {
       annotators.annotate(config)
     case 4 ⇒
       val config = Word2vecAnnotatorConfig(oaWord2vecsPureBaselineDirectory, word2vecResultDedupeFileSuffix, rawDirectory,
-        1, 0.9, 0.7, word2vecAnnotatedSuffix, pureBaseline = true, useNamedEntity = true, useINO = true)
+        1, 0.9, 0.7, word2vecAnnotatedSuffix, pureBaseline = true)
       Word2vecHelper.help(config)
       annotators.annotate(config)
     case 5 ⇒

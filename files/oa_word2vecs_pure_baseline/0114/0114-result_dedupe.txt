@@ -3,7 +3,6 @@ x-ray_crystallographic,0.880751
 crystallography,0.880626
 electron_diffraction,0.873574
 powder_diffraction,0.860762
-single-crystal_x-ray_diffraction,0.858509
 powder_xrd,0.855113
 crystallographic,0.854583
 pxrd,0.849865
@@ -11,7 +10,6 @@ atomic_resolution,0.848856
 crystal_structures,0.84545
 x-ray_crystal_structure,0.843261
 high-resolution_structures,0.841213
-powder_x-ray_diffraction,0.838259
 neutron_diffraction,0.832929
 structure_determination,0.832431
 x-ray_structure,0.832415

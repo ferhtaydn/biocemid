@@ -151,6 +151,11 @@ object Word2vecHelper {
       m.id → names
     }.toMap
 
+    lazy val methodNamesToWord2VecItems = methodsNames.map {
+      case (id, names) ⇒
+        id → names.map(p ⇒ Word2vecItem(p, 1d))
+    }
+
     lazy val methodWord2vecItems: Map[String, Seq[Word2vecItem]] = methodIds.map { methodId ⇒
       list(s"${config.w2vDir}/$methodId", txtSuffix) match {
         case Nil   ⇒ methodId → Seq.empty[Word2vecItem]
@@ -173,8 +178,6 @@ object Word2vecHelper {
           }
         }
       }
-      // remove the ontology's name/synonyms from word2vecs list. Their score is already 1.0
-      methodsNames(methodId).foreach(map.remove)
       map.toSeq.sortBy(_._2).reverse.map { case (p, s) ⇒ Word2vecItem(p, s) }
     }
 
@@ -185,17 +188,30 @@ object Word2vecHelper {
 
       val results = items.foldLeft(Seq.empty[Word2vecItem]) {
         case (acc, i) ⇒
-          if (namesOfMethod.exists(n ⇒ n.contains(i.phrase) || i.phrase.contains(n))) {
-            acc :+ i
-          } else {
-            val skipItem = otherMethodItems.exists {
-              case (oId, oItems) ⇒
-                val namesOfOtherMethod = methodsNames(oId)
-                namesOfOtherMethod.exists(n ⇒ n.contains(i.phrase) || i.phrase.contains(n)) ||
-                  oItems.exists(oi ⇒ oi.phrase.equalsIgnoreCase(i.phrase) && oi.score > i.score)
-            }
-            if (skipItem) acc else acc :+ i
+          val skipItem = namesOfMethod.find(n ⇒ n.contains(i.phrase) || i.phrase.contains(n)) match {
+            case None ⇒
+              otherMethodItems.exists {
+                case (oId, oItems) ⇒
+                  val namesOfOtherMethod = methodsNames(oId)
+                  namesOfOtherMethod.exists(n ⇒ n.contains(i.phrase) || i.phrase.contains(n)) ||
+                    oItems.exists(oi ⇒ oi.phrase.equalsIgnoreCase(i.phrase) && oi.score > i.score)
+              }
+            case Some(name) ⇒
+              otherMethodItems.exists {
+                case (oId, oItems) ⇒
+                  val namesOfOtherMethod = methodsNames(oId)
+                  namesOfOtherMethod.find(n ⇒ i.phrase.contains(n)) match {
+                    case None ⇒ false
+                    case Some(oName) ⇒
+                      if (oName.contains(name) || name.contains(oName)) {
+                        oName.length > name.length
+                      } else {
+                        oItems.exists(oi ⇒ oi.phrase.equalsIgnoreCase(i.phrase) && oi.score > i.score)
+                      }
+                  }
+              }
           }
+          if (skipItem) acc else acc :+ i
       }
       results
     }
@@ -203,7 +219,11 @@ object Word2vecHelper {
     methodWord2vecItems.foreach {
       case (methodId, items) ⇒
 
-        val results: Seq[Word2vecItem] = cleanWord2vecResults(methodId, items)
+        val cleanedResults: Seq[Word2vecItem] = cleanWord2vecResults(methodId, items)
+
+        val results = cleanedResults.filterNot(i ⇒ methodsNames(methodId).contains(i.phrase))
+        val dedupeResults = dedupe(methodNamesToWord2VecItems(methodId) ++ results, Seq.empty[Word2vecItem])
+          .filterNot(i ⇒ methodsNames(methodId).contains(i.phrase))
 
         write(
           s"${config.w2vDir}/$methodId/$methodId-$word2vecResultFileSuffix",
@@ -211,7 +231,7 @@ object Word2vecHelper {
         )
         write(
           s"${config.w2vDir}/$methodId/$methodId-$word2vecResultDedupeFileSuffix",
-          Word2vecItem.stringifyItems(dedupe(results, Seq.empty[Word2vecItem]))
+          Word2vecItem.stringifyItems(dedupeResults)
         )
     }
   }
