@@ -11,10 +11,10 @@ trueNegatives: 56.0
 truePositives: 2.4595679488979134
 
 16732694.xml
-falseNegatives: 9.99379279003675
-falsePositives: 11.0
+falseNegatives: 9.52417953036824
+falsePositives: 10.0
 trueNegatives: 48.0
-truePositives: 15.006207209963252
+truePositives: 15.47582046963176
 
 16754960.xml
 falseNegatives: 10.291322258145607
@@ -66,7 +66,7 @@ truePositives: 2.4744616103935213
 
 17581628.xml
 falseNegatives: 13.656860375838667
-falsePositives: 3.0
+falsePositives: 4.0
 trueNegatives: 31.0
 truePositives: 7.343139624161332
 
@@ -78,7 +78,7 @@ truePositives: 1.0
 
 17620405.xml
 falseNegatives: 14.541361409806168
-falsePositives: 13.0
+falsePositives: 15.0
 trueNegatives: 35.0
 truePositives: 9.45863859019383
 
@@ -90,7 +90,7 @@ truePositives: 4.263597126644935
 
 18292755.xml
 falseNegatives: 3.562243478058547
-falsePositives: 10.481727574750831
+falsePositives: 15.481727574750831
 trueNegatives: 13.0
 truePositives: 11.956028947190623
 
@@ -126,7 +126,7 @@ truePositives: 10.217054889262474
 
 18583960.xml
 falseNegatives: 5.8408231565273
-falsePositives: 10.0
+falsePositives: 15.0
 trueNegatives: 39.0
 truePositives: 8.159176843472698
 
@@ -138,7 +138,7 @@ truePositives: 2.4185823754789273
 
 18700817.xml
 falseNegatives: 1.5664845173041895
-falsePositives: 1.0
+falsePositives: 2.0
 trueNegatives: 68.0
 truePositives: 5.43351548269581
 
@@ -161,10 +161,10 @@ trueNegatives: 23.0
 truePositives: 2.9633352202424774
 
 18836139.xml
-falseNegatives: 15.05357028630577
+falseNegatives: 14.84863669996801
 falsePositives: 9.0
 trueNegatives: 19.0
-truePositives: 10.946429713694231
+truePositives: 11.151363300031992
 
 18940607.xml
 falseNegatives: 10.869050908803434
@@ -174,12 +174,12 @@ truePositives: 9.588675038718431
 
 19131970.xml
 falseNegatives: 7.986764312749669
-falsePositives: 26.0
+falsePositives: 28.0
 trueNegatives: 10.0
 truePositives: 10.01323568725033
 
-TN -> 1064.0, FN -> 232.86455449790353, TP -> 185.8974700757409, FP -> 186.2379754263556
-accuracy: 0.7488900359950514
-precision: 0.4995424980948062
-recall: 0.4439215095136893
-fscore: 0.4700924635855474
+TN -> 1064.0, FN -> 232.19000765189725, TP -> 186.57201692174715, FP -> 201.2379754263556
+accuracy: 0.7426199625426051
+precision: 0.48109130915398884
+recall: 0.44553232139829857
+fscore: 0.46262953092221687

@@ -32,6 +32,7 @@ abstract class Annotator extends CopyConverter {
   }
 
   // "bacterial two-hybrid" vs "two-hybrid". calculateMethodWeights results should be filtered.
+  // not used for now.
   private def filterShorterMethod(methodWeights: List[MethodWeight]): List[MethodWeight] = {
 
     methodWeights.foldLeft(List.empty[MethodWeight]) {
@@ -44,7 +45,7 @@ abstract class Annotator extends CopyConverter {
         } else {
           mw :: acc
         }
-    }
+    }.reverse
   }
 
   def searchInSentence(sentenceTokens: List[String], terms: List[String]): List[String] = {
@@ -118,7 +119,7 @@ abstract class Annotator extends CopyConverter {
   }
 
   private def annotateSentence(sentence: BioCSentence): BioCSentence = {
-    setWeights(sentence, filterShorterMethod(calculateMethodWeights(tokenize(sentence.getText))))
+    setWeights(sentence, calculateMethodWeights(tokenize(sentence.getText)))
   }
 
   private def setWeights(sentence: BioCSentence, methodWeights: List[MethodWeight]): BioCSentence = {
