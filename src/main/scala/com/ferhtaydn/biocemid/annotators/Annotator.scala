@@ -119,7 +119,7 @@ abstract class Annotator extends CopyConverter {
   }
 
   private def annotateSentence(sentence: BioCSentence): BioCSentence = {
-    setWeights(sentence, calculateMethodWeights(tokenize(sentence.getText)))
+    setWeights(sentence, filterShorterMethod(calculateMethodWeights(tokenize(sentence.getText))))
   }
 
   private def setWeights(sentence: BioCSentence, methodWeights: List[MethodWeight]): BioCSentence = {

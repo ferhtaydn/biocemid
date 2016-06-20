@@ -88,12 +88,6 @@ object Evaluator {
 
     if (manualAnnotations.isEmpty && annotations.isEmpty) {
       fileRate.incTN(1)
-    } else if (manualAnnotations.isEmpty && annotations.nonEmpty) {
-      fileRate.incFP(annotations.length)
-      //append("files/FP_annotations.txt", annotations.map(x ⇒ x.getInfon(psimi) + newline + x.getText + newline).mkString(newline))
-    } else if (manualAnnotations.nonEmpty && annotations.isEmpty) {
-      fileRate.incFN(manualAnnotations.length)
-      //append("files/FN_annotations.txt", manualAnnotations.map(x ⇒ x.getInfon(psimi) + newline + x.getText + newline).mkString(newline))
     } else {
       // manualAnnotations.nonEmpty && annotations.nonEmpty
       val consumedAnnotations = manualAnnotations.foldLeft(List.empty[BioCAnnotation]) {

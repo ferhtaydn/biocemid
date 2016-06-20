@@ -141,6 +141,7 @@ package object biocemid {
   val word2vecResultFileSuffix = "result.txt"
   val word2vecResultRawFileSuffix = "result_raw.txt"
   val word2vecResultDedupeFileSuffix = "result_dedupe.txt"
+  val word2vecResultDedupeEnhancedFileSuffix = "result_dedupe_enhanced.txt"
   val baselineAnnotatedSuffix = "baseline.xml"
   val tfrfAnnotatedSuffix = "tfrf.xml"
   val word2vecAnnotatedSuffix = "word2vec.xml"
