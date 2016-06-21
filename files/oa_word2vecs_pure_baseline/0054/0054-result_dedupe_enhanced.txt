@@ -1,6 +1,5 @@
 flow-cytometry,0.930638
 flow_cytometric,0.929751
-flow_cytometric,0.928599
 cytometric_analysis,0.8914
 flowcytometry,0.884633
 flow_cytometery,0.878405

@@ -316,8 +316,13 @@ object Word2vecHelper {
 
         write(
           s"${config.w2vDir}/$methodId/$methodId-$word2vecResultDedupeEnhancedFileSuffix",
-          Word2vecItem.stringifyItems(newNames ++ dedupeResults.distinct)
+          Word2vecItem.stringifyItems(distinct(newNames ++ dedupeResults))
         )
+    }
+
+    def distinct(seq: Seq[Word2vecItem]) = seq.foldLeft(Seq.empty[Word2vecItem]) {
+      case (acc, i) ⇒
+        if (!acc.map(_.phrase).contains(i.phrase)) acc :+ i else acc
     }
   }
 
