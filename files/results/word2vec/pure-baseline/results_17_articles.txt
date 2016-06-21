@@ -1,0 +1,19 @@
+- genia0: there should be more than 0 (at least 1) different protein in the passage.
+- genia1: there should be more than 1 different protein in the passage.
+- ino1: uses the files/ino/literature_mining_keywords_related_to_proteins.txt
+- ino0: uses the files/ino/interaction_keywords.txt
+- > mainThreshold: dedupe enhanced rule. Terms whose weight more than mainThreshold used as synonym.
+
+config_1:
+  - pure-baseline, oa_word2vecs_pure_baseline
+  - dedupe enhanced
+  - before, after: 1
+  - mainThreshold: 0.9
+  - smallThreshold: 0.65
+
+  default: dedupe_enhanced:
+  TN -> 569.0, FN -> 93.3968432210871, TP -> 130.13966075417142, FP -> 221.4634960247415
+  accuracy: 0.6894868449252184
+  precision: 0.3701322307410422
+  recall: 0.5821852737241321
+  fscore: 0.45254977054971784

@@ -17,12 +17,10 @@ object Main extends App {
        |2 - Annotate with BASELINE raw files in $rawDirectory
        |3 - Annotate with TFRF raw files in $rawDirectory
        |4 - Annotate with WORD2VEC over PURE-BASELINE, raw files in $rawDirectory
-       |5 - Annotate with WORD2VEC + GENIATAGGER, raw files in $rawDirectory
-       |6 - Annotate with WORD2VEC + GENIATAGGER + INO, raw files in $rawDirectory
-       |7 - Generate Eval results by comparing $goldResultDirectory and $baselineResultDirectory
-       |8 - Generate Eval results by comparing $goldResultDirectory and $tfrfResultDirectory
-       |9 - Generate Eval results by comparing $goldResultDirectory and $word2vecResultDirectory
-       |10 - Count of each method annotated in $publishedDataSet
+       |5 - Generate Eval results by comparing $goldResultDirectory and $baselineResultDirectory
+       |6 - Generate Eval results by comparing $goldResultDirectory and $tfrfResultDirectory
+       |7 - Generate Eval results by comparing $goldResultDirectory and $word2vecResultDirectory
+       |8 - Count of each method annotated in $publishedDataSet
      """.stripMargin
   )
 
@@ -37,29 +35,19 @@ object Main extends App {
       annotators.annotate(config)
     case 4 ⇒
       val config = Word2vecAnnotatorConfig(oaWord2vecsPureBaselineDirectory, word2vecResultDedupeEnhancedFileSuffix,
-        rawDirectory, 1, 0.9, 0.7, word2vecAnnotatedSuffix, pureBaseline = true)
+        rawDirectory, 1, 0.90, 0.65, word2vecAnnotatedSuffix, pureBaseline = true, useINO = true, useNamedEntity = true)
       Word2vecHelper.help(config)
       annotators.annotate(config)
     case 5 ⇒
-      val config = Word2vecAnnotatorConfig(oaWord2vecsDirectory, word2vecResultDedupeFileSuffix, rawDirectory,
-        1, 1d, 0.5, word2vecAnnotatedSuffix, useNamedEntity = true)
-      Word2vecHelper.help(config)
-      annotators.annotate(config)
-    case 6 ⇒
-      val config = Word2vecAnnotatorConfig(oaWord2vecsDirectory, word2vecResultDedupeFileSuffix,
-        rawDirectory, 1, 1d, 0.5, word2vecAnnotatedSuffix, useNamedEntity = false, useINO = true)
-      Word2vecHelper.help(config)
-      annotators.annotate(config)
-    case 7 ⇒
       Evaluator.evaluate(goldResultDirectory, pureBaselineResultDirectory, xmlSuffix)
-    case 8 ⇒
+    case 6 ⇒
       Evaluator.evaluate(goldResultDirectory, tfrfResultDirectory, xmlSuffix)
-    case 9 ⇒
+    case 7 ⇒
       Evaluator.evaluate(goldResultDirectory, word2vecResultDirectory, xmlSuffix)
-    case 10 ⇒
+    case 8 ⇒
       Evaluator.countOfMethods(publishedDataSet, xmlSuffix)
     case _ ⇒
-      Console.println("Please select the options from 1 to 10.")
+      Console.println("Please select the options from 1 to 8.")
       System.exit(0)
   }
 }

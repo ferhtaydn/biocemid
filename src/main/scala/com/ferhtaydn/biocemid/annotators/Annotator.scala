@@ -32,9 +32,7 @@ abstract class Annotator extends CopyConverter {
   }
 
   // "bacterial two-hybrid" vs "two-hybrid". calculateMethodWeights results should be filtered.
-  // not used for now.
   private def filterShorterMethod(methodWeights: List[MethodWeight]): List[MethodWeight] = {
-
     methodWeights.foldLeft(List.empty[MethodWeight]) {
       case (acc, mw) ⇒
         val accTerms = acc.flatMap(_.terms)
@@ -123,7 +121,6 @@ abstract class Annotator extends CopyConverter {
   }
 
   private def setWeights(sentence: BioCSentence, methodWeights: List[MethodWeight]): BioCSentence = {
-
     methodWeights.partition(_.weight >= config.mainThreshold) match {
       case (up, down) ⇒
         if (up.nonEmpty) {

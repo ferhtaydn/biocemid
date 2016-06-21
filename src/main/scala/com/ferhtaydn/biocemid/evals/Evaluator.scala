@@ -55,6 +55,9 @@ object Evaluator {
     val manuallyAnnotatedFiles = list(manuallyAnnotatedFilesDirectory, fileSuffix)
     val annotatedFiles = list(annotatedFilesDirectory, fileSuffix)
 
+    remove(s"$annotatedFilesDirectory/FN_annotations.txt")
+    remove(s"$annotatedFilesDirectory/FP_annotations.txt")
+
     val results = scala.collection.mutable.Map.empty[Rate, Double].withDefaultValue(0)
 
     manuallyAnnotatedFiles.zip(annotatedFiles).foreach {
@@ -74,7 +77,7 @@ object Evaluator {
             val manualAnnotations = manuallyAnnotatedPassage.getAnnotations.toList
             val annotations = annotatedPassage.getAnnotations.toList
 
-            matchAnnotations(manualAnnotations, annotations, fileRate)
+            matchAnnotations(manualAnnotations, annotations, fileRate, annotatedFilesDirectory)
         }
         calculateFileResults(results, fileRate)
     }
@@ -84,7 +87,7 @@ object Evaluator {
   }
 
   private def matchAnnotations(manualAnnotations: List[BioCAnnotation], annotations: List[BioCAnnotation],
-    fileRate: FileRate) = {
+    fileRate: FileRate, annotatedFilesDirectory: String) = {
 
     if (manualAnnotations.isEmpty && annotations.isEmpty) {
       fileRate.incTN(1)
@@ -99,7 +102,7 @@ object Evaluator {
           } match {
             case Nil ⇒
               fileRate.incFN(1)
-              //append("files/FN_annotations.txt", manualAnnotation.getInfon(psimi) + newline + manualAnnotation.getText + newline)
+              append(s"$annotatedFilesDirectory/FN_annotations.txt", manualAnnotation.getInfon(psimi) + newline + manualAnnotation.getText + newline)
               acc
             case matchedAnnotations ⇒
               // big manual annotated text with multi small code annotated text.
@@ -126,7 +129,7 @@ object Evaluator {
       }
 
       fileRate.incFP((annotations diff consumedAnnotations).length)
-      //append("files/FP_annotations.txt", (annotations diff consumedAnnotations).map(x ⇒ x.getInfon(psimi) + newline + x.getText + newline).mkString(newline))
+      append(s"$annotatedFilesDirectory/FP_annotations.txt", (annotations diff consumedAnnotations).map(x ⇒ x.getInfon(psimi) + newline + x.getText + newline).mkString(newline))
 
     }
   }
