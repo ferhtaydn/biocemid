@@ -12,6 +12,7 @@ object Word2vecHelper {
     cleanPreviousAnnotatedFiles(config)
     generateRawWord2vecResultFiles(config)
     generateWord2vecResultFiles(config)
+    generateDedupeEnhancedResultFiles(config)
     //generateRawLatexTableContext("0018")
     //generateDedupeLatexTableContext("0018")
   }
@@ -21,6 +22,8 @@ object Word2vecHelper {
     s"find ${config.w2vDir} -type f -name *$word2vecResultFileSuffix" #| "xargs rm" !!
 
     s"find ${config.w2vDir} -type f -name *$word2vecResultDedupeFileSuffix" #| "xargs rm" !!
+
+    s"find ${config.w2vDir} -type f -name *$word2vecResultDedupeEnhancedFileSuffix" #| "xargs rm" !!
 
     s"find ${config.w2vDir} -type f -name *$word2vecResultRawFileSuffix" #| "xargs rm" !!
   }
@@ -146,22 +149,12 @@ object Word2vecHelper {
 
   private def generateWord2vecResultFiles(config: Word2vecAnnotatorConfig): Unit = {
 
-    lazy val methodsNames: Map[String, List[String]] = methodsInfo.map { m ⇒
+    val methodsNames: Map[String, List[String]] = methodsInfo.map { m ⇒
       val names = if (config.pureBaseline) m.pureNameAndSynonymsWithUnderscore else m.nameAndSynonymsWithUnderscore
       m.id → names
     }.toMap
 
-    lazy val methodNamesToWord2VecItems = methodsNames.map {
-      case (id, names) ⇒
-        id → names.map(p ⇒ Word2vecItem(p, 1d))
-    }
-
-    lazy val methodWord2vecItems: Map[String, Seq[Word2vecItem]] = methodIds.map { methodId ⇒
-      list(s"${config.w2vDir}/$methodId", txtSuffix) match {
-        case Nil   ⇒ methodId → Seq.empty[Word2vecItem]
-        case files ⇒ methodId → combineWord2vecs(methodId, files)
-      }
-    }.filter(_._2.nonEmpty).toMap
+    def methodNamesToWord2VecItems(id: String): List[Word2vecItem] = methodsNames(id).map(Word2vecItem(_, 1d))
 
     def combineWord2vecs(methodId: String, files: List[File]): Seq[Word2vecItem] = {
       val map = scala.collection.mutable.Map.empty[String, Double].withDefaultValue(0d)
@@ -180,6 +173,13 @@ object Word2vecHelper {
       }
       map.toSeq.sortBy(_._2).reverse.map { case (p, s) ⇒ Word2vecItem(p, s) }
     }
+
+    val methodWord2vecItems: Map[String, Seq[Word2vecItem]] = methodIds.map { methodId ⇒
+      list(s"${config.w2vDir}/$methodId", txtSuffix) match {
+        case Nil   ⇒ methodId → Seq.empty[Word2vecItem]
+        case files ⇒ methodId → combineWord2vecs(methodId, files)
+      }
+    }.filter(_._2.nonEmpty).toMap
 
     def cleanWord2vecResults(methodId: String, items: Seq[Word2vecItem]): Seq[Word2vecItem] = {
 
@@ -232,6 +232,91 @@ object Word2vecHelper {
         write(
           s"${config.w2vDir}/$methodId/$methodId-$word2vecResultDedupeFileSuffix",
           Word2vecItem.stringifyItems(dedupeResults)
+        )
+    }
+  }
+
+  def generateDedupeEnhancedResultFiles(config: Word2vecAnnotatorConfig): Unit = {
+
+    lazy val methodWord2vecItems: Map[String, Seq[Word2vecItem]] = methodIds.map { methodId ⇒
+      methodId → read(s"${config.w2vDir}/$methodId/$methodId-$word2vecResultDedupeFileSuffix")
+        .map(line ⇒ Word2vecItem.underscoredPhrases(line))
+    }.filter(_._2.nonEmpty).toMap
+
+    lazy val redundantKeywords = List("assay", "assays", "experiment", "experiments", "analysis", "system", "analyses")
+
+    def expandMethodNames(items: Seq[Word2vecItem]): Seq[Word2vecItem] = {
+      items.filter(_.score >= config.mainThreshold)
+        .foldLeft(Seq.empty[Word2vecItem]) {
+          case (acc, i) ⇒
+            redundantKeywords.find(_.equalsIgnoreCase(i.phrase.split(underscoreRegex).last)) match {
+              case None    ⇒ acc :+ i
+              case Some(a) ⇒ acc :+ i.copy(i.phrase.split(underscoreRegex + a).head)
+            }
+        }
+    }
+
+    lazy val expandedMethodsNames: Map[String, List[String]] = methodsInfo.map { m ⇒
+      val names = if (config.pureBaseline) m.pureNameAndSynonymsWithUnderscore else m.nameAndSynonymsWithUnderscore
+
+      val ex = methodWord2vecItems.get(m.id) match {
+        case None    ⇒ Nil
+        case Some(x) ⇒ expandMethodNames(x)
+      }
+
+      m.id → (names ++ ex.map(_.phrase)).distinct
+    }.toMap
+
+    def cleanDedupeResults(methodId: String, items: Seq[Word2vecItem]): Seq[Word2vecItem] = {
+
+      val otherMethodItems = methodWord2vecItems - methodId
+      val namesOfMethod = expandedMethodsNames(methodId)
+
+      val results = items.foldLeft(Seq.empty[Word2vecItem]) {
+        case (acc, i) ⇒
+          val skipItem = namesOfMethod.find(n ⇒ n.contains(i.phrase) || i.phrase.contains(n)) match {
+            case None ⇒
+              otherMethodItems.exists {
+                case (oId, oItems) ⇒
+                  val namesOfOtherMethod = expandedMethodsNames(oId)
+                  namesOfOtherMethod.exists(n ⇒ n.contains(i.phrase) || i.phrase.contains(n)) ||
+                    oItems.exists(oi ⇒ oi.phrase.equalsIgnoreCase(i.phrase) && oi.score > i.score)
+              }
+            case Some(name) ⇒
+              otherMethodItems.exists {
+                case (oId, oItems) ⇒
+                  val namesOfOtherMethod = expandedMethodsNames(oId)
+                  namesOfOtherMethod.find(n ⇒ i.phrase.contains(n)) match {
+                    case None ⇒ false
+                    case Some(oName) ⇒
+                      if (oName.contains(name) || name.contains(oName)) {
+                        oName.length > name.length
+                      } else {
+                        oItems.exists(oi ⇒ oi.phrase.equalsIgnoreCase(i.phrase) && oi.score > i.score)
+                      }
+                  }
+              }
+          }
+          if (skipItem) acc else acc :+ i
+      }
+      results
+    }
+
+    methodWord2vecItems.foreach {
+      case (methodId, items) ⇒
+
+        val cleanedResults: Seq[Word2vecItem] = cleanDedupeResults(methodId, items)
+
+        val names = expandedMethodsNames(methodId).map(Word2vecItem(_, 1d))
+
+        val newNames = expandMethodNames(items)
+
+        val dedupeResults = dedupe(names ++ cleanedResults, Seq.empty[Word2vecItem])
+          .filterNot(i ⇒ expandedMethodsNames(methodId).contains(i.phrase))
+
+        write(
+          s"${config.w2vDir}/$methodId/$methodId-$word2vecResultDedupeEnhancedFileSuffix",
+          Word2vecItem.stringifyItems(newNames ++ dedupeResults.distinct)
         )
     }
   }
