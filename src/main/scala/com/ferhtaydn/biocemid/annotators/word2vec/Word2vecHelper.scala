@@ -243,7 +243,8 @@ object Word2vecHelper {
         .map(line ⇒ Word2vecItem.underscoredPhrases(line))
     }.filter(_._2.nonEmpty).toMap
 
-    lazy val redundantKeywords = List("assay", "assays", "experiment", "experiments", "analysis", "system", "analyses")
+    lazy val redundantKeywords = List("assay", "assays", "experiment", "experiments", "analysis", "system",
+      "analyses", "study", "technology")
 
     def expandMethodNames(items: Seq[Word2vecItem]): Seq[Word2vecItem] = {
       items.filter(_.score >= config.mainThreshold)

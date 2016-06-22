@@ -1,0 +1,700 @@
+0432
+As bait the sequences encoding the MEINOXSTM domain (amino acids 116–220 of the STM protein) or the slightly longer MEINOX-ELKSTM (amino acids 116–287) domain were cloned into the vector pGBKT7 (Clontech) and expressed in fusion with the GAL4 DNA-binding domain.
+0809
+Verified cDNA inserts were either directly transferred into appropriate secondary vectors for bimolecular fluorescence complementation (BiFC), co-immunoprecipitation or transgenic experiments and served as templates in second-round PCR-amplification to remove the stop codon or to adjust open reading frames (ORFs) for translational fusions.
+
+0019
+Verified cDNA inserts were either directly transferred into appropriate secondary vectors for bimolecular fluorescence complementation (BiFC), co-immunoprecipitation or transgenic experiments and served as templates in second-round PCR-amplification to remove the stop codon or to adjust open reading frames (ORFs) for translational fusions.
+0019
+HA-tagged (1/3 aliquot) partner proteins were identified using an anti-HA horseradish peroxidase (HRP)-conjugated antibody (clone 3F10; Roche 2012819).
+0019
+In addition to the interactions in yeast, we performed co-immunoprecipitation experiments with epitope-tagged full-length proteins. The HA-tagged BLH proteins shown in Figure 2B were used to co-precipitate epitope-tagged STM-His (Figure 2C).
+
+0019
+The co-immunoprecipitation experiments therefore confirm that the full-length STM protein interacts with full-length ATH1, BLH3 and BLH9 proteins in vitro and substantiate the affinity of BLH/STM interactions.
+0809
+According to our BiFC results, however, STM is targeted into the nucleus as a heterodimer with ATH1, BLH3 and BLH9.
+0019
+STM/BLH interactions in yeast and co-immunoprecipitations.
+
+0432
+(A) Galactosidase activity mediated by the interaction of the MEINOX domain cloned into pGBKT7 (bait) with BLH partner proteins expressed in pACT2.
+
+0019
+Asterisks mark control lanes showing that STM-His is undetectable in immunoprecipitations in the absence of BLH partner proteins.
+0809
+(A–C) BiFC staining of the nucleus obtained after coexpression of STM/BLH constructs as indicated above each photograph in leek epidermal cells.
+
+0809
+(G) Schematic representation of BLH3 and STM deletion constructs fused to the YFP NYFP- or CYFP- sub-domains.
+0114
+A 5-Å gE-gI/Fc crystal structure, which was independently verified by a theoretical prediction method, reveals that CgE binds Fc at the CH2-CH3 interface, the binding site for several mammalian and bacterial Fc-binding proteins.
+0402
+The Fc proteins were immobilized on the surface of a biosensor chip, and the binding of CgE was assayed at pH 8 and pH 6.
+
+0019
+The relatively low affinity of the CgE/Fc interaction likely explains why a CgE/Fc binding interaction was not detectable by coimmunoprecipitation analyses [16].
+0114
+The complex crystals could not be improved by changing the gE-gI or Fc construct or by manipulating the crystals (summarized inMaterials and Methods). A 5.0-Å native data set was collected from the best of several hundred crystals (Table S2) and used for molecular replacement with the IgG Fc (pdb entry 1dn2) and CgE structures as search models. A molecular replacement solution was obtained when the Fc was positioned first followed by two CgE molecules, one bound to each Fc chain.
+0114
+The molecular replacement solution positions a CgE molecule near the CH2-CH3 linker on each of the Fc chains to make an approximately two-fold symmetric 2:1 gE-gI complex (Figure 3A). The model allows sufficient space in the unit cell for gI and NgE, which are unaccounted for in the molecular replacement solution, and shows a plausible packing arrangement including contacts between crystallographically related CgE molecules. Other features of the molecular replacement solution suggest that it is correct.
+0114
+We used experimental phasing methods to independently corroborate the molecular replacement model. A screen of complex crystals that had been soaked in various heavy-atom compounds resulted in four approximately isomorphous data sets (Table S2). An initial analysis of a KIrCl3 derivative identified five iridium sites located near the Fc molecule as positioned in the molecular replacement solution, four of which are related by the Fc dimer symmetry and two of which make a chemically-plausible interaction with a methionine (Met358) on each half of the Fc dimer (Figure 3B).
+
+0114
+An overlay of the molecular replacement model with a 5-Å heavy atom–phased electron density map (Figure S2) shows overlap of the model with electron density, including density for theN-linked carbohydrates attached to the CH2 domain of Fc, and extra density that likely corresponds to gI and NgE. Thus, experimental phasing methods using a combination of heavy-atom derivatives and SeMet-substituted crystals provides further confirmation of the molecular replacement solution and validates its use as a model for the CgE/Fc interaction in the context of the gE-gI/Fc complex.
+0114
+Of the five resulting models for the CgE/Fc interaction, one is similar to the crystallographic model obtained by molecular replacement and experimental phasing methods (Figure 3C).
+0114
+Crystal structures are available for Fc complexed with four other proteins, domain B1 of protein A [25], domain C2 of protein G [28], rheumatoid factor [24], and FcRn [27], and with one peptide that bind to this region [19].
+0114
+Although we cannot rule out local conformational variability that occurs as a function of pH, it seems unlikely that CgE undergoes large changes in conformation due to its relative compactness as a single domain, and arguments against pH-induced conformational changes in Fc have been made based on the similarity of Fc crystal structures at pH values between 4.1 and 8.0 [27].
+0114
+Because we were able to solve the crystal structure of the CgE subunit of the gE-gI ectodomain at high resolution, the identification of CgE as a minimal Fc-binding domain (Figure 1) made its structure useful for interpreting the low-resolution gE-gI/Fc complex structure. An independent prediction of the complex structure using the coordinates of the unbound CgE and Fc molecules revealed a close agreement with the experimentally determined gE-gI/Fc structure (Figure 3C), demonstrating the power of new protein docking methods [33,34], and their potential for facilitating difficult crystallographic problems.
+0114
+As revealed in the low resolution crystal structure of a gE-gI/Fc complex, the CgE portion of gE-gI binds to Fc at the CH2-CH3 interdomain junction (Figure 3A), consistent with previous studies of the gE-gI/Fc interaction [12,21,23] and allowing a comparison of the Fc-binding properties of CgE with other proteins that bind to the same site on Fc [19,20,27].
+0114
+The model for CgE binding to Fc derived from the crystal structures of CgE and a gE-gI/Fc complex can be used to gain insight into the regions of CgE that are implicated in cell-to-cell spread of HSV.
+0402
+In this system, binding between a molecule coupled to a biosensor chip (the “ligand”) and a second molecule injected over the chip (the “analyte”) results in changes in the surface plasmon resonance signal that are read out in real time as resonance units [54]. wtFc and nbFc, both derived from human IgG1, were purified from CHO cell supernatants as described previously [12] and immobilized on a CM5 biosensor chip (Biacore) using primary-amine coupling as described by the manufacturer.
+0114
+Microseeding increased the frequency of obtaining single crystals. SeMet-substituted CgE crystals were grown in conditions similar to the native crystals with the addition of 10 mM MgCl2 in the well solution, which decreased the disorder that was often observed in the diffraction of the native crystals. All crystals were cryoprotected in well solution with an additional 15% PEG 4000, added in 5% increments, and stored in liquid nitrogen prior to data collection at −180 °C.
+0114
+For heavy-atom screening, complex crystals were soaked in 38 different heavy-atom compounds for between 18 h to 7 d, back-soaked for 2–3 h during cryopreservation, and screened for diffraction and fluorescence at the appropriate energies. Four datasets, which were collected near thef′′ peak energies for crystals that were soaked in KIrCl3, PIP, EMP, or Na2WO4, were isomorphous with the native data set (Table S2).
+0114
+(C) Stereo superposition of the crystallographically determined CgE/Fc complex and the complex predicted with RosettaDock [34] using the structures of CgE and Fc. A half complex (one CgE and one chain of the Fc dimer) is shown with Fc in green, the CgE as positioned in the crystal structure in blue, and the CgE as positioned by the docking prediction in pink. The root mean square deviation between the Cα atoms of the Rosetta-positioned CgE molecule and each of the CgE molecules in the molecular replacement solution is 3.9 Å, with the alignment being the best in the regions of CgE that are closest to the CgE/Fc interface and poorest in the regions that are more distant from the binding site.
+0114
+However, this β-hairpin is well packed against strand 6 of monomer C itself and appears to be an intrinsic feature of the Munc13–1 C2A domain, because the two Munc13–1 monomers present in the crystal structure of the Munc13–1/RIM2 heterodimer also contain this β-hairpin (see below).
+0114
+Hence, we designed two charge-reversal mutations, K32E and E63K, to disrupt Munc13–1 homodimerization based on the crystal structure of the C2A-domain homodimer.
+0114
+All these results strongly suggest that the monomer A/RIM2α82–142 complex observed in the crystals faithfully reflects the true Munc13–1/RIM2α binding mode, whereas the presence of a second Munc13–13–150(K32E) molecule in the crystals must be considered a consequence of crystal packing.
+0114
+Our Munc13–13–150(K32E)/RIM2α82–142 structure, together with the crystal structure of a rabphilin/Rab3A complex [27], and the sequence homology between rabphilin and RIM2α, also provide an explanation for our previous observations that Munc13–1, RIM2α, and Rab3A form a tripartite complex and that Munc13–1 alters the RIM2α/Rab3A binding mode [20].
+0114
+In the past, NMR spectroscopy and X-ray crystallography were largely viewed as alternative methods for structure determination of biomolecules, but the usefulness of combining the strengths of both techniques is increasingly being recognized [32,33].
+
+0077
+In the past, NMR spectroscopy and X-ray crystallography were largely viewed as alternative methods for structure determination of biomolecules, but the usefulness of combining the strengths of both techniques is increasingly being recognized [32,33]. On the other hand, two structural genomics studies recently indicated that there is no overt correlation between1H-15N HSQC spectral quality and successful crystallization of protein targets [34,35]. However, it is unclear to what extent the fragment length of each target was optimized in these studies, and a separate structural genomics effort suggested that NMR spectra can be used to identify promising targets for structure determination by X-ray crystallography [36]. The data presented here, together with our previous NMR analysis of Munc13–1/α-RIM/Rab3 interactions [20], provide a particularly compelling illustration of how NMR spectroscopy can assist in X-ray diffraction studies of protein complexes that present particularly challenging problems for crystallization, and at the same time can provide complementary information. Thus,1H-15N HSQC spectra were instrumental to map the regions involved in these interactions, to identify sequences of the complexes that can hinder crystallization because they are unstructured and promote aggregation, to interpret the X-ray results, and to resolve ambiguities. Altogether, these observations suggest that combining the strengths of NMR spectroscopy in fragment optimization and analysis of protein–protein interactions in solution with the high accuracy of structure determination by X-ray crystallography for biomolecules of any size will be particularly useful to study complex protein networks.
+
+0114
+However, it is unclear to what extent the fragment length of each target was optimized in these studies, and a separate structural genomics effort suggested that NMR spectra can be used to identify promising targets for structure determination by X-ray crystallography [36]. The data presented here, together with our previous NMR analysis of Munc13–1/α-RIM/Rab3 interactions [20], provide a particularly compelling illustration of how NMR spectroscopy can assist in X-ray diffraction studies of protein complexes that present particularly challenging problems for crystallization, and at the same time can provide complementary information.
+
+0114
+Altogether, these observations suggest that combining the strengths of NMR spectroscopy in fragment optimization and analysis of protein–protein interactions in solution with the high accuracy of structure determination by X-ray crystallography for biomolecules of any size will be particularly useful to study complex protein networks.
+0096
+Unlabeled and isotopically labeled proteins were expressed in bacteria as GST fusions as described [20]. The fusion proteins were isolated on glutathione-Sepharose beads (Amersham Biosciences, Little Chalfont, United Kingdom), cleaved from the GST moiety, and further purified by size-exclusion or ion-exchange chromatography.
+
+0226
+The fusion proteins were isolated on glutathione-Sepharose beads (Amersham Biosciences, Little Chalfont, United Kingdom), cleaved from the GST moiety, and further purified by size-exclusion or ion-exchange chromatography.
+0077
+(D)1H-15N HSQC spectrum of15N-labeled Munc13–13–150 bound to unlabeled RIM2α82–142 at 500 MHz.
+0065
+(B) ITC analysis of the binding of Munc13–13–150(K32E) to RIM2α82–142.
+0077
+(C)1H-15N HSQC spectra of15N-labeled Munc13–13–150(K32E) alone (black) and bound to unlabeled RIM2α82–142 (red) at 800 MHz.
+0019
+1 B) and endogenous integrins that were immunoprecipitated with antibodies against α1, α2, α5, α6, and β1 subunits (Fig.
+
+0019
+These associations were specific, as Rab7 and Rab11 failed to coprecipitate β1-integrin from these cells, even though separately all proteins were efficiently immunoprecipitated (Fig.
+0432
+(D) α2- and α11-integrin cytoplasmic domains and their point mutants (indicated in bold) were cloned as Gal4BD fusions and used as baits with Rab21 (amino acids 95–222) Gal4AD prey in yeast two-hybrid assays.
+0019
+Immunoprecipitations (IPs) were performed as indicated, and the Rab coprecipitating proteins were detected first with anti-biotin antibody followed by stripping and reprobing with anti–β1-integrin antibody.
+0027
+In the lighter fractions (3–5), GFP-Rab21 and integrin were found to cosediment with the Golgi-marker GM130, whereas in the denser fractions, cosedimentation was observed with the ER marker P115 (fractions 6–8) and EEA1 (fractions 7–9; Fig.
+0416
+Combined total internal reflection fluorescence microscopy (TIRFM; pseudocolored green) and conventional widefield epifluorescence analysis (pseudocolored red) showed GFP-Rab21 vesicles emanating from the membrane into the cell (changing from green to red/yellow) and back or vice versa (although formally this technique does not exclude the possibility that some vesicles will by chance come closer and further away from the plasma membrane).
+0416
+(B and C) Combined widefield epifluorescence (pseudocolored red) and TIRFM (pseudocolored green) analysis of GFP-Rab21WT (B; see Video 2) or GFP-Rab21GDP (C; see Video 3) transfected cells.
+0054
+(C) Cell surface expression of β1-integrin was analyzed with dual-color FACS from transiently transfected MDA-MB-231 cells.
+
+0416
+(F) Subcellular localization of GFP-integrin in the transfected collagen adhering cells was studied by widefield fluorescence microscopy.
+0077
+Evidence from detailed biochemical and nuclear magnetic resonance studies (Stefansson et al., 2004; Vinogradova et al., 2004) indicates that upon integrin activation the membrane-proximal regions of the integrin cytoplasmic tails move out of the membrane into the cytoplasm, revealing the highly conserved residues to the cytoplasmic face and involving substantial structural changes in the cytoplasmic tails.
+0411
+The cells were lysed (200 mM NaCl, 75 mM Tris, 15 mM NaF, 1.5 mM Na3VO4, 7.5 mM EDTA, 7.5 mM EGTA, 1.5% Triton-X-100, and Complete), and the amount of biotinylated integrin was assayed using the anti–β1-integrin antibody AIIB2 to capture the integrins and HRP anti-biotin antibody for ELISA detection.
+0019
+HeLa cells were transiently transfected with GFP, GFP-Rab21, or GFP-Rab21GTP using Lipofectamine 2000 as described in the Immunoprecipitations section. 48 h after transfection, the cells were harvested and fractionated on a sucrose density gradient and analyzed by Western blotting as described previously (Hughes et al., 2002).
+0432
+The α2-integrin COOH-terminal tail (28 residues) Gal4 DNA binding domain fusion (pGBKT7 vector) was used to screen a mouse E17 Matchmaker cDNA library (CLONTECH Laboratories, Inc.) as described previously (Mattila et al., 2005).
+0416
+TIRFM was combined with conventional widefield epifluorescence microscopy and time-lapse series (frame rate ∼2/s) Widefield images were pseudocolored red and TIRFM images green.
+0040
+S3 shows the localization of organelle markers on the sucrose gradient–fractionated GFP-Rab21–expressing HeLa cells and immunogold electron micrographs of GFP-Rab21–positive structures in MDA-MB-231 cells.
+
+0416
+Video 2 shows a combined widefield epifluorescence and TIRFM analysis of MDA-MB-231 cells expressing GFP-Rab21, adhering to collagen. Video 3 shows a combined widefield epifluorescence and TIRFM analysis of MDA-MB-231 cells expressing GFP-Rab21GDP mutant, adhering to collagen.
+0809
+To investigate the mechanism of miRNA-mediated repression of mRNA translation and to determine the interactions of P-body components with the RNAi machinery, we constructed expression vectors for the yellow fluorescent protein (YFP)-tagged P-body proteins, Lsm1, RCK/p54, Dcp2, and eIF4E.
+
+0019
+These vectors were co-expressed in HeLa cells with Myc-tagged Ago2 and immunopurified using anti-Myc antibodies. The protein composition of isolated complexes was analyzed by immunoblot using antibodies against green fluorescent protein (GFP) or Myc. When total cell extracts (TCE) were analyzed to determine the protein expression efficiencies of the vectors used in these experiments (Figure 1A, TCE lane), all YFP- and Myc-tagged proteins were expressed. Analysis of immunopurified complexes revealed that Ago1, Dcp2, RCK/p54, and eIF4E formed complexes with Ago2 (Figure 1A, anti-Myc lane).
+0019
+To address this possibility, HeLa cells were transfected with vectors to co-express Myc-Ago2 and the YFP-tagged P-body proteins, Lsm1, RCK/p54, Dcp2, and eIF4E, subjected to RNase A digestion, and immunopurified. Analysis of immunopurified complexes showed that Ago1 and RCK/p54 interactions with Myc-Ago2 were not affected by RNase treatment, whereas the amounts of Dcp2 and eIF4E protein that co-purified with Myc-Ago2 decreased significantly (Figure 1A, anti-Myc lane). Control experiments analyzing Myc-Ago2 showed that equal amounts of complexes were purified (Figure 1A, anti-Myc lane).
+0012
+To visualize protein–protein interactions in vivo, we used fluorescence resonance energy transfer (FRET) as a probe. In FRET, a fluorescent donor molecule transfers energy via a nonradiative dipole–dipole interaction to an acceptor molecule [46]. We used a well-known donor: acceptor fluorescent-protein pair, CFP:YFP, with a Förster distance (R 0) of 4.9 nm [47].
+
+0019
+In cells expressing CFP-Ago2 and YFP-Lsm1, FRET efficiency was not significant (1.62% ± 1.11%), corroborating our immunoprecipitation results (Figure 1A).
+0019
+Immunoblot analysis of affinity-purified miRISC using anti-Myc, anti-Flag, anti-RCK/p54, and anti-eIF4E antibodies (Figure 3C) showed that Myc-Ago1, Flag-Ago2, and RCK/p54 were associated with let-7 miRISC.
+0019
+24 h after transfecting cells with siRNA, real-time quantitative PCR showed that mRNA levels decreased by more than 90% and immunoblot analysis showed that RCK/p54 protein levels decreased significantly without affecting the levels of other P-body proteins including Lsm1 and Ago2 (Figure S2).
+0019
+After immunoprecipitation, RISC activities were analyzed by incubating the supernatant (S) or bead (B) phases with 182-nt 32P-cap-labeled let-7 substrate mRNAs having a perfectly complementary or mismatched sequence to the let-7 miRNA.
+0019
+To examine the RNA dependence of protein–protein interactions, TCEs (250 μg) were treated before immunoprecipitation with 0.2 μg/ul of RNase A for 20 min at room temperature. Myc-tagged proteins were precipitated by incubating overnight with polyclonal rabbit anti-Myc antibodies directly conjugated to agarose beads (Santa Cruz Biotech, California, United States). Samples were washed four times in lysis buffer and eluted by boiling for 5 min at 100 °C in SDS-PAGE sample loading buffer, separated by SDS-PAGE, and analyzed by immunoblot. For immunoblotting, antibodies included monoclonal mouse anti-GFP (BD Biosciences), anti-eIF4E and anti-Myc (Santa Cruz Biotech), anti-Flag (Sigma, St. Louis, Missouri, United States); polyclonal rabbit anti-Myc (Santa Cruz Biotech), anti-DDX6 (rck/p54; Bethyl Laboratories, Montgomery, Texas, United States); and polyclonal chicken anti-Lsm1 (GenWay Biotech Incorporated, San Diego, California, United States).
+0663
+The signals were detected by a Leica (Wetzlar, Germany) confocal imaging spectrophotometer system (TCS-SP2) attached to a Leica DMIRE inverted fluorescence microscope equipped with an argon laser, two HeNe lasers, an acousto-optic tunable filter (AOTF) to attenuate individual visible laser lines, and a tunable acousto-optical beam splitter (AOBS).
+
+0055
+For FRET studies, HeLa cells co-expressing CFP- and YFP-tagged proteins were fixed with 4% paraformaldehyde in PBS at room temperature for 20 min and washed three times with PBS.
+
+0663
+After the final wash, cells were visualized with a Leica confocal imaging system as described above.
+
+0055
+FRET experiments were performed by an acceptor photobleaching method as described [48,49,68]. FRET efficiencies were measured and images were analyzed using Leica confocal software.
+
+0663
+After the final wash, samples were counterstained with Hoechst 33258 to visualize nuclei with a Leica confocal imaging system as described above.
+0019
+To quantify RNAi effects, cell lysates were prepared from siRNA-treated cells 24 h post-transfection.
+
+0420
+Total cell lysate (150 μg in 200 μl of reporter lysis buffer) was measured using a Safire plate reader (TECAN).
+
+0019
+GFP fluorescence was detected in cell lysates by exciting at 488 nm and recording emissions from 504–514 nm.
+
+0019
+RFP fluorescence was detected in the same cell lysates by exciting at 558 nm and recording emissions from 578–588 nm.
+0019
+Active human RISC from HeLa cells expressing Flag-Ago1 was captured by biotin-siRNA and its protein composition was analyzed by immunoblot using anti-Flag, anti-Ago2, anti-RCK/p54, anti-Lsm1, and anti-eIF4E antibodies.
+0019
+After immunoprecipitation, RISC activities were analyzed by incubating the supernatant (S) or bead (B) phases with 182-nt 32P-cap-labeled let-7 substrate mRNAs having a perfectly complementary or mismatched sequence to the let-7 miRNA.
+0019
+Supernatant (S) and beads (B) after biotin capture were analyzed by immunoblot using anti-Myc, anti-Flag, anti-RCK/p54, and anti-eIF4E antibodies.
+0019
+After immunoprecipitation, RISC activities were analyzed by incubating the supernatant (S) or bead (B) phases with 182-nt 32P-cap-labeled let-7 substrate mRNAs having a perfectly matched or a mismatched sequence to the let-7 miRNA.
+0019
+Western-blot analysis of whole cell lysates indicated that both proteins were expressed, albeit at different levels, and that expression of ephrin-B1 did not influence the phosphorylation status of Cx43 (detected by differences in mobility on a SDS-PAGE), which is known to regulate GJC (Figure 7A).
+0052
+Trypsin was inactivated by addition of complete medium (DMEM containing 15% FCS) and cells were dissociated by trituration with a glass Pasteur pipette.
+0019
+Protein lysates from NIH 3T3 cells expressing ephrin-B1 were incubated with ephrinB1-Fc, and the presence of Cx43 in the affinity complexes was assessed by Western blot (b) Cx43 was immunoprecipitated from NIH 3T3 cells expressing ephrin-B1 and the presence of ephrin-B1 in the immunocomplexes was detected by Western blot (right panel).
+0417
+Although the details of how replication occurs on chromatin are poorly understood, it is possible that remodeling activities that promote protein-protein and protein-DNA interactions on chromatin are important to allow efficient replication of these templates [11-13].
+0054
+Cell cycle progression profiles of Δabp1, cdc23-M36 and cdc23-M36 Δabp1 at 30°C (from 1–6 hrs) and 25°C at time zero, by flow cytometry anaylsis.
+0054
+We analyzed DNA content by flow cytometry to determine the precise arrest points for the different strains (Figure 3B).
+0018
+First, Abp1 not only interacts with Cdc23 (Mcm10) protein in the two-hybrid analysis, but deletion of Abp1 lowers the restrictive temperature for cdc23-M36, consistent with its proposed role in DNA replication.
+0054
+Our flow cytometry analysis suggests that cdc23+ (MCM10) is required for DNA replication initiation.
+0054
+Figure 5C and Figure S6B illustrate that double staining for Annexin V and propidium iodide (PI) followed by FACS analysis revealed a major increase in Annexin V+ PI− (apoptotic) cells following transduction with the negative control shRNA followed by either γ irradiation or treatment with etoposide, whereas there was no increase in apoptotic cells above baseline in the cells depleted of NHE-1: DNA damage–induced apoptosis was blocked 100%. Comparable results were obtained by measuring the sub-G1 peak by FACS (unpublished data) and NHE-1 depletion also correlated with increased survival (Figure S5B).
+0114
+Furthermore, comparison of the crystal structures of native rat Bcl-xL with its deamidated version has revealed significant differences [10]; the structural implications of introducing iso-Asp residues into the disordered loop environment of Asn52/Asn66 merits further work.
+0071
+Aliquots of the digestion mixtures were analysed by liquid chromatography mass spectrometry (LC-MS) on a quadrupole TOF mass spectrometer (Qstar pulsar i, Applied Biosystems-MDS Sciex), with online separation by reversed-phase nano-LC.
+0019
+Cell lysates were resolved by standard Laemmli's SDS-PAGE (pH 8.8) unless otherwise stated. For immunoprecipitations: rat Bim antibody (Oncogene, San Diego, California, United States) was coated to goat-anti-rat immunoglobulin-agarose; rabbit Puma antibody was coated to protein A-sepharose; mouse NHE-1 antibody was coated to protein G-sepharose; rabbit Bcl-xL antibody was coated to goat-anti-rabbit immunoglobulin-agarose. Lysates were precleared with the appropriate agarose.
+0054
+Intracellular pH was measured using a standard ratiometric method with a pH-sensitive fluorophore SNARF-1 by flow cytometry [44].
+
+0054
+FACS data were analysed using Flowjo software to obtain the ratio based on the Fl3/Fl2 channels.
+0054
+48 h later, GFP+ DsRed+ cells were purified by flow cytometry and treated with etoposide (Etop, 25 μM) for 30 h or exposed to irradiation (IR, 5 Gy) followed by 30 h in culture.
+0052
+Wild-type thymocytes were maintained in RPMI-1640/10% bovine fetal calf serum buffered at the indicated pH with Tris-HCl for 20 h in the presence of 20 μM monensin prior to lysis and immunoblotting for Bcl-xL.
+0019
+Cell lysates were processed by immunoblotting for Bcl-xL or β-actin (loading control).
+0054
+The lower left FACS histogram shows the infection efficiency for nontransfected (non), empty-vector transfected (vector), or NHE-1 transfected (NHE-1) cells as percentage GFP-positive cells.
+0054
+pHi was measured by FACS on live CD4−CD8− cells, and the sub-G1 peak was analysed by FACS on CD4−CD8− cells to assess apoptosis.
+0054
+Patients' cells (PBMC, in the range 85%–95% CD19+B220+) were incubated at pHe values of 7.2, 8.0, or 8.5, and the pHi values were monitored by SNARF-1 staining using flow cytometry. Apoptosis was evaluated by measurement of sub-G1 peaks using flow cytometry.
+0052
+The same cell aliquots cultured in RPMI/10% FCS for 24 h or 48 h were analysed for apoptosis by sub-G1 staining (right panel).
+0019
+We incubated 7.5 mg of cell lysates with 0.5 μM of WT-MELK or D150A-MELK recombinant proteins pre-immobilized on Ni-NTA agarose beads in reaction buffer containing 50 mM Tris-HCL (pH 7.5), 50 μM ATP, 10 mM MgCL2, 25 mM NaCL and 1 mM DTT at 30°C for 5 minutes.
+
+0019
+An approximately 30 kDa band, which was seen in pulled-down cell lysates with WT-MELK added but not in those with D150A-MELK added, was extracted.
+0019
+After homogenization, the cell lysates were incubated on ice for 30 minutes and centrifuged at 14,000 rpm for 15 minutes to separate only supernatant from cell debris.
+0019
+The His-tagged MELK recombinant protein (10 μg) was immunoprecipitated with anti-6XHis-tag monoclonal antibody (2 μg; Takara Clontech) in 500 μl of coupling buffer (50 mM Tris, 75 mM NaCL, 10 mM MgCL2, 1 mM DTT, and complete EDTA-free protease inhibitors; Roche) for 3 hours at 4°C.
+0019
+To use the long isoform Bcl-GL recombinant protein as a substrate for kinase assay, a set of Flag-tagged Bcl-GL (FL, N-1, N-2 N-3 and N-4) expression vectors was transfected into HeLa cells, and the proteins were immunoprecipitated with Flag-conjugated agarose M2 gel (Sigma-Aldrich) at 4°C for 1 hour. These immunoprecipitates were washed five times with lysis buffer containing 50 mM Tris-HCL (pH 7.5), 150 mM NaCL, 1% NP-40 and 0.1% protease inhibitor cocktail III (Calbiochem). Aliquots (20 μl) of immunoprecipitates were subjected to immunoblotting using rabbit anti-Flag antibody (Sigma-Aldrich) to check the success of the immunoprecipitation experiments. His-tagged MELK recombinant proteins (0.5 μM WT-MELK and D150A-MELK) were reacted for 30 minutes at 30°C with aliquots (20 μl) of immunoprecipitates of Flag-tagged Bcl-GL (FL, N-1 N-2, N-3 and N-4) as substrates in 50 μl of kinase buffer containing 30 mM Tris-HCL (pH 7.5), 0.1 mM EGTA, 10 mM DTT, 40 mM NaF, 40 mM sodium β-glycerophosphate (Sigma-Aldrich), 50 μM cold-ATP, 10 Ci of [γ-32P] ATP (GE Healthcare) and 10 mM MgCL2.
+0019
+COS7 cells (1 × 106) were co-transfected with 8 μg each of Flag-tagged pCAGGSn3FH vectors (Flag-Bcl-GL and Flag-Mock) and HA-tagged pCAGGSnHC vectors (HA-WT-MELK, HA-D150A-MELK and HA-Mock) using the FuGENE 6 transfection reagent (Roche) according to the supplier's protocol.
+0096
+Furthermore, we examined expression of endogenous Bcl-GL in breast cancer cell lines at the protein level by western blot analysis using an anti-Bcl-GL antibody and detected an approximately 30 kDa endogenous Bcl-GL, corresponding to the size identified by protein pull-down experiment, in all the breast cancer cell lines examined (Figure 3b).
+0019
+To validate an interaction between WT-MELK and Bcl-GL, we constructed plasmids designed to express HA-tagged WT-MELK (HA-WT-MELK) and Flag-tagged Bcl-GL (Flag-Bcl-GL). These plasmids were co-transfected into HeLa cells and the proteins immunoprecipitated with anti-Flag antibody. Immunoblotting of the precipitates using anti-HA antibodies indicated that Flag-Bcl-GL was co-precipitated with HA-WT-MELK (Figure 3c).
+
+0019
+To further determine which segment of Bcl-GL can interact with WT-MELK, we performed co-immunoprecipitation analyses using HA-WT-MELK and partial Bcl-GL proteins tagged with Flag (Figure 3e). After co-transfection of plasmid clones into HeLa cells, we performed immunoprecipitation with an anti-Flag antibody, and then immunoblotting with an anti-HA antibody.
+0019
+First, we confirmed the amount of immunoprecipitated protein corresponding to partial Bcl-GL (N-1, N-2, N-3 and N-4) as well as to full-length Bcl-GL (FL) by western blot analysis (Figure 3f), and then examined the extent of their phosphorylation (Figure 4c).
+0019
+To investigate this hypothesis, we transiently co-transfected two plasmid clones designed to express HA-tagged MELK (WT or D150A) and Flag-tagged Bcl-GL into COS7 cells, and then performed a TUNEL assay and FACS analysis to measure the proportions of apoptotic cells (see Material and methods).
+0019
+(a) Silver staining of SDS-PAGE gels that contained the pulled-down cell lysates.
+
+0019
+Extracts from HeLa-cells transfected with HA (hemagglutinin)-tagged WT-MELK (HA-WT-MELK) or Flag-tagged Bcl-GL (Flag-Bcl-GL), or a combination of these, were harvested 36 hours after transfection. The cell lysates were immunoprecipitated with anti-Flag M2 antibody. Precipitated proteins were separated by SDS-PAGE and western blotting analysis was performed with an anti-HA antibody.
+
+0019
+(f) Determination of the WT-MELK binding regions of Bcl-GL by immunoprecipitation. The HA-tagged WT-MELK and various peptide sequences of Flag-tagged Bcl-GL (Figure 3e) were pulled down by immunoprecipitation with Flag-M2 antibody and then immunoblotted with rabbit anti-Flag antibody. The expression of HA-tagged WT-MELK in total cell lysates was confirmed by western blotting analysis. As a control, immunoprecipitation was performed from cells co-transfected with pCAGGSn3FC (Mock) and HA-tagged WT-MELK (HA-WT-MELK) through all steps.
+
+0096
+The HA-tagged WT-MELK and various peptide sequences of Flag-tagged Bcl-GL (Figure 3e) were pulled down by immunoprecipitation with Flag-M2 antibody and then immunoblotted with rabbit anti-Flag antibody.
+0019
+The single arrowheads indicate phosphorylated immunoprecipitated Bcl-GL proteins, and the double arrowhead indicates an autophosphorylated MELK recombinant protein.
+0019
+(b) TUNEL assays after transfection with pCAGGSnHC (HA-Mock), pCAGGSn3FH (Flag-Mock), HA-tagged MELK (WT and D150A), Flag-tagged Bcl-GL expression vectors, and combinations of these.
+
+0019
+(d) FACS analysis of cells collected after transfection with pCAGGSnHC (HA-Mock), pCAGGSn3FH (Flag-Mock), HA-tagged MELK (WT and D150A), Flag-tagged Bcl-GL expression vectors, and combinations of these.
+0019
+TrkA, TrkB, or TrkC was overexpressed together with Cdk5 or p35 in COS7 cells, and immunoprecipitation was performed with Cdk5, p35, or pan-Trk antibody. Interestingly, all three Trk receptors were observed to associate with Cdk5 (Figure 1B) and p35 (Figure 1C), while no association was observed when immunoprecipitation was performed with IgG control.
+
+0019
+We found that TrkB associated with both p35 and Cdk5 in postnatal day 7 (P7) rat brain lysates (Figure 1D). Furthermore, Flag-tagged Cdk5 pulled down TrkB from the membrane fraction of adult brain lysates (Figure 1E).
+
+0096
+Furthermore, Flag-tagged Cdk5 pulled down TrkB from the membrane fraction of adult brain lysates (Figure 1E).
+0019
+TrkA, TrkB, and TrkC were overexpressed in COS7 cells and immunoprecipitated by pan-Trk antibody.
+0052
+Both cells were maintained in DMEM supplemented with 10% heat-inactivated fetal bovine serum, penicillin (50 units/ml), and streptomycin (100 μg/ml) at 37 °C with 5% CO2.
+0019
+For immunoprecipitation, 1–2 mg of protein lysates was incubated with 1 μg of the corresponding antibody at 4 °C overnight with rotation.
+
+0019
+After intense washing with the lysis buffer, the immunoprecipitated protein and its associated proteins were analyzed by SDS-PAGE and Western blotting.
+0019
+TrkA, TrkB, and TrkC were immunoprecipitated from transfected HEK293T cells, and used as substrates for reconstituted Cdk5/p35 or Cdk5/p25 in the in vitro kinase assay.
+
+0019
+The immunoprecipitated Cdk5/p35 complexes from the lysates were washed three times with lysis buffer and twice with kinase buffer.
+0019
+(B) Cell lysates from HEK293T cells overexpressing Cdk5 and TrkA, TrkB, or TrkC were immunoprecipitated (IP) with Cdk5 antibody and immunoblotted with pan-Trk antibody.
+0019
+(C) Cell lysates from HEK293T cells overexpressing p35 and TrkA, TrkB, or TrkC were immunoprecipitated with p35 antibody and immunoblotted with pan-Trk antibody.
+0019
+(D) Brain lysate from P7 rat brain was immunoprecipitated with pan-Trk, p35, or Cdk5 antibody and immunoblotted with p35, Cdk5, and TrkB antibodies.
+0019
+(E) The membrane fraction of adult brain lysates was incubated with or without Flag-tagged Cdk5. Flag-tagged Cdk5 pulled down TrkB from the membrane fraction of adult brain lysates.
+0019
+(F) Brain lysates from P7 p35+/+ or p35−/− mouse brains were immunoprecipitated with p35 and Cdk5 antibodies and immunoblotted with p35, Cdk5, and TrkB antibodies.
+0019
+(A) Lysates from COS7 cells overexpressing TrkA, TrkB, and TrkC were immunoprecipitated with pan-Trk antibody and incubated with Cdk5/p25 in an in vitro kinase assay.
+0019
+IP, immunoprecipitation.
+0019
+(B) cdk5+/+ and cdk5−/− brain lysates were immunoblotted against TrkB, phospho-TrkB at Ser478, and β-actin as loading control.
+0019
+Lysates were immunoprecipitated (IP) with p35 antibody and subjected to in vitro kinase assay using histone H1 as substrate.
+0019
+Lysates were immunoprecipitated with p35 antibody and subjected to in vitro kinase assay using histone H1 as substrate.
+0019
+Lysates were immunoprecipitated with p35 antibody and immunoblotted with TrkB, p35, or Cdk5 antibody.
+0019
+GST-pull down and co-immunoprecipitation assays were performed to further characterize this interaction.
+0018
+We hypothesized that, although BRCA1 was shown to interact with PP1β in the two-hybrid screen, it might be capable of interacting with all three PP1 isoforms PP1 due to their high degree of sequence similarity.
+0019
+Coimmunoprecipitation of BRCA1 and PP1.
+
+0019
+(A) A western blot probed with BRCA1 shows that immunoprecipitation of protein with an antibody against the Flag-PP1α, β or γ proteins, but not Laf4, co-immunoprecipitates BRCA1 (Lanes 1A-1D).
+
+0019
+Lanes 1E-1H show immunoprecipitation of BRCA1 using antibodies against the amino and carboxy termini of BRCA1.
+
+0019
+Lanes 2A-2D indicate immunoprecipitation of the Flag-epitope tagged PP1α, β or γ or Flag-Laf4. Lanes 2E-2G show co-immunoprecipitation of Flag-PP1α, β or γ with antibodies against BRCA1, and lane 2H shows a lack of coimmunoprecipitation of the negative control Flag-Laf4 by BRCA1.
+0114
+We report the crystal structures of human APPL1 N-terminal BAR-PH domain motif.
+0114
+In order to address the functional roles of the BAR-PH motif in APPL1 and related proteins, we have carried out structure-function studies on human APPL1 and determined the crystal structures of the Rab5-binding region of APPL1 as well as the BAR domain alone.
+0114
+The BAR domain crystal diffracted up to 1.8-Å resolution on a beamline at the Argonne Advanced Photon Source (APS) synchrotron facility. The crystal belongs to P21212 space group.
+0114
+The BAR-PH crystal diffracted to 2.05-Å resolution at the synchrotron facility. The crystal also belongs to P21212 space group.
+
+0114
+Phases of this crystal form were calculated using a combination of molecular replacement and SAD methods, and further improved with density modification.
+0114
+The canonical ligand-binding site is composed of β1, L1, β2, L3, and L6 (exemplified in the crystal structure of PLC-δ1, PDB file 1MAI) and, roughly speaking, is confined to a triangular area with L1, L3, and L6 as the three vertices.
+
+0031
+The canonical ligand-binding site is composed of β1, L1, β2, L3, and L6 (exemplified in the crystal structure of PLC-δ1, PDB file 1MAI) and, roughly speaking, is confined to a triangular area with L1, L3, and L6 as the three vertices.
+0114
+In our crystal structure of the APPL1 BAR-PH dimer, the two PH domains are located at the opposite ends of the crescent-shaped dimer, and each has fairly extensive contact with the BAR domain of its symmetry mate (Figure 1).
+0114
+Because of the interaction between D15SPxxR20 motif and PH domain, the rest N-terminus peptide (residues 5−12) clearly became ordered in the BAR-PH crystal structure, in comparison to the BAR domain-alone crystal structure, where residues N-terminal to Leu13 were invisible in the electron density map.
+
+0114
+Furthermore, the N-terminus is surrounded by a number of regions from the dimer partner, including the helix α4 and flexible loop connecting α1 and α2 (where residues 76−78 were mobile in the crystal structure).
+0402
+Rab5 was coupled to the SPR biosensor chip in random orientations, and APPL1 (5−419) was applied as the analyte at concentrations of 0.15−12 μM (Supplementary Figure 4).
+0096
+To identify Rab5-binding site(s) in APPL1, GST−Rab5-Q79L (full length) was used to pull down APPL1 variants having surface point mutations.
+
+0276
+The WT APPL1 (5−419) fragment was used as the parental construct for the mutagenesis, because this fragment is easily distinguishable from GST−Rab5 by size on SDS–PAGE gels without the need for Western blot analysis.
+0114
+Interaction between small GTPase and BAR domain has been exemplified in a complex crystal structure of Rac and arfaptin2 before (Tarricone et al, 2001).
+
+0096
+Second, the isolated APPL1 BAR domain did not bind to Rab5 in our pull-down assay.
+0114
+Furthermore, with the knowledge of crystal structures of Rab5–rabaptin5 and Rab22–rabenosyn5 complexes, it is clear that both Rab5 effectors rabaptin5 and rabenosyn5 bind to the so called invariant hydrophobic triad of Rab5 (i.e., Phe57, Trp74, and Tyr89) (Merithew et al, 2001).
+0114
+Combined results from our mutagenesis pull-down experiments (Figures 4, 5 and 6), crystal structures of the BAR-PH domain of APPL1 (Figure 1), and structures of GTPase domain of human Rab5 in different nucleotide binding modes (Zhu et al, 2003, 2004) clearly explain the requirement of GTP-bound Rab5 for APPL1 binding.
+
+0114
+Note that the L3-β4 region showed weak electron density in the crystal structure, indicating its higher mobility and possible adaptability in forming a complex with Rab5.
+0114
+So far, only two crystal structures of small GTPase−PH domain complexes are available.
+0114
+A similar N-BAR structure was predicted for APPL1 and APPL2 (Habermann, 2004), but our current APPL1 crystal structure does not show such a structural motif.
+0114
+Coordinates and the structural factors of the APPL1 crystal structures have been deposited to PDB under codes 2Q12 (BAR domain structure) and 2Q13 (BAR-PH domain structure).
+0416
+RFP−Rab5-Q79L was coexpressed with GFP−APPL1 (full length, FL; BAR-PH domain; or BAR-PH mutant) in PC12 cells as indicated, followed by confocal fluorescence microscopy.
+0114
+We have determined the crystal structure of full-length ST in complex with PP2A A subunit at 3.1 Å resolution.
+0114
+The crystal structure of full-length SV40 small t antigen (ST) in complex with the A subunit of its target, protein phosphatase 2A, contributes to our understanding of the oncogenic functions of ST.
+0114
+The J domain contains three helices and has a structure similar to the previously solved crystal structure of the J domain of SV40 LT and a NMR structure of polyomavirus DnaJ-like domain [41,42], with Cα root mean square deviations (RMSDs) of 1.84 and 1.83 Å, respectively.
+
+0077
+The J domain contains three helices and has a structure similar to the previously solved crystal structure of the J domain of SV40 LT and a NMR structure of polyomavirus DnaJ-like domain [41,42], with Cα root mean square deviations (RMSDs) of 1.84 and 1.83 Å, respectively.
+0114
+These observations provide strong support to the A-ST interface observed in our crystal structure.
+0019
+Top: Expression of ST in whole cell lysates (WCL). Middle: Isolation of PP2A Aα complexes and immunoblotting with anti-PP2A Aα antibodies.
+0019
+The products were mixed and immunoprecipitated with the indicated antibodies coupled onto protein A/G beads. The immunoprecipitates were resolved by SDS-PAGE and visualized by autoradiography.
+
+0096
+10% of the input proteins for pull down are shown at the left.
+0019
+To further substantiate its interaction with p65, an in vitro coimmunoprecipitation assay was applied in which full-length HA-p65 and FLAG-UXT proteins were generated and labeled, respectively, with [35S]methionine by in vitro translation. The products were mixed and immunoprecipitated with either control IgG or anti-HA antibody.
+0019
+The fractionated cytoplasmic or nuclear extracts were immunoprecipitated with either anti-p65 antibody or IgG as a control, respectively.
+0019
+(B) Cell lysates from A were subjected to Western blotting for determining endogenous UXT protein levels after siRNA transfection.
+0413
+This suggested that UXT positively regulated p65 inside the nucleus, and the loss of it affected the sustained action of p65 in the nucleus, which led to the attenuated EMSA results as observed in Fig.
+0413
+This rescuing effect was also confirmed with EMSA assays (Fig.
+0019
+(A) The HA-tagged wild-type UXT and siRNA-resistant UXT (UXTr) were cotransfected with the indicated siRNAs. After 24 h, cell lysates were subjected to Western blotting for determining exogenous UXT protein levels.
+0413
+(C) 293T cells were induced by 10 ng/ml TNF-α for 30 min, and nuclear extracts were prepared and incubated with the indicated antibodies to perform EMSA supershift assays.
+
+0413
+Nuclear lysates were used for EMSA to check endogenous NF-κB or sp1 DNA binding activities.
+0413
+Stimulation of 293T cells with TNF-α led to a strong NF-κB DNA-binding band composed of κB probe, NF-κB, and its cofactors in EMSA. Interestingly, this EMSA band was markedly diminished when antibody against UXT was introduced into the reaction mixture (Fig.
+0413
+However, immunofluorescence and EMSA experiments indicated that the knockdown of CARM1 did not affect the nuclear presence of p65 (Fig.
+0019
+(A) Equal amounts of whole cell lysates from LNcaP or PC-3 prostate cancer cells were immunoblotted with the indicated antibodies.
+
+0413
+(B) 10 μg of nuclear extracts from LNCaP or PC-3 were subjected to EMSA with a radiolabeled κB or sp1 probe.
+
+0413
+48 h after transfection, nuclear extracts were prepared. Endogenous NF-κB or sp1 DNA binding activities were examined by EMSA.
+0413
+(2) ChIP and EMSA assays demonstrated that UXT localized inside the NF-κB enhanceosome in vivo and was recruited to it upon stimulation.
+
+0402
+(2) ChIP and EMSA assays demonstrated that UXT localized inside the NF-κB enhanceosome in vivo and was recruited to it upon stimulation.
+0432
+A cDNA fragment encoding residues 1–312 of human p65 was inserted in frame into the Gal4 DNA-binding domain vector pGBKT7.
+0052
+293T and RAW264.7 cells were cultured in DME (Invitrogen) supplemented with 10% FBS (Hyclone). PC-3 cells were cultured in RPMI 1640 medium (Invitrogen) supplemented with 10% FBS, and LNCaP cells were cultured in Ham's F12 medium (Invitrogen) supplemented with 10% FBS.
+0402
+The ChIP assay kit (Upstate Biotechnology) was used according to the manufacturer's instructions with some variations.
+
+0019
+Immunoprecipitations were performed at 4°C overnight using antibodies as indicated with IgG as a negative control.
+0014
+Here, we demonstrate that β1AR forms a signaling complex with a cAMP-specific phosphodiesterase (PDE) in a manner inherently different from a β2AR/β-arrestin/PDE complex reported previously.
+0014
+Even though these highly homologous receptors both activate the G protein stimulatory for adenylyl cyclase (Gs), signaling through β1AR and β2AR produces clearly distinguishable biological effects (Xiang and Kobilka, 2003; Xiao et al, 2004).
+0014
+One of the emerging mechanisms that safeguard the specificity of G-protein-coupled receptor/cAMP signaling is the control of cAMP transients via degradation by cyclic nucleotide phosphodiesterases (PDEs) (Conti and Beavo, 2007). Biochemical, electrophysiological, and in vivo imaging studies are consolidating the idea that occupancy of different receptors generates a nonuniform pattern of activation of cAMP effector proteins such as PKA (cAMP-dependent protein kinase). PDEs play a critical role for the specificity in cAMP-signaling by preventing the free diffusion of cAMP, thus, effectively creating cyclic nucleotide microdomains and/or cAMP gradients that can be sensed by the cell (Zaccolo and Pozzan, 2002; Xiang et al, 2005; Fischmeister et al, 2006).
+0019
+To probe for a possible signaling complex including the β1AR and a PDE, mouse neonatal cardiomyocytes were infected with an adenovirus encoding a Flag-tagged β1AR, and the receptor was subsequently immunoprecipitated using an antibody against the tag. A significant amount of endogenous PDE activity was recovered in the β1AR immunoprecipitation (IP) pellet (Figure 1A).
+
+0019
+Whereas ablation of PDE4A or PDE4B had no effect, inactivation of the PDE4D gene prevented co-IP of PDE activity with the β1AR (Figure 1B).
+
+0019
+This conclusion is further supported by western blot analysis of the immunoprecipitated PDE.
+0014
+Thus, the concentration-dependence of dissociation of the β1AR/PDE4D complex is comparable to that of receptor occupancy by NorEpi rather than that of receptor-induced cAMP production, which is in the nanomolar range.
+0012
+The β1AR/PDE4D complex is present in the absence of agonist and dissociates after receptor occupancy, whereas agonist binding to the β2AR is a prerequisite for the recruitment of the β-arrestin/PDE4D complex to the receptor. Thus, under basal conditions, PDE4D is poised to control local cAMP concentration and PKA activity in the vicinity of the β1AR (see Figure 6), whereas it affects β2AR signaling only after ligand binding and β-arrestin recruitment.
+0019
+Recombinant Flag-tagged βARs and Myc-tagged PDE4D splice variants were detected in western blots using antibodies against their respective tags (mouse monoclonal α-Flag AB, Sigma Aldrich; mouse monoclonal α-Myc AB, Roche Applied Sciences).
+0052
+They were cultured in Dulbecco's Modified Eagle's Medium (DMEM) supplemented with 10% Nu Serum IV (BD Falcon), 5% fetal bovine serum (FBS), 1 mM glutamine, 20 μg/ml gentamycin, and 1 × ITS media supplement (Sigma) on plates precoated with 10 μg/ml laminin.
+
+0052
+HEK293 and MEF cells were cultured in DMEM supplemented with 10% FBS, 1 mM glutamine, 30 μg/ml penicillin, and 100 μg/ml streptomycin.
+0019
+Flag-tagged receptors were then immunoprecipitated using M1-affinity resin (α-Flag antibody resin; Sigma Aldrich).
+0019
+Flag-tagged β1AR and β2AR were also expressed in Sf9 cells and subsequently purified in a two-step procedure consisting of an initial affinity chromatography using M1-resin (immobilized anti-Flag antibody; Sigma Aldrich), followed by an alprenolol-sepharose affinity column.
+0019
+for 30 min), and soluble extracts were immunoprecipitated using 30 μl ProteinG Sepharose and the respective PDE4 subtype, or PDE4D splice variant antibodies, as well as IgG as a control. After incubation for 2 h at 4°C, the resin was washed three times, and PDE recovered in the pellet was detected by PDE activity assay or western blotting.
+0019
+(B) Co-IP of β1AR and PDE activity from cardiomyocytes deficient in PDE4A, PDE4B, or PDE4D, and wild-type controls.
+0019
+(A, B) Co-IP of exogenous β1AR and Myc-tagged PDE4D splice variants expressed in HEK293 cells.
+
+0019
+(C) Shown is the co-IP of exogenous β1AR and PDE4D8-Myc from extracts of MEFs derived from mice deficient in β-arrestin 1 and 2 (βarr1/2KO) or from wild-type controls (WT-MEF). (D, E) PDE4D3, and Flag-tagged receptors, β1AR and β2AR, were affinity purified after baculovirus expression (see Supplementary Figure 1). Purified PDE and (βARs) were then combined and the βARs immunoprecipitated.
+0019
+At the end of incubation, cells were lysed, PDE4D5, 8, and 9 were immunoprecipitated with variant-specific antibodies, and the PDE activity recovered in the IP pellet was measured.
+0019
+(A, B) Neonatal cardiac myocytes expressing a Flag-tagged β1AR were treated for 3 min with 100 nM Norepinephrine before cell lysis and IP with M1 (α-Flag) resin.
+
+0019
+(E, F) Neonatal cardiac myocytes coexpressing a Flag-tagged β1AR and either GFP, a catalytically inactive PDE4D8 construct (PDE4D-DN; see also Supplementary Figure 5), or a catalytically inactive PDE3A1 (PDE3A1-DN) were subjected to α-Flag(M1)-IP, and the phosphorylation of the β1AR was subsequently detected in IB using a PKA-substrate-specific antibody.
+0114
+We generated a model of AIRE–PHD1 complexed with the H3K4me0 peptide on the basis of the crystal structure of the BPTF–PHD finger bound to H3K4me3 and performed molecular dynamics calculations for 10 ns.
+0077
+Remarkably, residues G305, G306 and G313 showed strong shifts when bound to H3K4me2 and disappeared completely from the NMR spectrum owing to line-shape broadening on binding to H3K4me3, indicating an involvement of this region in peptide binding.
+0065
+NMR binding, fluorescence titration assays and isothermal titration calorimetry thermodynamic analysis.
+
+0077
+NMR binding, fluorescence titration assays and isothermal titration calorimetry thermodynamic analysis. Details on NMR titrations, fluorescence spectroscopy and thermodynamic measurements are described in the supplementary information online.
+0402
+DNA ChIP with (B) anti-AIRE, (C) anti-H3K4me3 and (D) anti-H3. The fold differences are normalized to input fractions and shown in comparison with the background level (ChIP with IgG from HEK-control cells (=1)) of each primer set.
+
+0402
+AIRE, autoimmune regulator; ChIP, chromatin immunoprecipitation; GAPDH, glyceraldehyde-3-phosphate dehydrogenase; HEK, human embryonic kidney; H3K4me3, histone H3 trimethylated at lysine 4.
+0108
+In addition, replication of single-stranded DNA of M13 phage was normal in Plx1-depleted extracts, indicating that DNA elongation was not affected by Plx1 deficiency (Supplementary Figure 3).
+0858
+Interphase extracts (500 μl) were incubated three times for 40 min with 100 μl of protein A-Sepharose beads, 4B fast flow (Sigma) coupled to 200 μl of anti-Plx1 serum, 100 μl of anti-Mcm3 or 200 μl of anti-Tipin serum at 4°C for 2 h in the presence of 1 mM AEBSF (4-(2-aminoethyl)benzenesulphonyl fluoride hydrochloride).
+0108
+Replication of single-stranded DNA of M13 phage was performed in a similar manner using 12.5 ng/μl of DNA.
+0858
+(A) Immunodepletion of Plx1.
+0077
+To obtain the p62 PH-D-bound structure of hTFIIEα AC-D using NMR, we performed NMR titration experiments in buffers both with and without 100 mM NaCl for both domains (Supplementary Figures 1–3). Although in the 100 mM NaCl buffer the dissociation constant (Kd) between AC-D and p62 PH-D was estimated from the titration plots as 376±81 nM (Supplementary Figure 1C) or 237±82 nM (Supplementary Figure 2C), the NaCl-free buffer NMR titration experiment showed much stronger binding affinity between AC-D and p62 PH-D because of the slow exchange timescale with a Kd below about 150 nM (Supplementary Figure 3).
+0077
+These interacting amino acids were also observed in the NMR titration experiments. In hTFIIEα AC-D, the NMR signals of E386, F387, E388, E389, V390, A391 and D392 were changed significantly upon addition of p62 PH-D (Supplementary Figure 1B) and also in p62 PH-D the NMR signals of K19, Q53, K54, I55, S56, E58, K60, A61, I63, Q64, L65, Q66, T74, T75 and F77 were changed by adding hTFIIEα AC-D (Supplementary Figure 2B).
+0077
+To investigate whether the STDE is involved in the binding, we prepared a longer construct (residues 351–439) containing both acidic regions and performed the NMR titration experiment under the same conditions (Supplementary Figure 4). The result was that the NMR signals of STDE showed no significant changes and the Kd of 400±43 nM was almost the same as that estimated using hTFIIEα AC-D.
+0077
+This is supported by the result that the binding is strengthened by removing NaCl from the buffer in the NMR titration experiments.
+0077
+In the binding of VP16 TAD to Tfb1 PH-D, the Kd value estimated by NMR titration experiment was ∼4000–7000 nM (Di Lello et al, 2005).
+0019
+The bound proteins were released by boiling in SDS–PAGE loading buffer, separated by SDS–PAGE and detected by western blotting with anti-hTFIIEα rabbit antiserum (1:3000 dilution), anti-FLAG M2 monoclonal antibody (Sigma) and anti-p53 (DO-1) (Santa Cruz) using the enhanced chemiluminescence detection system (GE Healthcare).
+0077
+Left, superposition of the backbone heavy atoms of the 20 lowest energy NMR structures.
+0077
+(A) Superposition of the backbone heavy atoms of the 20 lowest energy NMR structures.
+0019
+Bound mutants were subjected to SDS–PAGE and detected by western blotting with anti-FLAG antibody.
+
+0019
+Bound proteins were subjected to SDS–PAGE and detected by western blotting with anti-FLAG, anti-p53 and anti-hTFIIEα antisera.
+0809
+Microprojectile bombardment was used to co-express cyan fluorescent protein (CFP):COP1 and yellow fluorescent protein (YFP):CO in leaf epidermal cells of Arabidopsis. CFP:COP1 and YFP:CO colocalized to the nucleus and also colocalized in speckles within the nucleus (Figure 4A and B).
+0055
+The method used to analyse FRET is described in detail in Supplementary data.
+0420
+After removal of the residual dye and medium, 100 ul of dimethylsulfoxide was added to each well, and the absorbance at 570 nm was measured using BMG microplate Reader (BMG Labtech, Inc., Durham, NC).
+0096
+KL generated GST fusion protein for pull down analysis.
+0071
+Membrane-bound proteins were separated from soluble proteins by Sepharose CL-2B gel filtration chromatography.
+0019
+Unlike the conformational change that accompanies tBid-induced insertion of Bax into membranes, the liposome-induced conformational change also disappears if liposomes are solubilized in CHAPS prior to immunoprecipitation (Figure 5A, compare lanes 1 and 3).
+0004
+GS-TAP-tagged DDX3X, isolated by affinity purification using rabbit IgG agarose, was also recruited to the enhanceosome region upon L.
+0096
+ChIP assays were performed as recently described (Zupkovitz et al, 2006) using 3 μg of IRF3-specific antibody (Zymed, Invitrogen) followed by a protein A pulldown or using rabbit IgG agarose for NTAP(GS)-DDX3X.
+
+0402
+ChIP assays were performed as recently described (Zupkovitz et al, 2006) using 3 μg of IRF3-specific antibody (Zymed, Invitrogen) followed by a protein A pulldown or using rabbit IgG agarose for NTAP(GS)-DDX3X.
+0019
+For peptide-based assays, Myc-TBK1 was isolated from HEK293 cells by immunoprecipitation using anti-Myc agarose (Sigma).
+0276
+Samples were separated by SDS–PAGE, the gels were dried and analysed by autoradiography.
+0081
+The peptide array was custom synthesized by Jerini Peptide Technologies (Berlin, Germany).
+
+0081
+The peptide array was incubated with TBK1 in the presence of 50 μM ATP and 100 μCi [γ-32P]ATP using kinase buffer (40 mM Tris–HCl pH 7.5, 10 mM MgCl2 and 1 mM DTT) at 30°C.
+0402
+Quantitative PCR was realized on ChIP samples treated with either an IRF3-specific antiserum (black bar) or an unrelated serum (white bar).
+
+0019
+Quantitative PCR was realized on samples immunoprecipitated with IgG beads with primers specific for either the enhanceosome-binding site (black bar) or the control region (white bar).
+0019
+Cell extracts were analysed by immunoblotting using either anti-Myc (Rockland), anti-HA (Covance Research) or an antiserum against phosphoserine 172 in TBK1.
+0081
+(A) Phosphorylation sites obtained from the peptide array were mutated as follows: Dead-M (S181A, S183A, S240A and S269A), Helic-M (S429A, T438A, S442A, S456A and S520A) or Pan-M (S181A, S183A, S240A, S269A, S429A, T438A, S442A, S456A and S520A).
+0019
+Immunoblotting showed that treating these cells with the CK2 inhibitor 4,5,6,7-tetrabromo-benzimidazole increased the electrophoretic mobility of the MDC1 SDTD fragment and reduced the ability of the fragment to co-immunoprecipitate MRN (Fig 2E).
+0019
+Right panels: whole-cell extracts (WCE) from osteosarcoma (U2OS) cells 1 h after 5 Gy irradiation or control cells were immunoblotted with the indicated antibodies.
+
+0019
+(C) Immunoblot analysis of purified GST-SDTD2 and GST-SDAD2 after in vitro phosphorylation by recombinant CK2, or mock treatment.
+
+0096
+GST fusions and interacting proteins were captured on glutathione-Sepharose beads and immunoblotted.
+
+0019
+Extracts were immunoprecipitated (IP) with monoclonal antibodies against HA or GFP (CNTL) and immunoblotted.
+0019
+OSM-11 was not detected in cell lysates (unpublished data).
+0018
+Pairwise interactions were tested with the yeast two-hybrid assay; positive interactions are indicated by blue staining.
+0432
+Physical interactions caused activation of the Gal4-driven HIS3 reporter gene, allowing growth on plates lacking histidine.
+0019
+Prior to SDS-PAGE analysis, samples were immunoprecipitated with an anti-opsin antibody and then treated with EndoH, as indicated.
+0416
+p30 (uniprotkb:Q8V1E7) and hnRNP-K (uniprotkb:P61978) colocalize (MI:0403) by fluorescence microscopy (MI:0416)
+0432
+For the yeast two-hybrid assay, plasmids pGBT9 and pACT2 (BD Sciences) were used as sources of the GAL4 DNA-binding domain (BD) and transcriptional activation domain (AD), respectively.
+0432
+To examine the regions of both proteins involved in this interaction, different truncations of p30 fused to GAL4-BD domain and different truncations of hnRNP-K fused to GAL4-AD domain were tested for interaction (Fig.
+0416
+Nevertheless, colocalization of both proteins in the cytoplasm during infection was not detectable by immunofluorescence, probably because of the low relative abundance of hnRNP-K in cytoplasm and its shuttling properties which difficult its visualization by immunofluorescence microscopy.
+0416
+Cells were infected with BA71V strain and analyzed at different times post infection by confocal immunofluorescence microscopy acquiring 0.1 μm optical sections from the Z-axis.
+0052
+HCT-116 (human colon carcinoma) and Cos-7 cells were cultured in McCoy's 5A media, containing 10% heat-inactivated (56°C, 30min) fetal bovine serum (FBS) and.
+0019
+We sought to establish whether the mitochondrial localized SIRT3 may also form a physical interaction with the FOXO family protein, FOXO3a, using co-immunoprecipitation (Co-IP) techniques. Carboxy-terminally myc tagged wild-type (p-myc-hSIRT3-wt), and mutant (p-myc-hSIRT3-mt) SIRT3 expression vectors were transfected into Cos-7 cells followed by Co-IP with an anti-myc antibody.
+0019
+Cos-7 cells were transfected with either SIRT3 wild-type (p-myc-hSIRT3-wt) or deacetylation mutant (p-myc-hSIRT3-mt) vectors and cell lysates were immunoprecipitated (IPd) with an anti-Myc antibody followed by Western analysis with an anti-FOXO3a antibody. (B) HCT116 cell lysates were IPd with either an anti-FOXO3a or anti-SIRT3 antibody, resolved by SDS-PAGE, and immunoblotted with anti-FOXO3a antibody. (C) Mitochondrial factions from HCT116 cells were IPd with either an anti-FOXO3a or anti-SIRT3 antibody and immunoblotted with anti-FOXO3a antibody.
+0417
+Cells were fixed with 1% formaldehyde to crosslink protein-DNA interactions, sonicated, and fixed cells were immunoprecipitated with either an anti-FOXO3a antibody.
+
+0030
+Cells were fixed with 1% formaldehyde to crosslink protein-DNA interactions, sonicated, and fixed cells were immunoprecipitated with either an anti-FOXO3a antibody.
+
+0019
+Cells were fixed with 1% formaldehyde to crosslink protein-DNA interactions, sonicated, and fixed cells were immunoprecipitated with either an anti-FOXO3a antibody.
+0018
+thaliana ethylene-responsive element binding protein (AtEBP), identified in a yeast two-hybrid screen, was confirmed by co-immunoprecipitation.
+
+0019
+thaliana ethylene-responsive element binding protein (AtEBP), identified in a yeast two-hybrid screen, was confirmed by co-immunoprecipitation.
+
+0416
+The subcellular localization of ACBP4 and AtEBP, was addressed using an ACBP4:DsRed red fluorescent protein fusion and a green fluorescent protein (GFP):AtEBP fusion. Transient expression of these autofluoresence-tagged proteins in agroinfiltrated tobacco leaves, followed by confocal laser scanning microscopy, indicated their co-localization predominantly at the cytosol which was confirmed by FRET analysis.
+
+0055
+Transient expression of these autofluoresence-tagged proteins in agroinfiltrated tobacco leaves, followed by confocal laser scanning microscopy, indicated their co-localization predominantly at the cytosol which was confirmed by FRET analysis.
+0019
+Co-immunoprecipitation assays were used to confirm the protein–protein interactions.
+0432
+For bait preparation, ACBP4 (amino acids 1–669) was cloned in-frame with the GAL4 DNA-binding domain of bait vector pBUTE (a kanamycin-resistant version of GAL4 bait vector pGBDUC1).
+0018
+To corroborate the interaction from yeast two-hybrid analysis, co-immunoprecipitation studies were performed according to Mongiat et al.
+0018
+Two putative interactors, ADF3 (identified at the Molecular Interaction Facility, University of Wisconsin–Madison) and AtEBP (from a yeast two-hybrid screen in our laboratory) were selected for further studies.
+0019
+However, this was not investigated further in this study because it did not bind ACBP4 in subsequent co-immunoprecipitation, possibly due to the absence of some as yet unidentified essential cofactor(s) for binding in an in vitro co-immunoprecipitation reaction.
+0018
+When Arabidopsis cDNA libraries were screened for interacting proteins of Arabidopsis ACBPs by the yeast two-hybrid system in our laboratory, as well as at the Molecular Interaction Facility, University of Wisconsin–Madison, while we could not identify protein interactors for ACBP5, a common interacting protein (AtEBP) was identified for both ACBP2 (Li and Chye, 2004) and ACBP4.
+0114
+We initially attempted to solve the crystal structure of full-length human α-parvin, but no crystals could be obtained. However, limited proteolysis led to the identification of a stable fragment, α-parvin-CHC, that readily crystallized.
+0077
+This phenomenon is also illustrated in Figure 5, using two diagnostic NMR signals as examples: the resonance originating from residue 257 is predicted to experience strong PRE in the forward mode (calculated distance from spin-label 10.7 Å) but should only be weakly affected in the backward mode (calculated distance 20.2 Å).
+0114
+We thus conclude that the crystal structures of the α-parvin-CHC/LD complexes along with the solution NMR studies presented here provide a relevant description of LD recognition by α-parvin.
+0077
+Small changes in a variety of factors, such as experimental conditions or the length of the paxillin fragment studied, might influence the observed binding orientation in NMR, where a mean is detected.
+0114
+Interestingly, the crystal structure of α−parvin-CHC presented here shows that part of the putative ABS2 region is obstructed by the N-linker helix.
+0071
+On the basis of gel filtration experiments with the N-terminal CH domain of α-parvin, Wang et al.
+0077
+For PRE measurements, 1H-15N HSQC experiments were recorded on 230 μM 15N-enriched α-parvin-CHC in the presence of 250 μM PROXYL-labeled LD1 peptide in 50 mM sodium phosphate and 100 mM NaCl (pH 6.9) in the absence and presence of 5 mM ascorbate at 25°C.
+
+0114
+For the simulation of PRE effects in both unidirectional binding modes, the crystal structures of α-parvin-CHC bound to LD1 and LD4 were protonated with the program PDB 2PQR (Dolinsky et al., 2004).
+0077
+(A) Details of the 1H-15N HSQC spectra of 230 μM 15N-enriched α-parvin-CHC and 250 μM PROXYL-labeled LD1 peptide in the absence (left) and presence (right) of 5 mM ascorbate.
+
+0114
+The binding orientation of LD1 seen in the crystal structure is denoted “forward.”.
+0114
+Paxillin residues ordered in the crystal structures of the α-parvin-CHC/LD complexes are underlined and those forming contacts with α-parvin-CHC within a radius of 4 Å are boxed.
+0402
+ChIP was carried out with IgG-agarose as described previously (Kim et al, 2004a).
+0019
+A single round of transcription on the HIS4 template was allowed, and RNApII was immunoprecipitated from the supernatant through the Rpb3 subunit (Figure 5E).
+0402
+We note that in some ctk1Δ strain backgrounds, the abnormal cross-linking of basal factors observed in our ChIP analyses was not as pronounced.
+0019
+For Rpb1 (BWG16 Covance), Sua7, TBP, Kin28, Tfb1, Tfa2, and Rap1 (y-300, Santa Cruz) immunoprecipitations, the antibodies were preincubated with protein A-sepharose CL-4B (Amersham) for 1 h at room temperature and then incubated with chromatin solution overnight at 4°C. For Rpb3 immunoprecipitation, antibody (1Y26, NeoClone) was preincubated with protein G-sepharose (Amersham).
+
+0019
+The signal for each specific gene primer in the immunoprecipitation was then divided by this ratio to convert the signal to normalized units. This value was divided by the immunoprecipitation signal of the non-transcribed control product to determine the fold enrichment of the ChIP over background signals.
+0276
+Beads were washed five times with buffer E and loaded onto SDS–PAGE gels together with 50 mg of input material.
+0402
+Arrows indicate the position of the major polyadenylation sites reported previously (Kim et al, 2004a) and bars below the genes show the relative positions of PCR products in ChIP analysis.
+
+0402
+(C) Quantitation of the ChIP experiments in (B), with PMA1 as representative.
+0019
+The abnormal cross-linking of basal transcription factors in ctk1Δ cells is confirmed by independent immunoprecipitation of TAP-tagged TFIIF subunits.
+
+0019
+IgG agarose was used for immunoprecipitation of TAP-tagged proteins.
+0402
+Cells with kin28-T17D (YSB592) or srb10-D290A (YF243) alleles were grown at 30°C and prepared for ChIP analysis.
+
+0019
+Chromatin from each strain was immunoprecipitated with anti-TBP.
+
+0402
+ChIP was carried out in the indicated strains.
+
+0402
+Each strain was then transformed with RNA14–TAP (creating YSB1188, YSB1189, and YSB1190, respectively) before ChIP analysis.
+
+0019
+Protein A- or protein G-sepharose was used for TBP or Rpb3 immunoprecipitation and rabbit IgG agarose was used for RNA14–TAP pull-down.
+
+0096
+Protein A- or protein G-sepharose was used for TBP or Rpb3 immunoprecipitation and rabbit IgG agarose was used for RNA14–TAP pull-down.
+
+0402
+Cells were grown at 22°C, shifted to 37°C (non-permissive temperature) for 4 h as indicated, and prepared for ChIP analysis. (E) The Ctk1-deficient strain (YSB854) was transformed with either of the plasmids YCplac22 (empty vector), YCplac22-CTK1HA (T338A), YCplac22-CTK1-DN, or pRS316-CTK1 and used for ChIP analysis.
+0019
+To measure the association between RNApII and the basal transcription factors after termination, the supernatant was removed after incubation with NTPs for 2 min and immunoprecipitated with anti-Rpb3 antibody. (F) Coimmunoprecipitated proteins with Rpb3 from WT and ctk1Δ cells were determined by western blot using antibodies against non-scaffold (Tfg2 or Sua7) and scaffold components (TBP, Tfb1, Kin28, or Tfa2).

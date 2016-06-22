@@ -12,7 +12,7 @@ class GeniaTagger extends GeniaTaggerWrapper {
     tag(sentenceTokens).map(_.tokenNamedEntity)
   }
 
-  def containsDifferentProteinsInPassage(passageTokens: Seq[Seq[String]], moreThan: Int = 1): Boolean = {
+  def containsDifferentProteinsInPassage(passageTokens: Seq[Seq[String]], moreThan: Int = 0): Boolean = {
     passageTokens.flatMap {
       case sentenceTokens ⇒
         tagNer(sentenceTokens).filter {
