@@ -674,8 +674,8 @@ Texts:
 
 MI:0071
 In 5 article(s): Set(18940607.xml, 18547146.xml, 16732694.xml, 16646632.xml, 17608567.xml)
-In 12 passage(s)
-Total: 12
+In 13 passage(s)
+Total: 13
 Texts:
 
 Bound protein was eluted in buffer containing 40 mM Tris (pH 8), 300 mM NaCl, and 250 mM imidazole, and further purified by size-exclusion chromatography on a Superdex 75 HiLoad 16/60 column (GE Healthcare, Piscataway, New Jersey, United States) that was equilibrated in 10 mM HEPES (pH 7.6) and 150 mM NaCl. Peak fractions were concentrated and buffer exchanged into 10 mM HEPES (pH 7.5).
@@ -685,6 +685,8 @@ Various forms of gE and the gE-gI heterodimer were subcloned, expressed, and pur
 The predicted C2A domain of Munc13–1 encompasses approximately residues 3–130. Using Munc13–1 fragments containing residues 3–132 (Munc13–13–132), 3–150 (Munc13–13–150), 3–209 (Munc13–13–209), and 105–228, we previously showed that the C2A domain is essential for binding to the RIM2α ZF domain (RIM2α82–142), but additional sequences at its C-terminus are necessary for tight binding [20]. In agreement with these conclusions, Munc13–13–150 and Munc13–13–209 (but not Munc13–13–132) largely co-elute with RIM2α82–142 in gel filtration experiments with an apparent molecular weight characteristic of a 1:1 heterodimer (Figure 1B and [20]). Interestingly, the apparent molecular weights observed for isolated Munc13–13–132, Munc13–13–150, and Munc13–13–209 in gel filtration were significantly higher than their monomeric molecular weights (Figure 1B and unpublished data), suggesting that they form stable dimers.
 
 Gel filtration showed that both point mutations disrupt dimerization of Munc13–13–128, Munc13–13–150, and Munc13–13–209, but preserve heterodimerization with RIM2α82–142 (Figure 4A and unpublished data).
+
+Moreover, the gel filtration and ITC data (Figure 4A and4B), as well as the high quality of the1H-15N HSQC spectrum of Munc13–13–150(K32E)/RIM2α82–142 complex and the observation of only one set of cross-peaks (Figure 4C), demonstrate a 1:1 stoichiometry. All these results strongly suggest that the monomer A/RIM2α82–142 complex observed in the crystals faithfully reflects the true Munc13–1/RIM2α binding mode, whereas the presence of a second Munc13–13–150(K32E) molecule in the crystals must be considered a consequence of crystal packing.
 
 The fusion proteins were isolated on glutathione-Sepharose beads (Amersham Biosciences, Little Chalfont, United Kingdom), cleaved from the GST moiety, and further purified by size-exclusion or ion-exchange chromatography. Gel-filtration binding experiments were performed on Superdex S75 or S200 columns (Amersham) in 30 mM Tris-HCl buffer containing 150 mM NaCl, and 1 mM Tris(2-carboxyethyl)-phosphine (TCEP) at pH 7.4.
 
@@ -706,8 +708,8 @@ After cleavage with recombinant human rhinovirus 3C-protease, the sample was sub
 
 MI:0077
 In 4 article(s): Set(16732694.xml, 18292755.xml, 18354501.xml, 18940607.xml)
-In 25 passage(s)
-Total: 27
+In 24 passage(s)
+Total: 26
 Texts:
 
 X-ray diffraction studies guided by nuclear magnetic resonance (NMR) experiments reveal the crystal structures of the Munc13–1 C2A-domain homodimer and the Munc13–1 C2A-domain/RIM ZF heterodimer at 1.44 Å and 1.78 Å resolution, respectively. The C2A domain adopts a β-sandwich structure with a four-stranded concave side that mediates homodimerization, leading to the formation of an eight-stranded β-barrel. In contrast, heterodimerization involves the bottom tip of the C2A-domain β-sandwich and a C-terminal α-helical extension, which wrap around the RIM ZF domain. Our results describe the structural basis for a Munc13–1 homodimer–Munc13–1/RIM heterodimer switch that may be crucial for vesicle priming and presynaptic plasticity, uncovering at the same time an unexpected versatility of C2 domains as protein–protein interaction modules, and illustrating the power of combining NMR spectroscopy and X-ray crystallography to study protein complexes.
@@ -717,8 +719,6 @@ Guided by solution nuclear magnetic resonance (NMR) experiments, we have solved 
 Moreover, our data uncover an unexpected versatility of C2 domains as protein–protein interaction modules that underlies this switch, and emphasize that combining NMR spectroscopy with X-ray crystallography provides a powerful approach to investigate protein complexes at atomic resolution.
 
 NMR spectroscopy and X-ray crystallography provide complementary tools to study protein structure. X-ray crystallography is better suited to elucidate the structures of large proteins and accurately define interfaces of protein complexes, but requires crystallization, which can yield artifacts due to crystal packing. Furthermore, unfolded regions and non-specific aggregation can hinder crystallization, and these properties need to be monitored by alternative techniques. NMR spectroscopy can be performed in solution, and low-resolution information on the conformational and aggregation states of proteins can be quickly obtained even for large species using heteronuclear NMR experiments such as1H-15N heteronuclear single quantum coherence (HSQC). These spectra contain one cross-peak for each non-proline residue of a15N-labeled protein and exhibit well-dispersed cross-peak patterns for well-folded proteins, whereas unfolding or misfolding leads to poor cross-peak dispersion. Moreover, binding interactions and conformational changes can be monitored by perturbations of the cross-peaks, and unusual cross-peak broadening reports on sample aggregation. In this study, we took advantage of the strengths of both techniques, using NMR spectroscopy to optimize protein complexes for crystallization and to obtain structural information in solution that was later employed to interpret the high-resolution structures of these complexes elucidated by X-ray crystallography.
-
-Moreover, the gel filtration and ITC data (Figure 4A and4B), as well as the high quality of the1H-15N HSQC spectrum of Munc13–13–150(K32E)/RIM2α82–142 complex and the observation of only one set of cross-peaks (Figure 4C), demonstrate a 1:1 stoichiometry. All these results strongly suggest that the monomer A/RIM2α82–142 complex observed in the crystals faithfully reflects the true Munc13–1/RIM2α binding mode, whereas the presence of a second Munc13–13–150(K32E) molecule in the crystals must be considered a consequence of crystal packing.
 
 Note also that the mutated Munc13–1 side chain (E32) is close to the interface with the ZF domain, but is facing away, consistent with the conclusion drawn from the NMR analysis that the mutation does not substantially alter the binding mode.
 
