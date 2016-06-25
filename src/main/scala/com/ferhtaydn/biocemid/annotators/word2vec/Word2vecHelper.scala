@@ -13,7 +13,6 @@ object Word2vecHelper {
     generateRawWord2vecResultFiles(config)
     generateWord2vecResultFiles(config)
     generateDedupeEnhancedResultFiles(config)
-    //generateRawLatexTableContext("0018")
     //generateDedupeLatexTableContext("0018")
   }
 
@@ -81,48 +80,15 @@ object Word2vecHelper {
     }
   }
 
-  private def generateRawLatexTableContext(methodId: String): Unit = {
-
-    val rawFileName = s"$methodId-$word2vecResultRawFileSuffix"
-    val fileName = s"$methodId-$word2vecResultFileSuffix"
-
-    val raw = read(s"$oaWord2vecsDirectory/$methodId/$rawFileName").map { line ⇒
-      Word2vecItem.underscoredPhrases(line)
-    }
-    val normal = read(s"$oaWord2vecsDirectory/$methodId/$fileName").map { line ⇒
-      Word2vecItem.underscoredPhrases(line)
-    }
-
-    val diff = raw diff normal
-
-    val a = raw.take(45)
-    val b = raw.slice(45, 90)
-
-    a zip b foreach {
-      case (x, y) ⇒
-        val itX = if (diff.contains(x))
-          s"\\textit{${x.phrase}} & \\textit{${x.score}} & "
-        else
-          s"\\textbf{${x.phrase}} & \\textbf{${x.score}} & "
-
-        val itY = if (diff.contains(y))
-          s"\\textit{${y.phrase}} & \\textit{${y.score}} \\\\"
-        else
-          s"\\textbf{${y.phrase}} & \\textbf{${y.score}} \\\\"
-
-        println(s"$itX $itY")
-    }
-  }
-
   private def generateDedupeLatexTableContext(methodId: String): Unit = {
 
-    val dedupeFileName = s"$methodId-$word2vecResultDedupeFileSuffix"
+    val dedupeFileName = s"$methodId-$word2vecResultDedupeEnhancedFileSuffix"
     val fileName = s"$methodId-$word2vecResultFileSuffix"
 
-    val dedupe = read(s"$oaWord2vecsDirectory/$methodId/$dedupeFileName").map { line ⇒
+    val dedupe = read(s"$oaWord2vecsPureBaselineDirectory/$methodId/$dedupeFileName").map { line ⇒
       Word2vecItem.underscoredPhrases(line)
     }
-    val normal = read(s"$oaWord2vecsDirectory/$methodId/$fileName").map { line ⇒
+    val normal = read(s"$oaWord2vecsPureBaselineDirectory/$methodId/$fileName").map { line ⇒
       Word2vecItem.underscoredPhrases(line)
     }
 
