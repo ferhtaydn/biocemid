@@ -13,7 +13,8 @@ object Word2vecHelper {
     generateRawWord2vecResultFiles(config)
     generateWord2vecResultFiles(config)
     generateDedupeEnhancedResultFiles(config)
-    //generateDedupeLatexTableContext("0018")
+    generateDedupeLatexTableContext("0018", "0096")
+    generateDedupeLatexTableContext2("0096")
   }
 
   private def cleanPreviousResultFiles(config: Word2vecAnnotatorConfig): String = {
@@ -105,6 +106,72 @@ object Word2vecHelper {
           s"\\textbf{${x.phrase}} & \\textbf{${x.score}} & "
 
         val itY = if (diff.contains(y))
+          s"\\textit{${y.phrase}} & \\textit{${y.score}} \\\\"
+        else
+          s"\\textbf{${y.phrase}} & \\textbf{${y.score}} \\\\"
+
+        println(s"$itX $itY")
+    }
+  }
+
+  private def generateDedupeLatexTableContext2(methodId: String): Unit = {
+
+    val dedupeFileName = s"$methodId-$word2vecResultDedupeEnhancedFileSuffix"
+    val fileName = s"$methodId-$word2vecResultFileSuffix"
+
+    val dedupe = read(s"$oaWord2vecsPureBaselineDirectory/$methodId/$dedupeFileName").map { line ⇒
+      Word2vecItem.underscoredPhrases(line)
+    }
+    val normal = read(s"$oaWord2vecsPureBaselineDirectory/$methodId/$fileName").map { line ⇒
+      Word2vecItem.underscoredPhrases(line)
+    }
+
+    val diff = normal diff dedupe
+
+    normal foreach {
+      case x ⇒
+        val itX = if (diff.contains(x))
+          s"\\textit{${x.phrase}} & \\textit{${x.score}} \\\\ "
+        else
+          s"\\textbf{${x.phrase}} & \\textbf{${x.score}} \\\\ "
+
+        println(s"$itX")
+    }
+  }
+
+  private def generateDedupeLatexTableContext(firstMethodId: String, secondMethodId: String): Unit = {
+
+    val dedupeFileName1 = s"$firstMethodId-$word2vecResultDedupeEnhancedFileSuffix"
+    val fileName1 = s"$firstMethodId-$word2vecResultFileSuffix"
+
+    val dedupe1 = read(s"$oaWord2vecsPureBaselineDirectory/$firstMethodId/$dedupeFileName1").map { line ⇒
+      Word2vecItem.underscoredPhrases(line)
+    }
+    val normal1 = read(s"$oaWord2vecsPureBaselineDirectory/$firstMethodId/$fileName1").map { line ⇒
+      Word2vecItem.underscoredPhrases(line)
+    }
+
+    val dedupeFileName2 = s"$secondMethodId-$word2vecResultDedupeEnhancedFileSuffix"
+    val fileName2 = s"$secondMethodId-$word2vecResultFileSuffix"
+
+    val dedupe2 = read(s"$oaWord2vecsPureBaselineDirectory/$secondMethodId/$dedupeFileName2").map { line ⇒
+      Word2vecItem.underscoredPhrases(line)
+    }
+    val normal2 = read(s"$oaWord2vecsPureBaselineDirectory/$secondMethodId/$fileName2").map { line ⇒
+      Word2vecItem.underscoredPhrases(line)
+    }
+
+    val diff1 = normal1 diff dedupe1
+    val diff2 = normal2 diff dedupe2
+
+    normal1 zip normal2 foreach {
+      case (x, y) ⇒
+        val itX = if (diff1.contains(x))
+          s"\\textit{${x.phrase}} & \\textit{${x.score}} & "
+        else
+          s"\\textbf{${x.phrase}} & \\textbf{${x.score}} & "
+
+        val itY = if (diff2.contains(y))
           s"\\textit{${y.phrase}} & \\textit{${y.score}} \\\\"
         else
           s"\\textbf{${y.phrase}} & \\textbf{${y.score}} \\\\"

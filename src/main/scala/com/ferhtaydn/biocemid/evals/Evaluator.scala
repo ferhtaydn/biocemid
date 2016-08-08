@@ -50,6 +50,28 @@ object Evaluator {
     }
   }
 
+  def countOfMethods2(dir: String, suffix: String): Unit = {
+
+    val tn = list(dir, suffix).flatMap { file ⇒
+      getBioCPassages(file).filter(p ⇒ p.getAnnotations.isEmpty)
+    }
+
+    println(tn.length)
+
+    val annotatedParagraphs = list(dir, suffix).flatMap { file ⇒
+      getBioCPassages(file).filter(p ⇒ p.getAnnotations.nonEmpty)
+    }
+
+    println(annotatedParagraphs.length)
+
+    val annotations = list(dir, suffix).flatMap { file ⇒
+      getBioCPassages(file).flatMap(p ⇒ p.getAnnotations)
+    }
+
+    println(annotations.length)
+
+  }
+
   def evaluate(manuallyAnnotatedFilesDirectory: String, annotatedFilesDirectory: String, fileSuffix: String): Unit = {
 
     val manuallyAnnotatedFiles = list(manuallyAnnotatedFilesDirectory, fileSuffix)
