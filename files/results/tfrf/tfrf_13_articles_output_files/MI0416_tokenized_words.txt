@@ -1,11 +1,4 @@
-mounted
-cells
-visualized
-under
-fluorescent
-microscope
-leica
-http://www.leica.comsubcellular
+subcellular
 localization
 endogenous
 exogenous

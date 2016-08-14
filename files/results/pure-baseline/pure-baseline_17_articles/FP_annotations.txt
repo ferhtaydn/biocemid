@@ -1,0 +1,233 @@
+0809
+Verified cDNA inserts were either directly transferred into appropriate secondary vectors for bimolecular fluorescence complementation (BiFC), co-immunoprecipitation or transgenic experiments and served as templates in second-round PCR-amplification to remove the stop codon or to adjust open reading frames (ORFs) for translational fusions.
+
+0019
+Verified cDNA inserts were either directly transferred into appropriate secondary vectors for bimolecular fluorescence complementation (BiFC), co-immunoprecipitation or transgenic experiments and served as templates in second-round PCR-amplification to remove the stop codon or to adjust open reading frames (ORFs) for translational fusions.
+0019
+In addition to the interactions in yeast, we performed co-immunoprecipitation experiments with epitope-tagged full-length proteins.
+
+0019
+The co-immunoprecipitation experiments therefore confirm that the full-length STM protein interacts with full-length ATH1, BLH3 and BLH9 proteins in vitro and substantiate the affinity of BLH/STM interactions.
+0809
+According to our BiFC results, however, STM is targeted into the nucleus as a heterodimer with ATH1, BLH3 and BLH9.
+0809
+(A–C) BiFC staining of the nucleus obtained after coexpression of STM/BLH constructs as indicated above each photograph in leek epidermal cells.
+0019
+The relatively low affinity of the CgE/Fc interaction likely explains why a CgE/Fc binding interaction was not detectable by coimmunoprecipitation analyses [16].
+0077
+NMR spectroscopy and X-ray crystallography provide complementary tools to study protein structure.
+
+0114
+NMR spectroscopy and X-ray crystallography provide complementary tools to study protein structure. X-ray crystallography is better suited to elucidate the structures of large proteins and accurately define interfaces of protein complexes, but requires crystallization, which can yield artifacts due to crystal packing.
+
+0077
+NMR spectroscopy can be performed in solution, and low-resolution information on the conformational and aggregation states of proteins can be quickly obtained even for large species using heteronuclear NMR experiments such as1H-15N heteronuclear single quantum coherence (HSQC).
+
+0077
+In this study, we took advantage of the strengths of both techniques, using NMR spectroscopy to optimize protein complexes for crystallization and to obtain structural information in solution that was later employed to interpret the high-resolution structures of these complexes elucidated by X-ray crystallography.
+
+0114
+In this study, we took advantage of the strengths of both techniques, using NMR spectroscopy to optimize protein complexes for crystallization and to obtain structural information in solution that was later employed to interpret the high-resolution structures of these complexes elucidated by X-ray crystallography.
+0077
+In the past, NMR spectroscopy and X-ray crystallography were largely viewed as alternative methods for structure determination of biomolecules, but the usefulness of combining the strengths of both techniques is increasingly being recognized [32,33].
+
+0114
+In the past, NMR spectroscopy and X-ray crystallography were largely viewed as alternative methods for structure determination of biomolecules, but the usefulness of combining the strengths of both techniques is increasingly being recognized [32,33].
+
+0077
+However, it is unclear to what extent the fragment length of each target was optimized in these studies, and a separate structural genomics effort suggested that NMR spectra can be used to identify promising targets for structure determination by X-ray crystallography [36]. The data presented here, together with our previous NMR analysis of Munc13–1/α-RIM/Rab3 interactions [20], provide a particularly compelling illustration of how NMR spectroscopy can assist in X-ray diffraction studies of protein complexes that present particularly challenging problems for crystallization, and at the same time can provide complementary information.
+
+0114
+However, it is unclear to what extent the fragment length of each target was optimized in these studies, and a separate structural genomics effort suggested that NMR spectra can be used to identify promising targets for structure determination by X-ray crystallography [36]. The data presented here, together with our previous NMR analysis of Munc13–1/α-RIM/Rab3 interactions [20], provide a particularly compelling illustration of how NMR spectroscopy can assist in X-ray diffraction studies of protein complexes that present particularly challenging problems for crystallization, and at the same time can provide complementary information.
+
+0077
+Altogether, these observations suggest that combining the strengths of NMR spectroscopy in fragment optimization and analysis of protein–protein interactions in solution with the high accuracy of structure determination by X-ray crystallography for biomolecules of any size will be particularly useful to study complex protein networks.
+
+0114
+Altogether, these observations suggest that combining the strengths of NMR spectroscopy in fragment optimization and analysis of protein–protein interactions in solution with the high accuracy of structure determination by X-ray crystallography for biomolecules of any size will be particularly useful to study complex protein networks.
+0065
+ITC experiments were performed using a VP-ITC system (MicroCal, Northampton, Massachusetts, United States) at 20 °C in a buffer composed of 30 mM Tris (pH 7.4), 150 mM NaCl, and 1 mM TCEP.
+
+0065
+Data were fit with a non-linear least-squares routine using a single-site binding model with Origin for ITC v.5.0 (Microcal), varying the stoichiometry(n), the enthalpy of the reaction (ΔH) and the association constant (Ka).
+0071
+(B) Gel filtration analysis of Munc13–13–150 (black), RIM2α82–142 (blue), and the complex between them (red).
+0071
+(A) Gel filtration analysis of Munc13–13–150(K32E) (black), RIM2α82–142 (blue), and the complex between them (red).
+0065
+(B) ITC analysis of the binding of Munc13–13–150(K32E) to RIM2α82–142.
+0027
+In the lighter fractions (3–5), GFP-Rab21 and integrin were found to cosediment with the Golgi-marker GM130, whereas in the denser fractions, cosedimentation was observed with the ER marker P115 (fractions 6–8) and EEA1 (fractions 7–9; Fig.
+0040
+Further characterization of the large intracellular structures induced by GFP-Rab21 overexpression was performed by electron microscopy and immunogold labeling of GFP (Fig.
+0416
+Combined total internal reflection fluorescence microscopy (TIRFM; pseudocolored green) and conventional widefield epifluorescence analysis (pseudocolored red) showed GFP-Rab21 vesicles emanating from the membrane into the cell (changing from green to red/yellow) and back or vice versa (although formally this technique does not exclude the possibility that some vesicles will by chance come closer and further away from the plasma membrane).
+0054
+(C) Cell surface expression of β1-integrin was analyzed with dual-color FACS from transiently transfected MDA-MB-231 cells.
+
+0416
+(F) Subcellular localization of GFP-integrin in the transfected collagen adhering cells was studied by widefield fluorescence microscopy.
+0077
+Evidence from detailed biochemical and nuclear magnetic resonance studies (Stefansson et al., 2004; Vinogradova et al., 2004) indicates that upon integrin activation the membrane-proximal regions of the integrin cytoplasmic tails move out of the membrane into the cytoplasm, revealing the highly conserved residues to the cytoplasmic face and involving substantial structural changes in the cytoplasmic tails.
+0411
+The cells were lysed (200 mM NaCl, 75 mM Tris, 15 mM NaF, 1.5 mM Na3VO4, 7.5 mM EDTA, 7.5 mM EGTA, 1.5% Triton-X-100, and Complete), and the amount of biotinylated integrin was assayed using the anti–β1-integrin antibody AIIB2 to capture the integrins and HRP anti-biotin antibody for ELISA detection.
+0052
+Ultrathin cruosections were prepared on a cryochamber (EM FCS; Leica), and thawed sections were incubated with a polyclonal antiserum raised against EGFP followed by incubation with protein A complexed to 5-nm gold particles according to standard procedures.
+0663
+To examine the contents of these cytoplasmic foci, HeLa cells were transfected with expression vectors for YFP-Lsm1 and CFP-Ago2, or YFP-RCK/p54 and CFP-Ago2, and visualized 24 h later by confocal microscopy.
+0019
+In cells expressing CFP-Ago2 and YFP-Lsm1, FRET efficiency was not significant (1.62% ± 1.11%), corroborating our immunoprecipitation results (Figure 1A).
+0019
+After immunoprecipitation, RISC activities were analyzed by incubating the supernatant (S) or bead (B) phases with 182-nt 32P-cap-labeled let-7 substrate mRNAs having a perfectly complementary or mismatched sequence to the let-7 miRNA.
+0019
+To examine the RNA dependence of protein–protein interactions, TCEs (250 μg) were treated before immunoprecipitation with 0.2 μg/ul of RNase A for 20 min at room temperature.
+0055
+For FRET studies, HeLa cells co-expressing CFP- and YFP-tagged proteins were fixed with 4% paraformaldehyde in PBS at room temperature for 20 min and washed three times with PBS.
+
+0055
+FRET experiments were performed by an acceptor photobleaching method as described [48,49,68]. FRET efficiencies were measured and images were analyzed using Leica confocal software.
+0663
+HeLa cells expressing YFP-Lsm1 and CFP-Ago2 (a, b, and c), YFP-RCK/p54 and CFP-Ago2 (d, e, and f) were visualized by confocal microscopy at 24 h post-transfection.
+0055
+(D) FRET efficiencies between different P-body protein donor: acceptor pairs. HeLa cells co-expressing YFP-RCK/p54 and CFP-Ago2, YFP-Lsm1 and CFP-Ago2, YFP-RCK/p54 and CFP, YFP-Ago1 and CFP-Ago2, YFP-Ago2 and CFP-Ago1, YFP-RCK/p54 and CFP-Ago-1, as well as YFP-Ago1 and CFP, were fixed and FRET efficiencies were measured.
+0019
+After immunoprecipitation, RISC activities were analyzed by incubating the supernatant (S) or bead (B) phases with 182-nt 32P-cap-labeled let-7 substrate mRNAs having a perfectly complementary or mismatched sequence to the let-7 miRNA.
+0019
+After immunoprecipitation, RISC activities were analyzed by incubating the supernatant (S) or bead (B) phases with 182-nt 32P-cap-labeled let-7 substrate mRNAs having a perfectly matched or a mismatched sequence to the let-7 miRNA.
+0052
+Trypsin was inactivated by addition of complete medium (DMEM containing 15% FCS) and cells were dissociated by trituration with a glass Pasteur pipette.
+0052
+Primary NCCs were isolated from dissected branchial arches of E9.5 embryos as described above, except cells were cultured in F12 medium supplemented with 10% FCS.
+0019
+IP, immunoprecipitation; Wcl, whole cell lysate.
+0054
+Cell cycle progression profiles of Δabp1, cdc23-M36 and cdc23-M36 Δabp1 at 30°C (from 1–6 hrs) and 25°C at time zero, by flow cytometry anaylsis.
+0054
+We analyzed DNA content by flow cytometry to determine the precise arrest points for the different strains (Figure 3B).
+0054
+FACS analysis (DNA content) for Δabp1 strain (wild-type (wt) as control).
+0018
+First, Abp1 not only interacts with Cdc23 (Mcm10) protein in the two-hybrid analysis, but deletion of Abp1 lowers the restrictive temperature for cdc23-M36, consistent with its proposed role in DNA replication.
+0054
+Our flow cytometry analysis suggests that cdc23+ (MCM10) is required for DNA replication initiation.
+0054
+Cells were then returned to the permissive temperature of 25°C, collected at the indicated times and fixed for flow cytometry analysis (FACS).
+
+0054
+Cells were then collected at the indicated times and prepared for FACS analysis.
+0054
+Figure 5C and Figure S6B illustrate that double staining for Annexin V and propidium iodide (PI) followed by FACS analysis revealed a major increase in Annexin V+ PI− (apoptotic) cells following transduction with the negative control shRNA followed by either γ irradiation or treatment with etoposide, whereas there was no increase in apoptotic cells above baseline in the cells depleted of NHE-1: DNA damage–induced apoptosis was blocked 100%. Comparable results were obtained by measuring the sub-G1 peak by FACS (unpublished data) and NHE-1 depletion also correlated with increased survival (Figure S5B).
+0054
+Intracellular pH was measured using a standard ratiometric method with a pH-sensitive fluorophore SNARF-1 by flow cytometry [44].
+
+0054
+FACS data were analysed using Flowjo software to obtain the ratio based on the Fl3/Fl2 channels.
+0054
+Cells were stained with 20 μg/ml PI (with 50 μg/ml RNase A) and analysed by flow cytometry, gating on the CD4−CD8− subset as necessary.
+0054
+GFP-positive cells were sorted by flow cytometry using a FACsAria.
+0054
+Cells positive for both GFP and DsRed were sorted by flow cytometry and used for subsequent experiments.
+0054
+The purity of PBMCs was routinely checked by staining with antibodies CD3-Cy5, CD19-Fitc, and B220-PE and was analysed by flow cytometry.
+0054
+(A) Wild-type thymocytes were pre-incubated with or without Z-VAD-fmk (200 μM), and were then cultured with or without etoposide for 24 h, harvested, and apoptosis was measured by measuring the sub-G1 peak by flow cytometry.
+0054
+48 h later, GFP+ DsRed+ cells were purified by flow cytometry and treated with etoposide (Etop, 25 μM) for 30 h or exposed to irradiation (IR, 5 Gy) followed by 30 h in culture.
+0054
+pHi was measured using SNARF by FACS in the gated live CD4−CD8− subset.
+0054
+(E) Aliquots of cells used in (D) were assessed for pHi by FACS.
+0054
+(F) Apoptosis of aliquots of the cells from (D) was analysed by FACS.
+0054
+GFP-positive cells were FACS sorted (left panel) and cultured in media with the pHe shown for 24 h or 48 h, then processed for immunoblotting with Bcl-xL antibody (middle panel).
+0054
+The lower left FACS histogram shows the infection efficiency for nontransfected (non), empty-vector transfected (vector), or NHE-1 transfected (NHE-1) cells as percentage GFP-positive cells.
+0054
+pHi was measured by FACS on live CD4−CD8− cells, and the sub-G1 peak was analysed by FACS on CD4−CD8− cells to assess apoptosis.
+0054
+(C) Aliquots of the cells from (A) were analysed for apoptosis by Annexin V/PI staining using flow cytometry, as illustrated in a representative experiment (total n = 5).
+0054
+Patients' cells (PBMC, in the range 85%–95% CD19+B220+) were incubated at pHe values of 7.2, 8.0, or 8.5, and the pHi values were monitored by SNARF-1 staining using flow cytometry. Apoptosis was evaluated by measurement of sub-G1 peaks using flow cytometry.
+0052
+The same cell aliquots cultured in RPMI/10% FCS for 24 h or 48 h were analysed for apoptosis by sub-G1 staining (right panel).
+0019
+A significant amount of endogenous PDE activity was recovered in the β1AR immunoprecipitation (IP) pellet (Figure 1A).
+
+0019
+Whereas ablation of PDE4A or PDE4B had no effect, inactivation of the PDE4D gene prevented co-IP of PDE activity with the β1AR (Figure 1B).
+0019
+(B) Co-IP of β1AR and PDE activity from cardiomyocytes deficient in PDE4A, PDE4B, or PDE4D, and wild-type controls.
+0019
+(A, B) Co-IP of exogenous β1AR and Myc-tagged PDE4D splice variants expressed in HEK293 cells.
+
+0019
+(C) Shown is the co-IP of exogenous β1AR and PDE4D8-Myc from extracts of MEFs derived from mice deficient in β-arrestin 1 and 2 (βarr1/2KO) or from wild-type controls (WT-MEF).
+0077
+Remarkably, residues G305, G306 and G313 showed strong shifts when bound to H3K4me2 and disappeared completely from the NMR spectrum owing to line-shape broadening on binding to H3K4me3, indicating an involvement of this region in peptide binding.
+0019
+Next, we studied in vivo histone binding by protein chromatin immunoprecipitation (ChIP) assays and observed that AIRE is found in complexes with a small fraction of histone H3 but not with H3K4me3.
+0065
+NMR binding, fluorescence titration assays and isothermal titration calorimetry thermodynamic analysis.
+
+0077
+NMR binding, fluorescence titration assays and isothermal titration calorimetry thermodynamic analysis. Details on NMR titrations, fluorescence spectroscopy and thermodynamic measurements are described in the supplementary information online.
+0019
+Cell lines, expression analysis and chromatin immunoprecipitation.
+
+0402
+DNA ChIP was performed essentially according to Upstate Chromatin Immunoprecipitation Assay protocol.
+0019
+AIRE, autoimmune regulator; ChIP, chromatin immunoprecipitation; GAPDH, glyceraldehyde-3-phosphate dehydrogenase; HEK, human embryonic kidney; H3K4me3, histone H3 trimethylated at lysine 4.
+0019
+AIRE, autoimmune regulator; ChIP, chromatin immunoprecipitation; HEK, human embryonic kidney; PHD, plant homeodomain.
+0858
+(A) Immunodepletion of Plx1.
+0077
+To obtain the p62 PH-D-bound structure of hTFIIEα AC-D using NMR, we performed NMR titration experiments in buffers both with and without 100 mM NaCl for both domains (Supplementary Figures 1–3). Although in the 100 mM NaCl buffer the dissociation constant (Kd) between AC-D and p62 PH-D was estimated from the titration plots as 376±81 nM (Supplementary Figure 1C) or 237±82 nM (Supplementary Figure 2C), the NaCl-free buffer NMR titration experiment showed much stronger binding affinity between AC-D and p62 PH-D because of the slow exchange timescale with a Kd below about 150 nM (Supplementary Figure 3).
+0077
+In the binding of VP16 TAD to Tfb1 PH-D, the Kd value estimated by NMR titration experiment was ∼4000–7000 nM (Di Lello et al, 2005).
+0077
+Measurements of NMR spectra, structural calculations and NMR titration experiments are described in Supplementary data.
+0077
+Left, superposition of the backbone heavy atoms of the 20 lowest energy NMR structures.
+0077
+(A) Superposition of the backbone heavy atoms of the 20 lowest energy NMR structures.
+0096
+KL generated GST fusion protein for pull down analysis.
+0071
+Membrane-bound proteins were separated from soluble proteins by Sepharose CL-2B gel filtration chromatography.
+0071
+In incubations of 20 nM tBid and liposomes, tBid bound effectively to liposomes as assayed by gel filtration chromatography (Figure 1B).
+0019
+Unlike the conformational change that accompanies tBid-induced insertion of Bax into membranes, the liposome-induced conformational change also disappears if liposomes are solubilized in CHAPS prior to immunoprecipitation (Figure 5A, compare lanes 1 and 3).
+0077
+This phenomenon is also illustrated in Figure 5, using two diagnostic NMR signals as examples: the resonance originating from residue 257 is predicted to experience strong PRE in the forward mode (calculated distance from spin-label 10.7 Å) but should only be weakly affected in the backward mode (calculated distance 20.2 Å).
+0077
+Small changes in a variety of factors, such as experimental conditions or the length of the paxillin fragment studied, might influence the observed binding orientation in NMR, where a mean is detected.
+0071
+On the basis of gel filtration experiments with the N-terminal CH domain of α-parvin, Wang et al.
+0071
+After cleavage with recombinant human rhinovirus 3C-protease, the sample was subjected to size exclusion chromatography (Superdex 75, GE Healthcare) in 25 mM Tris (pH 8.0), 150 mM NaCl, 2 mM DTT, and 2 mM EDTA.
+0053
+For fluorescence anisotropy studies, LD1 with 5-carboxyfluorescein (5-FAM) attached to the ɛ-amino group of the C-terminal lysine was used.
+0077
+NMR Titrations of α-Parvin-CHC with Paxillin LD Peptides
+0019
+Chromatin immunoprecipitation (ChIP) experiments show that Ctk1 associates with RNApII throughout elongation (Kim et al, 2004a).
+0019
+Chromatin immunoprecipitation was performed as described previously (Ahn et al, 2004).
+
+0019
+For Rpb3 immunoprecipitation, antibody (1Y26, NeoClone) was preincubated with protein G-sepharose (Amersham).
+
+0019
+The signal for each specific gene primer in the immunoprecipitation was then divided by this ratio to convert the signal to normalized units. This value was divided by the immunoprecipitation signal of the non-transcribed control product to determine the fold enrichment of the ChIP over background signals.
+0019
+The abnormal cross-linking of basal transcription factors in ctk1Δ cells is confirmed by independent immunoprecipitation of TAP-tagged TFIIF subunits.
+
+0019
+IgG agarose was used for immunoprecipitation of TAP-tagged proteins.
+0019
+Protein A- or protein G-sepharose was used for TBP or Rpb3 immunoprecipitation and rabbit IgG agarose was used for RNA14–TAP pull-down.

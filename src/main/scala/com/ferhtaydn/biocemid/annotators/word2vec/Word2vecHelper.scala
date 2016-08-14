@@ -13,8 +13,8 @@ object Word2vecHelper {
     generateRawWord2vecResultFiles(config)
     generateWord2vecResultFiles(config)
     generateDedupeEnhancedResultFiles(config)
-    generateDedupeLatexTableContext("0018", "0096")
-    generateDedupeLatexTableContext2("0096")
+    //generateDedupeLatexTableContext("0018", "0096")
+    //generateDedupeLatexTableContext2("0096")
   }
 
   private def cleanPreviousResultFiles(config: Word2vecAnnotatorConfig): String = {

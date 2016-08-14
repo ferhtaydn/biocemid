@@ -1,4 +1,4 @@
-Mounted cells were visualized under fluorescent microscope (Leica, http://www.leica.com).(B) Subcellular localization of endogenous and exogenous UXT.
+(B) Subcellular localization of endogenous and exogenous UXT.
 293T cells were transfected with (top) or without (bottom) FLAG-UXT.
 Immunofluorescentmicroscopy was performed with the indicated primary antibodies.
 Alternatively, we performed immunofluorescence analysis to support this speculation.

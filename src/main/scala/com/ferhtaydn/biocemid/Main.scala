@@ -17,7 +17,7 @@ object Main extends App {
        |2 - Annotate with BASELINE raw files in $rawDirectory
        |3 - Annotate with TFRF raw files in $rawDirectory
        |4 - Annotate with WORD2VEC over PURE-BASELINE, raw files in $rawDirectory
-       |5 - Generate Eval results by comparing $goldResultDirectory and $baselineResultDirectory
+       |5 - Generate Eval results by comparing $goldResultDirectory and $pureBaselineResultDirectory
        |6 - Generate Eval results by comparing $goldResultDirectory and $tfrfResultDirectory
        |7 - Generate Eval results by comparing $goldResultDirectory and $word2vecResultDirectory
        |8 - Count of each method annotated in $publishedDataSet
