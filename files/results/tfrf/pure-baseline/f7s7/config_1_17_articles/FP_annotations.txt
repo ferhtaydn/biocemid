@@ -2,8 +2,11 @@
 A functional interaction between plant MEINOX-HD and BLH genes is substantiated by the synergism observed when pennywise a null-allele of BLH9 (18), allelic to bellringer, replumless, vaamana (19,22,23) is combined with the brevipedicellus1 (bp1) mutant (24).
 0030
 This dominant-negative function upon expression of the MEINOXSTM domain is strengthened in combination with the Drosophila engrailed repressor domain and best explained by squelching: the abundant MEINOXSTM domain depleting the native STM protein from essential interaction partners.
-0226
-As bait the sequences encoding the MEINOXSTM domain (amino acids 116–220 of the STM protein) or the slightly longer MEINOX-ELKSTM (amino acids 116–287) domain were cloned into the vector pGBKT7 (Clontech) and expressed in fusion with the GAL4 DNA-binding domain.
+0018
+The meristem-enriched cDNA library in the vector pACT2 (Clonetech) was prepared from immature inflorescence shoots (Lumbrineris erecta, 4–5 mm size) containing inflorescence and multiple floral meristems (FMs). cDNA synthesis exactly followed the manual for the cDNA synthesis kit (Stratagene). Directional cloning into pACT2 was achieved via an XhoI site addition to the oligo-dT primer (3′) and an EcoRI adapter at the cDNA 5′-terminus. The cDNA library (1.25 × 106 clones) was colony amplified in Escherichia coli, plasmid DNA purified by CsCl2-gradient centrifugation and used for yeast transformation (strain AH109). Screening of the library followed the Matchmaker manual applying quadruple selection (HIS3, ADE2, LacZ and MEL1).
+
+0018
+Positive clones (223) were isolated and cDNA inserts in pACT2 were subjected to N-terminal sequence analysis. The specificity of each protein interaction was confirmed by retransformation of sequence-verified cDNA clones (ATH1, BHL3 or BHL9) into yeast strains providing the MEINOXSTM or MEINOXBP1 bait constructs in pGDKT7.
 0809
 Verified cDNA inserts were either directly transferred into appropriate secondary vectors for bimolecular fluorescence complementation (BiFC), co-immunoprecipitation or transgenic experiments and served as templates in second-round PCR-amplification to remove the stop codon or to adjust open reading frames (ORFs) for translational fusions.
 
@@ -26,13 +29,10 @@ Aliquots (10 µl) of DNA-coated tungsten were spotted on macro carriers and used
 0426
 Aliquots (10 µl) of DNA-coated tungsten were spotted on macro carriers and used to transform leek epidermal cells at 1100 psi rupture disc bursting pressure using a Biolistic PDS-1000-He apparatus (BioRad) The bombarded tissue was kept in Petri dishes on damp filter paper for 12–16 h in the dark and YFP or GFP fluorescence was visualized using a LEICA MZFLIII stereomicroscope.
 0007
-Eluted protein samples were split (1/3 and 2/3), size-fractionated in parallel on two polyacrylamide SDS-gels (concentration adjusted to protein size), electroblotted onto Immobilon-P membrane (Millipore) and subjected to antibody detection. HA-tagged (1/3 aliquot) partner proteins were identified using an anti-HA horseradish peroxidase (HRP)-conjugated antibody (clone 3F10; Roche 2012819). The co-precipitated 6× his-tagged STM protein was visualized by a primary penta-His mouse antibody [α-(H)5; Qiagen 34660] and secondary HRP-coupled goat anti-mouse IGG (Dianova 115-035-062).
+HA-tagged (1/3 aliquot) partner proteins were identified using an anti-HA horseradish peroxidase (HRP)-conjugated antibody (clone 3F10; Roche 2012819).
 
-0276
+0004
 Epidermal proteins after bombardement of leek epidermal cells were isolated in 50 mM Tris–HCl, pH 8.0, 150 mM NaCl, 1% Triton and size-fractionated by SDS–PAGE.
-
-0007
-GFP fusion proteins were detected after transfer to Immobilon-P membrane (Millipore) by a mouse monoclonal anti-GFP HRP-conjugated antibody (IgG1; Milteny Biotec 130-091-833).
 0107
 The method of choice to prove a physical interaction between candidate partner proteins in plant cells is BiFC (31,36).
 
@@ -40,8 +40,6 @@ The method of choice to prove a physical interaction between candidate partner p
 As a potential transcription factor, STM was expected to direct GFP fluorescence into the plant cell nucleus.
 0663
 Additional support for nuclear exclusion was obtained by several STM deletion constructs, none of which targeted GFP fluorescence to the plant cell nucleus (data not shown).
-0226
-Potential STM protein interaction partners were identified in a yeast two-hybrid screen performed with a meristem-enriched cDNA library (Materials and Methods) established in the vector pACT2 (prey) and the MEINOXSTM domain as a bait expressed from the pGDKT7 vector.
 0018
 Besides obvious controls in yeast such as retransformation of bait or prey plasmids and the combination with the empty bait vector, we included the MEINOXBp1 domain of the BP1 gene as bait as it encodes the closest relative to the MEINOXSTM domain in the Arabidopsis genome.
 
@@ -79,13 +77,14 @@ Based on protein–protein interaction data, the animal PBC-A/B domain finds its
 The PBC-B domain contains several conserved phosphorylation sites for Ser/Thr kinases and PBX1 sub-cellular localization correlates with the phosphorylation state of these residues whose dephosphorylation induces nuclear export (49).
 0107
 The evolutionary conservation of a functional interaction between members of two families of TALE-HD gene products, MEIS/PBX and KNOX/BLH proteins in animals or plants, respectively, suggests an ancient and possibly extant function.
-0007
-(I) Stability of GFP-STM and GFP-BLH3 fusion proteins in leak epidermal cells visualized by a GFP antibody.
 0107
 The positive controls upper panel to the left shows the interaction between p53 and the SV40 T-antigen (pGBKT7-53 and pADT7-T, respectively, provided in the MATCHMAKER Biosensor kit).
 
 0007
-(B) In vitro translated full-length BLH proteins tagged with the hemaglutine (HA) epitope which were used in co-precipitation experiments with His-tagged STM protein and visualized by an anti-HA HRP-conjugated antibody. (C) Co-precipitated STM-His protein detected by a penta-His antibody.
+(B) In vitro translated full-length BLH proteins tagged with the hemaglutine (HA) epitope which were used in co-precipitation experiments with His-tagged STM protein and visualized by an anti-HA HRP-conjugated antibody.
+
+0096
+(B) In vitro translated full-length BLH proteins tagged with the hemaglutine (HA) epitope which were used in co-precipitation experiments with His-tagged STM protein and visualized by an anti-HA HRP-conjugated antibody.
 0809
 (A–C) BiFC staining of the nucleus obtained after coexpression of STM/BLH constructs as indicated above each photograph in leek epidermal cells.
 
@@ -98,9 +97,6 @@ Herpes simplex virus type-1 expresses a heterodimeric Fc receptor, gE-gI, on the
 
 0114
 Here we identify the C-terminal domain of the gE ectodomain (CgE) as the minimal Fc-binding domain and present a 1.78-Å CgE structure. A 5-Å gE-gI/Fc crystal structure, which was independently verified by a theoretical prediction method, reveals that CgE binds Fc at the CH2-CH3 interface, the binding site for several mammalian and bacterial Fc-binding proteins. The structure identifies interface histidines that may confer pH-dependent binding and regions of CgE implicated in cell-to-cell spread of virus.
-
-0096
-A 5-Å gE-gI/Fc crystal structure, which was independently verified by a theoretical prediction method, reveals that CgE binds Fc at the CH2-CH3 interface, the binding site for several mammalian and bacterial Fc-binding proteins. The structure identifies interface histidines that may confer pH-dependent binding and regions of CgE implicated in cell-to-cell spread of virus.
 0411
 Herpes simplex virus type-1 (HSV-1) has evolved several strategies to escape detection by the host's immune system, including the expression of an Fc receptor (FcR) called gE-gI that is found on the surface of virions and infected cells [1–3].
 
@@ -109,16 +105,10 @@ Herpes simplex virus type-1 (HSV-1) has evolved several strategies to escape det
 
 0416
 Antibody bipolar bridging has been shown to protect the virus and infected cells from IgG-mediated immune responses, such as antibody- and complement-dependent neutralization [6], antibody-dependent cell-mediated cytotoxicity [5], and granulocyte attachment [8]. Experiments in HSV-1–infected mice comparing the effectiveness of human anti-HSV IgG versus nonimmune IgG or murine anti-HSV IgG (which does not bind gE-gI) have provided support for the importance of antibody bipolar bridging mediated by gE-gI [7].
-0096
-The gE-gI-binding site on IgG has been localized to the Fc CH2-CH3 interdomain hinge, a “hot spot” that serves as the binding site for several other mammalian and bacterial Fc-binding proteins [19,20].
-
 0107
 Residues critical to the interaction were identified in binding studies comparing the affinities of human IgG subtypes for gE-gI, which found that gE-gI binds to IgG1, IgG2, and IgG4 with similar affinities (equilibrium dissociation constant [KD] ˜40–400 nM), but does not bind several IgG3 allotypes or an IgG4 mutant in which His435 was changed to an arginine [21,22].
 0107
 In order to study the interaction between gE-gI and Fc in more detail, we initiated structural studies of gE, gE-gI, and a gE-gI/Fc complex.
-0004
-To determine whether isolated CgE (gE residues 213–390, where residue 1 is the first residue of the hydrophobic leader peptide in the immature gE and residue 420 is the first residue of the predicted transmembrane region) binds Fc and to measure the affinity of the interaction, we performed a surface plasmon resonance assay using two forms of recombinant Fc derived from human IgG1: wild-type Fc (wtFc) and nbFc, which contains six point mutations in the CH2-CH3 linker that abrogate binding to gE-gI (Met252 to Gly, Ile253 to Gly, His310 to Glu, His433 to Glu, His435 to Glu, and Tyr436 to Ala) [12].
-
 0096
 To determine whether isolated CgE (gE residues 213–390, where residue 1 is the first residue of the hydrophobic leader peptide in the immature gE and residue 420 is the first residue of the predicted transmembrane region) binds Fc and to measure the affinity of the interaction, we performed a surface plasmon resonance assay using two forms of recombinant Fc derived from human IgG1: wild-type Fc (wtFc) and nbFc, which contains six point mutations in the CH2-CH3 linker that abrogate binding to gE-gI (Met252 to Gly, Ile253 to Gly, His310 to Glu, His433 to Glu, His435 to Glu, and Tyr436 to Ala) [12]. The Fc proteins were immobilized on the surface of a biosensor chip, and the binding of CgE was assayed at pH 8 and pH 6.
 
@@ -131,6 +121,9 @@ Significant binding of CgE to nbFc was not observed under any conditions (unpubl
 0019
 The relatively low affinity of the CgE/Fc interaction likely explains why a CgE/Fc binding interaction was not detectable by coimmunoprecipitation analyses [16].
 
+0104
+The affinity of CgE for Fc is similar to that determined for the interaction of gE with Fc at pH 8 (KD ˜30 μM), but ˜50-fold weaker than the affinity of the gE-gI/Fc interaction, which has KD values of 340 nM and 930 nM for the first and second binding sites on wtFc, respectively [12].
+
 0107
 The affinity of CgE for Fc is similar to that determined for the interaction of gE with Fc at pH 8 (KD ˜30 μM), but ˜50-fold weaker than the affinity of the gE-gI/Fc interaction, which has KD values of 340 nM and 930 nM for the first and second binding sites on wtFc, respectively [12]. As previously observed for the interaction of gE-gI with Fc [12], the binding of CgE to Fc is much weaker at pH 6 than at pH 8 (Figure 1A and1B).
 0114
@@ -140,23 +133,12 @@ A 3-D search of the protein database using the DALI server [29] identified the c
 
 0114
 Further structural differences include the extension of strands C, C′, and C′′ as well as the A′–B and C′–C′′ loops, and the shortening of strands D and E as compared to a representative Ig V domain (Figure S1A), which leads to a more open organization of the first two β-sheets (sheets DEBB′A and A′GFCC′C′′).
-0096
-In the first step, a global search through possible rigid-body orientations of the CgE and Fc proteins was carried out with the constraint that the CgE/Fc interface contains at least one of the six residues in the consensus binding site on Fc (Met252, Ile253, Ser254, Asn434, His435, and Tyr436) [19].
-
 0107
 The magnitude of the energy gap between the correct models and other models is correlated with the binding affinity of the interaction [33]. Perhaps because of the relatively low binding affinity of the CgE/Fc interaction (Figure 1C), we did not observe a significant energy gap in this case, and hence could not confidently identify a single model as correct based on the global docking calculations alone.
 0081
 The identification of the CH2-CH3 linker region of the IgG Fc as the gE-gI binding site allows comparison with other proteins that share similar binding sites on Fc.
-
-0096
-The identification of the CH2-CH3 linker region of the IgG Fc as the gE-gI binding site allows comparison with other proteins that share similar binding sites on Fc.
 0114
 The complex structure shows that CgE interacts with Fc using regions of the first and second β-sheets, which correspond to the two β-sheets found in Ig V domains: strands A and B′ and the B′–C and D–E loops in the DEBB′A sheet and strands C, C′, and C′′ and the C′–C′′ loop in the A′GFCC′C′′ sheet (Figures 2C and4).
-0096
-Crystal structures are available for Fc complexed with four other proteins, domain B1 of protein A [25], domain C2 of protein G [28], rheumatoid factor [24], and FcRn [27], and with one peptide that bind to this region [19]. Each of the Fc-binding proteins is different in sequence and structure; however, their binding interactions with Fc are similar, sharing a set of six contact residues on Fc that have been referred to as the consensus region [19,27].
-
-0096
-Similar to the binding interfaces for the other five proteins that bind the CH2-CH3 linker region of Fc [19,20,27], the CgE/Fc interface is primarily nonpolar with a total of ˜1800 Å2 of buried surface area.
 0416
 Previous studies demonstrated a sharply pH-dependent interaction for HSV-1–infected cells binding to rabbit IgG [37] and for soluble gE-gI or gE monomers binding to human Fc [12], such that binding occurs at neutral or slightly basic pH but not at acidic pH.
 
@@ -189,12 +171,6 @@ The gE-gI binding site on Fc does not directly overlap with the binding sites fo
 0114
 The gE-gI binding site on Fc does not directly overlap with the binding sites for the FcγRs or the C1q component of complement, which bind on or near the CH2 domain [43,44,51], thus the structure of the gE-gI/Fc complex does not directly suggest how gE-gI binding to the Fc region of IgG leads to evasion of FcγR- and complement-mediated immune responses.
 
-0007
-However, an anti-HSV antibody that is bound to both gE-gI and an HSV antigen on the surface of an infected cell could be sterically hindered from also binding to host FcγRs or C1q due to the close proximity of the proteins in the antibody bipolar bridging complex.
-
-0096
-However, an anti-HSV antibody that is bound to both gE-gI and an HSV antigen on the surface of an infected cell could be sterically hindered from also binding to host FcγRs or C1q due to the close proximity of the proteins in the antibody bipolar bridging complex.
-
 0416
 The demonstration that the gE-gI/Fc structure is compatible with antibody bipolar bridging (Figure 5) raises the possibility that anti-HSV IgG/HSV antigen complexes interacting with gE-gI on the surface of infected cells are endocytosed by gE-gI and degraded in the lysosomes after dissociation at acidic pH, resulting in destruction of antiviral antibodies and removal of viral antigens from the cell surface.
 0081
@@ -204,25 +180,39 @@ The expression vector also encoded the gE hydrophobic leader peptide N-terminal 
 Recombinant baculovirus stocks were generated by cationic liposome cotransfection of the expression plasmid with linear wild-type baculovirus DNA in High 5 insect cells (Invitrogen, Carlsbad, California, United States) as described by the manufacturer.
 
 0004
-Bound protein was eluted in buffer containing 40 mM Tris (pH 8), 300 mM NaCl, and 250 mM imidazole, and further purified by size-exclusion chromatography on a Superdex 75 HiLoad 16/60 column (GE Healthcare, Piscataway, New Jersey, United States) that was equilibrated in 10 mM HEPES (pH 7.6) and 150 mM NaCl.
+Insect cell supernatants containing secreted CgE were buffer-exchanged into nickel-binding buffer (40 mM Tris [pH 8], 300 mM NaCl, 10 mM imidazole) and passed over a Ni-NTA agarose column (Qiagen, Valencia, California, United States). Bound protein was eluted in buffer containing 40 mM Tris (pH 8), 300 mM NaCl, and 250 mM imidazole, and further purified by size-exclusion chromatography on a Superdex 75 HiLoad 16/60 column (GE Healthcare, Piscataway, New Jersey, United States) that was equilibrated in 10 mM HEPES (pH 7.6) and 150 mM NaCl. Peak fractions were concentrated and buffer exchanged into 10 mM HEPES (pH 7.5).
+
+0071
+Insect cell supernatants containing secreted CgE were buffer-exchanged into nickel-binding buffer (40 mM Tris [pH 8], 300 mM NaCl, 10 mM imidazole) and passed over a Ni-NTA agarose column (Qiagen, Valencia, California, United States). Bound protein was eluted in buffer containing 40 mM Tris (pH 8), 300 mM NaCl, and 250 mM imidazole, and further purified by size-exclusion chromatography on a Superdex 75 HiLoad 16/60 column (GE Healthcare, Piscataway, New Jersey, United States) that was equilibrated in 10 mM HEPES (pH 7.6) and 150 mM NaCl. Peak fractions were concentrated and buffer exchanged into 10 mM HEPES (pH 7.5).
 
 0416
 Briefly, insect cells that were infected with the CgE-recombinant virus were grown in Ex-Cell 400 media (JRH Biosciences, Lenexa, Kansas, United States) for 16 hours, pelleted, and then resuspended in Sf-900 II SFM media (Invitrogen) supplemented with 30 mg/l of L-cysteine (Sigma, St.
+0004
+Equilibrium binding data for CgE binding to wtFc (coupling density, 440 resonance units), nbFc (coupling density, 405 resonance units), and a mock-coupled flow cell were collected for a CgE concentration series (three-fold dilutions of CgE from 30 μM to 5 nM) at pH 8 (50 mM HEPES [pH 8.0], 150 mM NaCl, 3 mM EDTA, 0.005% [vol/vol] P-20 surfactant) and pH 6 (50 mM sodium phosphate [pH 6.0], 150 mM NaCl, 3 mM EDTA, 0.005% [vol/vol] P-20 surfactant). After each injection of CgE, a 30-s injection of 250 mM di-ammonium hydrogen citrate (pH 5.0) was used to disrupt the interaction and restore the surface.
 0104
 KD values were determined by plotting the equilibrium response in the plateau region versus the logarithm of the CgE concentration for each injection and fitting the data to a single-site binding model. Although Fc contains two potential binding sites for CgE, the interaction was too weak to accurately fit the data to a two-site binding model.
-0004
-Various forms of gE and the gE-gI heterodimer were subcloned, expressed, and purified from baculovirus-infected insect cell supernatants by nickel affinity and/or IgG affinity and gel-filtration chromatography as described previously [12]. Two recombinant forms of the Fc fragment of IgG1, wtFc and heterodimeric Fc, which contain two and one gE-gI binding sites, respectively, were also produced in CHO cells and purified as described previously [12].
 0096
 In the next stage, a second constraint was imposed requiring that CgE make contact with both the CH2 and CH3 domains of the Fc protein, as observed for other proteins binding to the Fc “hot spot,” [19] which resulted in pruning some of the top-ranking clusters.
 0114
 The Research Collaboratory for Structural Bioinformatics Protein Data Bank accession numbers (http://www.rcsb.org/pdb) are 2GIY for the CgE structure and 2GJ7 for the gE-gI/Fc complex structure.
 0114
 A half complex (one CgE and one chain of the Fc dimer) is shown with Fc in green, the CgE as positioned in the crystal structure in blue, and the CgE as positioned by the docking prediction in pink.
-0096
-Thus, C2 domains perform a variety of functions that often depend on their most common activity, Ca2+-dependent phospholipid binding, but they are also believed to act as protein–protein interaction modules (reviewed in [21]). Although the mechanisms of Ca2+/phospholipid binding to C2 domains have been extensively characterized [22–24], no high-resolution structures of protein complexes involving C2 domains have been described.
-
 0107
 Hence, understanding the interaction between the Munc13–1 C2A domain and the α-RIM ZF domain at atomic detail can provide key insights into the functional diversification of C2 domains and ZF domains in general.
+0114
+NMR spectroscopy and X-ray crystallography provide complementary tools to study protein structure. X-ray crystallography is better suited to elucidate the structures of large proteins and accurately define interfaces of protein complexes, but requires crystallization, which can yield artifacts due to crystal packing.
+
+0077
+NMR spectroscopy and X-ray crystallography provide complementary tools to study protein structure.
+
+0077
+NMR spectroscopy can be performed in solution, and low-resolution information on the conformational and aggregation states of proteins can be quickly obtained even for large species using heteronuclear NMR experiments such as1H-15N heteronuclear single quantum coherence (HSQC).
+
+0114
+In this study, we took advantage of the strengths of both techniques, using NMR spectroscopy to optimize protein complexes for crystallization and to obtain structural information in solution that was later employed to interpret the high-resolution structures of these complexes elucidated by X-ray crystallography.
+
+0077
+In this study, we took advantage of the strengths of both techniques, using NMR spectroscopy to optimize protein complexes for crystallization and to obtain structural information in solution that was later employed to interpret the high-resolution structures of these complexes elucidated by X-ray crystallography.
 0104
 Interestingly, the apparent molecular weights observed for isolated Munc13–13–132, Munc13–13–150, and Munc13–13–209 in gel filtration were significantly higher than their monomeric molecular weights (Figure 1B and unpublished data), suggesting that they form stable dimers.
 0104
@@ -257,8 +247,6 @@ Disrupting the interaction between the N-terminal region of Munc13–1 and α-RI
 The structure of the Munc13–1/RIM2α ZF domain complex described here shows that Munc13–1 binding to the α-RIM/Rab3A complex should lead to a partial steric clash with Rab3A (Figure 7B), explaining our previous observation that the interaction of the α-RIM SGAWFY motif with Rab3A is released upon Munc13–1 binding [20]. The Munc13–1/α-RIM interaction still allows formation of the tripartite complex because helix a1 of α-RIMs is sufficient for Rab3A binding, but is expected to induce a significant reorientation of the N-terminal structural elements of α-RIMs (Figure 7C).
 0081
 It is worth noting that phosphorylation of RIM1α by PKA at an N-terminal site between the ZF and PDZ domains is key for mossy-fiber LTP [17], and that the surfaces of Munc13–1 involved in homodimerization and heterodimerization (Figures 2G,6D, and6E) contain several predicted phosphorylation sites (Y23, T25, and Y140). Hence, phosphorylation may be crucial for regulation of inter- and intramolecular interactions of Munc13–1 and α-RIMs during plasticity processes.
-0096
-In particular, Ca2+-dependent phospholipid binding is known to be a common activity of many C2 domains that is mediated by loops at one tip of the β-sandwich [21], but it is now clear that many C2 domains do not bind Ca2+ and likely act as protein–protein interaction modules.
 0114
 In the past, NMR spectroscopy and X-ray crystallography were largely viewed as alternative methods for structure determination of biomolecules, but the usefulness of combining the strengths of both techniques is increasingly being recognized [32,33]. On the other hand, two structural genomics studies recently indicated that there is no overt correlation between1H-15N HSQC spectral quality and successful crystallization of protein targets [34,35]. However, it is unclear to what extent the fragment length of each target was optimized in these studies, and a separate structural genomics effort suggested that NMR spectra can be used to identify promising targets for structure determination by X-ray crystallography [36]. The data presented here, together with our previous NMR analysis of Munc13–1/α-RIM/Rab3 interactions [20], provide a particularly compelling illustration of how NMR spectroscopy can assist in X-ray diffraction studies of protein complexes that present particularly challenging problems for crystallization, and at the same time can provide complementary information.
 
@@ -273,13 +261,28 @@ Altogether, these observations suggest that combining the strengths of NMR spect
 
 0077
 Altogether, these observations suggest that combining the strengths of NMR spectroscopy in fragment optimization and analysis of protein–protein interactions in solution with the high accuracy of structure determination by X-ray crystallography for biomolecules of any size will be particularly useful to study complex protein networks.
-0004
-Unlabeled and isotopically labeled proteins were expressed in bacteria as GST fusions as described [20]. The fusion proteins were isolated on glutathione-Sepharose beads (Amersham Biosciences, Little Chalfont, United Kingdom), cleaved from the GST moiety, and further purified by size-exclusion or ion-exchange chromatography.
-
 0096
 Unlabeled and isotopically labeled proteins were expressed in bacteria as GST fusions as described [20]. The fusion proteins were isolated on glutathione-Sepharose beads (Amersham Biosciences, Little Chalfont, United Kingdom), cleaved from the GST moiety, and further purified by size-exclusion or ion-exchange chromatography.
-0276
-Typically, 200 μM Rim2α82–142 was injected in 35 aliquots of 8 μl into a 1.8-ml sample cell containing 10–20 μM Munc13–13–150(K32E).
+
+0004
+Gel-filtration binding experiments were performed on Superdex S75 or S200 columns (Amersham) in 30 mM Tris-HCl buffer containing 150 mM NaCl, and 1 mM Tris(2-carboxyethyl)-phosphine (TCEP) at pH 7.4.
+
+0071
+Gel-filtration binding experiments were performed on Superdex S75 or S200 columns (Amersham) in 30 mM Tris-HCl buffer containing 150 mM NaCl, and 1 mM Tris(2-carboxyethyl)-phosphine (TCEP) at pH 7.4.
+0004
+ITC experiments were performed using a VP-ITC system (MicroCal, Northampton, Massachusetts, United States) at 20 °C in a buffer composed of 30 mM Tris (pH 7.4), 150 mM NaCl, and 1 mM TCEP.
+
+0065
+ITC experiments were performed using a VP-ITC system (MicroCal, Northampton, Massachusetts, United States) at 20 °C in a buffer composed of 30 mM Tris (pH 7.4), 150 mM NaCl, and 1 mM TCEP.
+
+0065
+Data were fit with a non-linear least-squares routine using a single-site binding model with Origin for ITC v.5.0 (Microcal), varying the stoichiometry(n), the enthalpy of the reaction (ΔH) and the association constant (Ka).
+0004
+Samples contained 0.1 mM15N-labeled Munc13–1 fragments, alone or together with 0.15 mM unlabeled Rim2α82–142, dissolved in 30 mM Tris (pH 7.4), 150 mM NaCl, 1 mM TCEP.
+0004
+The purified Munc13–13–128 fragment and the Munc13–13–150(K32E)/Rim2α82–142 complex were concentrated to 12 and 10 mg/ml, respectively, in buffer containing 30 mM Tris (pH 7.4), 150 mM NaCl, and 1 mM TCEP. Munc13–13–128 was crystallized in 0.4 M magnesium formate, 0.1 M sodium acetate (pH 4.5) at 20 °C using the hanging-drop vapor-diffusion method.
+0004
+The loading concentration of Munc13–13–128, Munc13–13–132, Munc13–13–150, and Munc13–13–209 were 13.52 μM, 13.65 μM, 12.46 μM, and 12.55 μM in 30 mM Tris (pH 8.0), 150 mM NaCl, 1 mM TCEP.
 0071
 (B) Gel filtration analysis of Munc13–13–150 (black), RIM2α82–142 (blue), and the complex between them (red).
 0071
@@ -337,9 +340,6 @@ A Rab21 mutant (Simpson et al., 2004) that has defects in GTP hydrolysis (Rab21 
 
 0889
 A Rab21 mutant (Simpson et al., 2004) that has defects in GTP hydrolysis (Rab21 Q76L, designated Rab21GTP) showed a 10–73% increase in its ability to associate with integrins in different cell lines when compared with Rab21 wild type (WT).
-0096
-β1-Integrin was detected by the NH2-terminally binding antibody in the lumen of endogenous Rab5- and Rab21-positive large vesicles (Fig.
-
 0030
 α/β1- Integrin heterodimers can be expressed in active (extracellular domain detected by a monoclonal antibody HUTS21; active-β1 antibody) and inactive forms on the cell surface (extracellular domain of both forms detected by P5D2; pan-β1 antibody; Lenter et al., 1993; Luque et al., 1996).
 
@@ -373,11 +373,6 @@ Mutagenesis of the putative COOH-terminal prenylation motif (CCXXX; Opdam et al.
 Mutagenesis of the putative COOH-terminal prenylation motif (CCXXX; Opdam et al., 2000) in Rab21 resulted in a complete loss of vesicular localization of Rab21 (GFP-Rab21CCSS; Fig.
 0096
 Interestingly, Rab5 and Rab21 antibodies very weakly coimmunoprecipitated biotinylated ∼160-kD proteins located on the plasma membrane (Fig.
-0007
-(A) Nontransfected MDA-MB-231 cells were surface labeled with cleavable biotin and lysed immediately or allowed to internalize cell surface proteins for 15 min. Immunoprecipitations (IPs) were performed as indicated, and the Rab coprecipitating proteins were detected first with anti-biotin antibody followed by stripping and reprobing with anti–β1-integrin antibody.
-
-0054
-Inset (C) shows the extent of Rab21 down-regulation in Rab21-shRNA–expressing cells. (D) GFP-, GFP-Rab21–, GFP-Rab21GTP–, or GFP-Rab21GDP–transfected HeLa cells (48 h) were lysed, and postnuclear supernatant was fractionated on a sucrose gradient and subjected to Western blot analysis with anti–α2-integrin and anti-GFP antibodies.
 0030
 We are aware that we have not excluded the effects of Rab21 expression for all types of unspecific internalization (e.g., macropinocytosis), but at least its closest homologues (Rab5 and Rab22) have not been shown to affect macropinocytosis (Rosenfeld et al., 2001; Kauppi et al., 2002).
 
@@ -394,15 +389,14 @@ In density gradient fractionations, expression of GFP-Rab21 shifted the integrin
 
 0027
 In the lighter fractions (3–5), GFP-Rab21 and integrin were found to cosediment with the Golgi-marker GM130, whereas in the denser fractions, cosedimentation was observed with the ER marker P115 (fractions 6–8) and EEA1 (fractions 7–9; Fig.
+0040
+Further characterization of the large intracellular structures induced by GFP-Rab21 overexpression was performed by electron microscopy and immunogold labeling of GFP (Fig.
 0416
 Combined total internal reflection fluorescence microscopy (TIRFM; pseudocolored green) and conventional widefield epifluorescence analysis (pseudocolored red) showed GFP-Rab21 vesicles emanating from the membrane into the cell (changing from green to red/yellow) and back or vice versa (although formally this technique does not exclude the possibility that some vesicles will by chance come closer and further away from the plasma membrane).
-0054
-(B and C) Combined widefield epifluorescence (pseudocolored red) and TIRFM (pseudocolored green) analysis of GFP-Rab21WT (B; see Video 2) or GFP-Rab21GDP (C; see Video 3) transfected cells.
-
-0054
-(D) Representative still image from TIRFM (pseudocolored green) analysis of YFP-talin–transfected cells.
 0411
 We also addressed whether Rab21 expression alters the motility of integrins in live cells.
+0416
+(B and C) MDA-MB-231 cells transfected with GFP–α2-integrin and Rluc-Rab21 (B) or with GFP–α2-integrin alone (C) were plated on collagen for 1 h, and time-lapse series were acquired with widefield epifluorescence microscopy. Cotransfected cells (B; see Video 4, available at http://www.jcb.org/cgi/content/full/jcb.200509019/DC1) show green fluorescent vesicles moving in the cytosol.
 0411
 To investigate the importance of Rab21-mediated integrin traffic in β1-integrin–dependent cell adhesion, we studied MDA-MB-231 breast and PC3 prostate cancer cells having relatively high and low endogenous Rab21 expression, respectively (unpublished data). Of all the Rabs tested, overexpressed Rab21 was most efficient in increasing cell adhesion to collagen (86 ± 8% in PC3 cells and 22% in MDA-MB-231 cells; Fig.
 
@@ -458,9 +452,6 @@ Although the role of Rab proteins was not addressed in the study of Laukaitis et
 0889
 Although the role of Rab proteins was not addressed in the study of Laukaitis et al.
 
-0096
-However, we cannot rule out the possibility that as-yet-unknown proteins that are capable of binding to the integrin may serve as linkers between Rab21 and integrins.
-
 0030
 Evidence from detailed biochemical and nuclear magnetic resonance studies (Stefansson et al., 2004; Vinogradova et al., 2004) indicates that upon integrin activation the membrane-proximal regions of the integrin cytoplasmic tails move out of the membrane into the cytoplasm, revealing the highly conserved residues to the cytoplasmic face and involving substantial structural changes in the cytoplasmic tails.
 
@@ -508,12 +499,6 @@ Plasmids encoding GFP-Rab5a, GFP-Rab7, YFP-Rab9, and GFP-Rab11 have been describ
 0413
 Rluc-tagged Rab21 constructs alone or with GFP-α2 variants (CHO cells that lack endogenous collagen binding integrins) were transfected into 95% confluent cells using Lipofectamine 2000 and incubated for 18 h. For immunoprecipitations with endogenous proteins, confluent MDA-MB-231 cells (20 × 106) were collected from plastic plates with cold PBS.
 
-0054
-For analysis of association with cell surface–labeled integrin, MDA-MB-231 cells were plated on collagen-coated dishes for 1 h and surface biotinylated with cleavable biotin (0.5 mg/ml EZ-sulfo-NHS-SS-biotin in HANKS buffer) for 30 min on ice. After washings, cells were either lysed immediately or warmed for 15 min in HANKS +37°C to allow internalization.
-
-0276
-After three washings (IP buffer containing 0.3% octylglycoside), SDS sample buffer was added and the proteins were separated by SDS-PAGE (4%/10%) and immunoblotted for β1-integrin (MAB2252).
-
 0030
 Reimmunoprecipitations were performed as described earlier (Mattila et al., 2005).
 
@@ -534,6 +519,9 @@ Ultrathin cruosections were prepared on a cryochamber (EM FCS; Leica), and thawe
 
 0889
 48 h after transfection, the cells were harvested and fractionated on a sucrose density gradient and analyzed by Western blotting as described previously (Hughes et al., 2002).
+0018
+The α2-integrin COOH-terminal tail (28 residues) Gal4 DNA binding domain fusion (pGBKT7 vector) was used to screen a mouse E17 Matchmaker cDNA library (CLONTECH Laboratories, Inc.) as described previously (Mattila et al., 2005). In yeast mating tests, pGADT7-Rab21 (95–222) prey was transformed in Y187 host strain and cytoplasmic tails of α2- and α11-integrin (pGBKT7-α2 and -α11) and their variants in AH109 host strain.
+
 0030
 The α2-integrin COOH-terminal tail (28 residues) Gal4 DNA binding domain fusion (pGBKT7 vector) was used to screen a mouse E17 Matchmaker cDNA library (CLONTECH Laboratories, Inc.) as described previously (Mattila et al., 2005).
 
@@ -554,17 +542,11 @@ Slides were examined using an inverted fluorescence microscope (Carl Zeiss Micro
 β1-Integrin and transferrin internalization were studied as described previously (Powelka et al., 2004).
 0416
 TIRFM was combined with conventional widefield epifluorescence microscopy and time-lapse series (frame rate ∼2/s) Widefield images were pseudocolored red and TIRFM images green. Transiently transfected GFP-Rab21 cells were plated on acid-washed glass-bottomed dishes (MatTek Corporation) coated with 10 μg/ml collagen type I and allowed to adhere for 1 h before microscopy.
-0054
-Video 1 shows MDA-MB-231 cells expressing GFP-Rab21, adhering to collagen recorded on GFP channel. Video 2 shows a combined widefield epifluorescence and TIRFM analysis of MDA-MB-231 cells expressing GFP-Rab21, adhering to collagen. Video 3 shows a combined widefield epifluorescence and TIRFM analysis of MDA-MB-231 cells expressing GFP-Rab21GDP mutant, adhering to collagen. Video 4 shows MDA-MB-231 cells cotransfected with GFP–α2-integrin and Rluc-Rab21WT, adhering to collagen recorded on GFP channel.
-0004
-RNA-induced silencing complexes (RISC) in human cells can be programmed by exogenously introduced siRNA or endogenously expressed miRNA.
-0226
-The protein composition of isolated complexes was analyzed by immunoblot using antibodies against green fluorescent protein (GFP) or Myc. When total cell extracts (TCE) were analyzed to determine the protein expression efficiencies of the vectors used in these experiments (Figure 1A, TCE lane), all YFP- and Myc-tagged proteins were expressed.
-
-0004
-When total cell extracts (TCE) were analyzed to determine the protein expression efficiencies of the vectors used in these experiments (Figure 1A, TCE lane), all YFP- and Myc-tagged proteins were expressed.
 0411
 To confirm whether these structures also contain Ago2 as recently reported [28, 31], we transfected HeLa cells with expression vectors containing YFP-Ago1, CFP (cyan fluorescent protein)-Ago1, YFP-Ago2, and CFP-Ago2.
+
+0663
+To examine the contents of these cytoplasmic foci, HeLa cells were transfected with expression vectors for YFP-Lsm1 and CFP-Ago2, or YFP-RCK/p54 and CFP-Ago2, and visualized 24 h later by confocal microscopy.
 
 0411
 To examine the contents of these cytoplasmic foci, HeLa cells were transfected with expression vectors for YFP-Lsm1 and CFP-Ago2, or YFP-RCK/p54 and CFP-Ago2, and visualized 24 h later by confocal microscopy.
@@ -576,14 +558,8 @@ In cells expressing CFP-Ago2 and YFP-Lsm1, FRET efficiency was not significant (
 
 0107
 Similar to the YFP-RCK/p54 and CFP-Ago2 pair, YFP-Ago1 and CFP-Ago2 showed an efficient FRET (19.61% ± 4.51%), indicating a direct interaction between Ago1 and Ago2 in vivo [28].
-0054
-These results show that active RISC can be programmed in human cells by biotin-containing guide strands of siRNAs and can be captured on magnetic beads for further analysis.
-0004
-To probe the involvement of P-body proteins in this purified active RISC, its protein composition was analyzed by immunoblot using antibodies against Flag tag or endogenous Ago2, RCK/p54, eIF4E, and Lsm1.
 0676
 To determine the functional interactions of RCK/p54 with miRISC, we employed affinity purification of RISC and target mRNA cleavage capabilities of miRISC when the target has perfectly complementary sequences to the miRNAs.
-0054
-To understand the function and role of RCK/p54 in the RNAi pathway, RCK/p54 was depleted in P-bodies of HeLa cells by siRNA-mediated RNAi. 24 h after transfecting cells with siRNA, real-time quantitative PCR showed that mRNA levels decreased by more than 90% and immunoblot analysis showed that RCK/p54 protein levels decreased significantly without affecting the levels of other P-body proteins including Lsm1 and Ago2 (Figure S2). The effect of depleting RCK/p54 on localization of Ago2 was next examined by immunofluorescence analysis of HeLa cells expressing Myc-Ago2 and siRNAs against RCK/p54.
 0411
 HeLa cells were transfected with siRNA against Lsm1, harvested at 24, 48, and 72 h post-transfection, and TCEs were analyzed by immunoblot.
 0411
@@ -591,9 +567,6 @@ P-bodies were disrupted in HeLa cells by transfecting them with siRNA against Ls
 
 0019
 After immunoprecipitation, RISC activities were analyzed by incubating the supernatant (S) or bead (B) phases with 182-nt 32P-cap-labeled let-7 substrate mRNAs having a perfectly complementary or mismatched sequence to the let-7 miRNA.
-0226
-To examine whether the P-body protein RCK/p54, also a component of RISC, is involved in siRNA-mediated gene silencing, the siRNA dose dependence of RNAi-mediated gene silencing was quantified in RCK/p54-depleted HeLa cells using a dual fluorescence reporter assay. Briefly, GFP and red fluorescent protein (RFP) were constitutively expressed in cells transfected with reporter plasmids for enhanced GFP (EGFP) and RFP, respectively.
-
 0663
 To examine whether the P-body protein RCK/p54, also a component of RISC, is involved in siRNA-mediated gene silencing, the siRNA dose dependence of RNAi-mediated gene silencing was quantified in RCK/p54-depleted HeLa cells using a dual fluorescence reporter assay. Briefly, GFP and red fluorescent protein (RFP) were constitutively expressed in cells transfected with reporter plasmids for enhanced GFP (EGFP) and RFP, respectively.
 
@@ -601,6 +574,9 @@ To examine whether the P-body protein RCK/p54, also a component of RISC, is invo
 GFP expression was silenced by treating cells with a 21-nt siRNA targeting nt 238–258 of the EGFP mRNA.
 
 0663
+The fluorescence intensity ratio of target (GFP) to control (RFP) fluorophore was determined in the presence of siRNA duplexes and normalized to that observed in control-treated cells [52].
+
+0416
 The fluorescence intensity ratio of target (GFP) to control (RFP) fluorophore was determined in the presence of siRNA duplexes and normalized to that observed in control-treated cells [52].
 0411
 When HeLa cells were transfected with siRNA mismatched for CDK9 (control), the second transfection with GFP siRNA silenced GFP expression in a dose-dependent manner, i.e., GFP/RFP ratios decreased with increasing concentrations of siRNA (Figure 6A, gray bars).
@@ -627,8 +603,9 @@ Recently, Petersen et al.
 
 0889
 Recently, Petersen et al.
-0096
-Once in P-bodies, translationally repressed mRNA could stay in oligomeric structures for storage or it could form a complex with decapping enzymes and cap binding proteins that would lead to the mRNA decay pathway.
+0004
+TCEs were prepared by incubating cells in lysis buffer (20 mM HEPES [pH 7.9], 10 mM NaCl, 1 mM MgCl2, 0.2 mM EDTA, 0.35% [v/v] Triton X-100, 1/100 [v/v] dilution in protease inhibitor cocktail) and centrifuging at 14,000 rpm for 10 min at 4 °C. Protein concentration was determined by Dc protein assay (Bio-Rad, Hercules, California, United States).
+
 0019
 To examine the RNA dependence of protein–protein interactions, TCEs (250 μg) were treated before immunoprecipitation with 0.2 μg/ul of RNase A for 20 min at room temperature.
 0411
@@ -657,9 +634,6 @@ A dual fluorescence assay was used to quantify the RNAi activity of siRNAs again
 0411
 To quantify RNAi effects, cell lysates were prepared from siRNA-treated cells 24 h post-transfection.
 
-0276
-Total cell lysate (150 μg in 200 μl of reporter lysis buffer) was measured using a Safire plate reader (TECAN).
-
 0663
 GFP fluorescence was detected in cell lysates by exciting at 488 nm and recording emissions from 504–514 nm. The spectrum peak at 509 nm represents the fluorescence intensity of GFP. RFP fluorescence was detected in the same cell lysates by exciting at 558 nm and recording emissions from 578–588 nm. The spectrum peak at 583 nm represents the fluorescence intensity of RFP. The fluorescence intensity ratio of target (GFP) to control (RFP) fluorophores was determined in the presence of siRNA duplexes and normalized to the emissions measured in mock-treated cells.
 
@@ -672,6 +646,9 @@ HeLa cells transfected with siRNAs directed against P-body proteins (RCK/p54, GW
 
 0411
 At 24 h post-transfection, cells were harvested and RL activities were analyzed. RL signals were normalized to the FL signals from cells co-transfected with pGL3 plasmid as control.
+0663
+HeLa cells expressing YFP-Lsm1 and CFP-Ago2 (a, b, and c), YFP-RCK/p54 and CFP-Ago2 (d, e, and f) were visualized by confocal microscopy at 24 h post-transfection.
+
 0411
 HeLa cells expressing YFP-Lsm1 and CFP-Ago2 (a, b, and c), YFP-RCK/p54 and CFP-Ago2 (d, e, and f) were visualized by confocal microscopy at 24 h post-transfection.
 
@@ -715,8 +692,6 @@ Sorting of ephrin-B1–positive and –negative cells following X-inactivation h
 As a result of random X-inactivation, X-linked ephrin-B1 expression is mosaic in ephrin-B1+/− mice and ephrin-B1–positive and ephrin-B1–negative cells segregate from one another.
 0411
 Indeed, studies in zebrafish have shown that expression of Eph receptors and ephrins in animal cap cells was sufficient to block GJC at the boundary between both cell populations.
-0226
-We chose to focus on ephrin-B2 since loss of this gene has been shown previously to affect migration of a sub-population of cranial NCCs [19] and ephrin-B2 is expressed in the craniofacial area (Figure 2) We generated a mouse line harboring a null mutation in the ephrin-B2 gene by placing a cDNA coding for a fusion protein between histone 2B (H2B) and the green fluorescent protein (GFP) under the control of the ephrin-B2 promoter (A.
 0411
 It has been reported previously that patchy expression of ephrin-B1 in ephrin-B1+/− limb buds reflects sorting between ephrin-B1–positive and –negative cell populations that are generated in the ephrin-B1 heterozygous females via random X-inactivation and that this abnormal expression of ephrin-B1 in the limb bud correlates with a polydactyly phenotype that is observed in ephrin-B1+/− females [7,8]. Our data demonstrate that the calvarial phenotypes observed in ephrin-B1 heterozygous females correlate with an abnormal expression of ephrin-B1 and EphB2 in the presumptive frontal bone, likely due to cell sorting between ephrin-B1–positive and ephrin-B1–negative cells in the craniofacial mesenchyme.
 0411
@@ -734,15 +709,6 @@ We found that interaction between ephrin-B1 and Eph-B2 resulted in inhibition of
 These results demonstrate that interaction between EphB2 and ephrin-B1 impairs establishment of GJC.
 0411
 Expression of ephrin-B1 and Cx43 was partially overlapping in untreated NIH 3T3 cells, especially at interfaces between cells expressing ephrin-B1, which exhibited strong Cx43 staining (Figure 6Ba–c).
-
-0004
-We used a recombinant protein consisting of the extracellular domain of Eph-B2 receptor fused to the Fc fragment of human IgG (EphB2-Fc) to pull down ephrin-B1.
-0004
-To identify the domain of ephrin-B1 required for the interaction with Cx43, we performed a pull down using a recombinant protein consisting of the extracellular domain of ephrin-B1 fused to the Fc fragment of human IgG (ephrinB1-Fc).
-
-0096
-We generated a mutant form of ephrin-B1 that shows reduced binding to PDZ-containing proteins (ephrin-B1ΔPDZ [8]).
-
 0081
 Western-blot analysis of whole cell lysates indicated that both proteins were expressed, albeit at different levels, and that expression of ephrin-B1 did not influence the phosphorylation status of Cx43 (detected by differences in mobility on a SDS-PAGE), which is known to regulate GJC (Figure 7A).
 
@@ -758,8 +724,6 @@ Moreover, heterozygosity for the transcription factor Twist can lead to craniosy
 
 0107
 The genetic interaction suggests, however, that the discrepancy in coronal suture phenotype between ephrin-B1 heterozygous mice and humans could be due to genetic modifiers.
-0096
-Our data using chimeric embryos demonstrate that a mutation in the PDZ binding domain of ephrin-B1, which is known to phenocopy some of the phenotypes observed in ephrin-B1 null embryos including cleft palate [8], does not induce calvarial defects or polydactyly. These results indicate that the mutations found in CFNS patients might impinge on protein stability, protein localization, or binding of effector molecules independent of the PDZ domain.
 0107
 In our pull-down assay, wild-type ephrin-B1 interacted preferentially with phosphorylated Cx43 whereas ephrin-B1ΔPDZ interacted preferentially with unphosphorylated Cx43, suggesting that the interaction between ephrin-B1 and Cx43 might not be direct, and that these proteins might interact differently when at the cell surface or in the cytoplasm.
 0411
@@ -772,6 +736,8 @@ Trypsin was inactivated by addition of complete medium (DMEM containing 15% FCS)
 Primary NCCs were isolated from dissected branchial arches of E9.5 embryos as described above, except cells were cultured in F12 medium supplemented with 10% FCS.
 0411
 NIH 3T3 cells were stably transfected with expression vectors for ephrin-B1, Eph-B2 receptor, or the pcDNA3 control vector. Recipient cells were plated at high density.
+0004
+Cells were scraped in 1% NP40 lysis buffer (50 mM Hepes [pH 7.5], 150 mM NaCl, 10% glycerol, 1.5 mM MgCl2, 1mM EGTA, 100 mM NaF), except for the experiment presented in Figure 7A (100 mM Tris [pH 7.4], 150 mM NaCl, 1mM EDTA). Protein lysates were incubated with either 5-μg EphB2-Fc or 4-μg Cx43 monoclonal antibody (generous gift from P.
 0411
 NIH 3T3 cells were plated on glass coverslips and transiently transfected with an expression vector for ephrin-B1. Forty hours after transfection, cells were either fixed in 2% PFA or incubated with 4-μg/ml EphB2-Fc for 30 min at 37 °C and then fixed in PFA.
 
@@ -792,16 +758,11 @@ For immunofluorescence on sections, paraffin sections were rehydrated and subjec
 Protein lysates from NIH 3T3 cells expressing ephrin-B1 were incubated with ephrinB1-Fc, and the presence of Cx43 in the affinity complexes was assessed by Western blot (b) Cx43 was immunoprecipitated from NIH 3T3 cells expressing ephrin-B1 and the presence of ephrin-B1 in the immunocomplexes was detected by Western blot (right panel).
 0019
 IP, immunoprecipitation; Wcl, whole cell lysate.
-
-0276
-IP, immunoprecipitation; Wcl, whole cell lysate.
 0411
 (A) NIH 3T3 cells were transiently transfected with either wild-type ephrin-B1 (B1), ephrin-B1ΔPDZ (ΔPDZ), or a control plasmid (−).
 
 0676
 Protein lysates were incubated with EphB2-Fc, and the presence of Cx43 in the affinity complex was assessed by Western blot.
-0276
-np, non phosphorylated Cx43; p1, p2, two different forms of phosphorylated Cx43; wcl, whole cell lysate.
 0416
 (B) NIH 3T3 cells were transiently transfected with ephrin-B1ΔPDZ and treated with EphB2-Fc. Subcellular localization of Cx43 (a) and ephrin-B1ΔPDZ (b) was analyzed by immunofluorescence.
 0416
@@ -810,10 +771,10 @@ np, non phosphorylated Cx43; p1, p2, two different forms of phosphorylated Cx43;
 At a developmental boundary and at ectopic ephrin boundaries in ephrin-B1+/− embryos, Eph/ephrin interaction leads to inhibition of GJC, possibly through endocytosis of Cx43, concomitant with a loss of stable cell–cell interactions between the two cell types. Sorting between these cells and inhibition of GJC concur to establish distinct developmental compartments.
 0423
 Also, biochemical analysis of purified Cdc23 (Mcm10) protein demonstrates that it is required for efficient phosphorylation of the Mcm2-7 complex by Dfp1-Hsk1 (Dbf4-Cdc7) kinase in vitro, and that Cdc23 (Mcm10) can directly interact with Dfp1-Hsk1 (Dbf4-Cdc7) [37].
-0096
+0018
 Ars binding protein 1 (Abp1) was first identified in a search for fission yeast proteins that could retard an ARS (Autonomously Replicating Sequence)-containing DNA fragment in a gel-shift mobility assay [38].
 
-0018
+0096
 Ars binding protein 1 (Abp1) was first identified in a search for fission yeast proteins that could retard an ARS (Autonomously Replicating Sequence)-containing DNA fragment in a gel-shift mobility assay [38].
 0107
 The two-hybrid interaction between Snf1 and Snf4 is shown as a positive control (Figure 1A, row 4).
@@ -842,90 +803,52 @@ All media and growth conditions were as previously described (Moreno et al., 199
 The cdc23+ gene (bait) was cloned into pAS1 and co-transformed with pACT2 containing a S. pombe cDNA library (kindly provided by S. Elledge) into strain Y190 (MATa gal4 gal80 his3 trp1-901 ade2-101 ura3-52 leu2-3,-112, URA3::GAL-lacZ, LYS2::GAL(UAS)-HIS3 cyhr2).
 0054
 To arrest cells in G1, cdc10-129 and cdc10-129 Δabp1 cells were incubated at 36°C for four hours. Cells were then returned to the permissive temperature of 25°C, collected at the indicated times and fixed for flow cytometry analysis (FACS). To block cells in S phase, wt and Δabp1 cells were incubated in 15 mM HU for 4 hours at 32°C. Cells were then pelleted, washed 3× with YE media to remove traces of hydroxyurea, and resuspended in YE media. Cells were then collected at the indicated times and prepared for FACS analysis.
-0054
-In murine thymocytes and tumour cells expressing an oncogenic tyrosine kinase, this DNA damage–induced cascade is blocked. Enforced intracellular alkalinisation mimics the effects of DNA damage in murine tumour cells and human B-lineage chronic lymphocytic leukaemia cells, thereby causing Bcl-xL deamidation and increased apoptosis. Our results define a signalling pathway leading from DNA damage to up-regulation of the NHE-1 antiport, to intracellular alkalanisation to Bcl-xL deamidation, to apoptosis, representing the first example, to our knowledge, of how deamidation of internal asparagine residues can be regulated in a protein in vivo.
-
 0426
 In murine thymocytes and tumour cells expressing an oncogenic tyrosine kinase, this DNA damage–induced cascade is blocked. Enforced intracellular alkalinisation mimics the effects of DNA damage in murine tumour cells and human B-lineage chronic lymphocytic leukaemia cells, thereby causing Bcl-xL deamidation and increased apoptosis. Our results define a signalling pathway leading from DNA damage to up-regulation of the NHE-1 antiport, to intracellular alkalanisation to Bcl-xL deamidation, to apoptosis, representing the first example, to our knowledge, of how deamidation of internal asparagine residues can be regulated in a protein in vivo.
 0411
 Surprisingly, DNA damage–triggered deamidation in primary wild-type cells is mediated not enzymatically, but by intracellular alkalinisation caused by increased expression of the NHE-1 Na+/H+ exchanger (antiport), events blocked by expression of the oncogenic tyrosine kinase (OTK). In the case of either murine or human cancer cells, enforced alkalinisation triggers Bcl-xL deamidation, crippling its ability to provide protection from the pro-apoptotic consequences of DNA damage, thereby indicating possible novel approaches to cancer therapy.
-0054
-Because the BH3-only protein Puma, not Bim, plays a major role in DNA-damage triggered apoptosis [19,20], we also showed that both Puma and Bim are found in Bcl-xL immunoprecipitates from etoposide treated CD45−/−LckF505 thymocytes, whereas sequestration is ablated in wild-type cells, correlating with Bcl-xL deamidation (Figure 2B).
-
 0426
 Because the BH3-only protein Puma, not Bim, plays a major role in DNA-damage triggered apoptosis [19,20], we also showed that both Puma and Bim are found in Bcl-xL immunoprecipitates from etoposide treated CD45−/−LckF505 thymocytes, whereas sequestration is ablated in wild-type cells, correlating with Bcl-xL deamidation (Figure 2B).
-0054
-To investigate Bcl-xL deamidation, pHi, and apoptosis in parallel, we manipulated pHi values artificially by incubating cells at varying pHe values in the absence of monensin.
+0004
+Until now, the in vivo mechanism for the deamidation of internal protein Asn residues has not been described for any protein. Because protein Asn deamidation is accelerated by increased pH in vitro, we investigated intracellular pH change (pHi) as a possible regulatory mechanism in thymocytes.
 
 0426
 To investigate Bcl-xL deamidation, pHi, and apoptosis in parallel, we manipulated pHi values artificially by incubating cells at varying pHe values in the absence of monensin.
-0054
-Interestingly, in the cells expressing these mutant forms of Bcl-xL, the apoptosis induced by enforced alkalinisation was reduced 4-fold compared to cells transduced with empty vector, or more than 2-fold in comparison with the wild-type protein (Figure 3G, right panel), which of course undergoes deamidation in response to alkali treatment.
-
 0426
 Interestingly, in the cells expressing these mutant forms of Bcl-xL, the apoptosis induced by enforced alkalinisation was reduced 4-fold compared to cells transduced with empty vector, or more than 2-fold in comparison with the wild-type protein (Figure 3G, right panel), which of course undergoes deamidation in response to alkali treatment.
 
-0054
-Nevertheless, protection was not absolute, suggesting that Bcl-xL may not be the only mechanism protecting cells from apoptosis triggered by alkalinisation.
-
 0426
 Nevertheless, protection was not absolute, suggesting that Bcl-xL may not be the only mechanism protecting cells from apoptosis triggered by alkalinisation.
-0054
-Taken overall, these results demonstrate that intracellular alkalinisation following DNA damage is both necessary and sufficient for nonenzymatic Bcl-xL deamidation, that the oncogenic suppression of Bcl-xL deamidation in pretumourigenic thymocytes is caused by inhibition of alkalinisation, and that versions of Bcl-xL competent for BH3-only protein sequestration are sufficient per se to protect cells from apoptosis at alkaline pHi.
-
 0426
 Taken overall, these results demonstrate that intracellular alkalinisation following DNA damage is both necessary and sufficient for nonenzymatic Bcl-xL deamidation, that the oncogenic suppression of Bcl-xL deamidation in pretumourigenic thymocytes is caused by inhibition of alkalinisation, and that versions of Bcl-xL competent for BH3-only protein sequestration are sufficient per se to protect cells from apoptosis at alkaline pHi.
 0411
 Because the NHE-1 Na/H antiport is a well-established regulator of pHi [22] and has previously been implicated in the regulation of thymic apoptosis [23], we measured its expression in wild-type thymocytes after DNA damage and found that the NHE-1 level increased 2.5-fold within 5 h, whereas this increase was completely suppressed in pretumourigenic thymocytes (Figure 4B). No inhibition of increased NHE-1 expression in wild-type thymocytes was observed following addition of the Z-VAD-fmk caspase inhibitor (Figure S4A) nor following depletion of Bax and Bak from the cells (Figure S4B). We therefore carried out a further series of experiments to demonstrate that there was a direct causal linkage between the regulation of NHE-1 expression, pHi, Bcl-xL deamidation, and apoptosis. Given that the OTK blocks DNA-damage induced NHE-1 expression in pretumourigenic thymocytes, this provides a powerful system for examining the consequences of experimentally enforcing NHE-1 expression in these cells by retroviral transduction. As Figure 4C illustrates (upper panel), an enforced 2-fold–3-fold increase in NHE-1 expression in pretumourigenic thymocytes, without DNA damage, restored Bcl-xL deamidation to a level comparable to that observed in a retrovirally transduced wild-type control in five separate experiments, thereby bypassing the OTK-mediated inhibition in deamidation.
-0054
-We measured apoptosis by two different methods to ensure that DNA damage–induced cell death following retroviral transduction was by apoptosis and not by necrosis. Figure 5C and Figure S6B illustrate that double staining for Annexin V and propidium iodide (PI) followed by FACS analysis revealed a major increase in Annexin V+ PI− (apoptotic) cells following transduction with the negative control shRNA followed by either γ irradiation or treatment with etoposide, whereas there was no increase in apoptotic cells above baseline in the cells depleted of NHE-1: DNA damage–induced apoptosis was blocked 100%. Comparable results were obtained by measuring the sub-G1 peak by FACS (unpublished data) and NHE-1 depletion also correlated with increased survival (Figure S5B).
-
 0426
 We measured apoptosis by two different methods to ensure that DNA damage–induced cell death following retroviral transduction was by apoptosis and not by necrosis. Figure 5C and Figure S6B illustrate that double staining for Annexin V and propidium iodide (PI) followed by FACS analysis revealed a major increase in Annexin V+ PI− (apoptotic) cells following transduction with the negative control shRNA followed by either γ irradiation or treatment with etoposide, whereas there was no increase in apoptotic cells above baseline in the cells depleted of NHE-1: DNA damage–induced apoptosis was blocked 100%.
+
+0054
+Figure 5C and Figure S6B illustrate that double staining for Annexin V and propidium iodide (PI) followed by FACS analysis revealed a major increase in Annexin V+ PI− (apoptotic) cells following transduction with the negative control shRNA followed by either γ irradiation or treatment with etoposide, whereas there was no increase in apoptotic cells above baseline in the cells depleted of NHE-1: DNA damage–induced apoptosis was blocked 100%. Comparable results were obtained by measuring the sub-G1 peak by FACS (unpublished data) and NHE-1 depletion also correlated with increased survival (Figure S5B).
 0081
 For example, a number of serine kinases have been shown to regulate NHE-1 phosphorylation and activity [24,25], so we investigated the pSer and pThr levels in NHE-1 immunoprecipitates from irradiated wild-type and pretumourigenic thymocytes, but the basal level of phosphorylation did not change after DNA damage and was comparable between the two cell types (Figure S6C). Nevertheless, we cannot formally exclude the possibility that not all pSer/pThr sites were recognised by the cocktail of monocolonal antibodies (mAbs) used.
-0054
-Figure S7 shows that this was indeed the case: murine tumour cells resistant to genotoxic insult at physiological pHi values can be sensitised to die by enforced alkalinisation leading to Bcl-xL deamidation. Furthermore, a modest rise in pHi following incubation in a mildly alkaline buffer produces levels of Bcl-xL deamidation and apoptosis in murine tumour cells comparable to those observed by adding a DNA damaging reagent to wild-type thymocytes incubated at physiological pH.
-
 0426
 Figure S7 shows that this was indeed the case: murine tumour cells resistant to genotoxic insult at physiological pHi values can be sensitised to die by enforced alkalinisation leading to Bcl-xL deamidation. Furthermore, a modest rise in pHi following incubation in a mildly alkaline buffer produces levels of Bcl-xL deamidation and apoptosis in murine tumour cells comparable to those observed by adding a DNA damaging reagent to wild-type thymocytes incubated at physiological pH.
-0054
-We therefore determined whether genotoxic treatment in vitro of primary human B lineage CLL (B-CLL) cells might cause increased NHE-1, alkalinisation, Bcl-xL deamidation, and apoptosis, as in primary murine thymocytes (Figures 3–5), or whether this might be inhibited, as with the murine cancer cells (Figure S7). In addition, we examined the consequences for these parameters of incubating cancer cells in alkaline pH buffers.
-
 0426
 We therefore determined whether genotoxic treatment in vitro of primary human B lineage CLL (B-CLL) cells might cause increased NHE-1, alkalinisation, Bcl-xL deamidation, and apoptosis, as in primary murine thymocytes (Figures 3–5), or whether this might be inhibited, as with the murine cancer cells (Figure S7). In addition, we examined the consequences for these parameters of incubating cancer cells in alkaline pH buffers. To perform these investigations, we divided each sample of patient cancer cells into nine aliquots that were either untreated, subjected to γ irradiation, or exposed to etoposide, followed by incubation at pH 7.2, pH 8.0, or pH 8.5 for 24 h. Each aliquot was then further subdivided into three samples to measure pHi, Bcl-xL deamidation, and apoptosis. As expected, exposure of cells to mildly alkaline buffers generated pHi values that displayed some variation between samples from different patients within a narrow range.
 
 0426
 Interestingly, unlike the murine tumour cells expressing an OTK, the B-CLL cells behaved somewhat more like wild-type thymocytes in that DNA damage at physiological pHe caused a mean increase of pHi of 0.22 units, an 8% increase in Bcl-xL deamidation, and an 18% increase in the number of cells undergoing apoptosis (Figure 6A and Figure S8A), compared to the higher thymocyte values of 0.45 pHi units, 40% increase, and 37% increase, respectively (Figure 3). The human cancer cell values for these parameters were greatly increased at alkaline pHe, generating tight correlations between increasing pHi, Bcl-xL deamidation, and apoptosis (r values shown in Figure 6A).
 
-0054
-Interestingly, unlike the murine tumour cells expressing an OTK, the B-CLL cells behaved somewhat more like wild-type thymocytes in that DNA damage at physiological pHe caused a mean increase of pHi of 0.22 units, an 8% increase in Bcl-xL deamidation, and an 18% increase in the number of cells undergoing apoptosis (Figure 6A and Figure S8A), compared to the higher thymocyte values of 0.45 pHi units, 40% increase, and 37% increase, respectively (Figure 3). The human cancer cell values for these parameters were greatly increased at alkaline pHe, generating tight correlations between increasing pHi, Bcl-xL deamidation, and apoptosis (r values shown in Figure 6A).
-
-0054
-This point is further illustrated by the gray shaded area shown in Figure 6A, which encompasses the overlap in sub-G1 (apoptosis) values that were obtained either by DNA damage at physiological pH or by enforced alkalinisation without DNA damage. Conversely, incubation of B-CLL cells at lower pH inhibited DNA damage–induced Bcl-xL deamidation and apoptosis (Figure 6B). Therefore with respect to enforced changes in pHi, the B-CLL cells behaved in a comparable way to both murine thymocytes and tumour cells.
-
 0426
 This point is further illustrated by the gray shaded area shown in Figure 6A, which encompasses the overlap in sub-G1 (apoptosis) values that were obtained either by DNA damage at physiological pH or by enforced alkalinisation without DNA damage. Conversely, incubation of B-CLL cells at lower pH inhibited DNA damage–induced Bcl-xL deamidation and apoptosis (Figure 6B). Therefore with respect to enforced changes in pHi, the B-CLL cells behaved in a comparable way to both murine thymocytes and tumour cells.
-0054
-These increases correlate with the observed increases in Bcl-xL deamidation and apoptosis in patients' cells (Figure 6A) and at the 2.6-fold level, at least, are comparable with the increases observed in wild-type thymocytes (Figure 4B). Furthermore, DNA damage–induced Bcl-xL deamidation in B-CLL cells was prevented by addition of either cycloheximide (CHX) (Figure S8C) or DMA (Figure S8D), establishing a possible linkage between DNA damage, NHE-1 function, and Bcl-xL deamidation in human cancer cells.
-
 0426
 These increases correlate with the observed increases in Bcl-xL deamidation and apoptosis in patients' cells (Figure 6A) and at the 2.6-fold level, at least, are comparable with the increases observed in wild-type thymocytes (Figure 4B). Furthermore, DNA damage–induced Bcl-xL deamidation in B-CLL cells was prevented by addition of either cycloheximide (CHX) (Figure S8C) or DMA (Figure S8D), establishing a possible linkage between DNA damage, NHE-1 function, and Bcl-xL deamidation in human cancer cells.
 0114
 The structural importance of protein iso-Asp residues is likewise underlined by the expression of the putative repair enzyme L-isoaspartate O-methyltransferase which converts iso-Asp to Asp residues: its deletion has striking effects on protein functions [28–30]. Furthermore, comparison of the crystal structures of native rat Bcl-xL with its deamidated version has revealed significant differences [10]; the structural implications of introducing iso-Asp residues into the disordered loop environment of Asn52/Asn66 merits further work.
-0096
-The regulation of NHE-1 antiport function is complex, involving modulation of its expression, phosphorylation, and binding of regulatory proteins [24,25,31].
-0054
-The resistance to genotoxic attack by CD45−/−lckF505 murine tumour cells correlates, as in their pretumourigenic counterparts, with the inhibition of DNA damage–induced NHE-1 antiport expression, alkalinisation, Bcl-xL deamidation, and apoptosis (Figure S7), which is an apparent example of ”oncogene addiction”, whereby oncogene expression continues to be important for survival [36]. By contrast, DNA damage of human B-CLL cells, which should not express OTKs, triggered increased NHE-1 expression and apoptosis, achieving levels comparable with wild-type thymocytes (Figure 6C). However, enforced alkalinisation of either the murine (Figure S7) or human (Figure 6) cancer cells triggered significant increases in Bcl-xL deamidation and apoptosis, even in the absence of genotoxic attack (Figure 7C). In the case of the B-CLL cells, we cannot yet exclude the possibility that the tight correlation observed between these events does not reflect causal efficacy, and further work will be necessary to elucidate this point.
-
 0411
 The resistance to genotoxic attack by CD45−/−lckF505 murine tumour cells correlates, as in their pretumourigenic counterparts, with the inhibition of DNA damage–induced NHE-1 antiport expression, alkalinisation, Bcl-xL deamidation, and apoptosis (Figure S7), which is an apparent example of ”oncogene addiction”, whereby oncogene expression continues to be important for survival [36]. By contrast, DNA damage of human B-CLL cells, which should not express OTKs, triggered increased NHE-1 expression and apoptosis, achieving levels comparable with wild-type thymocytes (Figure 6C).
 
 0426
 The resistance to genotoxic attack by CD45−/−lckF505 murine tumour cells correlates, as in their pretumourigenic counterparts, with the inhibition of DNA damage–induced NHE-1 antiport expression, alkalinisation, Bcl-xL deamidation, and apoptosis (Figure S7), which is an apparent example of ”oncogene addiction”, whereby oncogene expression continues to be important for survival [36]. By contrast, DNA damage of human B-CLL cells, which should not express OTKs, triggered increased NHE-1 expression and apoptosis, achieving levels comparable with wild-type thymocytes (Figure 6C). However, enforced alkalinisation of either the murine (Figure S7) or human (Figure 6) cancer cells triggered significant increases in Bcl-xL deamidation and apoptosis, even in the absence of genotoxic attack (Figure 7C). In the case of the B-CLL cells, we cannot yet exclude the possibility that the tight correlation observed between these events does not reflect causal efficacy, and further work will be necessary to elucidate this point.
-
-0054
-For example, the down-regulation of Bcl-xL promoted the apoptosis of KARPAS-299 cells derived from a patient with anaplastic large cell lymphoma [38], and down-regulation of Bcl-xL suppresses the tumourigenic potential of the causative NPM-ALK oncogenic fusion protein in vivo [39]. Knockdown of Bcl-xL also significantly reduces the viability of pancreatic cancer cells to tumour necrosis factor α (TNF-α)– and TNF-α - related apoptosis-inducing ligand (TRAIL)-mediated apoptosis by antitumour drugs [40].
 
 0426
 For example, the down-regulation of Bcl-xL promoted the apoptosis of KARPAS-299 cells derived from a patient with anaplastic large cell lymphoma [38], and down-regulation of Bcl-xL suppresses the tumourigenic potential of the causative NPM-ALK oncogenic fusion protein in vivo [39]. Knockdown of Bcl-xL also significantly reduces the viability of pancreatic cancer cells to tumour necrosis factor α (TNF-α)– and TNF-α - related apoptosis-inducing ligand (TRAIL)-mediated apoptosis by antitumour drugs [40].
@@ -933,14 +856,19 @@ For example, the down-regulation of Bcl-xL promoted the apoptosis of KARPAS-299 
 0412
 Knockdown of Bcl-xL also significantly reduces the viability of pancreatic cancer cells to tumour necrosis factor α (TNF-α)– and TNF-α - related apoptosis-inducing ligand (TRAIL)-mediated apoptosis by antitumour drugs [40].
 0004
-The DNA was sequenced and the insert subcloned into pDEST17 (coding for a hexa-histidine tag) and transformed into Escherichia coli expression host DE3 (Novagen, Madison, Wisconsin, United States). Recombinant Bcl-xL (His-N terminal tagged) was expressed in E. coli and purified using Co2+ chelation beads so that rapid elution could be performed at pH 7.0 to prevent deamidation.
+Warburg's legacy has included intermittent interest in the possibility of pH manipulation as a means to cancer therapy. Our findings not only establish that protein deamidation can be regulated by intracellular pH change in vivo, but they also suggest that strategies for pH manipulation in antineoplastic therapy should continue to receive attention, albeit for reasons different from those envisaged by Warburg.
 0081
 These digestion conditions were chosen after careful optimisation to give good and consistent yields of the peptides SDVEENRTEAPEGTESEMETPSAINGNPSW (peptide 1) and HLADSPAVNGATGHSSSL (peptide 2), containing the putative deamidation sites N52 and N66, respectively, but without inducing further deamidation.
 
+0004
+Peptides were eluted from the column (0.075 mm × 100 mm, Vydac C18) with a gradient of 5%–35% acetonitrile (containing 10 mM ammonium acetate pH 5.3) over 30 min at a flow rate of 250 nl/min.
+
 0081
-Peptides were eluted from the column (0.075 mm × 100 mm, Vydac C18) with a gradient of 5%–35% acetonitrile (containing 10 mM ammonium acetate pH 5.3) over 30 min at a flow rate of 250 nl/min. During the development phase of the methodology, the mass spectrometer was operated in MS/MS mode to conclusively identify the peptide digestion products and to confirm the sites of deamidation as N52 and N66. Once the identities of the peptides had been established, the mass spectrometer was operated in MS mode for subsequent analyses.
+During the development phase of the methodology, the mass spectrometer was operated in MS/MS mode to conclusively identify the peptide digestion products and to confirm the sites of deamidation as N52 and N66. Once the identities of the peptides had been established, the mass spectrometer was operated in MS mode for subsequent analyses.
 0019
 Freshly isolated thymocytes were irradiated with 10 Gy using a caesium source or treated with etoposide in DMSO at a concentration of 25 μM for murine cells, or 50 μM for B-CLL cells, for the times indicated.
+0004
+Cells were lysed in 50 mM HEPES (pH 7.2), 150 mM NaCl, 1mM EDTA, 0.2% NP-40, and complete protease inhibitors. Cell lysates were resolved by standard Laemmli's SDS-PAGE (pH 8.8) unless otherwise stated.
 0054
 Intracellular pH was measured using a standard ratiometric method with a pH-sensitive fluorophore SNARF-1 by flow cytometry [44]. Briefly, cells in phosphate-buffered saline (PBS) were loaded with 10 μM SNARF-1 for 40 min at 37 °C, followed by washing and incubation in PBS at room temperature for 30 min prior to measurement of pHi.
 
@@ -999,6 +927,8 @@ Note that in the vector lane, at this exposure endogenous Bcl-xL is not visible 
 (F) Peptides SDVEENRTEAPEGTESEMETPSAINGNPSW (peptide 1) and HLADSPAVNGATGHSSSL (peptide 2), and the corresponding deamidated forms, containing the putative deamidation sites N52 and N66, respectively, were generated by digestion of rBcl-xL with chymotrypsin. The chromatographic conditions used for the separation of the peptides in the LC-MS analyses were optimised so as to resolve the Asn, Asp, and iso-Asp forms of peptides 1 and 2.
 0054
 Cells were treated with etoposide (Etop) for 20 h or exposed to 5 Gy of irradiation (IR) and then maintained in culture for 20 h. pHi was measured using SNARF by FACS in the gated live CD4−CD8− subset.
+0004
+Wild-type thymocytes were maintained in RPMI-1640/10% bovine fetal calf serum buffered at the indicated pH with Tris-HCl for 20 h in the presence of 20 μM monensin prior to lysis and immunoblotting for Bcl-xL. To minimize any deamidation produced during the gel-running process, the resolving gel buffer was adjusted to pH 8.0 in this experiment.
 0054
 (E) Aliquots of cells used in (D) were assessed for pHi by FACS.
 
@@ -1012,7 +942,7 @@ Cells were treated with etoposide (Etop) for 20 h or exposed to 5 Gy of irradiat
 0054
 GFP-positive cells were FACS sorted (left panel) and cultured in media with the pHe shown for 24 h or 48 h, then processed for immunoblotting with Bcl-xL antibody (middle panel).
 0054
-The lower left FACS histogram shows the infection efficiency for nontransfected (non), empty-vector transfected (vector), or NHE-1 transfected (NHE-1) cells as percentage GFP-positive cells. The lower right histograms show the mean pHi and apoptosis (sub-G1) values ± SD (n = 5) analysed on GFP-negative and positive cells.
+The lower left FACS histogram shows the infection efficiency for nontransfected (non), empty-vector transfected (vector), or NHE-1 transfected (NHE-1) cells as percentage GFP-positive cells.
 
 0426
 The lower right histograms show the mean pHi and apoptosis (sub-G1) values ± SD (n = 5) analysed on GFP-negative and positive cells.
@@ -1030,9 +960,6 @@ pHi was measured by FACS on live CD4−CD8− cells, and the sub-G1 peak was ana
 Patients' cells (PBMC, in the range 85%–95% CD19+B220+) were incubated at pHe values of 7.2, 8.0, or 8.5, and the pHi values were monitored by SNARF-1 staining using flow cytometry. Apoptosis was evaluated by measurement of sub-G1 peaks using flow cytometry.
 0052
 The same cell aliquots cultured in RPMI/10% FCS for 24 h or 48 h were analysed for apoptosis by sub-G1 staining (right panel).
-0054
-(C) Enforced alkalinisation of murine tumour cells, or human B-CLL cells, causes Bcl-xL deamidation and subsequent apoptosis, even in the absence of external genotoxic attack.
-
 0426
 (C) Enforced alkalinisation of murine tumour cells, or human B-CLL cells, causes Bcl-xL deamidation and subsequent apoptosis, even in the absence of external genotoxic attack.
 0030
@@ -1049,10 +976,10 @@ Whereas ablation of PDE4A or PDE4B had no effect, inactivation of the PDE4D gene
 All PDE4 long forms are activated by phosphorylation at a conserved PKA consensus site in UCR1 (see Figure 2D); this mechanism provides a ubiquitous negative-feedback loop critical for cAMP signaling (Conti et al, 2003).
 0676
 Conversely, PDE4D5 is the variant tethered to the β2AR/β-arrestin complex (Baillie et al, 2003) concurring with the preferential activation of PDE4D5 upon β2AR signaling (Figure 5B). In pull-down experiments using purified proteins (Figure 3D and E), β1AR efficiently interacts with PDE4D, whereas β2AR has negligible affinity for PDE4D, underscoring the direct mode of PDE4D–β1AR interaction versus the indirect, β-arrestin-dependent mode of PDE4D–β2AR interaction.
-0096
+0030
 The latter may include the competition of PDE4D with other proteins for binding to the receptor or, in an opposite fashion, PDE4D may act as a scaffold by tethering additional proteins to the receptor complex such as the exchange protein activated by cAMP or PKA-anchoring proteins (Dodge-Kafka et al, 2005).
 
-0030
+0096
 The latter may include the competition of PDE4D with other proteins for binding to the receptor or, in an opposite fashion, PDE4D may act as a scaffold by tethering additional proteins to the receptor complex such as the exchange protein activated by cAMP or PKA-anchoring proteins (Dodge-Kafka et al, 2005).
 0426
 PAN-selective antibodies against PDE4A (AC55), PDE4B (K118), and PDE4D (M3S1), as well as splice variant-selective antibodies against PDE4D3, 4, 5, 8, and 9 (Richter et al, 2005), were used in IPs to determine the expression of the respective PDE4 subtype and splice variant in cardiac myocytes (Figure 2), as well as their PKA-dependent activation after β-adrenergic stimulation (Figure 5; Supplementary Figure 2). A PKA-site-specific antibody from Cell Signaling (Danvers, MA) was used to measure PKA phosphorylation of the β1AR (Figure 6).
@@ -1061,16 +988,21 @@ All cells were cultured at 37°C and under a 5% CO2 atmosphere. For expression o
 
 0416
 All cells were cultured at 37°C and under a 5% CO2 atmosphere. For expression of exogenous βARs and/or PDE4D constructs, cells were infected with adenoviruses 40 h before experimentation at an MOI of 2–6 (HEK293), 20–40 (cardiac myocytes), and 100 (MEFs), respectively. As ‘mock' controls, cells were infected with comparable titers of an adenovirus encoding green fluorescent protein (GFP).
+0004
+After the respective cell treatment, cells were rinsed once with ice-cold PBS and then lysed in 500 μl of 20 mM HEPES, 150 mM NaCl, 2 mM EDTA, 10% glycerol, 1% N-dodecyl-β-D-maltopyranoside (DDM, Anatrace), 1 μM microcystin-LR (Calbiochem), and Complete protease inhibitor cocktail (Roche).
+
 0006
 Flag-tagged receptors were then immunoprecipitated using M1-affinity resin (α-Flag antibody resin; Sigma Aldrich).
-0004
-Rat PDE4D3, expressed in Sf9 insect cells using a recombinant baculovirus, was purified to >90% purity using an anti-PDE4D antibody (M3S1) covalently coupled to ProteinG Sepharose as described previously (Salanova et al, 1998). Flag-tagged β1AR and β2AR were also expressed in Sf9 cells and subsequently purified in a two-step procedure consisting of an initial affinity chromatography using M1-resin (immobilized anti-Flag antibody; Sigma Aldrich), followed by an alprenolol-sepharose affinity column. For βAR/PDE4D IP, equal amounts of purified β1AR and β2AR (1 μg) were coupled to M1 resin and then incubated in 500 μl of 20 mM HEPES (pH 7.5), 100 mM NaCl, 0.1% DDM, 4 mM CaCl2, and 0.01% cholesterol hemisuccinate with 0.5 μg of purified PDE4D under continuous rotation for 4 h at 4°C.
+0676
+Rat PDE4D3, expressed in Sf9 insect cells using a recombinant baculovirus, was purified to >90% purity using an anti-PDE4D antibody (M3S1) covalently coupled to ProteinG Sepharose as described previously (Salanova et al, 1998). Flag-tagged β1AR and β2AR were also expressed in Sf9 cells and subsequently purified in a two-step procedure consisting of an initial affinity chromatography using M1-resin (immobilized anti-Flag antibody; Sigma Aldrich), followed by an alprenolol-sepharose affinity column.
 
 0007
 Flag-tagged β1AR and β2AR were also expressed in Sf9 cells and subsequently purified in a two-step procedure consisting of an initial affinity chromatography using M1-resin (immobilized anti-Flag antibody; Sigma Aldrich), followed by an alprenolol-sepharose affinity column.
 
-0676
-Flag-tagged β1AR and β2AR were also expressed in Sf9 cells and subsequently purified in a two-step procedure consisting of an initial affinity chromatography using M1-resin (immobilized anti-Flag antibody; Sigma Aldrich), followed by an alprenolol-sepharose affinity column.
+0004
+For βAR/PDE4D IP, equal amounts of purified β1AR and β2AR (1 μg) were coupled to M1 resin and then incubated in 500 μl of 20 mM HEPES (pH 7.5), 100 mM NaCl, 0.1% DDM, 4 mM CaCl2, and 0.01% cholesterol hemisuccinate with 0.5 μg of purified PDE4D under continuous rotation for 4 h at 4°C.
+0004
+After 4 days of culture and the respective cell treatment, neonatal cardiac myocytes were harvested in buffer containing 50 mM Tris–HCl (pH 7.4), 1 mM EDTA, 0.2 mM EGTA, 150 mM NaCl, 5 mM β-mercaptoethanol, 10% glycerol, 1 μM microcystin-LR, Complete protease inhibitor cocktail (Roche Diagnostics), and 1 mM 4-(2-aminoethyl)-benzenesulfonyl fluoride hydrochloride (AEBSF; Roche Diagnostics).
 0019
 (B) Co-IP of β1AR and PDE activity from cardiomyocytes deficient in PDE4A, PDE4B, or PDE4D, and wild-type controls.
 0081
@@ -1118,11 +1050,8 @@ Cell lines, expression analysis and chromatin immunoprecipitation.
 
 0402
 DNA ChIP was performed essentially according to Upstate Chromatin Immunoprecipitation Assay protocol.
-0004
-(D) GST-PHD1 and GST-AIRE, but not GST alone, interact with purified recombinant histone H3, visualized by Coomassie staining. (E) GST-PHD1, but not GST alone, interacts with native mononucleosomes detected by western blot against anti-H3 (middle) and anti-H2B (bottom).
-
 0096
-Equal input of GST proteins is shown with Ponceau red staining (top).
+(E) GST-PHD1, but not GST alone, interacts with native mononucleosomes detected by western blot against anti-H3 (middle) and anti-H2B (bottom). Equal input of GST proteins is shown with Ponceau red staining (top).
 
 0107
 (F) Interaction between GST-AIRE fusion proteins and whole histones, detected by anti-H3K4me1, anti-H3K4me3 and anti-H3K9me3. (G) Interaction between GST-AIRE–PHD1 fusion proteins and amino-terminal histone H3 peptides (H3K4me0, H3K4me1, H3K4me3 and H3K9me3), all detected by anti-GST.
@@ -1130,9 +1059,6 @@ Equal input of GST proteins is shown with Ponceau red staining (top).
 (B) Interaction between AIRE–PHD1 (PHD1), AIRE–PHD1-D297A (D297A) mutant proteins and H3K4me0 peptide detected by anti-GST.
 0019
 AIRE, autoimmune regulator; ChIP, chromatin immunoprecipitation; GAPDH, glyceraldehyde-3-phosphate dehydrogenase; HEK, human embryonic kidney; H3K4me3, histone H3 trimethylated at lysine 4.
-0054
-(B) DNA ChIP analysis with anti-AIRE and IgG was performed from the stably transfected cells, as indicated.
-
 0019
 AIRE, autoimmune regulator; ChIP, chromatin immunoprecipitation; HEK, human embryonic kidney; PHD, plant homeodomain.
 0889
@@ -1141,9 +1067,6 @@ Compared to chemiluminescence, the detection with infrared dye is linear over a 
 To test whether the increased Plx1 binding to chromatin was required for promoting DNA replication in the presence of stalled replication forks, we measured DNA replication in Plx1-depleted extracts treated with low amounts of aphidicolin.
 0030
 One of the truncated proteins contained the protein interaction domain known as the Polo box, which has been shown to interact with phosphorylated proteins (Elia et al, 2003).
-0096
-The fact that Plx1 binding to the Mcm complex is enhanced by checkpoint activation suggests that post-translational modifications of the Mcm proteins induced by the activation of the DNA damage response could increase Plx1 affinity for the Mcm complex.
-
 0676
 The fact that Plx1 binding to the Mcm complex is enhanced by checkpoint activation suggests that post-translational modifications of the Mcm proteins induced by the activation of the DNA damage response could increase Plx1 affinity for the Mcm complex.
 
@@ -1156,38 +1079,24 @@ Claspin inactivation by protein degradation restrains Chk1 activity and promotes
 0411
 Downregulation of Plk1 expression leads to cell death in transformed cells (Liu and Erikson, 2003a, 2003b), suggesting that Plk1 is required for the cell cycle of tumour cells. The genome of tumour cells is highly unstable and has many DNA lesions that would normally interfere with replication progression.
 0004
-Rabbit polyclonal antibodies against Plx1 were raised against recombinant histidine-tagged Plx1 expressed in baculovirus (Harlan).
-0004
-6xHistidine-tagged geminin (a gift from M Micheal) was expressed in BL21(DES) cells from a pET28 plasmid and purified on a nickel-NTA column according to standard protocols.
-
+The eggs were collected in 90 mM NaCl. To prepare interphase extracts, the eggs were dejelled in a buffer (20 mM Tris, pH 8.5, 110 mM NaCl, 5 mM DTT) for 5 min, washed with ¼ Marc's modified Ringer (MMR) (5 × MMR: 100 mM HEPES, pH 7.5, 2 M NaCl, 10 mM KCl, 5 mM MgSO4, 10 mM CaCl2, 0.5 mM EDTA) and activated with 1 μg/ml calcium ionophore A23187 in MMR for 5 min. The activated eggs were washed with ¼ MMR and then washed three times with ice-cold S-buffer (0.25 M sucrose, 50 mM KCl, 2.5 mM MgCl2, 2 mM β-mercaptoethanol, 15 μg/ml leupeptin and 50 mM HEPES–KOH at pH 7.5).
 0411
 6xHistidine-tagged geminin (a gift from M Micheal) was expressed in BL21(DES) cells from a pET28 plasmid and purified on a nickel-NTA column according to standard protocols.
 
 0426
 Baculoviruses encoding 6xHistidine-tagged Plx1 (a gift from J Gautier), Mcm2-WT and Mcm2-S92A (a gift from W Dunphy) were used to infect Sf9 cells, which were expanded in large flasks using complete GRACE medium according to standard protocols (Invitrogen).
-
 0004
-6xHistidine-tagged Plx1, Mcm2-WT or Mcm2-S92A proteins were purified on a nickel-NTA column (Qiagen) according to the manufacturer's protocol.
-0276
-The pellet was resuspended in Laemmli loading buffer, loaded onto a 10% SDS–PAGE and analysed by western blotting with specific antibodies, as indicated in the figure legend.
+Nuclei were lysed for 1 h at 4°C in a lysis solution at pH 9.5 (2.5 M NaCl, 100 mM EDTA, 10 mM Tris base, 1% Triton X-100 and 10% dimethyl sulphoxide). The slides were washed three times in the electrophoresis buffer (100 mM Tris, 300 mM sodium acetate, adjusted to pH 8.3) and then equilibrated for 60 min in the same buffer.
+
 0426
 Images of 100 randomly selected ethidium bromide-stained cells were analysed from each coded slide at × 400 magnification. To measure the extent of DNA damage, image analysis software (Comet IV, Perceptive Instruments) was used. DNA damage was assessed by monitoring comet head length analysing 100 cells for each slide.
 0858
 (A) Immunodepletion of Plx1.
-
-0276
-Chromatin was isolated at the indicated time points and separated on SDS–PAGE.
-0276
-Chromatin-bound proteins were separated on SDS–PAGE, transferred to nitrocellulose and probed for Mcm7 and Plx1, which were visualized with infrared dye-labelled secondary antibodies.
-0276
-The nuclei were isolated and the nuclear proteins were separated by SDS–PAGE.
-0004
-Interphase extracts were incubated with GST–agarose beads or agarose beads with GST fused to the Polo box derived from human Plk1.
-
 0104
 After pull-down, proteins were consecutively eluted using 3 mg/ml of phosphopeptide solution (first elution=E1, second elution=E2, see Supplementary data for the sequence of the peptide and the Polo box) and subjected to MALDI-TOF analysis.
-0096
-(A) Chromatin binding of Plx1 in the presence of Mcm2-WT and Mcm2-S92A proteins. Sperm nuclei were incubated for 60 min in extracts supplemented with 200 ng/μl recombinant histidine-tagged Mcm2-WT and Mcm2-S92A proteins in the presence of 5 μM etoposide.
+
+0004
+The GST fusion protein containing the Polo box from Plk1 is shown at the bottom.
 0426
 The percentage increase in the head length of the comets subtracted from the average nuclear diameter of undepleted samples with high Mcm was used as a parameter to measure DSBs.
 0030
@@ -1198,10 +1107,7 @@ With regard to the interaction between hTFIIE and hTFIIH, it has been shown that
 0030
 hTFIIEα AC-D is found to share its binding surface on p62 PH-D with the acidic transactivation domains (TADs) of tumour supressor protein p53 (Di Lello et al, 2006) and herpes simplex virus protein VP16 (Di Lello et al, 2005).
 0004
-After purification by glutathione-Sepharose column chromatography, all samples containing the C-terminal region, namely full-length GST–p621−548, GST–p62109−548, GST–p62238−548 and GST–p62333−548, were considerably degraded or incompletely translated (data not shown).
-
-0096
-Though such instability of the C-terminal half of p62 has previously been reported (Jawhari et al, 2004), we found that full-length GST–p621−548, GST–p621−108, GST–p621−238 and GST–p621−333 bound to hTFIIEα AC-D, whereas no binding was observed with GST–p62109−548, GST–p62238−548, GST–p62333−548 and GST alone (Figure 2B).
+After purification by glutathione-Sepharose column chromatography, all samples containing the C-terminal region, namely full-length GST–p621−548, GST–p62109−548, GST–p62238−548 and GST–p62333−548, were considerably degraded or incompletely translated (data not shown). Though such instability of the C-terminal half of p62 has previously been reported (Jawhari et al, 2004), we found that full-length GST–p621−548, GST–p621−108, GST–p621−238 and GST–p621−333 bound to hTFIIEα AC-D, whereas no binding was observed with GST–p62109−548, GST–p62238−548, GST–p62333−548 and GST alone (Figure 2B).
 0077
 To obtain the p62 PH-D-bound structure of hTFIIEα AC-D using NMR, we performed NMR titration experiments in buffers both with and without 100 mM NaCl for both domains (Supplementary Figures 1–3). Although in the 100 mM NaCl buffer the dissociation constant (Kd) between AC-D and p62 PH-D was estimated from the titration plots as 376±81 nM (Supplementary Figure 1C) or 237±82 nM (Supplementary Figure 2C), the NaCl-free buffer NMR titration experiment showed much stronger binding affinity between AC-D and p62 PH-D because of the slow exchange timescale with a Kd below about 150 nM (Supplementary Figure 3).
 
@@ -1210,15 +1116,8 @@ Although in the 100 mM NaCl buffer the dissociation constant (Kd) between AC-D a
 
 0104
 Although in the 100 mM NaCl buffer the dissociation constant (Kd) between AC-D and p62 PH-D was estimated from the titration plots as 376±81 nM (Supplementary Figure 1C) or 237±82 nM (Supplementary Figure 2C), the NaCl-free buffer NMR titration experiment showed much stronger binding affinity between AC-D and p62 PH-D because of the slow exchange timescale with a Kd below about 150 nM (Supplementary Figure 3).
-0077
-These interacting amino acids were also observed in the NMR titration experiments. In hTFIIEα AC-D, the NMR signals of E386, F387, E388, E389, V390, A391 and D392 were changed significantly upon addition of p62 PH-D (Supplementary Figure 1B) and also in p62 PH-D the NMR signals of K19, Q53, K54, I55, S56, E58, K60, A61, I63, Q64, L65, Q66, T74, T75 and F77 were changed by adding hTFIIEα AC-D (Supplementary Figure 2B).
-0004
-These mutants were expressed in Escherichia coli with hexa-histidine (6H) at the N terminus.
-
 0676
 All were soluble and could therefore be easily purified using a Ni-nitrilotriacetic acid (NTA) agarose column (Figure 4A).
-0276
-The mixture was analysed by SDS–PAGE and phosphorylated Rpb1 from Pol II was detected by autoradiography (Figure 4D).
 0030
 Furthermore, the herpes simplex virus protein 16 (VP16) TAD also interacts with virtually identical sites of Tfb1 and p62 PH-D (Di Lello et al, 2005).
 
@@ -1227,26 +1126,14 @@ Interestingly, the binding sites of p62 for p53 TAD2 and VP16 TAD significantly 
 
 0081
 The binding site of p53 TAD2 peptide is disordered in an unbound state, but it forms a nine-residue amphipathic α-helix upon binding to Tfb1 PH-D and p62 PH-D.
-0096
-As shown, K54, which forms the shallow pocket for F387 of hTFIIEα AC-D with its side chain interacting electrostatically with E389 of hTFIIEα AC-D, was the residue for which mutation to alanine had the largest effect as it prevented binding of all three hTFIIEα proteins tested (Figure 5C, lane 5). In addition, Q66, which also forms the same shallow pocket for F387 of hTFIIEα AC-D and the side chain of Q66 makes contact with F387 through amino-aromatic interaction, was shown to be essential for binding to hTFIIEα AC-D (Figure 5C, lane 6).
 0107
 In the present study, the specific interaction between hTFIIEα AC-D and hTFIIH p62 PH-D was explored, and structures of both the free and PH-D-bound forms of hTFIIEα AC-D were determined. This is the first report of the structural determination of the complex describing the interaction between TFIIE and TFIIH at the molecular level.
-
-0077
-To investigate whether the STDE is involved in the binding, we prepared a longer construct (residues 351–439) containing both acidic regions and performed the NMR titration experiment under the same conditions (Supplementary Figure 4). The result was that the NMR signals of STDE showed no significant changes and the Kd of 400±43 nM was almost the same as that estimated using hTFIIEα AC-D.
-0077
-This is supported by the result that the binding is strengthened by removing NaCl from the buffer in the NMR titration experiments.
 0107
 For yeast TFIIEα (Tfa1), functional significance of the C-terminal region and specific interaction between Tfa1 and Tfb1 has been reported (Bushnell et al, 1996; Kuldell and Buratowski, 1997). We aligned sequences of TFIIEα AC-D from other species to ascertain whether the interaction observed in human is evolutionally conserved (Figure 1A).
-0096
-The reason why transcription did not correlate well with the binding and CTD phosphorylation defects might be because there are more than 25 proteins involved in transcription, whereas only limited factors were used for both binding and phosphorylation studies (hTFIIEα AC-D mutants and p62 PH-D were used for binding studies and hTFIIEα AC-D mutants, hTFIIH and Pol II were used for CTD phosphorylation).
-0096
-In many cases, acidic TADs are disordered in an unbound form, but form an amphipathic helix upon binding to target proteins, for example, p53 TAD2–RPA70 (replication protein A 70) (Bochkareva et al, 2005), p53 TAD1–MDM2 (ubiquitin ligase) (Kussie et al, 1996), VP16 TAD–hTAFII31 (human TBP-associated factor) (Uesugi et al, 1997) complexes as well as the recently determined Tfb1 PH-D–p53 TAD2 complex (Di Lello et al, 2006).
-
-0004
-In many cases, acidic TADs are disordered in an unbound form, but form an amphipathic helix upon binding to target proteins, for example, p53 TAD2–RPA70 (replication protein A 70) (Bochkareva et al, 2005), p53 TAD1–MDM2 (ubiquitin ligase) (Kussie et al, 1996), VP16 TAD–hTAFII31 (human TBP-associated factor) (Uesugi et al, 1997) complexes as well as the recently determined Tfb1 PH-D–p53 TAD2 complex (Di Lello et al, 2006).
-
 0030
+In many cases, acidic TADs are disordered in an unbound form, but form an amphipathic helix upon binding to target proteins, for example, p53 TAD2–RPA70 (replication protein A 70) (Bochkareva et al, 2005), p53 TAD1–MDM2 (ubiquitin ligase) (Kussie et al, 1996), VP16 TAD–hTAFII31 (human TBP-associated factor) (Uesugi et al, 1997) complexes as well as the recently determined Tfb1 PH-D–p53 TAD2 complex (Di Lello et al, 2006).
+
+0096
 In many cases, acidic TADs are disordered in an unbound form, but form an amphipathic helix upon binding to target proteins, for example, p53 TAD2–RPA70 (replication protein A 70) (Bochkareva et al, 2005), p53 TAD1–MDM2 (ubiquitin ligase) (Kussie et al, 1996), VP16 TAD–hTAFII31 (human TBP-associated factor) (Uesugi et al, 1997) complexes as well as the recently determined Tfb1 PH-D–p53 TAD2 complex (Di Lello et al, 2006).
 
 0077
@@ -1262,15 +1149,10 @@ p62 has been shown to interact with the TADs of not only VP16 and p53 (Xiao et a
 It can be imagined that if TFIIH is recruited by an activator near the promoter through its TAD then the recruited TFIIH could be captured by TFIIE instead of the activator to form the PIC. TFIIE regulates the enzymatic activities of TFIIH, which are necessary for the next stage after the PIC formation, that is, promoter melting or promoter clearance.
 0411
 The NdeI–BamHI fragment of mutated hTFIIEα cDNA was subcloned into the pET11d vector (Novagen) making the N-terminal hexa histidine-tagged hTFIIEα (6H–hTFIIEα) expression plasmid. The NdeI–BamHI fragment of mutated hTFIIH p62 cDNA was subcloned into the pET vector making the N-terminal FLAG-tagged hTFIIH p62 PH-D (FLAG–p62 PH) expression plasmid.
-0004
-hTFIIEα AC-D (residues 378–439) was expressed as an hexa histidine-tagged product in pET3a vectors (Novagen) in E. coli BL21(DE3)pLysS (Novagen). Lysed supernatant was loaded onto the Ni-NTA-agarose (Qiagen) column.
-
 0071
 After digestion with thrombin to remove the 6H tag, sample was again loaded onto the Ni-NTA agarose column. Fractions passing through the column were concentrated and applied onto Superdex30 (GE Healthcare).
 0077
 Measurements of NMR spectra, structural calculations and NMR titration experiments are described in Supplementary data.
-0004
-Recombinant point mutant hTFIIEα proteins were expressed in E. coli Rosetta™(DE3)pLysS (Novagen), and recombinant hTFIIH p62 point mutants were expressed in BL21(DE3)pLysS by induction with isopropyl-β-D-thiogalactopyranoside (Studier et al, 1990). The purification method of these recombinant proteins was as described previously (Watanabe et al, 2003).
 0096
 GST fusion proteins were used for protein interaction assays (Okamoto et al, 1998).
 
@@ -1282,37 +1164,18 @@ GST fusion proteins were used for protein interaction assays (Okamoto et al, 199
 
 0007
 The bound proteins were released by boiling in SDS–PAGE loading buffer, separated by SDS–PAGE and detected by western blotting with anti-hTFIIEα rabbit antiserum (1:3000 dilution), anti-FLAG M2 monoclonal antibody (Sigma) and anti-p53 (DO-1) (Santa Cruz) using the enhanced chemiluminescence detection system (GE Healthcare).
-
-0276
-The bound proteins were released by boiling in SDS–PAGE loading buffer, separated by SDS–PAGE and detected by western blotting with anti-hTFIIEα rabbit antiserum (1:3000 dilution), anti-FLAG M2 monoclonal antibody (Sigma) and anti-p53 (DO-1) (Santa Cruz) using the enhanced chemiluminescence detection system (GE Healthcare).
-0276
-Phosphorylation reactions were carried out at 30°C for 1 h and stopped by addition of 75 μl of phosphorylation stop solution (10 mM EDTA, 0.1% NP40 and 0.05% SDS). Phosphorylated proteins were precipitated with TCA, analysed by SDS–PAGE (5.5% acrylamide), and detected by autoradiography with Fuji RX-U X-ray film.
 0077
 Left, superposition of the backbone heavy atoms of the 20 lowest energy NMR structures.
 0077
 (A) Superposition of the backbone heavy atoms of the 20 lowest energy NMR structures.
-0276
-(A) SDS–PAGE of the hTFIIEα mutants. In total, 400 ng of each purified hTFIIEα protein was subjected to SDS–PAGE (10% acrylamide) and stained with Coomassie blue.
-
-0276
-hTFIIEα proteins bound to the GST-tagged p62 PH-D and hTFIIEβ were separated by SDS–PAGE and detected by western blotting with anti-hTFIIEα antisera.
 0019
 Interacting residues are indicated with the side chains and interaction areas are roughly marked in yellow.
 
 0007
-Bound mutants were subjected to SDS–PAGE and detected by western blotting with anti-FLAG antibody.
-
-0276
-Bound mutants were subjected to SDS–PAGE and detected by western blotting with anti-FLAG antibody.
+The top panel shows 5 ng of FLAG-tagged p62 PH-D mutant proteins (p62 PH-D mutants).
 
 0007
 Bound proteins were subjected to SDS–PAGE and detected by western blotting with anti-FLAG, anti-p53 and anti-hTFIIEα antisera.
-
-0276
-Bound proteins were subjected to SDS–PAGE and detected by western blotting with anti-FLAG, anti-p53 and anti-hTFIIEα antisera.
-0096
-Vav proteins contain multiple function motifs and are involved in various cellular signaling processes, including cytoskeleton organization, calcium influx, phagocytosis, and cell transformation [3]. Vav proteins share a common structure, including a N-terminal calponin homology (CH) domain involved in Ca+2 mobilization and transforming activity, an acidic domain (AD) containing three regulatory tyrosines, a Dbl homology (DH) domain with a conserved region that promotes the exchange of GDP for GTP on Rac/Rho GTPases, a pleckstrin homology (PH) domain binding to PIP3 that enables its movement to the inner face of the plasma membrane, two Src-homology 3 (SH3) domains interacting with proteins containing proline-rich sequences, and a Src-homology 2 (SH2) domain interacting with proteins containing phosphorylated tyrosines [4,5].
-
 0419
 Vav proteins share a common structure, including a N-terminal calponin homology (CH) domain involved in Ca+2 mobilization and transforming activity, an acidic domain (AD) containing three regulatory tyrosines, a Dbl homology (DH) domain with a conserved region that promotes the exchange of GDP for GTP on Rac/Rho GTPases, a pleckstrin homology (PH) domain binding to PIP3 that enables its movement to the inner face of the plasma membrane, two Src-homology 3 (SH3) domains interacting with proteins containing proline-rich sequences, and a Src-homology 2 (SH2) domain interacting with proteins containing phosphorylated tyrosines [4,5].
 
@@ -1322,34 +1185,33 @@ Vav proteins share a common structure, including a N-terminal calponin homology 
 0419
 Upon phosphorylation of the tyrosines in the AD domain, the folding is opened and the DH domain is exposed. Thus, Vav protein is activated and interacts with substrate proteins, and the PH domain is exposed for PIP3 binding [6].
 
+0004
+Thus, Vav protein is activated and interacts with substrate proteins, and the PH domain is exposed for PIP3 binding [6].
+
 0096
 Thus, Vav protein is activated and interacts with substrate proteins, and the PH domain is exposed for PIP3 binding [6].
 0004
+Briefly, aliquots of samples with the same amount of protein, determined using the Bradford assay (BioRad, Hercules, CA), were mixed with loading buffer (final concentrations of 62.5 mM Tris-HCl, pH 6.8, 2.3% SDS, 100 mM dithiothreitol, and 0.005% bromophenol blue), boiled, fractionated in a SDS-PAGE, and transferred onto a 0.45-um nitrocellulose membrane (BioRad).
+0004
 GST-Vav3-DH+PH and control GST vectors were transformed into BL21 bacteria, respectively (Protein Express, Inc.
+
+0004
+The transformed bacteria were cultured in L-Broth with addition of 100 uM of IPTG to induce GST-fusion protein expression. Then, the bacteria were harvested and subjected to GST fusion protein purification by Sonication and using Glutathione Sepharose 4B (Amersham Bioscience).
+0004
+For pull down reaction, 5~10 ug of GST or GST-Vav3-DH+PH was incubated with 1 mg of cell extracts from MCF7 cells in a binding buffer [20 mM of Tris.CL, PH. 7.9; 300 mM of KCL; 0.05% of NP-40; 0.2 mM of EDTA; 20% of Glycerol; 1 mM of Dithiothritol; 1 mM of phenylmethylsulfonyl fluoride (PMSF), 1× of protease inhibitor cocktail (Roche Diagnostics)] for overnight [28,29].
+
 0413
 For pull down reaction, 5~10 ug of GST or GST-Vav3-DH+PH was incubated with 1 mg of cell extracts from MCF7 cells in a binding buffer [20 mM of Tris.CL, PH.
-0054
-Immunoblotting analysis also revealed that Vav3 expression was elevated in MCF-7 and T47D breast cancer cells in comparison with that in nontumoral breast epithelial MCF-10A cells (Figure 2A). ERα was detected in the two breast cancer cell lines, but not at the very low level in nontumoral MCF-10A cells.
-
 0411
 Immunoblotting analysis also revealed that Vav3 expression was elevated in MCF-7 and T47D breast cancer cells in comparison with that in nontumoral breast epithelial MCF-10A cells (Figure 2A). ERα was detected in the two breast cancer cell lines, but not at the very low level in nontumoral MCF-10A cells.
-0054
+0411
 Vav3 is involved in growth of breast cancer cells. (A) Expression analysis of Vav3 and ERα in breast cancer MCF7 and T47D cells and nontumoral breast epithelial MCF-10A cells. The cell extracts were prepared from T47D, MCF7, and MCF-10A cells and subjected to western blot analysis for Vav3 and ERα.
-
-0411
-Vav3 is involved in growth of breast cancer cells. (A) Expression analysis of Vav3 and ERα in breast cancer MCF7 and T47D cells and nontumoral breast epithelial MCF-10A cells.
 
 0411
 (B) MCF7 cells were transiently transfected with Vav3 expression vector or control empty vector and then cultured in stripped medium in the absence or presence of EGF for 5 days, followed by MTT assay.
 
-0054
-(C) MCF7 cells were transiently transfected with Vav3 expression vector or empty pHEF vector for 3 days, followed by cell extracts preparation and western blot analysis for Vav3.
-
 0411
 (C) MCF7 cells were transiently transfected with Vav3 expression vector or empty pHEF vector for 3 days, followed by cell extracts preparation and western blot analysis for Vav3.
-0054
-Elevated expression of Vav3 upon transient transfection of Vav3 expression vector was confirmed by western blot analysis in these cells (Figure 2C).
-
 0411
 Elevated expression of Vav3 upon transient transfection of Vav3 expression vector was confirmed by western blot analysis in these cells (Figure 2C).
 0411
@@ -1367,12 +1229,17 @@ Hela cells were transiently cotransfected with a luciferase reporter driven by t
 Upregulation of the endogenous ERα activity by Vav3 relative to the empty vector pHEF was also confirmed in MCF7 cells by stimulation of luciferase reporter expression driven by ERE (Figure 3B) and natural promoter of ERα target gene pS2 (Figure 3C).
 0411
 (A) Hela cells (105 cells/well in 12-well plate) were cotransfected with ERE-Luc (0.5 ug), expression vectors for Vav3, Vav3*, or empty vector pHEF (200 ng) and ERα (50 ng), respectively. Then, the cells were treated without or with E2 (10-9 M) and without or with Tamoxifen. (B and C) MCF7 cells (105 cells/well in 12-well plate) were cotransfected with ERE-Luc (0.5 ug) (B) or pS2-Luc (0.5 ug) (C), and expression vector (0.25 ug) for Vav3*, or empty vector pHEF, respectively. Then, the cells were treated with E2.
+0004
+The truncated Vav3 protein with deletion of both PH and SH domains failed to activate ERα.
 0411
 (B) Hela cells (105 cells/well in 12-well plate) were cotransfected with ERE-Luc (0.5 ug) and expression vectors (200 ng) for Vav3, Vav3*, Vav3*-ΔDH, Vav3*-ΔSH, or empty vector pHEF, as well as expression vector (50 ng) for ERα, respectively.
 0411
 (A) Hela cells were cotransfected with ERE-Luc (0.25 ug), expression vectors ERα (25 ng), Vav3* or empty vector pHEF (50 ng), p85+p110 or empty vector pCR3.1 (50 ng). (B) Hela cells were cotransfected with ERE-Luc reporter (0.25 ug/well in 12-well plate), expression vectors ERα (25 ng), dominant-negative Akt expression vector or empty vector pCR3.1 (0.1 ug), and Vav3* expression vector or empty vector pHEF (0.1 ug), respectively. (C) T47D cells were cotransfected with ERE-Luc (0.5 ug) and expression vector for Vav3 or empty vector pHEF (0.25 ug). Then, the cells were treated with Wortmannin (0.5 um). (D) T47D cells were cotransfected with pS2-Luc (0.5 ug) and expression vector for Vav3 or empty vector pHEF (0.25 ug). Then, the cells were treated with EGF (20 ng/ml).
 0411
 Hela cells were transiently cotransfected with ERE-Luc reporter, and expression vectors ERα, Vav3*, and p85 (the regulatory subunit of PI3K) and p110 (the catalytic subunit of PI3K).
+0004
+A nuclear localization signal (NLS) in the PH domain was shown to be solely responsible for the nucleus localization of Vav1 protein, indicating a role of Vav family protein as a transcription coregulator.
+
 0419
 A nuclear localization signal (NLS) in the PH domain was shown to be solely responsible for the nucleus localization of Vav1 protein, indicating a role of Vav family protein as a transcription coregulator. We have demonstrated that the DH domain of Vav3 is essential for AR and ERα activation (Figure 4) [25]. We performed sequence analysis of Vav proteins and found that the DH domain of Vav3 contains three consensus sequences of the LXXLL motifs or NR boxes, which have been well characterized and involved in interaction with nuclear receptors (Figure 6A). In addition, homologous analysis of Vav3 and Vav1 genes identified a conserved NLS in the PH domain of Vav3 (Figure 6B).
 0419
@@ -1380,44 +1247,47 @@ A nuclear localization signal (NLS) in the PH domain was shown to be solely resp
 0107
 We performed GST pull down experiment to confirm the interaction between Vav3 and ERα.
 
-0419
+0004
 A GST fusion protein including the DH and PH domain of Vav3 (GST-Vav3-DH+PH) was generated (Figure 7A). Cell extract derived from MCF7 cells was incubated with immobilized GST-Vav3-DH+PH fusion protein or GST protein.
 
 0419
+A GST fusion protein including the DH and PH domain of Vav3 (GST-Vav3-DH+PH) was generated (Figure 7A).
+
+0004
+We found that GST-Vav3-DH+PH fusion protein, but GST protein, interacted with ERα (Figure 7C).
+
+0419
 In summary, we found that Vav3 contains NLS in the PH domain and three LXXLL motifs in the DH domain. The deletion mutation and functional analysis by luciferase reporter assay showed that the DH domain of Vav3 is essential for enhancing ERα activity and is involved in complex with ERα.
+0004
+(A) GST-Vav3-DH+PH fusion protein. (B) GST-Vav3-DH+PH fusion protein (lane 3 and 4) and control GST protein (lane 1 and 2) were subjected to pull down reaction in the absence (lane 1 and 3) and presence (land 2 and 4) of cell extract derived from MCF7 cells.
 0411
 The knockdown expression of Vav3 compromised both estrogen-stimulated and -independent growth of breast cancer cells.
 0419
-A nuclear localization signal (NLS) in the PH domain is solely responsible for nucleus localization of Vav1 protein, indicating a role of Vav family proteins as a transcription coregulator. We found that Vav3 contains the LXXLL motifs in the DH domain and NLS in the PH domain.
+Vav3 is activated upon ligand stimulation of EGF, insulin, Ros, and IGF receptors and physically associates with a variety of signaling molecules, including Rac1, Cdc42, PI3K, Grb2, and PLC-γ, leading to alteration in cell morphology and cell transformation [33].
+0004
+A nuclear localization signal (NLS) in the PH domain is solely responsible for nucleus localization of Vav1 protein, indicating a role of Vav family proteins as a transcription coregulator.
+
 0419
+A nuclear localization signal (NLS) in the PH domain is solely responsible for nucleus localization of Vav1 protein, indicating a role of Vav family proteins as a transcription coregulator. We found that Vav3 contains the LXXLL motifs in the DH domain and NLS in the PH domain.
+0004
 Our findings support the notion that Vav3 overexpression may play a role in breast cancer, based on the following reasons: 1) Vav3 is overexpressed and correlated with poorly differentiated tumors in human breast cancer; 2) Vav3 contains the LXXLL motifs and complexes with ERα; 3) Vav3 enhances ERα activity partially via the PI3K-Akt pathway; 4) Vav3 is a protein with multiple domains and functions, including the SH2 domain interacting with receptor protein tyrosine kinase, the PH domain binding PIP3 involved in association with the cell membrane, and the DH domain involved in interaction with ERα; 5) Vav3 potentiates EGF for cell growth and ERα activation.
 
-0096
+0419
 Our findings support the notion that Vav3 overexpression may play a role in breast cancer, based on the following reasons: 1) Vav3 is overexpressed and correlated with poorly differentiated tumors in human breast cancer; 2) Vav3 contains the LXXLL motifs and complexes with ERα; 3) Vav3 enhances ERα activity partially via the PI3K-Akt pathway; 4) Vav3 is a protein with multiple domains and functions, including the SH2 domain interacting with receptor protein tyrosine kinase, the PH domain binding PIP3 involved in association with the cell membrane, and the DH domain involved in interaction with ERα; 5) Vav3 potentiates EGF for cell growth and ERα activation.
 0096
 KL generated GST fusion protein for pull down analysis.
-0054
-Although Bcl-XL and Bax are structurally similar, activated Bax forms large oligomers that permeabilize the outer mitochondrial membrane, thereby committing cells to apoptosis, whereas Bcl-XL inhibits this process.
 
+0004
+KL generated GST fusion protein for pull down analysis.
 0426
 Although Bcl-XL and Bax are structurally similar, activated Bax forms large oligomers that permeabilize the outer mitochondrial membrane, thereby committing cells to apoptosis, whereas Bcl-XL inhibits this process.
-0054
-During development and under stress, cells can become committed to die via programmed cell death (apoptosis).
-
 0426
 During development and under stress, cells can become committed to die via programmed cell death (apoptosis).
-0096
-Bcl-XL and Bax are structurally similar members of the Bcl-2 family of cell-death-related proteins, and they compete for binding to membranes, as well as to Bcl-2 family member tBid and activated Bax.
-0096
-Another large subgroup of the Bcl-2 family (BH3-only proteins; e.g., tBid) initiates apoptosis through binding to Bax and/or Bcl-XL. Even though Bcl-XL and Bax are structurally similar, experiments with protein fragments and peptides or full-length protein in the absence of membranes has led to the elaboration of models in which the functional relevance of binding partners for Bcl-XL differ.
-
 0096
 However, there is also considerable overlap between these two competing models: both models recognize that Bcl-XL directly binds to and inhibits a proapoptotic Bcl-2 family protein that is directly involved in membrane permeabilization, while other proapoptotic Bcl-2 family proteins indirectly induce apoptosis by binding to Bcl-XL and preventing this function.
 
 0096
 On the basis of these data and evidence from the literature, we have proposed a model termed “embedded together”, in which interaction of these proteins with each other changes after binding to the membrane as this causes conformational changes that alter and/or expose new binding surfaces [10,11].
-0004
-To eliminate complications from all other known and unknown proteins, metabolites, and post-translational modifications that may contribute additional levels of regulation, we used a cell-free system composed of highly purified full-length recombinant proteins, without N- or C-terminal tags, and as a source of membranes either liposomes with mitochondria-like composition [16] or subcellular fractions containing mitochondria.
 0426
 The large increase in fluorescence that accompanies the release of the fluorophore/quencher pair 8-aminonaphthalene 1,3,6-trisulfonic acid (ANTS)/p-xylene-bis-pyridinium (DPX) from liposomes was used to measure Bax-dependent membrane permeabilization and its inhibition by Bcl-XL [7].
 
@@ -1428,6 +1298,8 @@ Membrane-bound proteins were separated from soluble proteins by Sepharose CL-2B 
 
 0019
 Individual fractions were analyzed by immunoblotting (IB) using Bid, Bax, or Bcl-XL antibodies, as indicated.
+0071
+In incubations of 20 nM tBid and liposomes, tBid bound effectively to liposomes as assayed by gel filtration chromatography (Figure 1B).
 0107
 In the absence of membranes, interaction between Bcl-XL and tBid could not be detected by co-immunoprecipitation (unpublished data).
 0006
@@ -1440,22 +1312,12 @@ Conversely, cytoplasmic Bax may interact with other activator proteins to integr
 0107
 When tested in the absence of tBid, a stable interaction between Bax and Bcl-XL was not detected (Figure 2A, left panel, lane 3), suggesting that Bcl-XL does not sequester Bax in solution.
 
-0054
-However as expected, co-immunoprecipitation of Bcl-XL and Bax was observed in control experiments where membranes were solubilized with the nonionic detergent NP-40, known to induce a conformational change in Bax required for heterodimerization with Bcl-XL that is also seen in cells when apoptosis is induced [20,26].
-
 0426
 However as expected, co-immunoprecipitation of Bcl-XL and Bax was observed in control experiments where membranes were solubilized with the nonionic detergent NP-40, known to induce a conformational change in Bax required for heterodimerization with Bcl-XL that is also seen in cells when apoptosis is induced [20,26].
 0107
 When tested in the presence of tBid (20 nM) and membranes, we did not detect an interaction between Bcl-XL (100 nM) and Bax (100 nM) (Figure 2A, left panel, lane 2).
-0096
-In these incubations, substitution of the wild-type proteins with tBid-mt1, Bcl-XL Y101K, or both showed similar effects to those seen in bak –/– MLM and liposomes (Figure 3C). Thus, in contrast to widely promulgated models for the antiapoptotic mechanism of Bcl-XL, our results with purified proteins in the presence of relevant membrane targets indicate that Bcl-XL binding to Bax and tBid are both functionally relevant, but neither is paramount.
-0096
-Alternatively or in addition, Bcl-XL might directly inhibit Bax binding to membranes. To determine the mechanism(s) involved, we measured Bax liposome binding by gel filtration chromatography for reactions containing the different mutant proteins (Figure 4A).
 0107
 The absence of a stable interaction between tBid-mt1 and Bcl-XL significantly decreased Bcl-XL-mediated inhibition of Bax binding to membranes at all tBid concentrations assayed.
-0054
-At the onset of apoptosis in cells, Bcl-XL binds to membranes [23].
-
 0426
 At the onset of apoptosis in cells, Bcl-XL binds to membranes [23].
 0019
@@ -1463,27 +1325,12 @@ Unlike the conformational change that accompanies tBid-induced insertion of Bax 
 0006
 Conformation-altered Bax was immunoprecipitated using the 6A7 antibody with or without the addition of 2% CHAPS to solubilize the liposomes prior to immunoprecipitation and analyzed by immunoblotting using an α-Bax antibody. The asterisk denotes the light chain of the 6A7 antibody.
 0096
-To determine whether the effect of membrane-bound Bcl-XL on this transient, liposome-induced conformational change in Bax could be regulated, BH3 peptides were used to induce selectively Bcl-XL binding to membranes (Text S1). On the basis of the effects previously published for mutations in BH3 domains of proapoptotic proteins and peptides, we selected two peptides that both caused membrane binding by Bcl-XL (Figure S5A) but differed in their functional effects (Figure S5B).
-0054
-Pioneering experiments to identify relevant binding partners for Bcl-2 and Bcl-XL using immunoprecipitation in transfected cells suggested a lack of correlation between Bax binding and inhibition of apoptosis, as only certain Bcl-XL point mutants that could no longer bind to Bax lost function [40]. Further analysis of two of these Bcl-XL mutants that did not bind to Bax (the F131V/D133A mutant that remained functional and the inactive G138E/R139L/I140N mutant) suggested that prevention of apoptosis required binding to the BH3-only proteins tBid, Bim, and Bad, a function that was specifically lost in the latter mutant [19].
-
+On the basis of the effects previously published for mutations in BH3 domains of proapoptotic proteins and peptides, we selected two peptides that both caused membrane binding by Bcl-XL (Figure S5A) but differed in their functional effects (Figure S5B).
 0426
-Pioneering experiments to identify relevant binding partners for Bcl-2 and Bcl-XL using immunoprecipitation in transfected cells suggested a lack of correlation between Bax binding and inhibition of apoptosis, as only certain Bcl-XL point mutants that could no longer bind to Bax lost function [40].
-
-0096
-Further analysis of two of these Bcl-XL mutants that did not bind to Bax (the F131V/D133A mutant that remained functional and the inactive G138E/R139L/I140N mutant) suggested that prevention of apoptosis required binding to the BH3-only proteins tBid, Bim, and Bad, a function that was specifically lost in the latter mutant [19]. However, as these experiments were conducted on whole cells where Bax was also present, it is possible that the lack of function of this mutant is caused by the loss of binding to both BH3-only proteins (e.g., tBid) and Bax , a result entirely consistent with our observations.
-
-0426
-Conversely, early work with the M97A/D98A Bid mutant that does not bind to Bcl-XL [27,30] that we have used in our study (tBid mt1) indicated that Bcl-XL inhibited the apoptosis caused by this Bid mutant, in cells and in purified mitochondria, implying that the interaction with activated Bax rather than Bid was critical to the antiapoptotic function of Bcl-XL in this context.
+Pioneering experiments to identify relevant binding partners for Bcl-2 and Bcl-XL using immunoprecipitation in transfected cells suggested a lack of correlation between Bax binding and inhibition of apoptosis, as only certain Bcl-XL point mutants that could no longer bind to Bax lost function [40]. Further analysis of two of these Bcl-XL mutants that did not bind to Bax (the F131V/D133A mutant that remained functional and the inactive G138E/R139L/I140N mutant) suggested that prevention of apoptosis required binding to the BH3-only proteins tBid, Bim, and Bad, a function that was specifically lost in the latter mutant [19]. However, as these experiments were conducted on whole cells where Bax was also present, it is possible that the lack of function of this mutant is caused by the loss of binding to both BH3-only proteins (e.g., tBid) and Bax , a result entirely consistent with our observations. Conversely, early work with the M97A/D98A Bid mutant that does not bind to Bcl-XL [27,30] that we have used in our study (tBid mt1) indicated that Bcl-XL inhibited the apoptosis caused by this Bid mutant, in cells and in purified mitochondria, implying that the interaction with activated Bax rather than Bid was critical to the antiapoptotic function of Bcl-XL in this context.
 
 0019
 Conversely, early work with the M97A/D98A Bid mutant that does not bind to Bcl-XL [27,30] that we have used in our study (tBid mt1) indicated that Bcl-XL inhibited the apoptosis caused by this Bid mutant, in cells and in purified mitochondria, implying that the interaction with activated Bax rather than Bid was critical to the antiapoptotic function of Bcl-XL in this context.
-
-0054
-Conversely, early work with the M97A/D98A Bid mutant that does not bind to Bcl-XL [27,30] that we have used in our study (tBid mt1) indicated that Bcl-XL inhibited the apoptosis caused by this Bid mutant, in cells and in purified mitochondria, implying that the interaction with activated Bax rather than Bid was critical to the antiapoptotic function of Bcl-XL in this context.
-0096
-Migration of the cytoplasmic fraction to membranes with insertion occurs during apoptosis [23,43,44] for Bcl-XL as well as other antiapoptotic proteins such as Mcl-1 [44] and Bcl-w [25,45]. For Bcl-w, interaction with a tethered Bim BH3 peptide displaces the C-terminal insertion sequence from the BH3 binding pocket within the protein triggering insertion of the protein into the membrane [25,46].
-
 0081
 We therefore determined whether peptides from the BH3 regions of Bid, Bim, Bad, Bax, and Bak caused insertion of Bcl-XL into liposomes, assayed by flotation on a sucrose gradient (Figure S6). All five peptides caused Bcl-XL to insert into membranes, while a mutant Bid peptide that fails to bind Bcl-XL [2] did not.
 0019
@@ -1492,16 +1339,10 @@ Previous reports using transfected cells have indicated that the removal of the 
 0426
 Consistent with this variability, we have shown previously [37] that the function of ΔTM Bcl-XL compared to that of wild type is heavily dependent on the stimulus used to initiate apoptosis (and therefore possibly the BH3 protein(s) involved).
 
-0054
-However, in certain circumstances in cells ΔTM Bcl-XL may retain at least part of its antiapoptotic function in the cytoplasm depending on the location of relevant binding partners at the onset of apoptosis.
-
 0426
 However, in certain circumstances in cells ΔTM Bcl-XL may retain at least part of its antiapoptotic function in the cytoplasm depending on the location of relevant binding partners at the onset of apoptosis.
 0096
 The liposomes that we used to model physiologic membranes have a high intrinsic curvature and lipid composition that facilitate membrane binding of the recombinant proteins and induction of the 6A7 conformational change in Bax.
-
-0054
-In cells, these feature are likely represented by complex and dynamic physiologic processes such as mitochondrial membrane fission and fusion shown to be important in apoptosis [52–54] and the interaction of mitochondria with other membrane systems [39,52,55]. The major observations reported here were confirmed for cytochrome c release from mitochondria (Figure 3B–D), suggesting that they will be relevant in live cells.
 
 0426
 In cells, these feature are likely represented by complex and dynamic physiologic processes such as mitochondrial membrane fission and fusion shown to be important in apoptosis [52–54] and the interaction of mitochondria with other membrane systems [39,52,55]. The major observations reported here were confirmed for cytochrome c release from mitochondria (Figure 3B–D), suggesting that they will be relevant in live cells. Moreover, the simplicity and power of our in vitro system using recombinant proteins and membranes has allowed us to identify and measure functionally important and potentially “druggable” interactions important for the regulation of apoptosis (Figure 6).
@@ -1509,13 +1350,10 @@ In cells, these feature are likely represented by complex and dynamic physiologi
 Recombinant full-length human Bcl-XL (or Bcl-XL Y101K) with no additional amino acids was expressed in Escherichia coli as a C-terminal intein/chitin-binding domain fusion and purified by affinity chromatography on a chitin column followed by further purification on a phenyl-Sepharose column, similar to a method described previously [7] but with a final dialysis step to remove detergents.
 0663
 Fluorescence (λex = 355 nm and λem = 520 nM) was measured for 30 min at 37 °C in the presence of Bcl-XL but in the absence of Bax and tBid to obtain background values (F0). Bax and tBid (in that order) were added at t = 0, and fluorescence was measured for 2 h at 37 °C.
-0096
-Membrane binding was measured by comparing the intensities of membrane-bound proteins (fractions 3 and 4) with total proteins (fractions 3 and 4 plus fractions 8–11).
-
-0096
-To assess the membrane binding and membrane insertion of Bax and Bcl-XL into mitochondria, purified proteins, added in the order Bcl-XL, Bax, and tBid, were incubated for 1 h at 30 °C with mitochondria (5 mg/ml) from bak –/– mice.
 0081
 The signal peptide is shaded black, and putative O-linked glycosylation sites are indicated by vertical lines.
+0004
+However, OSM-11 and DOS-3 also have a consensus proprotein convertase protease cleavage site and a C-terminal transmembrane domain, suggesting that they may be translated as transmembrane preproproteins prior to proteolytic processing and release of a soluble DOS protein.
 0030
 C901 is a predicted Drosophila protein of unknown function containing a DSL domain and multiple EGF repeats [56]; it is unclear whether C901 is a transmembrane DSL domain protein.
 0411
@@ -1523,14 +1361,8 @@ Loss of lin-12 signaling results in the specification of two ACs, whereas increa
 0411
 In animals harboring this transgene, GFP expression was observed in numerous unidentified cells during embryonic development from the comma stage onward (unpublished data). GFP expression was observed in the VPCs during larval development, as well as various hypodermal cells during larval stages (Figure 4).
 
-0276
-Using polyclonal antisera raised against OSM-11 to stain wild-type animals, we found that OSM-11 was expressed in the VPCs of L3 larvae prior to and during cell fate specification (Figure 4B).
-
 0411
-OSM-11 immunoreactivity was also observed in the seam cells of L1 larvae and adult animals (Figure 4A and 4D). In adult animals, osm-11p::gfp was expressed only in hypodermal seam cells in adult animals; hypodermal seam cell expression in adult animals was also confirmed with staining with OSM-11 antisera (Figure 4D). The larval hypodermal expression pattern of osm-11p::gfp is reminiscent of the osm-7p::gfp expression pattern described previously, but osm-7p::gfp expression in seam cells was not reported [52].
-
-0226
-OSM-11 protein was also expressed in the developing uterus of L4 larvae (Figure 4B) and in the spermatheca (Figure 4D); the LIN-12 Notch receptor plays a developmental role in these tissues as well [64], but only OSM-11 expression in VPCs was characterized further.
+OSM-11 immunoreactivity was also observed in the seam cells of L1 larvae and adult animals (Figure 4A and 4D). In adult animals, osm-11p::gfp was expressed only in hypodermal seam cells in adult animals; hypodermal seam cell expression in adult animals was also confirmed with staining with OSM-11 antisera (Figure 4D). The larval hypodermal expression pattern of osm-11p::gfp is reminiscent of the osm-7p::gfp expression pattern described previously, but osm-7p::gfp expression in seam cells was not reported [52]. OSM-11 protein was also expressed in the developing uterus of L4 larvae (Figure 4B) and in the spermatheca (Figure 4D); the LIN-12 Notch receptor plays a developmental role in these tissues as well [64], but only OSM-11 expression in VPCs was characterized further.
 0411
 (A) OSM-11 expression in seam cells of L1 larvae detected using α-OSM-11 antisera. The seam cells on the right side of an L1 animal are in focus; the seam cells on the left side are visible and slightly out of focus.
 0411
@@ -1542,19 +1374,14 @@ OSM-11 protein was also expressed in the developing uterus of L4 larvae (Figure 
 An osm-11p::gfp reporter gene containing unc-54 3′ UTR sequences is expressed in adult seam cells (left); α-OSM-11 antisera was used to confirm seam cell and spermatheca expression (right).
 0411
 OSM-11 expression in Pn.p cells is consistent with a role for OSM-11 in initial cell fate specification.
+0004
+We found that rearing under osmotic stress conditions (400 mM NaCl) did not alter OSM-11 protein levels in VPCs (unpublished data).
 0030
-Because the predicted peptide sequence of OSM-11 contains a signal peptide, we tested whether OSM-11 is a secreted protein. When an osm-11 cDNA was expressed in Drosophila S2 tissue culture cells, OSM-11 protein accumulates in the media and not in cells (Figure 5A), consistent with OSM-11 acting in vivo as a soluble protein in the extracellular milieu.
-
-0226
 Because the predicted peptide sequence of OSM-11 contains a signal peptide, we tested whether OSM-11 is a secreted protein. When an osm-11 cDNA was expressed in Drosophila S2 tissue culture cells, OSM-11 protein accumulates in the media and not in cells (Figure 5A), consistent with OSM-11 acting in vivo as a soluble protein in the extracellular milieu.
 0411
 (A) Western blot of conditioned media from Drosophila S2 cells containing an OSM-11 cDNA expression construct or empty vector.
-0018
-DSL-1, OSM-11, LAG-2 extracellular domain (LAG-2Ex), EGL-17, or LIN-3 was fused to the GAL4 DNA binding domain (DB); the first six LIN-12 EGF repeats were fused to the GAL4 activation domain (AD). Pairwise interactions were tested with the yeast two-hybrid assay; positive interactions are indicated by blue staining.
 0423
 We found that OSM-11 also interacted with LIN-12 extracellular EGF repeats 1 through 6 (Figure 8); OSM-11 did not interact with DSL-1 or LAG-2 ligands. We also confirmed previous studies [50] in which murine DLK1 EGF repeats 1 and 2 containing the DOS motif interacted specifically with murine Notch1 EGF repeats 12 and 13 in the same two-hybrid assay format (unpublished data).
-0226
-OSM-11 is a secreted protein that is expressed in VPCs during cell fate specification.
 0030
 Dionne, et al., unpublished data), we also found that OSM-11 activates both LIN-12 and germline proliferation defective-1 (GLP-1) in the adult nervous system to regulate behavior.
 
@@ -1607,6 +1434,12 @@ This fragment includes residues 242–372 and thereby spans the entire C-termina
 0889
 This fragment includes residues 242–372 and thereby spans the entire C-terminal CH domain as defined by SMART (Schultz et al., 1998) and a portion of the inter-CH domain linker (Figure 1A).
 
+0114
+The crystal structure of α-parvin-CHC at 1.05 Å resolution was determined by molecular replacement using an ensemble of homologous type-1 CH domain structures as search model.
+
+0114
+The refined structural model includes α-parvin residues 246–372 (molecule A) or 247–372 (molecule B) and represents the first high-resolution crystal structure of a type-5 CH domain (Figure 1B).
+
 0030
 In spite of very low levels of sequence conservation (≤26% identity) compared to canonical type-1 CH domains (see Figure S1 available online), α-parvin-CHC exhibits a typical CH domain core composed of four main α-helices (αA, αC, αE, and αG; nomenclature from Djinovic Carugo et al., 1997), which are connected by loops and shorter helical elements (αD and αF).
 
@@ -1615,9 +1448,6 @@ In spite of very low levels of sequence conservation (≤26% identity) compared 
 
 0114
 However, conformational differences in this region may not be significant, since the C/E-loop structure varies between α-parvin-CHC molecules both in the same and different crystal forms and is involved in crystal packing (data not shown).
-0096
-On the basis of primary sequence comparison with other LD-binding proteins, such as FAK and vinculin, and mutation studies, the LD-binding site (or “paxillin binding subdomain” [PBS]) of α-parvin was mapped to residues 274–291 (Nikolopoulos and Turner, 2000) (i.e., the A/C-loop of α-parvin-CHC) (Figure 1B).
-
 0030
 However, we previously demonstrated that LD-binding to the FAT domain of FAK does not reside in a local peptide sequence such as the PBS (Hoellerer et al., 2003) and thus investigated the interaction of α-parvin-CHC with LD motifs using solution NMR.
 
@@ -1628,6 +1458,9 @@ To confirm this striking result, we built models corresponding to both possible 
 
 0889
 To confirm this striking result, we built models corresponding to both possible orientations for each LD-peptide complex and subjected them to simulated annealing refinement using PHENIX (Afonine et al., 2007).
+0004
+As measured by NMR, none of these substitutions substantially altered the binding affinity for α-parvin-CHC, indicating that the predicted electrostatic contacts are energetically neutral under the assay conditions (50 mM sodium phosphate and 100 mM NaCl [pH 6.9]) used.
+
 0081
 Likewise, comparison of the chemical shift perturbations imposed by oppositely aligned peptides on backbone amide resonances of α-parvin-CHC (Figure 2) is inconclusive. We note that the peptide side-chains contacting the LD-binding site of α-parvin-CHC are similar in either orientation (Figure S4), as is the conformational rearrangement induced by peptide binding, so that the perturbation patterns of either unidirectional binding mode (or a bidirectional mixture) may be indistinguishable.
 0077
@@ -1662,9 +1495,6 @@ Interestingly, γ-parvin was shown to associate with paxillin in vivo (Yoshimi 
 
 0889
 Interestingly, γ-parvin was shown to associate with paxillin in vivo (Yoshimi et al., 2006). Available experiments with β-parvin, however, have proved negative to date (Yamaji et al., 2004), although this protein is more similar in sequence to α-parvin than is γ-parvin (Figure 1C).
-
-0004
-Members of the paxillin and parvin families are differentially expressed in human tissues (http://www.hprd.org), and it is possible that they may form tissue-specific complexes.
 0030
 The structure of α-parvin-CHC is topologically distinct from other LD-binding domains, such as the FAT domain of FAK; it associates with a single LD motif across three oblique helices, whereas FAT accommodates two LD motifs in parallel fashion on opposite sites of its 4-helical bundle (Hoellerer et al., 2003).
 
@@ -1674,10 +1504,10 @@ The structure of α-parvin-CHC is topologically distinct from other LD-binding d
 0889
 The structure of α-parvin-CHC is topologically distinct from other LD-binding domains, such as the FAT domain of FAK; it associates with a single LD motif across three oblique helices, whereas FAT accommodates two LD motifs in parallel fashion on opposite sites of its 4-helical bundle (Hoellerer et al., 2003).
 
-0096
-In both cases, LD motifs adopt an α-helical conformation when bound, which allows the conserved leucine residues on one face of the helix to interact with the hydrophobic binding site. Notably, the role of electrostatic contacts in LD recognition might differ between the two proteins: while substitutions of the conserved aspartates (D+1) of LD2 and LD4 to alanine were found to abolish the interaction of N-terminal paxillin fragments with FAT (Brown et al., 1996; Scheswohl et al., 2008; Thomas et al., 1999), our study and others (Wang et al., 2008) show that the equivalent substitutions in the isolated LD1 peptides do not significantly perturb α-parvin-CHC binding in vitro.
-
 0030
+Notably, the role of electrostatic contacts in LD recognition might differ between the two proteins: while substitutions of the conserved aspartates (D+1) of LD2 and LD4 to alanine were found to abolish the interaction of N-terminal paxillin fragments with FAT (Brown et al., 1996; Scheswohl et al., 2008; Thomas et al., 1999), our study and others (Wang et al., 2008) show that the equivalent substitutions in the isolated LD1 peptides do not significantly perturb α-parvin-CHC binding in vitro.
+
+0096
 Notably, the role of electrostatic contacts in LD recognition might differ between the two proteins: while substitutions of the conserved aspartates (D+1) of LD2 and LD4 to alanine were found to abolish the interaction of N-terminal paxillin fragments with FAT (Brown et al., 1996; Scheswohl et al., 2008; Thomas et al., 1999), our study and others (Wang et al., 2008) show that the equivalent substitutions in the isolated LD1 peptides do not significantly perturb α-parvin-CHC binding in vitro.
 
 0107
@@ -1734,31 +1564,42 @@ On the basis of gel filtration experiments with the N-terminal CH domain of α-p
 0107
 Taken together, we have presented a comprehensive structural characterization of the interaction between paxillin LD motifs and α-parvin, which has revealed a surprising degree of promiscuity, both in terms of LD motif selectivity and binding directionality.
 0004
-Full-length α-parvin and α-parvin-CHC were expressed as GST-fusions in Escherichia coli BL21 at 20°C overnight in LB medium.
+α-parvin-CHC was purified as follows: cleared cell lysate (in 75 mM Tris [pH 8.0], 200 mM NaCl, 5 mM β-mercaptoethanol, 0.4% Triton X-100, 2 mM EDTA, 5 mM benzamidine, and protease inhibitor cocktail [Roche]) was applied to glutathione sepharose 4B (GE Healthcare) in binding buffer (20 mM Tris [pH 8.0], 150 mM NaCl, and 2 mM DTT) washed with 20 mM Tris (pH 8.0), 1 M NaCl, 2 mM DTT, 2 mM EDTA, and 5 mM benzamidine, and was eluted with 50 mM glutathione in binding buffer (pH 8.0). After cleavage with recombinant human rhinovirus 3C-protease, the sample was subjected to size exclusion chromatography (Superdex 75, GE Healthcare) in 25 mM Tris (pH 8.0), 150 mM NaCl, 2 mM DTT, and 2 mM EDTA.
 
-0276
-α-parvin-CHC was purified as follows: cleared cell lysate (in 75 mM Tris [pH 8.0], 200 mM NaCl, 5 mM β-mercaptoethanol, 0.4% Triton X-100, 2 mM EDTA, 5 mM benzamidine, and protease inhibitor cocktail [Roche]) was applied to glutathione sepharose 4B (GE Healthcare) in binding buffer (20 mM Tris [pH 8.0], 150 mM NaCl, and 2 mM DTT) washed with 20 mM Tris (pH 8.0), 1 M NaCl, 2 mM DTT, 2 mM EDTA, and 5 mM benzamidine, and was eluted with 50 mM glutathione in binding buffer (pH 8.0).
+0071
+After cleavage with recombinant human rhinovirus 3C-protease, the sample was subjected to size exclusion chromatography (Superdex 75, GE Healthcare) in 25 mM Tris (pH 8.0), 150 mM NaCl, 2 mM DTT, and 2 mM EDTA.
+0004
+To purify full-length α-parvin, cleared cell lysate in 200 mM potassium phosphate (pH 8.0), 10 mM NaCl, 5 mM β-mercaptoethanol, 0.4% Triton X-100, 5 mM benzamidine, 2 mM EDTA, and protease inhibitor cocktail (Roche) was applied to glutathione sepharose 4B (GE Healthcare), washed with 200 mM potassium phosphate, 10 mM NaCl, and 4 mM DTT, and α−parvin was released by cleavage with recombinant human rhinovirus 3C-protease at 4°C over night. After elution with 200 mM potassium phosphate, 10 mM NaCl, 4 mM DTT, and 2.5% glycerol, the protein was dialyzed into 25 mM potassium phosphate (pH 8.0), 1.5 mM NaCl, 2 mM DTT, and 2.5% (v/v) glycerol for subsequent anion exchange chromatography (MonoQ, GE Healthcare) and gradient elution with 250 mM potassium phosphate (pH 8.0), 15 mM NaCl, 250 mM KCl, 2 mM DTT, and 2.5% glycerol.
+0053
+For fluorescence anisotropy studies, LD1 with 5-carboxyfluorescein (5-FAM) attached to the ɛ-amino group of the C-terminal lysine was used.
+0004
+α-parvin-CHC was crystallized using sitting drop vapor diffusion by mixing 1 μl of protein (7 mg/ml in 25 mM Tris (pH 8.0), 150 mM NaCl, 2 mM DTT, and 2 mM EDTA) with 1 μl of reservoir solution (12% [w/v] PEG 8000, 35% [v/v] MPD, and 0.1 M HEPES [pH 7.5]) at 4°C.
+0004
+Plate-like α-parvin-CHC/LD1 cocrystals were obtained from 8 mg/ml protein in the presence of a 2-fold molar excess of LD1 peptide in 2 μl sitting drops containing buffer 28 (20% [w/v] PEG 10000 and 0.1 M HEPES [pH 7.5]) of Structure Screen 2 (Molecular Dimensions) at 13°C and were flash-frozen in mother liquor including 35% (v/v) glycerol.
+0004
+Rod-shaped α-parvin-CHC/LD2 cocrystals were grown from 9 mg/ml protein in the presence of a 2-fold molar excess of LD2 peptide in sitting drops containing 40% (w/v) PEG 200 and 0.1 M citrate (pH 4.5) at 13°C and were flash-frozen in mother liquor. Rod-shaped α-parvin-CHC/LD4 cocrystals were grown under similar conditions (40% [w/v] PEG 300 and 0.1 M citrate [pH 5.2]).
+0030
+Manual model building was performed with COOT (Emsley and Cowtan, 2004), and refinement was performed with REFMAC5 (Murshudov et al., 1997); occupancies of alternate conformers were refined with PHENIX (Afonine et al., 2007).
+
+0889
+Manual model building was performed with COOT (Emsley and Cowtan, 2004), and refinement was performed with REFMAC5 (Murshudov et al., 1997); occupancies of alternate conformers were refined with PHENIX (Afonine et al., 2007).
+0030
+Data were recorded on home-built or Bruker spectrometers with 11.7, 14.1, 17.6, and 22.3 T field strengths and processed with NMRPipe (Delaglio et al., 1995).
+
+0889
+Data were recorded on home-built or Bruker spectrometers with 11.7, 14.1, 17.6, and 22.3 T field strengths and processed with NMRPipe (Delaglio et al., 1995).
 
 0004
-After cleavage with recombinant human rhinovirus 3C-protease, the sample was subjected to size exclusion chromatography (Superdex 75, GE Healthcare) in 25 mM Tris (pH 8.0), 150 mM NaCl, 2 mM DTT, and 2 mM EDTA.
-0276
-To purify full-length α-parvin, cleared cell lysate in 200 mM potassium phosphate (pH 8.0), 10 mM NaCl, 5 mM β-mercaptoethanol, 0.4% Triton X-100, 5 mM benzamidine, 2 mM EDTA, and protease inhibitor cocktail (Roche) was applied to glutathione sepharose 4B (GE Healthcare), washed with 200 mM potassium phosphate, 10 mM NaCl, and 4 mM DTT, and α−parvin was released by cleavage with recombinant human rhinovirus 3C-protease at 4°C over night.
-0030
-Manual model building was performed with COOT (Emsley and Cowtan, 2004), and refinement was performed with REFMAC5 (Murshudov et al., 1997); occupancies of alternate conformers were refined with PHENIX (Afonine et al., 2007).
-
-0889
-Manual model building was performed with COOT (Emsley and Cowtan, 2004), and refinement was performed with REFMAC5 (Murshudov et al., 1997); occupancies of alternate conformers were refined with PHENIX (Afonine et al., 2007).
-0030
-Data were recorded on home-built or Bruker spectrometers with 11.7, 14.1, 17.6, and 22.3 T field strengths and processed with NMRPipe (Delaglio et al., 1995).
-
-0889
-Data were recorded on home-built or Bruker spectrometers with 11.7, 14.1, 17.6, and 22.3 T field strengths and processed with NMRPipe (Delaglio et al., 1995).
+Peptide titration experiments were performed by mixing two stock solutions (in 50 mM sodium phosphate, 100 mM NaCl, 2 mM DTT, 5% D2O, and 30 μM DSS [pH 6.9]) containing 235 μM 15N-enriched α-parvin-CHC and either no or a maximum concentration of LD peptide at the required protein/ligand ratios (Figure S2).
 
 0030
 Phase-sensitive gradient-enhanced 1H-15N HSQC spectra (Kay et al., 1992) were recorded at 25°C.
 
 0889
 Phase-sensitive gradient-enhanced 1H-15N HSQC spectra (Kay et al., 1992) were recorded at 25°C.
+0004
+For PRE measurements, 1H-15N HSQC experiments were recorded on 230 μM 15N-enriched α-parvin-CHC in the presence of 250 μM PROXYL-labeled LD1 peptide in 50 mM sodium phosphate and 100 mM NaCl (pH 6.9) in the absence and presence of 5 mM ascorbate at 25°C.
+
 0030
 For the simulation of PRE effects in both unidirectional binding modes, the crystal structures of α-parvin-CHC bound to LD1 and LD4 were protonated with the program PDB 2PQR (Dolinsky et al., 2004).
 
@@ -1770,6 +1611,8 @@ The resulting values were used as approximation of the distances, r, of the unpa
 
 0889
 The resulting values were used as approximation of the distances, r, of the unpaired electron of the PROXYL moiety to the backbone amide protons and to derive residue-specific PRE-values, I/I0, according to (Jain et al., 2001; Johnson et al., 1999) (for details, see Figure S5).
+0004
+Titrations were performed by mixing two stock solutions containing 50 nM 5-FAM-labeled LD1 peptide and either no or 300 μM protein in 100 mM potassium phosphate and 2 mM DTT (pH 8.0).
 0030
 (A) Schematic of the domain structure of α-parvin according to SMART (Schultz et al., 1998) and the crystallized fragment α-parvin-CHC.
 
@@ -1805,23 +1648,17 @@ For Rpb3 immunoprecipitation, antibody (1Y26, NeoClone) was preincubated with pr
 
 0019
 The signal for each specific gene primer in the immunoprecipitation was then divided by this ratio to convert the signal to normalized units. This value was divided by the immunoprecipitation signal of the non-transcribed control product to determine the fold enrichment of the ChIP over background signals.
-0276
-Proteins bound to the immobilized templates were analysed by SDS–PAGE and detected by western blot using Pierce ECL kits.
-0276
-Beads were washed five times with buffer E and loaded onto SDS–PAGE gels together with 50 mg of input material.
+0004
+Dynabeads M-280 Streptavidin (Dynal) were concentrated with a magnetic particle concentrator (MPC) (Dynal) and washed twice in Buffer T (10 mM Tris (pH 7.5), 1 mM EDTA, 1 M NaCl).
+0004
+The supernatant was then removed and incubated with protein G-sepharose (Amersham) overnight at 4°C with anti-Rpb3 antibody in buffer E (20 mM HEPES (pH 8), 350 mM NaCl, 10% glycerol, 0.1% Tween 20).
 0019
 The abnormal cross-linking of basal transcription factors in ctk1Δ cells is confirmed by independent immunoprecipitation of TAP-tagged TFIIF subunits.
 
 0019
 IgG agarose was used for immunoprecipitation of TAP-tagged proteins.
-0054
-Cells with kin28-T17D (YSB592) or srb10-D290A (YF243) alleles were grown at 30°C and prepared for ChIP analysis.
-
 0019
 Protein A- or protein G-sepharose was used for TBP or Rpb3 immunoprecipitation and rabbit IgG agarose was used for RNA14–TAP pull-down.
-
-0054
-Cells were grown at 22°C, shifted to 37°C (non-permissive temperature) for 4 h as indicated, and prepared for ChIP analysis. (E) The Ctk1-deficient strain (YSB854) was transformed with either of the plasmids YCplac22 (empty vector), YCplac22-CTK1HA (T338A), YCplac22-CTK1-DN, or pRS316-CTK1 and used for ChIP analysis.
 0412
 (D) Efficiency of scaffold formation was measured by quantitation of band intensities from lane 3 or 7 in WT and ctk1Δ cells (ImageJ v1.32).
 

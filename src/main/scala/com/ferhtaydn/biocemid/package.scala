@@ -123,15 +123,14 @@ package object biocemid {
   }
 
   // gold_set_13, gold_set_17 and gold_set_30 files contains the articles from $manualAnnotationStatistics
-  val goldResultDirectory = "files/gold_set_30"
+  val goldResultDirectory = "files/gold_set_13"
   val publishedDataSet = "files/published_dataset"
 
-  val word2vecResultDirectory = "files/results/word2vec/pure-baseline/config_3b_30_articles"
-  val tfrfResultDirectory = "files/results/tfrf/pure-baseline/manual/config_1_13_articles"
-  val baselineResultDirectory = "files/results/baseline/baseline_30_articles"
-  val pureBaselineResultDirectory = "files/results/pure-baseline/pure-baseline_30_articles"
+  val word2vecResultDirectory = "files/results/word2vec/pure-baseline/config_3b_13_articles_genia0_ino1"
+  val tfrfResultDirectory = "files/results/tfrf/pure-baseline/manual/config_1_17_articles"
+  val pureBaselineResultDirectory = "files/results/pure-baseline/pure-baseline_17_articles_genia0_ino1"
 
-  val rawDirectory = "files/manual_annotation_raw_30"
+  val rawDirectory = "files/manual_annotation_raw_13"
 
   val oaWord2vecsDirectory = "files/oa_word2vecs"
   val oaWord2vecsPureBaselineDirectory = "files/oa_word2vecs_pure_baseline"

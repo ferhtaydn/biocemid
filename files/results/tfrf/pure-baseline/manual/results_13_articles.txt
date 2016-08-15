@@ -1,9 +1,0 @@
-config.1: (MAIN CONFIG)
-    - -1 +1 before after sentences
-	- threshold 1.0 and 0.5
-	- results:
-	    TN -> 393.0, FN -> 102.59213322100746, TP -> 87.88424899599308, FP -> 173.52361778299945
-        accuracy: 0.6352499986737029
-        precision: 0.33619588453432003
-        recall: 0.4613918427738238
-        fscore: 0.38896796775393855

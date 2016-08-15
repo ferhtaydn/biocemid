@@ -4,16 +4,150 @@
 - ino0: uses the files/ino/interaction_keywords.txt
 - > mainThreshold: dedupe enhanced rule. Terms whose weight more than mainThreshold used as synonym.
 
-config_3b_13_articles:
+---------------------------------------------------------------------
+*********************************************************************
+---------------------------------------------------------------------
+config_2a:
+  - pure-baseline, oa_word2vecs_pure_baseline
+  - dedupe enhanced
+  - before, after: 0
+  - mainThreshold: 1.0
+  - smallThreshold: 0.5
+
+  TN -> 407.0, FN -> 119.27914404313259, TP -> 58.623034816910085, FP -> 136.09782113995732
+  accuracy: 0.6458017126448129
+  precision: 0.30106192030038975
+  recall: 0.3295239844309573
+  fscore: 0.3146506218850091
+
+---------------------------------------------------------------------
+* CHOOSE BEFORE AFTER 1
+config_2b:
+  - pure-baseline, oa_word2vecs_pure_baseline
+  - dedupe enhanced
+  - before, after: 1
+  - mainThreshold: 1.0
+  - smallThreshold: 0.5
+
+  TN -> 407.0, FN -> 115.9275613094365, TP -> 61.72891843450224, FP -> 135.34352025606125
+  accuracy: 0.6510123867145865
+  precision: 0.3132295862610545
+  recall: 0.34746224018101596
+  fscore: 0.3294590590573364
+
+---------------------------------------------------------------------
+config_2c:
+  - pure-baseline, oa_word2vecs_pure_baseline
+  - dedupe enhanced
+  - before, after: 2
+  - mainThreshold: 1.0
+  - smallThreshold: 0.5
+
+  TN -> 407.0, FN -> 114.66865394601606, TP -> 62.987825797922675, FP -> 142.34352025606125
+  accuracy: 0.6464756888554645
+  precision: 0.30676186080893103
+  recall: 0.3545484290171053
+  fscore: 0.3289286058463758
+
+---------------------------------------------------------------------
+*********************************************************************
+---------------------------------------------------------------------
+config_3a:
+  - pure-baseline, oa_word2vecs_pure_baseline
+  - dedupe enhanced
+  - before, after: 1
+  - mainThreshold: 0.9
+  - smallThreshold: 0.6
+
+  TN -> 398.0, FN -> 96.18648971994477, TP -> 81.46999002399397, FP -> 157.34352025606125
+  accuracy: 0.6541200409604284
+  precision: 0.34114481181761697
+  recall: 0.4585815847607638
+  fscore: 0.39124062705838786
+
+---------------------------------------------------------------------
+* CHOOSE MAIN THRESHOLD 0.90
+* CHOOSE SMALL THRESHOLD 0.65
+config_3b: BEST CONFIG
   - pure-baseline, oa_word2vecs_pure_baseline
   - dedupe enhanced
   - before, after: 1
   - mainThreshold: 0.9
   - smallThreshold: 0.65
 
-  default: dedupe_enhanced:
-  TN -> 393.0, FN -> 106.43512254278697, TP -> 87.22135720115179, FP -> 148.34352025606125
-  accuracy: 0.6533623907498665
-  precision: 0.3702646937126452
-  recall: 0.45039214446363873
-  fscore: 0.40641666933770987
+  default:
+  TN -> 398.0, FN -> 96.18648971994477, TP -> 81.46999002399397, FP -> 157.34352025606125
+  accuracy: 0.6541200409604284
+  precision: 0.34114481181761697
+  recall: 0.4585815847607638
+  fscore: 0.39124062705838786
+
+  default + genia0 + ino1:
+  TN -> 409.0, FN -> 103.09815498187542, TP -> 74.55832476206332, FP -> 140.34352025606125
+  accuracy: 0.6651421248446538
+  precision: 0.3469412966453367
+  recall: 0.41967692295561815
+  fscore: 0.3798585843632509
+
+---------------------------------------------------------------------
+config_3c:
+  - pure-baseline, oa_word2vecs_pure_baseline
+  - dedupe enhanced
+  - before, after: 1
+  - mainThreshold: 0.9
+  - smallThreshold: 0.7
+
+  TN -> 398.0, FN -> 96.46868150076669, TP -> 81.18779824317204, FP -> 157.34352025606125
+  accuracy: 0.6537350589947777
+  precision: 0.34036536063264583
+  recall: 0.4569931722174743
+  fscore: 0.3901498246026679
+
+---------------------------------------------------------------------
+config_3d:
+  - pure-baseline, oa_word2vecs_pure_baseline
+  - dedupe enhanced
+  - before, after: 1
+  - mainThreshold: 0.9
+  - smallThreshold: 0.75
+
+  TN -> 398.0, FN -> 97.24970532779848, TP -> 80.41867917804501, FP -> 157.3316154941565
+  accuracy: 0.6526857833261187
+  precision: 0.3382484942402379
+  recall: 0.4526335926434905
+  fscore: 0.3871692979100645
+
+---------------------------------------------------------------------
+*********************************************************************
+---------------------------------------------------------------------
+config_4a:
+  - pure-baseline, oa_word2vecs_pure_baseline
+  - dedupe enhanced
+  - before, after: 1
+  - mainThreshold: 0.875
+  - smallThreshold: 0.65
+
+  TN -> 396.0, FN -> 95.76461896311022, TP -> 81.89186078082851, FP -> 167.34352025606125
+  accuracy: 0.6449282871536147
+  precision: 0.32857237379434323
+  recall: 0.46095622799045405
+  fscore: 0.38366559920369525
+
+
+---------------------------------------------------------------------
+config_4b:
+  - pure-baseline, oa_word2vecs_pure_baseline
+  - dedupe enhanced
+  - before, after: 1
+  - mainThreshold: 0.85
+  - smallThreshold: 0.65
+
+  TN -> 390.0, FN -> 97.36833796260063, TP -> 80.2881417813381, FP -> 180.34352025606125
+  accuracy: 0.6287274622745161
+  precision: 0.308052142067901
+  recall: 0.4519291494296163
+  fscore: 0.36637149914675926
+
+---------------------------------------------------------------------
+*********************************************************************
+---------------------------------------------------------------------

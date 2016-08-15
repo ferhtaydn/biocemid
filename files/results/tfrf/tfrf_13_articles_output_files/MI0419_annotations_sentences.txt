@@ -1,5 +1,3 @@
-In addition, we found that Cdk5 is involved in BDNF-induced activation of Rho GTPase Cdc42, which is essential for BDNF-triggered dendritic growth.
-Our observations therefore reveal an unanticipated role of Cdk5 in TrkB-mediated regulation of dendritic growth through modulation of BDNF-induced Cdc42 activation.
 Rho GTPases, including RhoA, Rac1, and Cdc42, are key regulators of actin cytoskeleton dynamics.
 Since BDNF stimulation has been observed to activate Rac1 and Cdc42 in neurons [15], we were interested to delineate if Rho GTPases contribute to BDNF-stimulated dendritic growth.
 To investigate if Rho GTPases are involved, and to identify the Rho GTPase(s) implicated, hippocampal neurons were transfected with WT or DN Rac1, Cdc42, or RhoA.
@@ -8,12 +6,7 @@ On the other hand, while overexpression of DN RhoA slightly enhanced primary den
 Remarkably, in contrast to the inhibition of BDNF-stimulated dendritic growth in cells overexpressing WT Rac1 and RhoA, BDNF stimulation of hippocampal neurons overexpressing WT Cdc42 resulted in an increase in primary dendrites, which was nearly abolished by overexpression of DN Cdc42 (Figure 6A).
 Our observations therefore suggest that while Rac1 and RhoA may also modulate BDNF-stimulated dendritic growth, it is the activation of Cdc42 following BDNF stimulation that most likely mediates the increase in primary dendrites by BDNF.
 In the current study, we demonstrated that Ser478 phosphorylation of TrkB by Cdk5 is essential for the Cdc42-dependent increase in primary dendrites triggered by BDNF, thus adding a new regulatory component to the mechanisms involved in Rho GTPase activation by neurotrophin.
-Although the precise downstream pathways by which this phosphorylation affects Cdc42 activation remains to be determined, our observations provide some interesting insights.
-GTPase activity was measured as described [38].
-Briefly, cultured cortical neurons at DIV7 were pretreated with DMSO or Ros for 30 min, followed by treatment with BDNF for another 5 min.
-Cells were lysed at 4 °C and incubated with Pak1-PBD agarose with constant rocking at 4 °C for 1 h.
-The proteins bound to the beads were washed three times with lysis buffer at 4 °C, eluted in SDS sample buffer, and analyzed for bound Cdc42 by Western blotting using monoclonal antibody against Cdc42 (Upstate Biotechnology).
-GTPase activity was quantified by densitometry analysis of the blots.Interestingly, APPL1 would bind to Rab21 in a GTP-dependent manner (Figure 4), indicating that APPL1 is an effector for both Rab5 and Rab21.
+Although the precise downstream pathways by which this phosphorylation affects Cdc42 activation remains to be determined, our observations provide some interesting insights.Interestingly, APPL1 would bind to Rab21 in a GTP-dependent manner (Figure 4), indicating that APPL1 is an effector for both Rab5 and Rab21.
 GTPase binding has emerged as a major function of PH domains in addition to lipid binding (Lemmon, 2004).
 For example, PH domains in some guanine nucleotide-exchange factors (GEF) have been shown to bind directly to their cognate small GTPases (Rossman et al, 2002, 2003; Lu et al, 2004), and our data now show direct interaction between the APPL1 PH domain and Rab5.
 So far, only two crystal structures of small GTPase−PH domain complexes are available.

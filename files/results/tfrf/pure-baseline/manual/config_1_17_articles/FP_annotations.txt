@@ -1,3 +1,8 @@
+0018
+Directional cloning into pACT2 was achieved via an XhoI site addition to the oligo-dT primer (3′) and an EcoRI adapter at the cDNA 5′-terminus. The cDNA library (1.25 × 106 clones) was colony amplified in Escherichia coli, plasmid DNA purified by CsCl2-gradient centrifugation and used for yeast transformation (strain AH109).
+
+0018
+Positive clones (223) were isolated and cDNA inserts in pACT2 were subjected to N-terminal sequence analysis. The specificity of each protein interaction was confirmed by retransformation of sequence-verified cDNA clones (ATH1, BHL3 or BHL9) into yeast strains providing the MEINOXSTM or MEINOXBP1 bait constructs in pGDKT7.
 0809
 Verified cDNA inserts were either directly transferred into appropriate secondary vectors for bimolecular fluorescence complementation (BiFC), co-immunoprecipitation or transgenic experiments and served as templates in second-round PCR-amplification to remove the stop codon or to adjust open reading frames (ORFs) for translational fusions.
 
@@ -5,11 +10,6 @@ Verified cDNA inserts were either directly transferred into appropriate secondar
 Verified cDNA inserts were either directly transferred into appropriate secondary vectors for bimolecular fluorescence complementation (BiFC), co-immunoprecipitation or transgenic experiments and served as templates in second-round PCR-amplification to remove the stop codon or to adjust open reading frames (ORFs) for translational fusions.
 0663
 Aliquots (10 µl) of DNA-coated tungsten were spotted on macro carriers and used to transform leek epidermal cells at 1100 psi rupture disc bursting pressure using a Biolistic PDS-1000-He apparatus (BioRad) The bombarded tissue was kept in Petri dishes on damp filter paper for 12–16 h in the dark and YFP or GFP fluorescence was visualized using a LEICA MZFLIII stereomicroscope.
-0007
-Eluted protein samples were split (1/3 and 2/3), size-fractionated in parallel on two polyacrylamide SDS-gels (concentration adjusted to protein size), electroblotted onto Immobilon-P membrane (Millipore) and subjected to antibody detection. HA-tagged (1/3 aliquot) partner proteins were identified using an anti-HA horseradish peroxidase (HRP)-conjugated antibody (clone 3F10; Roche 2012819). The co-precipitated 6× his-tagged STM protein was visualized by a primary penta-His mouse antibody [α-(H)5; Qiagen 34660] and secondary HRP-coupled goat anti-mouse IGG (Dianova 115-035-062).
-
-0276
-Epidermal proteins after bombardement of leek epidermal cells were isolated in 50 mM Tris–HCl, pH 8.0, 150 mM NaCl, 1% Triton and size-fractionated by SDS–PAGE.
 0663
 As a potential transcription factor, STM was expected to direct GFP fluorescence into the plant cell nucleus.
 0663
@@ -60,16 +60,26 @@ The demonstration that the gE-gI/Fc structure is compatible with antibody bipola
 
 0019
 The demonstration that the gE-gI/Fc structure is compatible with antibody bipolar bridging (Figure 5) raises the possibility that anti-HSV IgG/HSV antigen complexes interacting with gE-gI on the surface of infected cells are endocytosed by gE-gI and degraded in the lysosomes after dissociation at acidic pH, resulting in destruction of antiviral antibodies and removal of viral antigens from the cell surface.
-0004
+0071
 Insect cell supernatants containing secreted CgE were buffer-exchanged into nickel-binding buffer (40 mM Tris [pH 8], 300 mM NaCl, 10 mM imidazole) and passed over a Ni-NTA agarose column (Qiagen, Valencia, California, United States). Bound protein was eluted in buffer containing 40 mM Tris (pH 8), 300 mM NaCl, and 250 mM imidazole, and further purified by size-exclusion chromatography on a Superdex 75 HiLoad 16/60 column (GE Healthcare, Piscataway, New Jersey, United States) that was equilibrated in 10 mM HEPES (pH 7.6) and 150 mM NaCl.
-0004
-Various forms of gE and the gE-gI heterodimer were subcloned, expressed, and purified from baculovirus-infected insect cell supernatants by nickel affinity and/or IgG affinity and gel-filtration chromatography as described previously [12]. Two recombinant forms of the Fc fragment of IgG1, wtFc and heterodimeric Fc, which contain two and one gE-gI binding sites, respectively, were also produced in CHO cells and purified as described previously [12].
 0114
 The Research Collaboratory for Structural Bioinformatics Protein Data Bank accession numbers (http://www.rcsb.org/pdb) are 2GIY for the CgE structure and 2GJ7 for the gE-gI/Fc complex structure.
 0114
-(C) Stereo superposition of the crystallographically determined CgE/Fc complex and the complex predicted with RosettaDock [34] using the structures of CgE and Fc. A half complex (one CgE and one chain of the Fc dimer) is shown with Fc in green, the CgE as positioned in the crystal structure in blue, and the CgE as positioned by the docking prediction in pink.
-0114
 (C) Secondary structure of HSV-1 CgE (residues 213–390) mapped on the amino acid sequence. Elements of secondary structure are shown above the sequence with color-coding as inFigure 2A and2B, and the three CDR loops (as defined in Ig V domain structures) are red.
+0114
+NMR spectroscopy and X-ray crystallography provide complementary tools to study protein structure. X-ray crystallography is better suited to elucidate the structures of large proteins and accurately define interfaces of protein complexes, but requires crystallization, which can yield artifacts due to crystal packing.
+
+0077
+NMR spectroscopy and X-ray crystallography provide complementary tools to study protein structure.
+
+0077
+NMR spectroscopy can be performed in solution, and low-resolution information on the conformational and aggregation states of proteins can be quickly obtained even for large species using heteronuclear NMR experiments such as1H-15N heteronuclear single quantum coherence (HSQC).
+
+0114
+In this study, we took advantage of the strengths of both techniques, using NMR spectroscopy to optimize protein complexes for crystallization and to obtain structural information in solution that was later employed to interpret the high-resolution structures of these complexes elucidated by X-ray crystallography.
+
+0077
+In this study, we took advantage of the strengths of both techniques, using NMR spectroscopy to optimize protein complexes for crystallization and to obtain structural information in solution that was later employed to interpret the high-resolution structures of these complexes elucidated by X-ray crystallography.
 0114
 Correspondingly, initial screens yielded no crystals for Munc13–13–150 and Munc13–13–209, and extensive screens with Munc13–13–132 only led to needle-like crystal clusters that were not suitable for structure determination (Figure S1).
 
@@ -97,8 +107,11 @@ Altogether, these observations suggest that combining the strengths of NMR spect
 
 0077
 Altogether, these observations suggest that combining the strengths of NMR spectroscopy in fragment optimization and analysis of protein–protein interactions in solution with the high accuracy of structure determination by X-ray crystallography for biomolecules of any size will be particularly useful to study complex protein networks.
-0004
-Unlabeled and isotopically labeled proteins were expressed in bacteria as GST fusions as described [20]. The fusion proteins were isolated on glutathione-Sepharose beads (Amersham Biosciences, Little Chalfont, United Kingdom), cleaved from the GST moiety, and further purified by size-exclusion or ion-exchange chromatography.
+0065
+ITC experiments were performed using a VP-ITC system (MicroCal, Northampton, Massachusetts, United States) at 20 °C in a buffer composed of 30 mM Tris (pH 7.4), 150 mM NaCl, and 1 mM TCEP.
+
+0065
+Data were fit with a non-linear least-squares routine using a single-site binding model with Origin for ITC v.5.0 (Microcal), varying the stoichiometry(n), the enthalpy of the reaction (ΔH) and the association constant (Ka).
 0071
 (B) Gel filtration analysis of Munc13–13–150 (black), RIM2α82–142 (blue), and the complex between them (red).
 0071
@@ -109,6 +122,9 @@ Unlabeled and isotopically labeled proteins were expressed in bacteria as GST fu
 1 B) and endogenous integrins that were immunoprecipitated with antibodies against α1, α2, α5, α6, and β1 subunits (Fig.
 0027
 In the lighter fractions (3–5), GFP-Rab21 and integrin were found to cosediment with the Golgi-marker GM130, whereas in the denser fractions, cosedimentation was observed with the ER marker P115 (fractions 6–8) and EEA1 (fractions 7–9; Fig.
+0040
+Further characterization of the large intracellular structures induced by GFP-Rab21 overexpression was performed by electron microscopy and immunogold labeling of GFP (Fig.
+
 0663
 Further characterization of the large intracellular structures induced by GFP-Rab21 overexpression was performed by electron microscopy and immunogold labeling of GFP (Fig.
 0663
@@ -133,12 +149,17 @@ Antibodies against the following antigens were used: EEA1, Rab5A, Rab7, Rab11, c
 
 0019
 Antibodies against the following antigens were used: EEA1, Rab5A, Rab7, Rab11, caveolin-1 (all from Santa Cruz Biotechnology, Inc.), Rab21 (Opdam et al., 2000), β1-integrin (P5D2, P4G11, and AIIB2), α5-integrin (BIIG2), EGFR (151-IgG; all from the Drosophila Studies Hybridoma Bank), α2 (mAb MCA2025; Serotec), pAb AB1934 (Chemicon), α1 (MAB1973; Chemicon), α6 (MAB699; Chemicon), β1 (HUTS-21 [BD Biosciences] and MAB2252 [Chemicon]), collagen type 1 (RAHC11; Imtek), GFP polyclonal antibody, fluorescently conjugated secondary antibodies, Cell Tracker dyes, and labeled transferrin (all from Invitrogen).
+0019
+Postcentrifugation supernatant was precleared with BSA-blocked (IP buffer) protein G–agarose beads and divided into five aliquots for immunoprecipitations with different anti-Rab antibodies or a control antibody and protein G beads (90-min rotation at 4°C).
+
 0006
 Postcentrifugation supernatant was precleared with BSA-blocked (IP buffer) protein G–agarose beads and divided into five aliquots for immunoprecipitations with different anti-Rab antibodies or a control antibody and protein G beads (90-min rotation at 4°C).
 0411
 The cells were lysed (200 mM NaCl, 75 mM Tris, 15 mM NaF, 1.5 mM Na3VO4, 7.5 mM EDTA, 7.5 mM EGTA, 1.5% Triton-X-100, and Complete), and the amount of biotinylated integrin was assayed using the anti–β1-integrin antibody AIIB2 to capture the integrins and HRP anti-biotin antibody for ELISA detection.
 0052
 Ultrathin cruosections were prepared on a cryochamber (EM FCS; Leica), and thawed sections were incubated with a polyclonal antiserum raised against EGFP followed by incubation with protein A complexed to 5-nm gold particles according to standard procedures.
+0018
+The α2-integrin COOH-terminal tail (28 residues) Gal4 DNA binding domain fusion (pGBKT7 vector) was used to screen a mouse E17 Matchmaker cDNA library (CLONTECH Laboratories, Inc.) as described previously (Mattila et al., 2005). In yeast mating tests, pGADT7-Rab21 (95–222) prey was transformed in Y187 host strain and cytoplasmic tails of α2- and α11-integrin (pGBKT7-α2 and -α11) and their variants in AH109 host strain.
 0663
 Green fluorescent cells were counted using a widefield epifluorescence microscope (narrow GFP filter and 20× objective).
 0663
@@ -148,6 +169,8 @@ Fluorescence intensities for TIRFM and widefield epifluorescence microscopy were
 
 0663
 Fluorescence intensities for TIRFM and widefield epifluorescence microscopy were measured and analyzed with MetaMorph software.
+0663
+To examine the contents of these cytoplasmic foci, HeLa cells were transfected with expression vectors for YFP-Lsm1 and CFP-Ago2, or YFP-RCK/p54 and CFP-Ago2, and visualized 24 h later by confocal microscopy.
 0019
 In cells expressing CFP-Ago2 and YFP-Lsm1, FRET efficiency was not significant (1.62% ± 1.11%), corroborating our immunoprecipitation results (Figure 1A).
 0676
@@ -156,8 +179,6 @@ To determine the functional interactions of RCK/p54 with miRISC, we employed aff
 These HeLa cell extracts were incubated with magnetic protein A beads coupled with rabbit IgG, rabbit anti-Ago2, or rabbit anti-RCK/p54 antibodies to purify miRISC associated with RCK/p54 or Ago2. After immunoprecipitation, RISC activities were analyzed by incubating the supernatant (S) or bead (B) phases with 182-nt 32P-cap-labeled let-7 substrate mRNAs having a perfectly complementary or mismatched sequence to the let-7 miRNA.
 0663
 GFP expression was silenced by treating cells with a 21-nt siRNA targeting nt 238–258 of the EGFP mRNA. The fluorescence intensity ratio of target (GFP) to control (RFP) fluorophore was determined in the presence of siRNA duplexes and normalized to that observed in control-treated cells [52].
-0004
-Interestingly, RCK/p54, Ago1, and Ago2 were also identified as a component of active RISC programmed with siRNA or miRNA and purified by biotin affinity to streptavidin-conjugated magnetic beads (Figures 2 and 3).
 0019
 To examine the RNA dependence of protein–protein interactions, TCEs (250 μg) were treated before immunoprecipitation with 0.2 μg/ul of RNase A for 20 min at room temperature. Myc-tagged proteins were precipitated by incubating overnight with polyclonal rabbit anti-Myc antibodies directly conjugated to agarose beads (Santa Cruz Biotech, California, United States).
 0663
@@ -173,6 +194,8 @@ A dual fluorescence assay was used to quantify the RNAi activity of siRNAs again
 
 0663
 GFP fluorescence was detected in cell lysates by exciting at 488 nm and recording emissions from 504–514 nm. The spectrum peak at 509 nm represents the fluorescence intensity of GFP. RFP fluorescence was detected in the same cell lysates by exciting at 558 nm and recording emissions from 578–588 nm. The spectrum peak at 583 nm represents the fluorescence intensity of RFP. The fluorescence intensity ratio of target (GFP) to control (RFP) fluorophores was determined in the presence of siRNA duplexes and normalized to the emissions measured in mock-treated cells.
+0663
+HeLa cells expressing YFP-Lsm1 and CFP-Ago2 (a, b, and c), YFP-RCK/p54 and CFP-Ago2 (d, e, and f) were visualized by confocal microscopy at 24 h post-transfection.
 0055
 (D) FRET efficiencies between different P-body protein donor: acceptor pairs. HeLa cells co-expressing YFP-RCK/p54 and CFP-Ago2, YFP-Lsm1 and CFP-Ago2, YFP-RCK/p54 and CFP, YFP-Ago1 and CFP-Ago2, YFP-Ago2 and CFP-Ago1, YFP-RCK/p54 and CFP-Ago-1, as well as YFP-Ago1 and CFP, were fixed and FRET efficiencies were measured.
 0019
@@ -204,8 +227,6 @@ Cells were then returned to the permissive temperature of 25°C, collected at th
 
 0054
 Cells were then collected at the indicated times and prepared for FACS analysis.
-0004
-Recombinant purified His-tagged Bcl-xL was exposed to alkaline conditions to cause partial deamidation and separated by anion-exchange chromatography into three peaks (Figure 2C, peaks A, B and C).
 0054
 Figure 5C and Figure S6B illustrate that double staining for Annexin V and propidium iodide (PI) followed by FACS analysis revealed a major increase in Annexin V+ PI− (apoptotic) cells following transduction with the negative control shRNA followed by either γ irradiation or treatment with etoposide, whereas there was no increase in apoptotic cells above baseline in the cells depleted of NHE-1: DNA damage–induced apoptosis was blocked 100%. Comparable results were obtained by measuring the sub-G1 peak by FACS (unpublished data) and NHE-1 depletion also correlated with increased survival (Figure S5B).
 0114
@@ -229,10 +250,6 @@ The purity of PBMCs was routinely checked by staining with antibodies CD3-Cy5, C
 (A) Wild-type thymocytes were pre-incubated with or without Z-VAD-fmk (200 μM), and were then cultured with or without etoposide for 24 h, harvested, and apoptosis was measured by measuring the sub-G1 peak by flow cytometry.
 0054
 48 h later, GFP+ DsRed+ cells were purified by flow cytometry and treated with etoposide (Etop, 25 μM) for 30 h or exposed to irradiation (IR, 5 Gy) followed by 30 h in culture.
-0004
-(C) Anion exchange chromatography of purified rBcl-xL.
-0004
-The three different forms of Bcl-xL (A, B, and C) purified by anion-exchange column chromatography shown in (C) were incubated in wild-type thymic lysates (1.5 × 107 cell equivalents) at 4 °C for 2 h and then precipitated using nickel beads.
 0081
 (F) Peptides SDVEENRTEAPEGTESEMETPSAINGNPSW (peptide 1) and HLADSPAVNGATGHSSSL (peptide 2), and the corresponding deamidated forms, containing the putative deamidation sites N52 and N66, respectively, were generated by digestion of rBcl-xL with chymotrypsin. The chromatographic conditions used for the separation of the peptides in the LC-MS analyses were optimised so as to resolve the Asn, Asp, and iso-Asp forms of peptides 1 and 2.
 0054
@@ -258,18 +275,16 @@ To probe for a possible signaling complex including the β1AR and a PDE, mouse n
 
 0019
 Whereas ablation of PDE4A or PDE4B had no effect, inactivation of the PDE4D gene prevented co-IP of PDE activity with the β1AR (Figure 1B).
-0004
-In pull-down experiments using purified proteins (Figure 3D and E), β1AR efficiently interacts with PDE4D, whereas β2AR has negligible affinity for PDE4D, underscoring the direct mode of PDE4D–β1AR interaction versus the indirect, β-arrestin-dependent mode of PDE4D–β2AR interaction.
 0007
 Flag-tagged receptors were then immunoprecipitated using M1-affinity resin (α-Flag antibody resin; Sigma Aldrich).
 
 0019
 Flag-tagged receptors were then immunoprecipitated using M1-affinity resin (α-Flag antibody resin; Sigma Aldrich).
-0004
-Rat PDE4D3, expressed in Sf9 insect cells using a recombinant baculovirus, was purified to >90% purity using an anti-PDE4D antibody (M3S1) covalently coupled to ProteinG Sepharose as described previously (Salanova et al, 1998). Flag-tagged β1AR and β2AR were also expressed in Sf9 cells and subsequently purified in a two-step procedure consisting of an initial affinity chromatography using M1-resin (immobilized anti-Flag antibody; Sigma Aldrich), followed by an alprenolol-sepharose affinity column. For βAR/PDE4D IP, equal amounts of purified β1AR and β2AR (1 μg) were coupled to M1 resin and then incubated in 500 μl of 20 mM HEPES (pH 7.5), 100 mM NaCl, 0.1% DDM, 4 mM CaCl2, and 0.01% cholesterol hemisuccinate with 0.5 μg of purified PDE4D under continuous rotation for 4 h at 4°C.
-
 0007
 Rat PDE4D3, expressed in Sf9 insect cells using a recombinant baculovirus, was purified to >90% purity using an anti-PDE4D antibody (M3S1) covalently coupled to ProteinG Sepharose as described previously (Salanova et al, 1998). Flag-tagged β1AR and β2AR were also expressed in Sf9 cells and subsequently purified in a two-step procedure consisting of an initial affinity chromatography using M1-resin (immobilized anti-Flag antibody; Sigma Aldrich), followed by an alprenolol-sepharose affinity column.
+
+0004
+Flag-tagged β1AR and β2AR were also expressed in Sf9 cells and subsequently purified in a two-step procedure consisting of an initial affinity chromatography using M1-resin (immobilized anti-Flag antibody; Sigma Aldrich), followed by an alprenolol-sepharose affinity column.
 0019
 for 30 min), and soluble extracts were immunoprecipitated using 30 μl ProteinG Sepharose and the respective PDE4 subtype, or PDE4D splice variant antibodies, as well as IgG as a control.
 0019
@@ -279,9 +294,6 @@ for 30 min), and soluble extracts were immunoprecipitated using 30 μl ProteinG 
 
 0019
 (C) Shown is the co-IP of exogenous β1AR and PDE4D8-Myc from extracts of MEFs derived from mice deficient in β-arrestin 1 and 2 (βarr1/2KO) or from wild-type controls (WT-MEF).
-
-0004
-(D, E) PDE4D3, and Flag-tagged receptors, β1AR and β2AR, were affinity purified after baculovirus expression (see Supplementary Figure 1). Purified PDE and (βARs) were then combined and the βARs immunoprecipitated.
 0019
 At the end of incubation, cells were lysed, PDE4D5, 8, and 9 were immunoprecipitated with variant-specific antibodies, and the PDE activity recovered in the IP pellet was measured.
 0114
@@ -303,8 +315,6 @@ Cell lines, expression analysis and chromatin immunoprecipitation.
 
 0402
 DNA ChIP was performed essentially according to Upstate Chromatin Immunoprecipitation Assay protocol.
-0004
-(D) GST-PHD1 and GST-AIRE, but not GST alone, interact with purified recombinant histone H3, visualized by Coomassie staining. (E) GST-PHD1, but not GST alone, interacts with native mononucleosomes detected by western blot against anti-H3 (middle) and anti-H2B (bottom).
 0019
 AIRE, autoimmune regulator; ChIP, chromatin immunoprecipitation; GAPDH, glyceraldehyde-3-phosphate dehydrogenase; HEK, human embryonic kidney; H3K4me3, histone H3 trimethylated at lysine 4.
 
@@ -312,22 +322,8 @@ AIRE, autoimmune regulator; ChIP, chromatin immunoprecipitation; GAPDH, glyceral
 AIRE, autoimmune regulator; ChIP, chromatin immunoprecipitation; GAPDH, glyceraldehyde-3-phosphate dehydrogenase; HEK, human embryonic kidney; H3K4me3, histone H3 trimethylated at lysine 4.
 0019
 AIRE, autoimmune regulator; ChIP, chromatin immunoprecipitation; HEK, human embryonic kidney; PHD, plant homeodomain.
-0004
-6xHistidine-tagged geminin (a gift from M Micheal) was expressed in BL21(DES) cells from a pET28 plasmid and purified on a nickel-NTA column according to standard protocols.
-
-0004
-6xHistidine-tagged Plx1, Mcm2-WT or Mcm2-S92A proteins were purified on a nickel-NTA column (Qiagen) according to the manufacturer's protocol.
-0276
-The pellet was resuspended in Laemmli loading buffer, loaded onto a 10% SDS–PAGE and analysed by western blotting with specific antibodies, as indicated in the figure legend.
 0858
 (A) Immunodepletion of Plx1.
-
-0276
-Chromatin was isolated at the indicated time points and separated on SDS–PAGE.
-0276
-Chromatin-bound proteins were separated on SDS–PAGE, transferred to nitrocellulose and probed for Mcm7 and Plx1, which were visualized with infrared dye-labelled secondary antibodies.
-0276
-The nuclei were isolated and the nuclear proteins were separated by SDS–PAGE.
 0114
 As the hydrophobic core residues as well as consecutive acidic amino acids found in the N-terminal regions of the AC-Ds are highly conserved in metazoans, they would all be expected to have similar structural features to hTFIIEα AC-D (Figure 1A). The structure seems to be a novel fold; similar structures with a Z score over 2.0 could not be detected by the DALI server.
 0004
@@ -335,61 +331,42 @@ After purification by glutathione-Sepharose column chromatography, all samples c
 0077
 To obtain the p62 PH-D-bound structure of hTFIIEα AC-D using NMR, we performed NMR titration experiments in buffers both with and without 100 mM NaCl for both domains (Supplementary Figures 1–3). Although in the 100 mM NaCl buffer the dissociation constant (Kd) between AC-D and p62 PH-D was estimated from the titration plots as 376±81 nM (Supplementary Figure 1C) or 237±82 nM (Supplementary Figure 2C), the NaCl-free buffer NMR titration experiment showed much stronger binding affinity between AC-D and p62 PH-D because of the slow exchange timescale with a Kd below about 150 nM (Supplementary Figure 3).
 0077
-These interacting amino acids were also observed in the NMR titration experiments. In hTFIIEα AC-D, the NMR signals of E386, F387, E388, E389, V390, A391 and D392 were changed significantly upon addition of p62 PH-D (Supplementary Figure 1B) and also in p62 PH-D the NMR signals of K19, Q53, K54, I55, S56, E58, K60, A61, I63, Q64, L65, Q66, T74, T75 and F77 were changed by adding hTFIIEα AC-D (Supplementary Figure 2B).
-0004
-All were soluble and could therefore be easily purified using a Ni-nitrilotriacetic acid (NTA) agarose column (Figure 4A).
-0276
-The mixture was analysed by SDS–PAGE and phosphorylated Rpb1 from Pol II was detected by autoradiography (Figure 4D).
-0077
-To investigate whether the STDE is involved in the binding, we prepared a longer construct (residues 351–439) containing both acidic regions and performed the NMR titration experiment under the same conditions (Supplementary Figure 4). The result was that the NMR signals of STDE showed no significant changes and the Kd of 400±43 nM was almost the same as that estimated using hTFIIEα AC-D.
-0077
-This is supported by the result that the binding is strengthened by removing NaCl from the buffer in the NMR titration experiments.
-0077
 In the binding of VP16 TAD to Tfb1 PH-D, the Kd value estimated by NMR titration experiment was ∼4000–7000 nM (Di Lello et al, 2005).
 0077
 Measurements of NMR spectra, structural calculations and NMR titration experiments are described in Supplementary data.
-0276
-Typical preparations were >90% pure, judging by Coomassie blue staining of an SDS–polyacrylamide gel.
 0007
 The bound proteins were released by boiling in SDS–PAGE loading buffer, separated by SDS–PAGE and detected by western blotting with anti-hTFIIEα rabbit antiserum (1:3000 dilution), anti-FLAG M2 monoclonal antibody (Sigma) and anti-p53 (DO-1) (Santa Cruz) using the enhanced chemiluminescence detection system (GE Healthcare).
-
-0276
-The bound proteins were released by boiling in SDS–PAGE loading buffer, separated by SDS–PAGE and detected by western blotting with anti-hTFIIEα rabbit antiserum (1:3000 dilution), anti-FLAG M2 monoclonal antibody (Sigma) and anti-p53 (DO-1) (Santa Cruz) using the enhanced chemiluminescence detection system (GE Healthcare).
-0276
-Phosphorylation reactions were carried out at 30°C for 1 h and stopped by addition of 75 μl of phosphorylation stop solution (10 mM EDTA, 0.1% NP40 and 0.05% SDS). Phosphorylated proteins were precipitated with TCA, analysed by SDS–PAGE (5.5% acrylamide), and detected by autoradiography with Fuji RX-U X-ray film.
 0077
 Left, superposition of the backbone heavy atoms of the 20 lowest energy NMR structures.
 0077
 (A) Superposition of the backbone heavy atoms of the 20 lowest energy NMR structures.
-0276
-(A) SDS–PAGE of the hTFIIEα mutants. In total, 400 ng of each purified hTFIIEα protein was subjected to SDS–PAGE (10% acrylamide) and stained with Coomassie blue.
-
-0276
-hTFIIEα proteins bound to the GST-tagged p62 PH-D and hTFIIEβ were separated by SDS–PAGE and detected by western blotting with anti-hTFIIEα antisera.
 0007
 Bound mutants were subjected to SDS–PAGE and detected by western blotting with anti-FLAG antibody.
-
-0276
-Bound mutants were subjected to SDS–PAGE and detected by western blotting with anti-FLAG antibody.
-
-0276
-Bound proteins were subjected to SDS–PAGE and detected by western blotting with anti-FLAG, anti-p53 and anti-hTFIIEα antisera.
-0276
-Briefly, aliquots of samples with the same amount of protein, determined using the Bradford assay (BioRad, Hercules, CA), were mixed with loading buffer (final concentrations of 62.5 mM Tris-HCl, pH 6.8, 2.3% SDS, 100 mM dithiothreitol, and 0.005% bromophenol blue), boiled, fractionated in a SDS-PAGE, and transferred onto a 0.45-um nitrocellulose membrane (BioRad).
+0004
+Then, the bacteria were harvested and subjected to GST fusion protein purification by Sonication and using Glutathione Sepharose 4B (Amersham Bioscience).
 0096
 KL generated GST fusion protein for pull down analysis.
 0071
 Membrane-bound proteins were separated from soluble proteins by Sepharose CL-2B gel filtration chromatography.
+0071
+In incubations of 20 nM tBid and liposomes, tBid bound effectively to liposomes as assayed by gel filtration chromatography (Figure 1B).
 0019
 Unlike the conformational change that accompanies tBid-induced insertion of Bax into membranes, the liposome-induced conformational change also disappears if liposomes are solubilized in CHAPS prior to immunoprecipitation (Figure 5A, compare lanes 1 and 3).
 0081
 We therefore determined whether peptides from the BH3 regions of Bid, Bim, Bad, Bax, and Bak caused insertion of Bcl-XL into liposomes, assayed by flotation on a sucrose gradient (Figure S6). All five peptides caused Bcl-XL to insert into membranes, while a mutant Bid peptide that fails to bind Bcl-XL [2] did not.
+0004
+Recombinant full-length human Bcl-XL (or Bcl-XL Y101K) with no additional amino acids was expressed in Escherichia coli as a C-terminal intein/chitin-binding domain fusion and purified by affinity chromatography on a chitin column followed by further purification on a phenyl-Sepharose column, similar to a method described previously [7] but with a final dialysis step to remove detergents.
+
 0676
 Recombinant full-length human Bcl-XL (or Bcl-XL Y101K) with no additional amino acids was expressed in Escherichia coli as a C-terminal intein/chitin-binding domain fusion and purified by affinity chromatography on a chitin column followed by further purification on a phenyl-Sepharose column, similar to a method described previously [7] but with a final dialysis step to remove detergents.
-0018
-DSL-1, OSM-11, LAG-2 extracellular domain (LAG-2Ex), EGL-17, or LIN-3 was fused to the GAL4 DNA binding domain (DB); the first six LIN-12 EGF repeats were fused to the GAL4 activation domain (AD). Pairwise interactions were tested with the yeast two-hybrid assay; positive interactions are indicated by blue staining.
 0114
 We initially attempted to solve the crystal structure of full-length human α-parvin, but no crystals could be obtained.
+
+0114
+The crystal structure of α-parvin-CHC at 1.05 Å resolution was determined by molecular replacement using an ensemble of homologous type-1 CH domain structures as search model.
+
+0114
+The refined structural model includes α-parvin residues 246–372 (molecule A) or 247–372 (molecule B) and represents the first high-resolution crystal structure of a type-5 CH domain (Figure 1B).
 
 0114
 However, conformational differences in this region may not be significant, since the C/E-loop structure varies between α-parvin-CHC molecules both in the same and different crystal forms and is involved in crystal packing (data not shown).
@@ -409,6 +386,15 @@ Interestingly, the crystal structure of α−parvin-CHC presented here shows tha
 On the basis of gel filtration experiments with the N-terminal CH domain of α-parvin, Wang et al.
 0114
 Taken together, we have presented a comprehensive structural characterization of the interaction between paxillin LD motifs and α-parvin, which has revealed a surprising degree of promiscuity, both in terms of LD motif selectivity and binding directionality.
+0004
+α-parvin-CHC was purified as follows: cleared cell lysate (in 75 mM Tris [pH 8.0], 200 mM NaCl, 5 mM β-mercaptoethanol, 0.4% Triton X-100, 2 mM EDTA, 5 mM benzamidine, and protease inhibitor cocktail [Roche]) was applied to glutathione sepharose 4B (GE Healthcare) in binding buffer (20 mM Tris [pH 8.0], 150 mM NaCl, and 2 mM DTT) washed with 20 mM Tris (pH 8.0), 1 M NaCl, 2 mM DTT, 2 mM EDTA, and 5 mM benzamidine, and was eluted with 50 mM glutathione in binding buffer (pH 8.0).
+
+0071
+After cleavage with recombinant human rhinovirus 3C-protease, the sample was subjected to size exclusion chromatography (Superdex 75, GE Healthcare) in 25 mM Tris (pH 8.0), 150 mM NaCl, 2 mM DTT, and 2 mM EDTA.
+0004
+To purify full-length α-parvin, cleared cell lysate in 200 mM potassium phosphate (pH 8.0), 10 mM NaCl, 5 mM β-mercaptoethanol, 0.4% Triton X-100, 5 mM benzamidine, 2 mM EDTA, and protease inhibitor cocktail (Roche) was applied to glutathione sepharose 4B (GE Healthcare), washed with 200 mM potassium phosphate, 10 mM NaCl, and 4 mM DTT, and α−parvin was released by cleavage with recombinant human rhinovirus 3C-protease at 4°C over night.
+0053
+For fluorescence anisotropy studies, LD1 with 5-carboxyfluorescein (5-FAM) attached to the ɛ-amino group of the C-terminal lysine was used.
 0114
 The structure of unliganded α-parvin-CHC was solved by molecular replacement with an ensemble of homologous structures (20%–25% sequence identity) including the CH1 domains of α-actinin1 (residues 30–135 of chain A of 2EYI), α-actinin3 (residues 42–149 of chain B of 1WKU, residues 42–149 of chain A of 1TJT) and plectin (residues 59–172 of chain A of 1MB8) using the program PHASER (McCoy, 2007).
 0114
@@ -431,10 +417,6 @@ For Rpb1 (BWG16 Covance), Sua7, TBP, Kin28, Tfb1, Tfa2, and Rap1 (y-300, Santa C
 
 0019
 The signal for each specific gene primer in the immunoprecipitation was then divided by this ratio to convert the signal to normalized units. This value was divided by the immunoprecipitation signal of the non-transcribed control product to determine the fold enrichment of the ChIP over background signals.
-0276
-Proteins bound to the immobilized templates were analysed by SDS–PAGE and detected by western blot using Pierce ECL kits.
-0276
-Beads were washed five times with buffer E and loaded onto SDS–PAGE gels together with 50 mg of input material.
 0019
 The abnormal cross-linking of basal transcription factors in ctk1Δ cells is confirmed by independent immunoprecipitation of TAP-tagged TFIIF subunits.
 

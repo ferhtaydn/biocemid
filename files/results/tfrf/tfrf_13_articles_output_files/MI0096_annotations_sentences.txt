@@ -3,13 +3,7 @@ Furthermore, we identified a long isoform of Bcl-G (Bcl-GL), a pro-apoptotic mem
 To investigate the biological functions of MELK in breast cancer cells, we searched for substrates of MELK in cancer cells by in vitro protein pull-down assays using wild-type MELK (WT-MELK) and kinase-dead MELK (D150A-MELK) recombinant proteins.
 Comparison of silver staining of SDS-PAGE gels containing the pulled-down proteins identified an approximately 30 kDa protein in the lane corresponding to proteins pulled-down with WT-MELK but not in that corresponding to proteins pulled-down with D150A-MELK (Figure 3a).
 Furthermore, we demonstrated that His-tagged WT-MELK could pull-down with Bcl-GL but His-tagged D150A-MELK could not, indicating that, in vitro, Bcl-GL interacts directly with WT-MELK but not with D150A-MELK (Figure 3d).
-Thus, to investigate the biological significance of MELK in breast cancer cells, we searched for a possible substrate(s) of MELK by means of in vitro pull-down assays with recombinant wild-type MELK (WT-MELK) and kinase-dead MELK (D150A-MELK).Flag-tagged protein was overexpressed in COS7 cells and the cell lysate was obtained as described above.
-The cell lysate obtained was incubated with anti-Flag M2 affinity gel (Sigma-Aldrich) at 4 °C overnight with rotation.
-The Flag-tagged protein was pulled down by the affinity gel, and the affinity gel was washed twice with lysis buffer (0.5% NP-40, 20 mM Tris-HCl, 150 mM NaCl, 1 mM EDTA, 1 mM EGTA, and 1 mM NaF [pH 7.5]) with various protease inhibitors (1 mM PMSF, 1 mM NaOV, 2 μg/ml antipain, 10 μg/ml leupeptin, 30 nM okadaic acid, 5 mM benzamidine, and 10 μg/ml aprotinin).
-One to two milligrams of proteins prepared from brain tissues was incubated with the affinity gel, and the Flag-tagged protein pulled down by the affinity gel for 1 h.
-The affinity gel was washed twice with lysis buffer supplemented with protease inhibitors.
-The proteins pulled down by the Flag-tagged protein were subjected to Western blot analysis.
-(E) The membrane fraction of adult brain lysates was incubated with or without Flag-tagged Cdk5.
+Thus, to investigate the biological significance of MELK in breast cancer cells, we searched for a possible substrate(s) of MELK by means of in vitro pull-down assays with recombinant wild-type MELK (WT-MELK) and kinase-dead MELK (D150A-MELK).(E) The membrane fraction of adult brain lysates was incubated with or without Flag-tagged Cdk5.
 Flag-tagged Cdk5 pulled down TrkB from the membrane fraction of adult brain lysates.
 Quality of the purified GST and GST-fusion proteins used in the GST pull-down assay was verified by Coomassie blue staining.GST-pull down and co-immunoprecipitation assays were performed to further characterize this interaction.
 GST-pull down assay to identify the region of BRCA1 interacting with PP1.
