@@ -2,6 +2,13 @@
 
 [BioCreative V - BioC Track (I) - Task 6 Implementation](http://www.biocreative.org/tasks/biocreative-v/track-1-bioc/)
 
+- The code is under [source](src/main/scala/com/ferhtaydn/biocemid/) directory. 
+- Target experimental methods from PSI-MI ontology are in [methods file](src/main/resources/methods.conf).
+- The [main](src/main/scala/com/ferhtaydn/biocemid/Main.scala) class is `com.ferhtaydn.biocemid.Main`.
+You may need to modify annotation and evaluation configurations in order to obtain your desired operation.
+- All the resources related to word2vecs, raw and annotated articles are located under [files](files/) directory.
+- The published data set, consists of 30 articles, is located in [published dataset](files/published_dataset/) directory.
+
 The versions of the libraries which are used:  
 * [Java Version: 1.8.0_91](http://download.oracle.com/otn-pub/java/jdk/8u91-b14/jdk-8u91-macosx-x64.dmg)
 * [Scala Version: 2.11.8](http://search.maven.org/#search|ga|1|g%3A%22org.scala-lang%22%20AND%20v%3A%222.11.8%22)
